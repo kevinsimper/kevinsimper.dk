@@ -1,0 +1,1 @@
+# Hvorfor du skal lærer at kode

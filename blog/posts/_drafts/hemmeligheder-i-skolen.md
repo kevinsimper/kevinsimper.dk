@@ -1,0 +1,1 @@
+# Hvad man aldrig får fortalt i skolen om skoler!

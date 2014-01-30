@@ -1,0 +1,10 @@
+# Hvad hvis Facebook og Wikipedia var forbundet?
+Hvordan ville Wikipedia være hvis det var forbundet med Facebook? Så hver gang at man redigeret en artikel eller skrev noget nyt på wikipedia ville det bliver postet til ens væg. Ville det gøre at vi ville skrive og bidrage mere med vores viden til Wikipedia? Eller ville det gøre vi var mere bange for at skrive fordi hvis det var forkert, ville folk vide hvem man var?
+
+Det ville undgå stor del af Wikipedia's problemer med at personer går ind på en artikel og sletter dele af den netop fordi de kan være anonyme. Hver redigering bliver sat sammen med en IP-adresse, som er unik for den bruger, men idag er der mange muligheder for skjule eller skift IP og dermed omgå en eventuel spærring der måtte havde blevet sat på dig.
+
+Jeg synes det kunne være meget interessant at se. Jeg synes Facebook er ved at drukne i mærkelige opdateringer og opslag som er uden værdi. Hvad hvis man kunne finde nye personer som interessere sig for det samme emne og mødes? Hvad hvis du var rigtig interesseret i Middelalderen, hvad ville der komme ud af hvis alle dem som havde skrevet om middelalderen sammen på wikipedia mødtes? Alle som alle har allerede har noget tilfælles både interesse, men også deres fælles bidrag?
+
+Men om det vil være en god ide for Wikipedia, som lægger meget vægt på at det er et åbent leksikon. Men facebook er næsten den eneste side hvor det er sværest at fake at du er virkelig. På facebook har du venner som alle har godkendt dig fordi du er en person i virkeligheden, netop fordi det er de færreste personer som er venner fremmede.
+
+Jeg kunne godt tror på at ideen kunne virke. Der findes allerede en side der hedder Github, hvor det er man kan samarbejde om kode projekter. Det er meget brugt fordi du netop kan se hvilke projekter personer er med i og hvilke projekter de bidrager til.
