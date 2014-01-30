@@ -1,0 +1,20 @@
+{
+  "name": "kevinsimper.dk",
+  "version": "0.0.1",
+  "description": "My personal blog",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@bitbucket.org/KevinSimper/kevinsimper.dk.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "~3.4.8",
+    "harp": "~0.11.1",
+    "to-markdown": "0.0.1"
+  }
+}
