@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.pure-g > div {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.sidebar {
+  padding: 60px 40px 0 30px;
+  background: #34495E;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  text-align: right;
+}
+.sidebar h1 a {
+  color: white;
+}
+.sidebar h3 {
+  color: #95A5A6;
+}
+.sidebar .profilepic {
+  width: 180px;
+  border-radius: 150px;
+}
+.sidebar .links li {
+  list-style-type: none;
+  padding: 0 20px 0 0;
+  float: left;
+}
+.sidebar .links a {
+  color: #FFF;
+  display: inline-block;
+  padding: 8px 10px;
+  border: 2px solid #95A5A6;
+  border-radius: 2px;
+}
+.content {
+  margin-left: 25%;
+}
