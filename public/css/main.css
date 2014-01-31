@@ -40,3 +40,14 @@ body {
 .content {
   margin-left: 25%;
 }
+.innercontent {
+  padding: 40px 0 0 0;
+}
+/*ARTICLE*/
+.articlelink .title {
+    margin-top: 0px;
+}
+.articlelink .date {
+    color: grey;
+    font-size: 14px;
+}

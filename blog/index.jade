@@ -1,6 +1,7 @@
 for article in public.posts._data
-  a(href="/posts/#{article.slug}")
-    h3 #{article.title}
+  a.articlelink(href="/posts/#{article.slug}")
+    i.date #{article.date}
+    h3.title #{article.title}
 
 //- - for(var i = public.posts._data.length - 1; i >= 0; i--)
 //-   p= public.posts._data[i].slug
