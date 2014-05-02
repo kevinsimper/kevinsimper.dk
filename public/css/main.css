@@ -2,6 +2,9 @@ body {
   margin: 0;
   padding: 0;
 }
+h1, h2, h3, h4, h5, p, a, div {
+  font-family: 'Open Sans', sans-serif !important;
+}
 .pure-g > div {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
