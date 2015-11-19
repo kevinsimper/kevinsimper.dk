@@ -1,1 +1,0 @@
-# Hvorfor jeg gerne vil lærer kinesisk

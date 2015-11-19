@@ -1,1 +1,0 @@
-# Min historie med computere op igennem tiden

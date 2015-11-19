@@ -1,1 +1,0 @@
-# Baren på internettet bliver hævet hver dag
