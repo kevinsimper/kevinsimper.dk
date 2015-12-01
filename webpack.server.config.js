@@ -32,6 +32,7 @@ module.exports = {
             'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
         ]
       },
+      { test: /\.md$/, loader: "html!markdown" }
     ]
   },
   plugins: [
