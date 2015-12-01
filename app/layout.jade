@@ -7,6 +7,13 @@ html
     link(rel="stylesheet",href="http://yandex.st/highlightjs/8.0/styles/default.min.css")
     link(rel="stylesheet",href="http://fonts.googleapis.com/css?family=Open+Sans:400,600")
     script(src="http://yandex.st/highlightjs/8.0/highlight.min.js")
+    if production
+      link(rel="stylesheet",href="/build/main.css")
+      script(src='/build/bundle.js')
+    else
+      link(rel="stylesheet",href="http://localhost:8080/build/main.css")
+      script(src='http://localhost:8080/webpack-dev-server.js')
+      script(src='http://localhost:8080/build/bundle.js')
 
   body
     .pure-g

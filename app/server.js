@@ -7,11 +7,14 @@ var post = require('jade!./post.jade')
 
 var blogposts = require('./blog/posts/_data.json')
 
+var production = process.env.NODE_ENV === 'production'
+
 app.use(express.static(process.cwd() + '/public'));
 
 app.get('/', (req, res) => {
   res.send(index({
-    posts: blogposts
+    posts: blogposts,
+    production: production
   }))
 })
 
@@ -20,7 +23,8 @@ app.get('/posts/:post', (req, res) => {
   var blogpost = blogposts.find(item => item.slug === slug)
   var content = require('./blog/posts/' + slug + '.md')
   res.send(post({
-    content: content
+    content: content,
+    production: production
   }))
 })
 
