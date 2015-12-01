@@ -1,7 +1,0 @@
-extends ./layout.jade
-
-block content
-  for post in posts
-    a.articlelink(href="/posts/#{post.slug}")
-      i.date #{post.date}
-      h3.title #{post.title}
