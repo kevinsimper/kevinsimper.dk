@@ -29,7 +29,7 @@ module.exports = {
       { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader'},
       { test: /\.s?css$/, loader: ExtractTextPlugin.extract(
         'style',
-        'css?localIdentName=[path][name]---[local]---[hash:base64:5]!autoprefixer!sass'
+        'css?modules&localIdentName=[path][name]---[local]---[hash:base64:5]!autoprefixer!sass'
       )},
       {
         test: /\.(jpe?g|png|gif|svg)$/i,

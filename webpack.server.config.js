@@ -23,7 +23,7 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader'},
-      { test: /\.s?css$/, loaders: ['css-loader/locals?localIdentName=[path][name]---[local]---[hash:base64:5]', 'autoprefixer', 'sass']},
+      { test: /\.s?css$/, loaders: ['css-loader/locals?modules&localIdentName=[path][name]---[local]---[hash:base64:5]', 'autoprefixer', 'sass']},
       { test:  /\.json$/, loader: 'json-loader' },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
