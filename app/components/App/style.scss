@@ -1,16 +1,24 @@
 .App {
   display: flex;
+  flex-direction: column;
+  @media (min-width: 900px) {
+    flex-direction: row;
+  }
 }
 .Sidebar {
-  width: 30%;
-  padding: 60px 40px 0 30px;
   background: #34495E;
-  text-align: center;
+  padding: 40px;
+  @media (min-width: 900px) {
+    width: 30%;
+    padding: 60px 40px 0 30px;
+  }
 }
 .Floating {
-  width: 30%;
-  position: fixed;
-  left: 0
+  @media (min-width: 900px) {
+    width: 30%;
+    position: fixed;
+    left: 0
+  }
 }
 .Content {
   flex: 2;

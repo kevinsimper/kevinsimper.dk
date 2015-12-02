@@ -4,7 +4,7 @@ import styles from './style.scss'
 export default class Sidebar extends React.Component {
   render() {
     return (
-      <div>
+      <div className={styles.sidebar}>
         <img className={styles.profilepic} src='https://2.gravatar.com/avatar/b120b6c94e16f352c691849391324206?s=440'/>
         <h1 className={styles.title}>
           <a href='/'>Kevin Simper</a>

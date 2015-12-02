@@ -1,3 +1,6 @@
+.sidebar {
+  text-align: center;
+}
 .title a {
   color: white;
 }
@@ -7,6 +10,10 @@
 .profilepic {
   width: 180px;
   border-radius: 150px;
+}
+.links {
+  display: inline-block;
+  margin: 0 auto;
 }
 .links li {
   list-style-type: none;
