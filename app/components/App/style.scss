@@ -1,0 +1,18 @@
+.App {
+  display: flex;
+}
+.Sidebar {
+  width: 30%;
+  padding: 60px 40px 0 30px;
+  background: #34495E;
+  text-align: center;
+}
+.Floating {
+  width: 30%;
+  position: fixed;
+  left: 0
+}
+.Content {
+  flex: 2;
+  padding: 40px;
+}
