@@ -1,11 +1,13 @@
-FROM node:4
+FROM node:5
 
-ADD . /app
+EXPOSE 9000
 
 WORKDIR /app
 
-RUN npm install
+ADD . /app
 
-EXPOSE 9000
+RUN npm install && npm rebuild
+
+RUN npm run build
 
 CMD npm start
