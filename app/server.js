@@ -1,18 +1,16 @@
-var express = require('express');
-var harp = require('harp');
-var app = express();
+import express from 'express'
 import compression from 'compression'
-
-var layout = require('jade!./layout.jade')
-
-var blogposts = require('./blog/posts/_data.json')
-
-var production = process.env.NODE_ENV === 'production'
-
+import layout from 'jade!./layout.jade'
+import blogdata from './blog/posts/_data.json'
 import React from 'react'
 import { renderToString } from 'react-dom/server'
 import App from './components/App'
 import Content from './components/Content'
+import Presentations from './components/Presentations'
+import Blogposts from './components/Blogposts'
+
+var app = express();
+var production = process.env.NODE_ENV === 'production'
 
 app.use(compression())
 app.use(express.static(process.cwd() + '/public', { maxAge: 86400000 }));
@@ -21,6 +19,7 @@ app.get('/', (req, res) => {
   let content = renderToString(
     <App>
       <Content>
+        <Presentations/>
         <Blogposts blogposts={blogdata}/>
       </Content>
     </App>
