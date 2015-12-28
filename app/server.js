@@ -21,12 +21,7 @@ app.get('/', (req, res) => {
   let content = renderToString(
     <App>
       <Content>
-        {blogposts.map(post =>
-          <a className='articlelink' href={'/posts/' + post.slug}>
-            <i className='date'>{post.date}</i>
-            <h3 className='title'>{post.title}</h3>
-          </a>
-        )}
+        <Blogposts blogposts={blogdata}/>
       </Content>
     </App>
   )
