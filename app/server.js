@@ -1,6 +1,7 @@
 var express = require('express');
 var harp = require('harp');
 var app = express();
+import compression from 'compression'
 
 var layout = require('jade!./layout.jade')
 
@@ -13,7 +14,8 @@ import { renderToString } from 'react-dom/server'
 import App from './components/App'
 import Content from './components/Content'
 
-app.use(express.static(process.cwd() + '/public'));
+app.use(compression())
+app.use(express.static(process.cwd() + '/public', { maxAge: 86400000 }));
 
 app.get('/', (req, res) => {
   let content = renderToString(
