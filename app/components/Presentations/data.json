@@ -1,0 +1,24 @@
+{
+  "presentations": [
+    {
+      "name": "Introduction to webtorrent",
+      "location": "Copenhagen Frontenders - August"
+    },
+    {
+      "name": "The land of Isomorphic Apps",
+      "location": "CopenhagenJS - November"
+    },
+    {
+      "name": "Lessons learnt building with Reflux.js",
+      "location": "CopenhagenJS - May"
+    },
+    {
+      "name": "Firespeed prototyping with Firebase",
+      "location": "CopenhagenJS - April"
+    },
+    {
+      "name": "20 minutes Super Mario",
+      "location": "CopenhagenJS - Februar"
+    }
+  ]
+}
