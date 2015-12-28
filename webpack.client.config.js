@@ -27,6 +27,7 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader'},
+      { test:  /\.json$/, loader: 'json-loader' },
       { test: /\.s?css$/, loader: ExtractTextPlugin.extract(
         'style',
         'css?modules&localIdentName=[path][name]---[local]---[hash:base64:5]!autoprefixer!sass'
