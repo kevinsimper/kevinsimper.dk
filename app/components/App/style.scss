@@ -7,7 +7,6 @@
   }
 }
 .Sidebar {
-  background: #34495E;
   padding: 40px;
   @media (min-width: 900px) {
     width: 30%;
@@ -15,10 +14,13 @@
   }
 }
 .Floating {
+  background: #34495E;
   @media (min-width: 900px) {
     width: 30%;
     position: fixed;
-    left: 0
+    left: 0;
+    top: 0;
+    height: 100%;
   }
 }
 .Content {
