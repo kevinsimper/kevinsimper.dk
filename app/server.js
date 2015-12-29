@@ -33,7 +33,7 @@ app.get('/', (req, res) => {
 
 app.get('/posts/:post', (req, res) => {
   var slug = req.params.post
-  var blogpost = blogposts.find(item => item.slug === slug)
+  var blogpost = blogdata.find(item => item.slug === slug)
   var blogcontent = require('./blog/posts/' + slug + '.md')
 
   let content = renderToString(
