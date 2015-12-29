@@ -1,0 +1,12 @@
+machine:
+  services:
+    - docker
+test:
+  override:
+    - docker-compose build
+deployment:
+  master:
+    branch: master
+    commands:
+      - docker login -u kevinsimper -p $DOCKER_PASSWORD -e kevin.simper@gmail.com registry.blackbeard.io
+      - npm run deploy
