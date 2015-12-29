@@ -6,11 +6,12 @@ export default class Presentations extends Component {
   render() {
     return (
       <div>
-        <h2>Presentations</h2>
+        <h2 className={styles.Header}>Presentations</h2>
+        <div>These are the presentations I have done.</div>
         <div>
           {data.presentations.map((presentation) => {
             return (
-              <div>
+              <div className={styles.Presentation}>
                 <div className={styles.Name}>{presentation.name}</div>
                 <div className={styles.Location}>{presentation.location}</div>
               </div>
