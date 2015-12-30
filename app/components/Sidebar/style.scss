@@ -1,6 +1,9 @@
 .sidebar {
   text-align: center;
-  margin: 40px 0 0;
+  padding: 40px 0;
+  @media(min-width: 900px) {
+    margin: 40px 0 0;
+  }
 }
 .title a {
   color: white;
