@@ -12,14 +12,20 @@ export default class Sidebar extends React.Component {
         <h3 className={styles.subtitle}>
           JavaScript, Crafty.js and other coding.
         </h3>
-        <ul  className={styles.links}>
-          <li>
-            <a href='http://github.com/kevinsimper'>Github</a>
-          </li>
-          <li>
-            <a href='http://twitter.com/kevinsimper'>Twitter</a>
-          </li>
-        </ul>
+        <div  className={styles.links}>
+          <div className={styles.link}>
+            <a href='https://github.com/kevinsimper'>Github</a>
+          </div>
+          <div className={styles.link}>
+            <a href='https://twitter.com/kevinsimper'>Twitter</a>
+          </div>
+          <div className={styles.link}>
+          <a href='https://www.facebook.com/kevinsimper'>Facebook</a>
+          </div>
+          <div className={styles.link}>
+            <a href='https://linkedin.com/in/kevinsimper'>LinkedIn</a>
+          </div>
+        </div>
       </div>
     )
   }

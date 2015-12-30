@@ -16,18 +16,27 @@
   border-radius: 150px;
 }
 .links {
-  display: inline-block;
+  display: flex;
   margin: 0 auto;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 15px;
 }
-.links li {
+.link {
   list-style-type: none;
-  padding: 0 20px 0 0;
+  padding: 10px;
   float: left;
 }
-.links a {
+.link a {
   color: #FFF;
   display: inline-block;
-  padding: 8px 10px;
+  padding: 10px 12px;
   border: 2px solid #95A5A6;
   border-radius: 2px;
+  transition: all 0.3s;
+  text-decoration: none;
+  &:hover {
+    background: white;
+    color: #111;
+  }
 }
