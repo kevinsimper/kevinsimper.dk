@@ -10,33 +10,23 @@
 }
 .subtitle {
   color: #95A5A6;
+  padding: 10px;
 }
 .profilepic {
   width: 180px;
   border-radius: 150px;
 }
-.links {
-  display: flex;
-  margin: 0 auto;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  padding: 15px;
-}
-.link {
-  list-style-type: none;
-  padding: 10px;
-  float: left;
-}
-.link a {
+.Menu a {
+  padding: 1rem;
+  display: block;
   color: #FFF;
-  display: inline-block;
-  padding: 10px 12px;
-  border: 2px solid #95A5A6;
-  border-radius: 2px;
-  transition: all 0.3s;
-  text-decoration: none;
   &:hover {
-    background: white;
-    color: #111;
+    background: rgba(0,0,0,0.3);
+  }
+  &:nth-child(odd) {
+    background: rgba(0,0,0,0.1);
+  }
+  &:nth-child(even) {
+    background: rgba(0,0,0,0.2);
   }
 }
