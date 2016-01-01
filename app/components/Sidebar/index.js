@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './style.scss'
+import external from './external.svg'
 
 export default class Sidebar extends React.Component {
   render() {
@@ -13,10 +14,10 @@ export default class Sidebar extends React.Component {
           JavaScript, Crafty.js and other coding.
         </h3>
         <div className={styles.Menu}>
-           <a href='https://github.com/kevinsimper'>Github</a>
-          <a href='https://twitter.com/kevinsimper'>Twitter</a>
-          <a href='https://www.facebook.com/kevinsimper'>Facebook</a>
-          <a href='https://linkedin.com/in/kevinsimper'>LinkedIn</a>
+          <a href='https://github.com/kevinsimper'>Github <img className={styles.External} src={external}/></a>
+          <a href='https://twitter.com/kevinsimper'>Twitter <img className={styles.External} src={external}/></a>
+          <a href='https://www.facebook.com/kevinsimper'>Facebook <img className={styles.External} src={external}/></a>
+          <a href='https://linkedin.com/in/kevinsimper'>LinkedIn <img className={styles.External} src={external}/></a>
         </div>
       </div>
     )
