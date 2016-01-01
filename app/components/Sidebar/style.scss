@@ -20,13 +20,16 @@
   padding: 1rem;
   display: block;
   color: #FFF;
-  &:hover {
-    background: rgba(0,0,0,0.3);
-  }
   &:nth-child(odd) {
     background: rgba(0,0,0,0.1);
+    &:hover {
+      background: rgba(0,0,0,0.3);
+    }
   }
   &:nth-child(even) {
     background: rgba(0,0,0,0.2);
+    &:hover {
+      background: rgba(0,0,0,0.3);
+    }
   }
 }
