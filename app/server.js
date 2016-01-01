@@ -12,6 +12,8 @@ import Blogposts from './components/Blogposts'
 var app = express();
 var production = process.env.NODE_ENV === 'production'
 
+var assets = (production) ? require(__dirname + '/../public/build/webpack.assets.json') : {}
+
 app.use(compression())
 app.use(express.static(process.cwd() + '/public', { maxAge: 86400000 }));
 
@@ -27,7 +29,8 @@ app.get('/', (req, res) => {
 
   res.send(layout({
     content: content,
-    production: production
+    production: production,
+    assets
   }))
 })
 
@@ -46,7 +49,8 @@ app.get('/posts/:post', (req, res) => {
 
   res.send(layout({
     content: content,
-    production: production
+    production: production,
+    assets
   }))
 })
 

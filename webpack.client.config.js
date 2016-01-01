@@ -1,11 +1,18 @@
 var webpack = require('webpack')
 var ExtractTextPlugin = require("extract-text-webpack-plugin")
+var AssetsPlugin = require('assets-webpack-plugin');
+
+var production = process.env.NODE_ENV === 'production'
+var publicPath = '/build/'
+var path = __dirname + '/public/build/'
+var jsName = (production) ? '[name]-bundle-[hash].js' : 'bundle.js'
+var cssName = (production) ? '[name]-bundle-[hash].css' : '[name].css'
 
 var plugins = [
-  new ExtractTextPlugin("[name].css")
+  new ExtractTextPlugin(cssName),
 ]
 
-if(process.env.NODE_ENV === 'production') {
+if(production) {
   plugins.push(
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.OccurenceOrderPlugin(),
@@ -13,6 +20,11 @@ if(process.env.NODE_ENV === 'production') {
       compress: {
           warnings: false
       }
+    }),
+    new AssetsPlugin({
+      filename: 'webpack.assets.json',
+      prettyPrint: true,
+      path: path
     })
   )
 }
@@ -20,9 +32,9 @@ if(process.env.NODE_ENV === 'production') {
 module.exports = {
   entry: './app/client.js',
   output: {
-    path: __dirname + '/public/build/',
-    publicPath: '/build/',
-    filename: 'bundle.js'
+    path: path,
+    publicPath: publicPath,
+    filename: jsName
   },
   module: {
     loaders: [
