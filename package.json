@@ -12,6 +12,7 @@
     "build": "npm run compile-client && npm run compile-server",
     "post-install": "npm run build",
     "start": "DEBUG=express:* node dist/server.js",
+    "start-watch": "nodemon --exec npm start -w ./dist/",
     "deploy": "docker-compose build && docker tag -f kevinsimperdk_web registry.blackbeard.io/kevinsimper/blog && docker push registry.blackbeard.io/kevinsimper/blog"
   },
   "repository": {
