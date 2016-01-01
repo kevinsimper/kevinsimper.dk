@@ -10,12 +10,15 @@ fs.readdirSync('node_modules')
     nodeModules[mod] = 'commonjs ' + mod
   })
 
+var production = process.env.NODE_ENV === 'production'
+var publicPath = (production) ? '/build/' : 'http://localhost:8080/build/'
+
 module.exports = {
   entry: './app/server.js',
   target: 'node',
   output: {
     path: __dirname + '/dist/',
-    publicPath: '/build/',
+    publicPath: publicPath,
     filename: 'server.js',
     libraryTarget : 'commonjs2'
   },
