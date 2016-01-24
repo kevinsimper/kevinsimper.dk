@@ -1,24 +1,32 @@
 {
   "presentations": [
     {
-      "name": "Introduction to webtorrent",
-      "location": "Copenhagen Frontenders - August"
+      "name": "How do you survive key-loss with Docker?",
+      "location": "Docker Copenhagen - January 2016"
+    },
+    {
+      "name": "Introduction to Docker - Workshop",
+      "location": "Docker Copenhagen - December 2015"
     },
     {
       "name": "The land of Isomorphic Apps",
-      "location": "CopenhagenJS - November"
+      "location": "CopenhagenJS - November 2015"
+    },
+    {
+      "name": "Introduction to webtorrent",
+      "location": "Copenhagen Frontenders - August 2015"
     },
     {
       "name": "Lessons learnt building with Reflux.js",
-      "location": "CopenhagenJS - May"
+      "location": "CopenhagenJS - May 2015"
     },
     {
       "name": "Firespeed prototyping with Firebase",
-      "location": "CopenhagenJS - April"
+      "location": "CopenhagenJS - April 2014"
     },
     {
       "name": "20 minutes Super Mario",
-      "location": "CopenhagenJS - Februar"
+      "location": "CopenhagenJS - Februar 2014"
     }
   ]
 }
