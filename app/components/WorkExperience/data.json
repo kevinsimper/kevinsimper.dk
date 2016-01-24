@@ -1,0 +1,44 @@
+{
+  "experiences": [
+    {
+      "company": "Ravn IT",
+      "location": "Snebærvej 11, 4200 Slagelse, Denmark",
+      "start": "2/2012",
+      "end": "3/2013",
+      "title": "Web Developer",
+      "description": ""
+    },
+    {
+      "company": "Gorm Larsen & Zornig",
+      "location": "Hillerødgade 30, 2200 København N, Denmark",
+      "start": "4/2013",
+      "end": "5/2014",
+      "title": "Front-end Developer",
+      "description": ""
+    },
+    {
+      "company": "Blackwood Seven A/S",
+      "location": "Livjægergade 17B, 2100 København, Denmark",
+      "start": "6/2014",
+      "end": "8/2014",
+      "title": "Senior Developer",
+      "description": ""
+    },
+    {
+      "company": "Graduateland",
+      "location": "Njalsgade 19, 2300 København, Denmark",
+      "start": "9/2014",
+      "end": "6/2015",
+      "title": "Lead Front-end Developer",
+      "description": ""
+    },
+    {
+      "company": "Blackbeard",
+      "location": "Njalsgade 19, 2300 København, Denmark",
+      "start": "7/2015",
+      "end": "",
+      "title": "CEO / Full Stack Developer",
+      "description": ""
+    }
+  ]
+}
