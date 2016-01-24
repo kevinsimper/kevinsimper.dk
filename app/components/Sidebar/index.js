@@ -14,6 +14,8 @@ export default class Sidebar extends React.Component {
           JavaScript, Crafty.js and other coding.
         </h3>
         <div className={styles.Menu}>
+          <a href='/'>Home</a>
+          <a href='/about'>About</a>
           <a href='https://github.com/kevinsimper'>Github <img className={styles.External} src={external}/></a>
           <a href='https://twitter.com/kevinsimper'>Twitter <img className={styles.External} src={external}/></a>
           <a href='https://www.facebook.com/kevinsimper'>Facebook <img className={styles.External} src={external}/></a>
