@@ -65,7 +65,8 @@ app.get('/about', (req, res) => {
   )
   res.send(layout({
     content,
-    production
+    production,
+    assets
   }))
 })
 
