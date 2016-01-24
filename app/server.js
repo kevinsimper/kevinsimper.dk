@@ -8,6 +8,7 @@ import App from './components/App'
 import Content from './components/Content'
 import Presentations from './components/Presentations'
 import Blogposts from './components/Blogposts'
+import About from './components/About'
 
 var app = express();
 var production = process.env.NODE_ENV === 'production'
@@ -51,6 +52,20 @@ app.get('/posts/:post', (req, res) => {
     content: content,
     production: production,
     assets
+  }))
+})
+
+app.get('/about', (req, res) => {
+  let content = renderToString(
+    <App>
+      <Content>
+        <About/>
+      </Content>
+    </App>
+  )
+  res.send(layout({
+    content,
+    production
   }))
 })
 
