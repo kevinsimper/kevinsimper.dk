@@ -2,25 +2,31 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  @media (min-width: 900px) {
+  @media (min-width: 800px) {
     flex-direction: row;
   }
 }
 .Sidebar {
-  @media (min-width: 900px) {
-    width: 30%;
+  @media (min-width: 800px) {
+    width: 25%;
     padding: 60px 40px 0 30px;
+  }
+  @media (min-width: 1400px) {
+    width: 30%;
   }
 }
 .Floating {
   background: #34495E;
   overflow-y: auto;
-  @media (min-width: 900px) {
-    width: 30%;
+  @media (min-width: 800px) {
+    width: 25%;
     position: fixed;
     left: 0;
     top: 0;
     height: 100%;
+  }
+  @media (min-width: 1400px) {
+    width: 30%;
   }
 }
 .Content {
