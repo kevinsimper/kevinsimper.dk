@@ -6,7 +6,7 @@ import React from 'react'
 import { renderToString } from 'react-dom/server'
 import App from './components/App'
 import Content from './components/Content'
-import Presentations from './components/Presentations'
+import HelloWorld from './components/HelloWorld'
 import Blogposts from './components/Blogposts'
 import About from './components/About'
 
@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
   let content = renderToString(
     <App>
       <Content>
-        <Presentations/>
+        <HelloWorld/>
         <Blogposts blogposts={blogdata}/>
       </Content>
     </App>
