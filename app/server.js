@@ -9,6 +9,7 @@ import Content from './components/Content'
 import HelloWorld from './components/HelloWorld'
 import Blogposts from './components/Blogposts'
 import About from './components/About'
+import Activities from './components/Activities'
 
 var app = express();
 var production = process.env.NODE_ENV === 'production'
@@ -23,6 +24,7 @@ app.get('/', (req, res) => {
     <App>
       <Content>
         <HelloWorld/>
+        <Activities/>
         <Blogposts blogposts={blogdata}/>
       </Content>
     </App>
