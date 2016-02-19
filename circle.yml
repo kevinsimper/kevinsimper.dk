@@ -1,6 +1,9 @@
 machine:
   services:
     - docker
+dependencies:
+  override:
+    - echo "No deps"
 test:
   override:
     - docker-compose build
