@@ -1,6 +1,10 @@
 {
   "presentations": [
     {
+      "name": "Kubernetes Introduction - Workshop 3 hours",
+      "location": "Docker Copenhagen - February 2016"
+    },
+    {
       "name": "How do you survive key-loss with Docker?",
       "location": "Docker Copenhagen - January 2016"
     },
