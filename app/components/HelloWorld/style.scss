@@ -1,6 +1,21 @@
 .HelloWorld {
-  font-size: 2em;
+  max-width: 813px;
   @media(min-width: 800px) {
     margin: 2em;
   }
+  a {
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+.Intro {
+  font-size: 2em;
+  @media(min-width: 800px) {
+    margin: 0 0 30px;
+  }
+}
+.SecondIntro {
+  font-size: 1.3em;
 }
