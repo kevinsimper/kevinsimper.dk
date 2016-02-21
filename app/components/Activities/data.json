@@ -2,36 +2,43 @@
   "activities": [
     {
       "type": "Medium",
+      "title": "No, I will not cross-promote your event!",
       "link": "https://medium.com/@kevinsimper/no-i-will-not-cross-promote-your-event-16ccda37f773",
       "date": "2016-02-18"
     },
     {
       "type": "Medium",
+      "title": "Why meetup.com is bad for the tech community",
       "link": "https://medium.com/@kevinsimper/why-meetup-is-bad-for-developer-communities-649dd4e34a61",
       "date": "2015-12-30"
     },
     {
       "type": "Medium",
+      "title": "Why you should not use git for deployment",
       "link": "https://medium.com/@kevinsimper/why-you-should-not-use-git-for-deployment-e0590bcb185c",
       "date": "2015-11-02"
     },
     {
       "type": "Medium",
+      "title": "React type.toUpperCase is not a function",
       "link": "https://medium.com/@kevinsimper/react-type-touppercase-is-not-a-function-d79f52e623a",
       "date": "2015-06-30"
     },
     {
       "type": "Medium",
+      "title": "React Newline to break (nl2br)",
       "link": "https://medium.com/@kevinsimper/react-newline-to-break-nl2br-a1c240ba746",
       "date": "2015-05-29"
     },
     {
       "type": "Medium",
+      "title": "My idea for a Pull Request Watcher",
       "link": "https://medium.com/@kevinsimper/my-idea-for-a-pull-request-watcher-ca52dcef5347",
       "date": "2015-04-21"
     },
     {
       "type": "Medium",
+      "title": "The programming stack of 2015",
       "link": "https://medium.com/@kevinsimper/the-programming-stack-of-2015-40ef4d77e0",
       "date": "2015-03-28"
     }
