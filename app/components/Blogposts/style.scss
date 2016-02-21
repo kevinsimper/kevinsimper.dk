@@ -1,6 +1,16 @@
 .Blogposts {
-  margin: 50px 0 0;
+  margin: 0 0 50px;
+}
+.Post {
+  margin: 20px 0;
+  border-left: 5px solid #1f8dd6;;
+  padding-left: 10px;
 }
 .Header {
   text-align: center;
+}
+.Date {
+  font-style: italic;
+  color: black;
+  opacity: 0.8;
 }

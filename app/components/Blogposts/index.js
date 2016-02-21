@@ -1,16 +1,18 @@
 import React, { Component } from 'react'
 import styles from './style.scss'
+import moment from 'moment'
 
 export default class Blogposts extends Component {
   render() {
     return (
       <div className={styles.Blogposts}>
-        <h2 className={styles.Header}>Blogposts</h2>
-        {this.props.blogposts.map(post =>
-          <a className='articlelink' href={'/posts/' + post.slug}>
-          <i className='date'>{post.date}</i>
-          <h3 className='title'>{post.title}</h3>
-          </a>
+        {this.props.blogposts.map((post, id) =>
+          <div className={styles.Post}>
+            <a className='articlelink' href={'/posts/' + post.slug} key={id}>
+              <div className={styles.Date}>{moment(new Date(post.date)).format('YYYY-MM-DD')} - {moment(new Date(post.date)).fromNow()}</div>
+              <h3 className='title'>{post.title}</h3>
+            </a>
+          </div>
         )}
       </div>
     )
