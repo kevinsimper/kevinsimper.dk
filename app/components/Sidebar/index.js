@@ -6,7 +6,7 @@ export default class Sidebar extends React.Component {
   render() {
     return (
       <div className={styles.sidebar}>
-        <a href='/'><img className={styles.profilepic} src='https://2.gravatar.com/avatar/b120b6c94e16f352c691849391324206?s=440'/></a>
+        <a href='/'><img className={styles.profilepic} src={'/kevinsimper.jpg'}/></a>
         <h1 className={styles.title}>
           <a href='/'>Kevin Simper</a>
         </h1>
