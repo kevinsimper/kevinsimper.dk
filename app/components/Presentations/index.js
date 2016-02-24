@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import data from './data.json'
 import styles from './style.scss'
-import Card from 'material-ui/lib/card/card'
 
 export default class Presentations extends Component {
   render() {
@@ -12,10 +11,10 @@ export default class Presentations extends Component {
         <div className={styles.Presentations}>
           {data.presentations.map((presentation) => {
             return (
-              <Card className={styles.Presentation}>
+              <div className={styles.Presentation}>
                 <div className={styles.Name}>{presentation.name}</div>
                 <div className={styles.Location}>{presentation.location}</div>
-              </Card>
+              </div>
             )
           })}
         </div>
