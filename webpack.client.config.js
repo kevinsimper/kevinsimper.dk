@@ -38,7 +38,14 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader'},
+      {
+        test: /\.jsx?$/,
+        exclude: /(node_modules|bower_components)/,
+        loader: 'babel', // 'babel-loader' is also a legal name to reference
+        query: {
+          presets: ['react', 'es2015']
+        }
+      },
       { test:  /\.json$/, loader: 'json-loader' },
       { test: /\.s?css$/, loader: ExtractTextPlugin.extract(
         'style',

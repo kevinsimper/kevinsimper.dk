@@ -25,7 +25,14 @@ module.exports = {
   externals: nodeModules,
   module: {
     loaders: [
-      { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader'},
+      {
+        test: /\.jsx?$/,
+        exclude: /(node_modules|bower_components)/,
+        loader: 'babel', // 'babel-loader' is also a legal name to reference
+        query: {
+          presets: ['react', 'es2015']
+        }
+      },
       { test: /\.s?css$/, loaders: ['css-loader/locals?modules&localIdentName=[path][name]---[local]---[hash:base64:5]', 'autoprefixer', 'sass']},
       { test:  /\.json$/, loader: 'json-loader' },
       {
