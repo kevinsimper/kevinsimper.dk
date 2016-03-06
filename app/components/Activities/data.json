@@ -2,6 +2,12 @@
   "activities": [
     {
       "type": "Medium",
+      "title": "Review of getting free HTTPS with \"Let's Encrypt\"",
+      "link": "https://medium.com/@kevinsimper/review-of-getting-free-https-with-let-s-encrypt-5515f74be5f6",
+      "date": "2016-03-06"
+    },
+    {
+      "type": "Medium",
       "title": "No, I will not cross-promote your event!",
       "link": "https://medium.com/@kevinsimper/no-i-will-not-cross-promote-your-event-16ccda37f773",
       "date": "2016-02-18"
