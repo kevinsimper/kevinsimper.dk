@@ -1,6 +1,10 @@
 {
   "presentations": [
     {
+      "name": "How to deploy with Docker",
+      "location": "Cusco Developer Group, Peru - May 2016"
+    },
+    {
       "name": "Docker Introduction - What you need to know",
       "location": "IT University of Copenhagen - Marts 2016"
     },
@@ -11,6 +15,10 @@
     {
       "name": "Kubernetes Introduction - Workshop 3 hours",
       "location": "Docker Copenhagen - February 2016"
+    },
+    {
+      "name": "Introduction to HTML and CSS",
+      "location": "Codher Introduction Weekend - January 2016"
     },
     {
       "name": "How do you survive key-loss with Docker?",
