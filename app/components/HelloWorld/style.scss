@@ -1,5 +1,5 @@
 .HelloWorld {
-  max-width: 813px;
+  max-width: 750px;
   @media(min-width: 800px) {
     margin: 2em;
   }
@@ -16,4 +16,7 @@
 }
 .SecondIntro {
   font-size: 1.3em;
+}
+.Smiley {
+  width: 33px;
 }
