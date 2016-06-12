@@ -1,0 +1,8 @@
+kevinsimper:
+  image: kevinsimper/blog
+  restart: always
+  target_num_containers: 2
+  autoredeploy: true
+  environment:
+    - NODE_ENV=production
+    - VIRTUAL_HOST=www.kevinsimper.dk, kevinsimper.dk
