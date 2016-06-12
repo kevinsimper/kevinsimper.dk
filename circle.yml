@@ -17,5 +17,5 @@ deployment:
   master:
     branch: master
     commands:
-      - docker login -u kevinsimper -p $DOCKER_PASSWORD -e kevin.simper@gmail.com registry.blackbeard.io
+      - docker login -u kevinsimper -p $DOCKER_PASSWORD -e kevin.simper@gmail.com
       - npm run deploy
