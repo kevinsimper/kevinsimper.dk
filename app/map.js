@@ -50,6 +50,13 @@ window.initMap = function () {
       }
     },
     {
+      "name": "latacunga",
+      "location": {
+        "lat": -0.7754954,
+        "lng": -78.52064999999999
+      }
+    },
+    {
       "name": "baños ecuador",
       "location": {
         "lat": -1.3928344,
@@ -61,6 +68,13 @@ window.initMap = function () {
       "location": {
         "lat": -1.6635508,
         "lng": -78.65464600000001
+      }
+    },
+    {
+      "name": "alausi",
+      "location": {
+        "lat": -2.198607,
+        "lng": -78.8467579
       }
     },
     {
@@ -141,6 +155,13 @@ window.initMap = function () {
       }
     },
     {
+      "name": "Arequipa",
+      "location": {
+        "lat": -16.4090474,
+        "lng": -71.53745099999998
+      }
+    },
+    {
       "name": "Chivay Peru",
       "location": {
         "lat": -15.6393489,
@@ -181,7 +202,6 @@ window.initMap = function () {
   })
   map.fitBounds(bounds)
 
-  // let name = 'keywest'
   var flightPlanCoordinates = places.map(place => place.location)
   var flightPath = new google.maps.Polyline({
     path: flightPlanCoordinates,
@@ -193,6 +213,7 @@ window.initMap = function () {
 
   flightPath.setMap(map);
 
+  // let name = 'latagunga'
   // geocoder.geocode( { 'address': name}, function(results, status) {
   //   if (status === google.maps.GeocoderStatus.OK) {
   //     console.log(JSON.stringify({
