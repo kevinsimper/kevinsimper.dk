@@ -192,7 +192,8 @@ window.initMap = function () {
   ]
 
   let bounds = new google.maps.LatLngBounds()
-  places.map((place) => {
+  // remove the first location as it is copenhagen
+  places.slice(1, places.length).map((place) => {
     var marker = new google.maps.Marker({
         map: map,
         position: place.location,
