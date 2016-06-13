@@ -77,7 +77,10 @@ app.get('/about', (req, res) => {
 })
 
 app.get('/map', (req, res) => {
-  res.send(map())
+  res.send(map({
+    production,
+    assets
+  }))
 })
 
 var port = process.env.PORT || 9000;
