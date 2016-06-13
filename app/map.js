@@ -8,6 +8,13 @@ window.initMap = function () {
 
   var places = [
     {
+      "name": "copenhagen",
+      "location": {
+        "lat": 55.6760968,
+        "lng": 12.568337100000008
+      }
+    },
+    {
       name: 'Fort Lauderdale',
       location: {
         "lat": 26.1224386,
@@ -26,6 +33,13 @@ window.initMap = function () {
       "location": {
         "lat": 28.419185,
         "lng": -81.58211899999998
+      }
+    },
+    {
+      name: 'Fort Lauderdale',
+      location: {
+        "lat": 26.1224386,
+        "lng": -80.13731740000003
       }
     },
     {
@@ -71,6 +85,13 @@ window.initMap = function () {
       }
     },
     {
+      name: 'Guayaquil',
+      location: {
+        "lat": -2.1709979,
+        "lng": -79.92235920000002
+      }
+    },
+    {
       "name": "Mancora",
       "location": {
         "lat": -4.1034782,
@@ -106,6 +127,13 @@ window.initMap = function () {
       }
     },
     {
+      "name": "Cusco",
+      "location": {
+        "lat": -13.53195,
+        "lng": -71.96746259999998
+      }
+    },
+    {
       "name": "Puno",
       "location": {
         "lat": -15.8402218,
@@ -132,6 +160,13 @@ window.initMap = function () {
         "lat": -13.9379378,
         "lng": -75.8007093
       }
+    },
+    {
+      "name": "Lima",
+      "location": {
+        "lat": -12.046374,
+        "lng": -77.0427934
+      }
     }
   ]
 
@@ -146,6 +181,17 @@ window.initMap = function () {
   map.fitBounds(bounds)
 
   // let name = 'keywest'
+  var flightPlanCoordinates = places.map(place => place.location)
+  var flightPath = new google.maps.Polyline({
+    path: flightPlanCoordinates,
+    geodesic: true,
+    strokeColor: '#FF0000',
+    strokeOpacity: 1.0,
+    strokeWeight: 2
+  });
+
+  flightPath.setMap(map);
+
   // geocoder.geocode( { 'address': name}, function(results, status) {
   //   if (status === google.maps.GeocoderStatus.OK) {
   //     console.log(JSON.stringify({
