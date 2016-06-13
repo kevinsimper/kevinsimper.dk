@@ -33,7 +33,8 @@ app.get('/', (req, res) => {
   res.send(layout({
     content: content,
     production: production,
-    assets
+    assets,
+    title: 'Kevin Simper - Front-end developer'
   }))
 })
 
@@ -53,7 +54,8 @@ app.get('/posts/:post', (req, res) => {
   res.send(layout({
     content: content,
     production: production,
-    assets
+    assets,
+    title: blogpost.title
   }))
 })
 
@@ -68,7 +70,8 @@ app.get('/about', (req, res) => {
   res.send(layout({
     content,
     production,
-    assets
+    assets,
+    title: 'CV and About Kevin Simper'
   }))
 })
 
