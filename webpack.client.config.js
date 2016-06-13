@@ -5,7 +5,7 @@ var AssetsPlugin = require('assets-webpack-plugin');
 var production = process.env.NODE_ENV === 'production'
 var publicPath = (production) ? '/build/' : 'http://localhost:8080/build/'
 var path = __dirname + '/public/build/'
-var jsName = (production) ? '[name]-bundle-[hash].js' : 'bundle.js'
+var jsName = (production) ? '[name]-bundle-[hash].js' : '[name].bundle.js'
 var cssName = (production) ? '[name]-bundle-[hash].css' : '[name].css'
 
 var plugins = [
@@ -30,7 +30,10 @@ if(production) {
 }
 
 module.exports = {
-  entry: './app/client.js',
+  entry: {
+    main: './app/client.js',
+    map: './app/map.js'
+  },
   output: {
     path: path,
     publicPath: publicPath,

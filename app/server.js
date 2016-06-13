@@ -1,6 +1,7 @@
 import express from 'express'
 import compression from 'compression'
 import layout from 'jade!./layout.jade'
+import map from 'jade!./map.jade'
 import blogdata from './blog/posts/_data.json'
 import React from 'react'
 import { renderToString } from 'react-dom/server'
@@ -73,6 +74,10 @@ app.get('/about', (req, res) => {
     assets,
     title: 'CV and About Kevin Simper'
   }))
+})
+
+app.get('/map', (req, res) => {
+  res.send(map())
 })
 
 var port = process.env.PORT || 9000;
