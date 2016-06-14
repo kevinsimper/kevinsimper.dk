@@ -1,6 +1,14 @@
 {
   "presentations": [
     {
+      "name": "React Workshop",
+      "location": "React Lima, Peru - 14. June 2016"
+    },
+    {
+      "name": "Universal Apps - The good, the bad and the ugly",
+      "location": "React Lima, Peru - 14. June 2016"
+    },
+    {
       "name": "How to deploy with Docker",
       "location": "Cusco Developer Group, Peru - May 2016"
     },
