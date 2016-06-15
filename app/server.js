@@ -11,6 +11,7 @@ import HelloWorld from './components/HelloWorld'
 import Blogposts from './components/Blogposts'
 import About from './components/About'
 import Activities from './components/Activities'
+import Contact from './components/Contact'
 
 var app = express();
 var production = process.env.NODE_ENV === 'production'
@@ -73,6 +74,22 @@ app.get('/about', (req, res) => {
     production,
     assets,
     title: 'CV and About Kevin Simper'
+  }))
+})
+
+app.get('/contact', (req, res) => {
+  let content = renderToString(
+    <App>
+      <Content>
+        <Contact/>
+      </Content>
+    </App>
+  )
+  res.send(layout({
+    content,
+    production,
+    assets,
+    title: 'Contact Kevin Simper'
   }))
 })
 
