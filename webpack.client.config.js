@@ -32,7 +32,7 @@ if(production) {
 module.exports = {
   entry: {
     main: './app/client.js',
-    map: './app/map.js'
+    map: './app/map/map.js'
   },
   output: {
     path: path,

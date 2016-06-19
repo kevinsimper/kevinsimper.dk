@@ -1,7 +1,7 @@
 import express from 'express'
 import compression from 'compression'
 import layout from 'jade!./layout.jade'
-import map from 'jade!./map.jade'
+import map from 'jade!./map/map.jade'
 import blogdata from './blog/posts/_data.json'
 import React from 'react'
 import { renderToString } from 'react-dom/server'
