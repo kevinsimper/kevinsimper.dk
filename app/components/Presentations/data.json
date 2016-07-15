@@ -45,12 +45,20 @@
       "location": "CopenhagenJS - November 2015"
     },
     {
+      "name": "Face Recognition on old pictures",
+      "location": "Hack4DK - October 2015"
+    },
+    {
       "name": "Introduction to webtorrent",
       "location": "Copenhagen Frontenders - August 2015"
     },
     {
       "name": "Lessons learnt building with Reflux.js",
       "location": "CopenhagenJS - May 2015"
+    },
+    {
+      "name": "Docker Hosting - How to ship those containers?",
+      "location": "Docker Copenhagen - February 2015"
     },
     {
       "name": "Firespeed prototyping with Firebase",
