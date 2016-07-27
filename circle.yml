@@ -4,12 +4,11 @@ machine:
 dependencies:
   cache_directories:
     - "~/docker"
+    - "node_modules"
   override:
-    - docker pull node:5
-    - mkdir -p ~/docker
-    - if [[ -e ~/docker/kevinsimperdk_web.tar ]]; then docker load -i ~/docker/kevinsimperdk_web.tar; fi
+    - docker pull node:6
+    - docker run -it --workdir /app -v $(pwd):/app node:6 npm install
     - docker-compose build
-    - docker save "kevinsimperdk_web" > ~/docker/kevinsimperdk_web.tar
 test:
   override:
     - echo "no test"
