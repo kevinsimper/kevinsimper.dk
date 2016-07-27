@@ -2,7 +2,7 @@
   "name": "kevinsimper.dk",
   "version": "0.0.1",
   "description": "My personal blog",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
     "watch-server": "webpack -w --progress --config webpack.server.config.js",
     "watch-client": "webpack-dev-server -w --progress --config webpack.client.config.js",
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@bitbucket.org/KevinSimper/kevinsimper.dk.git"
+    "url": "ssh://git@github.com:kevinsimper/kevinsimper.dk.git"
   },
   "author": "",
   "license": "MIT",
