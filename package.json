@@ -11,8 +11,7 @@
     "compile-client": "NODE_ENV=production webpack --progress --config webpack.client.config.js",
     "build": "npm run compile-client && npm run compile-server",
     "post-install": "npm run build",
-    "start": "DEBUG=express:* node dist/server.js",
-    "start-watch": "nodemon --exec npm start -w ./dist/",
+    "start": "DEBUG=express:* node server.js",
     "deploy": "docker tag -f kevinsimperdk_web kevinsimper/blog && docker push kevinsimper/blog"
   },
   "repository": {
@@ -39,6 +38,7 @@
     "babel-loader": "^6.2.4",
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-react": "^6.5.0",
+    "chokidar": "^1.6.0",
     "css-loader": "^0.23.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",

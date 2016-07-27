@@ -13,13 +13,12 @@ import About from './components/About'
 import Activities from './components/Activities'
 import Contact from './components/Contact'
 
-var app = express();
+var app = express.Router();
 var production = process.env.NODE_ENV === 'production'
 
 var assets = (production) ? require(__dirname + '/../public/build/webpack.assets.json') : {}
 
 app.use(compression())
-app.use(express.static(process.cwd() + '/public', { maxAge: 86400000 }));
 
 app.get('/', (req, res) => {
   let content = renderToString(
@@ -100,7 +99,4 @@ app.get('/map', (req, res) => {
   }))
 })
 
-var port = process.env.PORT || 9000;
-app.listen(port, function(){
-  console.log('Listening on port ' + port);
-});
+module.exports = app
