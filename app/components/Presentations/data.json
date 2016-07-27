@@ -2,71 +2,88 @@
   "presentations": [
     {
       "name": "React Workshop",
-      "location": "React Lima, Peru - 14. June 2016"
+      "location": "React Lima, Peru - 14. June 2016",
+      "description": "Made a workshop on how to get started with React and the attendees made a contact formular."
     },
     {
       "name": "Universal Apps - The good, the bad and the ugly",
-      "location": "React Lima, Peru - 14. June 2016"
+      "location": "React Lima, Peru - 14. June 2016",
+      "description": "My experiences on developing universal apps and what to do and what not to do."
     },
     {
       "name": "How to deploy with Docker",
-      "location": "Cusco Developer Group, Peru - May 2016"
+      "location": "Cusco Developer Group, Peru - May 2016",
+      "description": "I showed how to deploy a website from scracth with Docker."
     },
     {
       "name": "Docker Introduction - What you need to know",
-      "location": "IT University of Copenhagen - Marts 2016"
+      "location": "IT University of Copenhagen - Marts 2016",
+      "description": "Talked about why Docker matters and the reason why it is a billion dollar company. Showed a demo on how to use Docker."
     },
     {
       "name": "Swarm 1.1 release and Introduction",
-      "location": "Docker Copenhagen - Marts 2016"
+      "location": "Docker Copenhagen - Marts 2016",
+      "description": "Showed the newest version of Docker, including that of rescheduling of containers."
     },
     {
       "name": "Kubernetes Introduction - Workshop 3 hours",
-      "location": "Docker Copenhagen - February 2016"
+      "location": "Docker Copenhagen - February 2016",
+      "description": "Made a workshop with 5 scenarios on how to use Kubernetes, from launching a Kubernetes cluster on your own computer to the hardest scenario of launching a fault-tolerant Redis cluster."
     },
     {
       "name": "Introduction to HTML and CSS",
-      "location": "Codher Introduction Weekend - January 2016"
+      "location": "Codher Introduction Weekend - January 2016",
+      "description": "Prepared a introduction to learn a group of girls how to think in HTML, \"everything is a square\" and the semantic of html tags."
     },
     {
       "name": "How do you survive key-loss with Docker?",
-      "location": "Docker Copenhagen - January 2016"
+      "location": "Docker Copenhagen - January 2016",
+      "description": "Gave a thorough guide on how docker hub can survive a key loss with their Docker Notary project. Talking about how they switch out root keys and their standard they have published."
     },
     {
       "name": "JavaScript Jeopardy",
-      "location": "CopenhagenJS - January 2016"
+      "location": "CopenhagenJS - January 2016",
+      "description": "Prepared a 30 multiple-choice about everything from founders of projects to how to change the inline style of a element with basic JavaScript."
     },
     {
       "name": "Introduction to Docker - Workshop",
-      "location": "Docker Copenhagen - December 2015"
+      "location": "Docker Copenhagen - December 2015",
+      "description": "Gave a 3-hour introduction to Docker about everything you need to know. We talked about why it mattered and how to get started with Docker on their next project."
     },
     {
       "name": "The land of Isomorphic Apps",
-      "location": "CopenhagenJS - November 2015"
+      "location": "CopenhagenJS - November 2015",
+      "description": "Talked about my experience creating a universal app. What to do and especially what not to do!"
     },
     {
       "name": "Face Recognition on old pictures",
-      "location": "Hack4DK - October 2015"
+      "location": "Hack4DK - October 2015",
+      "description": "During a hackathon, I worked on doing facial recognition and then gave a presentation on what I found interesting with the results and how to get started with it."
     },
     {
       "name": "Introduction to webtorrent",
-      "location": "Copenhagen Frontenders - August 2015"
+      "location": "Copenhagen Frontenders - August 2015",
+      "description": "I had been hacking around with webtorrent and gave a talk about this project. I showed some small projects that I have made and explained the concept of webtorrent and what made it work."
     },
     {
       "name": "Lessons learnt building with Reflux.js",
-      "location": "CopenhagenJS - May 2015"
+      "location": "CopenhagenJS - May 2015",
+      "description": "I talked about lesson learned working with Reflux.js, a simple flux implementation. I showed why a unidirectional flow was a positive thing for both the development and debugging part of web development."
     },
     {
       "name": "Docker Hosting - How to ship those containers?",
-      "location": "Docker Copenhagen - February 2015"
+      "location": "Docker Copenhagen - February 2015",
+      "description": "We all love containers, but what are the actually easiest ways to get started hosting those containers online. I showed an example on how to get started with hosting containers on Tutum (now Docker Cloud)."
     },
     {
       "name": "Firespeed prototyping with Firebase",
-      "location": "CopenhagenJS - April 2014"
+      "location": "CopenhagenJS - April 2014",
+      "description": "I had been working on Firebase some time and showed how it was awesome for small and quick prototypes where you wanted something awesome quick."
     },
     {
       "name": "20 minutes Super Mario",
-      "location": "CopenhagenJS - Februar 2014"
+      "location": "CopenhagenJS - Februar 2014",
+      "description": "I showed how you could build a Super Mario clone in literally 20 minutes of time with Crafty.js and all the built in modules."
     }
   ]
 }

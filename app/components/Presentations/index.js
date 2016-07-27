@@ -14,6 +14,7 @@ export default class Presentations extends Component {
               <div className={styles.Presentation}>
                 <div className={styles.Name}>{presentation.name}</div>
                 <div className={styles.Location}>{presentation.location}</div>
+                <div className={styles.Description}>{presentation.description}</div>
               </div>
             )
           })}
