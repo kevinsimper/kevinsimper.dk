@@ -14,7 +14,8 @@ export default class WorkExperience extends React.Component {
                 <h3 className={styles.Company}>{item.company}</h3>
                 <div>{item.title}</div>
                 <div>{item.location}</div>
-                <div>Started {item.start}</div>
+                <div>Started {item.start}{item.end ? ' - ' + item.end : ''}</div>
+                <div className={styles.Description}>{item.description}</div>
               </div>
             )
           })}
