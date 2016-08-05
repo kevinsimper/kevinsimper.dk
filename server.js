@@ -17,7 +17,7 @@ if(!production) {
   })
 }
 
-app.use(express.static('/public', { maxAge: 86400000 }));
+app.use(express.static('public', { maxAge: 86400000 }));
 
 app.use(function(req, res, next) {
   require('./dist/server')(req, res, next)
