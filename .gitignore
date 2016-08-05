@@ -2,3 +2,4 @@ node_modules/
 temp/
 dist/
 public/build/
+docker-cloud.yml

@@ -1,0 +1,13 @@
+.Instagram {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -40px -40px 60px;
+  div {
+    width: 25%;
+    height: 17vw;
+    background-size: cover;
+    img {
+      width: 100%;
+    }
+  }
+}

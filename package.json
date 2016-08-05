@@ -21,6 +21,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.13.1",
     "compression": "^1.6.2",
     "express": "^4.13.4",
     "history": "^3.0.0",

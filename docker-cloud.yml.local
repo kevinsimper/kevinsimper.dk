@@ -6,3 +6,4 @@ kevinsimper:
   environment:
     - NODE_ENV=production
     - VIRTUAL_HOST=www.kevinsimper.dk, kevinsimper.dk
+    - INSTAGRAM_TOKEN=

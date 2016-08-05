@@ -12,6 +12,8 @@ import Blogposts from './components/Blogposts'
 import About from './components/About'
 import Activities from './components/Activities'
 import Contact from './components/Contact'
+import Instagram from './components/Instagram'
+import { get } from 'axios'
 
 var app = express.Router();
 var production = process.env.NODE_ENV === 'production'
@@ -21,22 +23,30 @@ var assets = (production) ? require(__dirname + '/../public/build/webpack.assets
 app.use(compression())
 
 app.get('/', (req, res) => {
-  let content = renderToString(
-    <App>
-      <Content>
-        <HelloWorld/>
-        <Activities/>
-        <Blogposts blogposts={blogdata}/>
-      </Content>
-    </App>
-  )
 
-  res.send(layout({
-    content: content,
-    production: production,
-    assets,
-    title: 'Kevin Simper - Front-end developer'
-  }))
+  let data = get('https://api.instagram.com/v1/users/self/media/recent/?access_token=' + process.env.INSTAGRAM_TOKEN)
+  console.log('kevin')
+  data.then((instares) => {
+    console.log('kevin3')
+    let images = instares.data.data.slice(0, 8)
+    let content = renderToString(
+      <App>
+        <Content>
+          <Instagram images={images}/>
+          <HelloWorld/>
+          <Activities/>
+          <Blogposts blogposts={blogdata}/>
+        </Content>
+      </App>
+    )
+
+    res.send(layout({
+      content: content,
+      production: production,
+      assets,
+      title: 'Kevin Simper - Front-end developer'
+    }))
+  })
 })
 
 app.get('/posts/:post', (req, res) => {
