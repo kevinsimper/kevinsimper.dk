@@ -2,6 +2,12 @@
   "activities": [
     {
       "type": "Medium",
+      "title": "10 ways to improve Docker Hub Search",
+      "link": "https://medium.com/@kevinsimper/10-ways-to-improve-docker-hub-search-564926749503",
+      "date": "2016-08-07"
+    },
+    {
+      "type": "Medium",
       "title": "Don't use nodemon, there are better ways!",
       "link": "https://medium.com/@kevinsimper/dont-use-nodemon-there-are-better-ways-fc016b50b45e",
       "date": "2016-07-22"
