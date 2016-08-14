@@ -2,6 +2,12 @@
   "activities": [
     {
       "type": "Medium",
+      "title": "How to sell Docker to non-technical people",
+      "link": "https://medium.com/@kevinsimper/how-to-sell-docker-to-non-technical-people-751d25bf0722",
+      "date": "2016-08-13"
+    },
+    {
+      "type": "Medium",
       "title": "10 ways to improve Docker Hub Search",
       "link": "https://medium.com/@kevinsimper/10-ways-to-improve-docker-hub-search-564926749503",
       "date": "2016-08-07"
