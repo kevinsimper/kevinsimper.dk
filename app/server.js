@@ -1,3 +1,9 @@
+var opbeat = require('opbeat').start({
+  appId: 'c2ed59c7d9',
+  organizationId: '414d75509c8b42938651e8660bfce051',
+  secretToken: 'cb9d65d129cb5b2325fdbc552f6652e0872ec297'
+})
+
 import express from 'express'
 import compression from 'compression'
 import layout from 'jade!./layout.jade'

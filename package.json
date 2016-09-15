@@ -28,6 +28,7 @@
     "moment": "^2.13.0",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
+    "opbeat": "^3.17.2",
     "react-router": "^2.4.1",
     "serve-favicon": "^2.3.0"
   },
