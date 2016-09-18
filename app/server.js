@@ -13,12 +13,9 @@ import React from 'react'
 import { renderToString } from 'react-dom/server'
 import App from './components/App'
 import Content from './components/Content'
-import HelloWorld from './components/HelloWorld'
-import Blogposts from './components/Blogposts'
 import About from './components/About'
-import Activities from './components/Activities'
 import Contact from './components/Contact'
-import Instagram from './components/Instagram'
+import Frontpage from './components/Frontpage'
 import { get } from 'axios'
 
 var app = express.Router();
@@ -38,10 +35,7 @@ app.get('/', (req, res) => {
     let content = renderToString(
       <App>
         <Content>
-          <Instagram images={images}/>
-          <HelloWorld/>
-          <Activities/>
-          <Blogposts blogposts={blogdata}/>
+          <Frontpage images={images} blogdata={blogdata} />
         </Content>
       </App>
     )
@@ -52,6 +46,9 @@ app.get('/', (req, res) => {
       assets,
       title: 'Kevin Simper - Front-end developer'
     }))
+  }).catch((e) => {
+    console.log(e)
+    res.send('Instagram failed loading!')
   })
 })
 

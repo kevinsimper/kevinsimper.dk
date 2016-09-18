@@ -1,0 +1,14 @@
+.Frontpage {
+  display: flex;
+  flex-direction: column-reverse;
+  @media(min-width: 2100px) {
+    flex-direction: row;
+  }
+}
+.Content {
+  flex: 1;
+  margin-right: 40px;
+}
+.Images {
+  flex: 1;
+}
