@@ -1,8 +1,17 @@
 "use strict"
+let production = process.env.NODE_ENV === 'production'
+
+if(production) {
+  var opbeat = require('opbeat').start({
+    appId: 'c2ed59c7d9',
+    organizationId: '414d75509c8b42938651e8660bfce051',
+    secretToken: 'cb9d65d129cb5b2325fdbc552f6652e0872ec297'
+  })
+}
+
 let express = require('express')
 let app = express()
 
-let production = process.env.NODE_ENV === 'production'
 if(!production) {
   var chokidar = require('chokidar')
   var watcher = chokidar.watch('./dist')
