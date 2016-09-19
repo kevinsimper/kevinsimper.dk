@@ -1,6 +1,11 @@
 {
   "presentations": [
     {
+      "name": "Distributed file system with IPFS",
+      "location": "Foo Cafe Copenhagen - 19. September 2016",
+      "description": "A presentation about distributed hash tables, hashing of files and hands on use of IPFS"
+    },
+    {
       "name": "React Workshop",
       "location": "React Lima, Peru - 14. June 2016",
       "description": "Made a workshop on how to get started with React and the attendees made a contact formular."
