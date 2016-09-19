@@ -2,6 +2,18 @@
   "activities": [
     {
       "type": "Medium",
+      "title": "How to average RGB colors together?",
+      "link": "https://medium.com/@kevinsimper/how-to-average-rgb-colors-together-6cd3ef1ff1e5",
+      "date": "2016-08-17"
+    },
+    {
+      "type": "Medium",
+      "title": "Why containers is such a good thing, apart from the technical side",
+      "link": "https://medium.com/@kevinsimper/why-containers-is-such-a-good-thing-apart-from-the-technical-side-6f20dd54ccfd",
+      "date": "2016-09-13"
+    },
+    {
+      "type": "Medium",
       "title": "How to sell Docker to non-technical people",
       "link": "https://medium.com/@kevinsimper/how-to-sell-docker-to-non-technical-people-751d25bf0722",
       "date": "2016-08-13"
