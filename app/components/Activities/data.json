@@ -2,6 +2,12 @@
   "activities": [
     {
       "type": "Medium",
+      "title": "Self-hosting email in 2016 is still hard",
+      "link": "https://medium.com/@kevinsimper/self-hosting-email-in-2016-is-still-hard-797a6320bfa8v",
+      "date": "2016-09-23"
+    }
+    {
+      "type": "Medium",
       "title": "How to average RGB colors together?",
       "link": "https://medium.com/@kevinsimper/how-to-average-rgb-colors-together-6cd3ef1ff1e5",
       "date": "2016-09-17"
