@@ -2,6 +2,18 @@
   "activities": [
     {
       "type": "Medium",
+      "title": "Make cloud provides outprice each other",
+      "link": "https://medium.com/@kevinsimper/make-cloud-provides-outprice-each-other-4a75a490e67f",
+      "date": "2016-09-25"
+    },
+    {
+      "type": "Medium",
+      "title": "Continuous Deployment & Continuous Integration — 10 things to do and not to do!",
+      "link": "https://medium.com/@kevinsimper/continuous-deployment-continuous-integration-10-things-to-do-and-not-to-do-178292055a96",
+      "date": "2016-09-24"
+    },
+    {
+      "type": "Medium",
       "title": "Self-hosting email in 2016 is still hard",
       "link": "https://medium.com/@kevinsimper/self-hosting-email-in-2016-is-still-hard-797a6320bfa8v",
       "date": "2016-09-23"
