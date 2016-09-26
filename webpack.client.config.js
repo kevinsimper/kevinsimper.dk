@@ -13,12 +13,14 @@ var cssName = (production) ? '[name]-bundle-[hash].css' : '[name].css'
 
 var plugins = [
   new ExtractTextPlugin(cssName),
+  new webpack.optimize.OccurrenceOrderPlugin(),
+  new webpack.HotModuleReplacementPlugin(),
+  new webpack.NoErrorsPlugin()
 ]
-
+var entry = []
 if(production) {
   plugins.push(
     new webpack.optimize.DedupePlugin(),
-    new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
           warnings: false
@@ -31,10 +33,15 @@ if(production) {
     })
   )
 }
+entry.push('./app/client.js')
+if(!production) {
+  entry.push('webpack-hot-middleware/client')
+}
+
 
 module.exports = {
   entry: {
-    main: './app/client.js',
+    main: entry,
     map: './app/map/map.js'
   },
   output: {
