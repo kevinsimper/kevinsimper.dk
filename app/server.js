@@ -20,11 +20,8 @@ var assets = global.assets
 app.use(compression())
 
 app.get('/', (req, res) => {
-
   let data = get('https://api.instagram.com/v1/users/self/media/recent/?access_token=' + process.env.INSTAGRAM_TOKEN)
-  console.log('kevin')
   data.then((instares) => {
-    console.log('kevin3')
     let images = instares.data.data.slice(0, 8)
     let content = renderToString(
       <App>
