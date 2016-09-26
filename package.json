@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "watch-server": "webpack -w --progress --config webpack.server.config.js",
-    "watch-client": "webpack-dev-server -w --progress --config webpack.client.config.js",
+    "watch-client": "webpack-dev-server --inline -w --progress --config webpack.client.config.js",
     "watch": "npm run watch-client & npm run watch-server",
     "compile-server": "NODE_ENV=production webpack --progress --config webpack.server.config.js",
     "compile-client": "NODE_ENV=production webpack --progress --config webpack.client.config.js",
