@@ -15,7 +15,7 @@ import { get } from 'axios'
 var app = express.Router();
 var production = process.env.NODE_ENV === 'production'
 
-var assets = (production) ? require(__dirname + '/../public/build/webpack.assets.json') : {}
+var assets = global.assets
 
 app.use(compression())
 

@@ -1,9 +1,12 @@
 var webpack = require('webpack')
 var ExtractTextPlugin = require("extract-text-webpack-plugin")
 var AssetsPlugin = require('assets-webpack-plugin');
+var autoprefixer = require('autoprefixer')
+var precss = require('precss')
+var colorFunction = require("postcss-color-function")
 
 var production = process.env.NODE_ENV === 'production'
-var publicPath = (production) ? '/build/' : 'http://localhost:8080/build/'
+var publicPath = (production) ? '/build/' : '/build/'
 var path = __dirname + '/public/build/'
 var jsName = (production) ? '[name]-bundle-[hash].js' : '[name].bundle.js'
 var cssName = (production) ? '[name]-bundle-[hash].css' : '[name].css'
@@ -52,7 +55,7 @@ module.exports = {
       { test:  /\.json$/, loader: 'json-loader' },
       { test: /\.s?css$/, loader: ExtractTextPlugin.extract(
         'style',
-        'css?modules&localIdentName=[path][name]---[local]---[hash:base64:5]!autoprefixer!sass'
+        'css?modules&localIdentName=[path][name]---[local]---[hash:base64:5]!postcss-loader'
       )},
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
@@ -68,5 +71,8 @@ module.exports = {
     ]
   },
   plugins: plugins,
-  devtool: 'source-map'
+  devtool: 'source-map',
+  postcss: function () {
+    return [autoprefixer, colorFunction, precss]
+  }
 }

@@ -11,11 +11,17 @@ if(production) {
 
 let express = require('express')
 let app = express()
+let webpack = require('webpack')
 
 if(!production) {
+  let config = require('./webpack.client.config')
+  let compiler = webpack(config)
+  app.use(require('webpack-dev-middleware')(compiler, {
+    noInfo: true, publicPath: config.output.publicPath
+  }))
+
   var chokidar = require('chokidar')
   var watcher = chokidar.watch('./dist')
-
   watcher.on('ready', function() {
     watcher.on('all', function() {
       console.log("Clearing /dist/ module cache from server")
@@ -24,6 +30,19 @@ if(!production) {
       })
     })
   })
+}
+
+let defaultAssets = {
+  main: {
+    js: '/build/bundle.js',
+    css: '/build/main.css'
+  }
+}
+
+if(production) {
+  global.assets = require(__dirname + '/public/build/webpack.assets.json')
+} else {
+  global.assets = defaultAssets
 }
 
 app.use(express.static('public', { maxAge: 86400000 }));
