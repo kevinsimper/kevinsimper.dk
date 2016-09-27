@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import HelloWorld from '../HelloWorld'
-import Blogposts from '../Blogposts'
 import Activities from '../Activities'
 import Instagram from '../Instagram'
 import styles from './style.scss'
