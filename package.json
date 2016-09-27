@@ -6,8 +6,8 @@
   "scripts": {
     "watch-server": "webpack -w --progress --config webpack.server.config.js",
     "watch": "npm run watch-server",
-    "compile-server": "NODE_ENV=production webpack --progress --config webpack.server.config.js",
-    "compile-client": "NODE_ENV=production webpack --progress --config webpack.client.config.js",
+    "compile-server": "NODE_ENV=production webpack --bail --progress --config webpack.server.config.js",
+    "compile-client": "NODE_ENV=production webpack --bail --progress --config webpack.client.config.js",
     "build": "npm run compile-client && npm run compile-server",
     "post-install": "npm run build",
     "start": "DEBUG=express:* node server.js",
