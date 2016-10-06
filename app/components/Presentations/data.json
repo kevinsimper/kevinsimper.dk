@@ -1,9 +1,14 @@
 {
   "presentations": [
     {
+      "name": "Learn to be a DevOps - Workshop",
+      "location": "Docker Copenhagen - 4. September 2016",
+      "description": "A workshop that teaches the flow of continuous integration and continuous deployment."
+    },
+    {
       "name": "Distributed file system with IPFS",
       "location": "Foo Cafe Copenhagen - 19. September 2016",
-      "description": "A presentation about distributed hash tables, hashing of files and hands on use of IPFS"
+      "description": "A presentation about distributed hash tables, hashing of files and hands on use of IPFS."
     },
     {
       "name": "React Workshop",
