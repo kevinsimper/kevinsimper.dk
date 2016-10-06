@@ -1,8 +1,13 @@
 {
   "presentations": [
     {
+      "name": "How to be an awesome developer and get paid well at the same time!",
+      "location": "ITU Innovators - 6. October 2016",
+      "description": "What does it take to be an awesome developer and how do you ensure you get paid well."
+    },
+    {
       "name": "Learn to be a DevOps - Workshop",
-      "location": "Docker Copenhagen - 4. September 2016",
+      "location": "Docker Copenhagen - 4. October 2016",
       "description": "A workshop that teaches the flow of continuous integration and continuous deployment."
     },
     {
