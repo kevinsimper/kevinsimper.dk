@@ -14,13 +14,11 @@ var cssName = (production) ? '[name]-bundle-[hash].css' : '[name].css'
 var plugins = [
   new ExtractTextPlugin(cssName),
   new webpack.optimize.OccurrenceOrderPlugin(),
-  new webpack.HotModuleReplacementPlugin(),
-  new webpack.NoErrorsPlugin()
+  new webpack.HotModuleReplacementPlugin()
 ]
 var entry = []
 if(production) {
   plugins.push(
-    new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
           warnings: false
@@ -54,32 +52,26 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/,
-        loader: 'babel', // 'babel-loader' is also a legal name to reference
+        loader: 'babel-loader', // 'babel-loader' is also a legal name to reference
         query: {
           presets: ['react', 'es2015']
         }
       },
       { test:  /\.json$/, loader: 'json-loader' },
-      { test: /\.s?css$/, loader: ExtractTextPlugin.extract(
-        'style',
-        'css?modules&localIdentName=[path][name]---[local]---[hash:base64:5]!postcss-loader'
-      )},
+      { test: /\.s?css$/, loader: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader?modules&localIdentName=[path][name]---[local]---[hash:base64:5]!postcss-loader' })},
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
         loaders: [
-            'file?hash=sha512&digest=hex&name=[hash].[ext]',
-            'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
+            'file-loader?hash=sha512&digest=hex&name=[hash].[ext]',
+            'image-webpack-loader?bypassOnDebug&optimizationLevel=7&interlaced=false'
         ]
       },
       {
         test: /\.(woff|eot|woff2|ttf)$/,
-        loader: 'url?limit=100000'
+        loader: 'url-loader?limit=100000'
       }
     ]
   },
   plugins: plugins,
-  devtool: 'source-map',
-  postcss: function () {
-    return [autoprefixer, colorFunction, precss]
-  }
+  devtool: 'source-map'
 }

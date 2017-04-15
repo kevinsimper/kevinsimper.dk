@@ -31,7 +31,7 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/,
-        loader: 'babel', // 'babel-loader' is also a legal name to reference
+        loader: 'babel-loader', // 'babel-loader' is also a legal name to reference
         query: {
           presets: ['react', 'es2015']
         }
@@ -41,24 +41,21 @@ module.exports = {
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
         loaders: [
-            'ignore-file?hash=sha512&digest=hex&name=[hash].[ext]',
-            'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
+            'ignore-file-loader?hash=sha512&digest=hex&name=[hash].[ext]',
+            'image-webpack-loader?bypassOnDebug&optimizationLevel=7&interlaced=false'
         ]
       },
-      { test: /\.md$/, loader: "html!markdown" }
+      { test: /\.md$/, loader: "html-loader!markdown-loader" }
     ]
   },
   plugins: [
     new webpack.NormalModuleReplacementPlugin(/\.(woff|eot|woff2|ttf)$/, 'node-noop'),
-    new webpack.BannerPlugin('require("source-map-support").install();',
-                             { raw: true, entryOnly: false })
+    // new webpack.BannerPlugin('require("source-map-support").install();',
+    //                          { raw: true, entryOnly: false })
   ],
   devtool: 'sourcemap',
   node: {
     __dirname: true,
     process: true
-  },
-  postcss: function () {
-    return [autoprefixer, colorFunction, precss]
   }
 }
