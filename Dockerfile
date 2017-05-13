@@ -8,6 +8,6 @@ ADD . /app
 
 RUN yarn global add node-gyp && yarn
 
-RUN npm rebuild && npm run build
+RUN npm run build
 
 CMD npm start
