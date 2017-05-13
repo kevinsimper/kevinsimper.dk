@@ -42,7 +42,7 @@ module.exports = {
         test: /\.(jpe?g|png|gif|svg)$/i,
         loaders: [
             'ignore-file-loader?hash=sha512&digest=hex&name=[hash].[ext]',
-            'image-webpack-loader?bypassOnDebug&optimizationLevel=7&interlaced=false'
+            'image-webpack-loader?bypassOnDebug&interlaced=false'
         ]
       },
       { test: /\.md$/, loader: "html-loader!markdown-loader" }
