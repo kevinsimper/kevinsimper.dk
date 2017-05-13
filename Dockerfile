@@ -4,11 +4,9 @@ EXPOSE 9000
 
 WORKDIR /app
 
-ADD package.json /app/package.json
-
-RUN npm install
-
 ADD . /app
+
+RUN yarn global add node-gyp && yarn
 
 RUN npm rebuild && npm run build
 
