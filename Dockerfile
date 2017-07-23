@@ -1,4 +1,4 @@
-FROM node:7.9
+FROM node:8.2.1
 
 EXPOSE 9000
 

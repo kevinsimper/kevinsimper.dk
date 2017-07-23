@@ -7,7 +7,7 @@ dependencies:
     - "node_modules"
   override:
     - docker pull node:6
-    - docker run -it --workdir /app -v $(pwd):/app node:6 npm install
+    - docker run -it --workdir /app -v $(pwd):/app node:8.2.1 npm install
     - docker-compose build
 test:
   override:
