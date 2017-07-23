@@ -2,6 +2,30 @@
   "activities": [
     {
       "type": "Medium",
+      "title": "How to deprecate fields in GraphQL",
+      "link": "https://medium.com/@kevinsimper/how-to-deprecate-fields-in-graphql-52fbd03fb9d7",
+      "date": "2017-07-02"
+    },
+    {
+      "type": "Medium",
+      "title": "Is Ethereum ready for developers?",
+      "link": "https://medium.com/@kevinsimper/is-ethereum-ready-for-developers-b89ac63476c8",
+      "date": "2017-06-17"
+    },
+    {
+      "type": "Medium",
+      "title": "Is Ethereum ready for developers?",
+      "link": "https://medium.com/@kevinsimper/how-to-test-google-cloud-services-locally-in-docker-d74196147841",
+      "date": "2017-03-20"
+    },
+    {
+      "type": "Medium",
+      "title": "How we work at Connected Cars",
+      "link": "https://medium.com/@kevinsimper/how-we-work-at-connected-cars-414e5a9ea114",
+      "date": "2017-03-03"
+    },
+    {
+      "type": "Medium",
       "title": "Make cloud provides outprice each other",
       "link": "https://medium.com/@kevinsimper/make-cloud-provides-outprice-each-other-4a75a490e67f",
       "date": "2016-09-25"
