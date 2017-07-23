@@ -19,10 +19,20 @@ var assets = global.assets
 
 app.use(compression())
 
-app.get('/', (req, res) => {
-  let data = get('https://api.instagram.com/v1/users/self/media/recent/?access_token=' + process.env.INSTAGRAM_TOKEN)
-  data.then((instares) => {
-    let images = instares.data.data.slice(0, 8)
+function getPictures() {
+  console.log('env', process.env.NODE_ENV)
+  if(process.env.NODE_ENV === 'production') {
+    return get('https://api.instagram.com/v1/users/self/media/recent/?access_token=' + process.env.INSTAGRAM_TOKEN).then(data => {
+      return data.data.data.slice(0, 8)
+    })
+  } else {
+    return Promise.resolve([])
+  }
+}
+
+app.get('/', (req, res, next) => {
+  let data = getPictures()
+  data.then((images) => {
     let content = renderToString(
       <App>
         <Content>
@@ -39,7 +49,7 @@ app.get('/', (req, res) => {
     }))
   }).catch((e) => {
     console.log(e)
-    res.send('Instagram failed loading!')
+    next(new Error('Something happend!'))
   })
 })
 

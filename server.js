@@ -1,17 +1,9 @@
 "use strict"
-let production = process.env.NODE_ENV === 'production'
-
-if(production) {
-  var opbeat = require('opbeat').start({
-    appId: 'c2ed59c7d9',
-    organizationId: '414d75509c8b42938651e8660bfce051',
-    secretToken: 'cb9d65d129cb5b2325fdbc552f6652e0872ec297'
-  })
-}
-
 let express = require('express')
 let app = express()
 let webpack = require('webpack')
+let reload = require('express-reload')
+let production = process.env.NODE_ENV === 'production'
 
 if(!production) {
   let config = require('./webpack.client.config')
@@ -20,17 +12,6 @@ if(!production) {
     noInfo: true, publicPath: config.output.publicPath
   }))
   app.use(require('webpack-hot-middleware')(compiler))
-
-  var chokidar = require('chokidar')
-  var watcher = chokidar.watch('./dist')
-  watcher.on('ready', function() {
-    watcher.on('all', function() {
-      console.log("Clearing /dist/ module cache from server")
-      Object.keys(require.cache).forEach(function(id) {
-        if (/[\/\\]dist[\/\\]/.test(id)) delete require.cache[id]
-      })
-    })
-  })
 }
 
 let defaultAssets = {
@@ -48,9 +29,7 @@ if(production) {
 
 app.use(express.static('public', { maxAge: 86400000 }));
 
-app.use(function(req, res, next) {
-  require('./dist/server')(req, res, next)
-})
+app.use(reload(__dirname + '/dist/server'))
 
 const PORT = 9000
 app.listen(PORT, () => console.log('Listening on', PORT))
