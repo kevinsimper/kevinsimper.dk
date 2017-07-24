@@ -1,6 +1,16 @@
 {
   "presentations": [
     {
+      "name": "Introduction to Docker",
+      "location": "Docker Copenhagen - 13. July 2017",
+      "description": "I gave a 2 hours introduction to docker and a live code demo."
+    },
+    {
+      "name": "Creating an intelligent Facebook bot",
+      "location": "Copenhagen JavaScript - 19. January 2017",
+      "description": "I showed how to make a facebook messenger bot that used speech recognition."
+    },
+    {
       "name": "How to be an awesome developer and get paid well at the same time!",
       "location": "ITU Innovators - 6. October 2016",
       "description": "What does it take to be an awesome developer and how do you ensure you get paid well."
