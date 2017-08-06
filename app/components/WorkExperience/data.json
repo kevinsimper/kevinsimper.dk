@@ -36,9 +36,17 @@
       "company": "Blackbeard",
       "location": "Njalsgade 19, 2300 København, Denmark",
       "start": "07/2015",
-      "end": "",
+      "end": "09/2016",
       "title": "CEO / Full Stack Developer",
       "description": "I started a company together with my friend where we created a hosting platform based on Docker. We were interviewed by Y-Combinator for the idea S15. We built it with Node.js, React.js, Mongo, RabbitMQ."
+    },
+    {
+      "company": "Connected Cars",
+      "location": "Banemarksvej 2B, 2600 Glostrup, Denmark",
+      "start": "10/2016",
+      "end": "",
+      "title": "CTO / Full Stack Developer",
+      "description": "Started from the start working on making a platform for Connected Cars for Volkswagen, Audi, Skoda and Volkswagen. It is built with Node.js and React and deployed with Docker and Kubernetes."
     }
   ]
 }
