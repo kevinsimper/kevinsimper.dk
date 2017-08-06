@@ -1,6 +1,11 @@
 {
   "presentations": [
     {
+      "name": "What is Cloud Native",
+      "location": "Docker Copenhagen - 3. August 2017",
+      "description": "A gave a 25 min presentation about Cloud Native and what it means."
+    },
+    {
       "name": "Introduction to Docker",
       "location": "Docker Copenhagen - 13. July 2017",
       "description": "I gave a 2 hours introduction to docker and a live code demo."
