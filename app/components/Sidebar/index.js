@@ -11,11 +11,11 @@ export default class Sidebar extends React.Component {
           <a href='/'>Kevin Simper</a>
         </h1>
         <h3 className={styles.subtitle}>
-          JavaScript, Crafty.js and other coding.
+          JavaScript, Docker and Ethereum.
         </h3>
         <div className={styles.Menu}>
           <a href='/'>Home</a>
-          <a href='/about'>About</a>
+          <a href='/about'>About & CV</a>
           <a href='/contact'>Contact</a>
           <a href='/map'>Travel Map</a>
           <a href='https://github.com/kevinsimper'>Github <img className={styles.External} src={external}/></a>

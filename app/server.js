@@ -45,7 +45,7 @@ app.get('/', (req, res, next) => {
       content: content,
       production: production,
       assets,
-      title: 'Kevin Simper - Front-end developer'
+      title: 'Kevin Simper - Full-Stack Developer'
     }))
   }).catch((e) => {
     console.log(e)
