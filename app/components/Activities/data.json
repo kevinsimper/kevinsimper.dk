@@ -2,6 +2,12 @@
   "activities": [
     {
       "type": "Medium",
+      "title": "Review of CircleCI newly launched 2.0",
+      "link": "https://medium.com/@kevinsimper/review-of-circleci-newly-launched-2-0-79afe1cf22fd",
+      "date": "2017-08-20"
+    },
+    {
+      "type": "Medium",
       "title": "How to deprecate fields in GraphQL",
       "link": "https://medium.com/@kevinsimper/how-to-deprecate-fields-in-graphql-52fbd03fb9d7",
       "date": "2017-07-02"

@@ -44,8 +44,16 @@
       "company": "Connected Cars",
       "location": "Banemarksvej 2B, 2600 Glostrup, Denmark",
       "start": "10/2016",
-      "end": "",
+      "end": "07/2017",
       "title": "CTO / Full Stack Developer",
+      "description": "Started from the start working on making a platform for Connected Cars for Volkswagen, Audi, Skoda and Volkswagen. It is built with Node.js and React and deployed with Docker and Kubernetes."
+    },
+    {
+      "company": "Connected Cars",
+      "location": "Banemarksvej 2B, 2600 Glostrup, Denmark",
+      "start": "08/2017",
+      "end": "",
+      "title": "VP Engineering",
       "description": "Started from the start working on making a platform for Connected Cars for Volkswagen, Audi, Skoda and Volkswagen. It is built with Node.js and React and deployed with Docker and Kubernetes."
     }
   ]
