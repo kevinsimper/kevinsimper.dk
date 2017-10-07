@@ -1,6 +1,4 @@
 import React from 'react'
-import Sidebar from '../Sidebar'
-import Content from '../Content'
 import styles from './style.scss'
 
 export default class App extends React.Component {
