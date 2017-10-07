@@ -1,6 +1,7 @@
 import express from 'express'
 import compression from 'compression'
 import Layout from './components/Layout'
+import Map from './components/Map'
 import blogdata from './blog/posts/_data.json'
 import React from 'react'
 import { renderToString, renderToStaticMarkup } from 'react-dom/server'
@@ -22,6 +23,11 @@ app.use(compression())
 function layout(props) {
   return `<!DOCTYPE html>
   ${renderToStaticMarkup(<Layout {...props}></Layout>)}
+  `
+}
+function map(props) {
+  return `<!DOCTYPE html>
+  ${renderToStaticMarkup(<Map {...props}></Map>)}
   `
 }
 
