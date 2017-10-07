@@ -10,9 +10,9 @@ export default class About extends React.Component {
       <div>
         <h1>About</h1>
         <div className={styles.Content}>
-          <Presentations/>
-          <WorkExperience/>
-          <Groups/>
+          <Presentations />
+          <WorkExperience />
+          <Groups />
         </div>
       </div>
     )

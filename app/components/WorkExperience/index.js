@@ -8,18 +8,21 @@ export default class WorkExperience extends React.Component {
       <div>
         <h2>Work Experience</h2>
         <div className={styles.Experiences}>
-          {data.experiences.map((item) => {
+          {data.experiences.map(item => {
             return (
               <div className={styles.Experience}>
                 <h3 className={styles.Company}>{item.company}</h3>
                 <div>{item.title}</div>
                 <div>{item.location}</div>
-                <div>Started {item.start}{item.end ? ' - ' + item.end : ''}</div>
+                <div>
+                  Started {item.start}
+                  {item.end ? ' - ' + item.end : ''}
+                </div>
                 <div className={styles.Description}>{item.description}</div>
               </div>
             )
           })}
-      </div>
+        </div>
       </div>
     )
   }

@@ -13,8 +13,8 @@ import About from './components/About'
 import Instagram from './components/Instagram'
 import Frontpage from './components/Frontpage'
 
-module.hot.status((status) => {
-  if(status === 'idle') {
+module.hot.status(status => {
+  if (status === 'idle') {
     setTimeout(() => {
       window.location.reload()
     }, 500)

@@ -9,8 +9,8 @@ export default class Frontpage extends Component {
     return (
       <div className={styles.Frontpage}>
         <div className={styles.Content}>
-          <HelloWorld/>
-          <Activities blogposts={this.props.blogdata}/>
+          <HelloWorld />
+          <Activities blogposts={this.props.blogdata} />
         </div>
       </div>
     )

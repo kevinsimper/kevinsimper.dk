@@ -8,7 +8,8 @@ const data = [
   },
   {
     name: 'Docker Copenhagen',
-    description: 'A meetup group that likes Docker and wants to improve their workflow.'
+    description:
+      'A meetup group that likes Docker and wants to improve their workflow.'
   }
 ]
 
@@ -19,12 +20,12 @@ export default class Groups extends React.Component {
         <h2>Groups</h2>
         <p>I am current active in two meetup groups.</p>
         <div className={styles.Groups}>
-          {data.map(item =>
+          {data.map(item => (
             <div className={styles.Group}>
               <h3 className={styles.Header}>{item.name}</h3>
               <div>{item.description}</div>
             </div>
-          )}
+          ))}
         </div>
       </div>
     )

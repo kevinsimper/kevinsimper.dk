@@ -1,18 +1,18 @@
 var places = require('./coordinates')
 
-window.initMap = function () {
+window.initMap = function() {
   var map = new google.maps.Map(document.getElementById('app'), {
-    center: {lat: -34.397, lng: 150.644},
+    center: { lat: -34.397, lng: 150.644 },
     zoom: 8
   })
 
   let bounds = new google.maps.LatLngBounds()
   // remove the first location as it is copenhagen
-  places.slice(1, places.length).map((place) => {
+  places.slice(1, places.length).map(place => {
     var marker = new google.maps.Marker({
-        map: map,
-        position: place.location,
-        icon: 'https://storage.googleapis.com/support-kms-prod/SNP_2752125_en_v0'
+      map: map,
+      position: place.location,
+      icon: 'https://storage.googleapis.com/support-kms-prod/SNP_2752125_en_v0'
     })
     bounds.extend(marker.getPosition())
   })
@@ -25,9 +25,9 @@ window.initMap = function () {
     strokeColor: '#FF0000',
     strokeOpacity: 1.0,
     strokeWeight: 2
-  });
+  })
 
-  flightPath.setMap(map);
+  flightPath.setMap(map)
 
   // var geocoder = new google.maps.Geocoder()
   // let name = 'latagunga'

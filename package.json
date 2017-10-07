@@ -11,7 +11,8 @@
     "build": "npm run compile-client && npm run compile-server",
     "post-install": "npm run build",
     "start": "node server.js",
-    "deploy": "docker tag -f kevinsimperdk_web kevinsimper/blog && docker push kevinsimper/blog"
+    "deploy": "docker tag -f kevinsimperdk_web kevinsimper/blog && docker push kevinsimper/blog",
+    "fix-lint": "prettier --write --no-semi --single-quote \"**/*.js\""
   },
   "repository": {
     "type": "git",
@@ -51,6 +52,7 @@
     "postcss-color-function": "^3.0.0",
     "postcss-loader": "^1.3.3",
     "precss": "^1.4.0",
+    "prettier": "1.7.4",
     "source-map-support": "^0.4.2",
     "style-loader": "^0.16.1",
     "url-loader": "^0.5.7",
