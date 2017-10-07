@@ -1,35 +1,33 @@
-.App {
-  height: 100%;
+.Header {
+  background-color: #3F51B5;
+  color: white;
+  min-height: 80px;
+  display: flex;
+  justify-content: center;
+}
+.HeaderInner {
+  max-width: 960px;
   display: flex;
   flex-direction: column;
-  @media (min-width: 800px) {
+  align-items: center;
+  @media(min-width: 600px) {
     flex-direction: row;
   }
-}
-.Sidebar {
-  @media (min-width: 800px) {
-    width: 25%;
-    padding: 60px 40px 0 30px;
-  }
-  @media (min-width: 1400px) {
-    width: 30%;
+  h1 {
+    display: inline;
+    color: white;
+    margin: 0
   }
 }
-.Floating {
-  background: #34495E;
-  overflow-y: auto;
-  @media (min-width: 800px) {
-    width: 25%;
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100%;
+
+.Menu {
+  display: flex;
+  a {
+    padding: 10px;
+    color: white;
   }
-  @media (min-width: 1400px) {
-    width: 30%;
+  flex-direction: column;
+  @media(min-width: 600px) {
+    flex-direction: row;
   }
-}
-.Content {
-  flex: 2;
-  padding: 40px;
 }

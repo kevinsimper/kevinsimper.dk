@@ -12,9 +12,6 @@ export default class Frontpage extends Component {
           <HelloWorld/>
           <Activities blogposts={this.props.blogdata}/>
         </div>
-        <div className={styles.Images}>
-          <Instagram images={this.props.images}/>
-        </div>
       </div>
     )
   }

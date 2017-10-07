@@ -10,7 +10,7 @@
     "compile-client": "NODE_ENV=production webpack --bail --progress --config webpack.client.config.js",
     "build": "npm run compile-client && npm run compile-server",
     "post-install": "npm run build",
-    "start": "DEBUG=express:* node server.js",
+    "start": "node server.js",
     "deploy": "docker tag -f kevinsimperdk_web kevinsimper/blog && docker push kevinsimper/blog"
   },
   "repository": {

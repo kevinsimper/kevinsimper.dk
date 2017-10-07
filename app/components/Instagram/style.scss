@@ -1,34 +1,24 @@
 .Instagram {
   display: flex;
   flex-wrap: wrap;
-  margin: -40px -40px 60px;
-  @media(min-width: 2100px) {
-    margin: -40px -40px 0 0;
-  }
 }
 .PictureContainer {
   width: 25%;
   background-size: cover;
-  @media(min-width: 2100px) {
-    width: 50%;
-  }
-  img {
-    width: 100%;
-  }
 }
 .Picture {
-  height: 17vw;
+  height: 25vw;
   background-size: cover;
 }
 .PictureBig {
   display: none;
-  @media(min-width: 2100px) {
+  @media(min-width: 600px) {
     display: block;
   }
 }
 .PictureSmall {
   display: block;
-  @media(min-width: 2100px) {
+  @media(min-width: 600px) {
     display: none;
   }
 }

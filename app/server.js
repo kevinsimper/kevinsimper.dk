@@ -6,6 +6,7 @@ import React from 'react'
 import { renderToString, renderToStaticMarkup } from 'react-dom/server'
 import App from './components/App'
 import Content from './components/Content'
+import Instagram from './components/Instagram'
 import About from './components/About'
 import Contact from './components/Contact'
 import Frontpage from './components/Frontpage'
@@ -40,6 +41,7 @@ app.get('/', (req, res, next) => {
   data.then((images) => {
     let content = renderToString(
       <App>
+        <Instagram images={images}/>
         <Content>
           <Frontpage images={images} blogdata={blogdata} />
         </Content>
