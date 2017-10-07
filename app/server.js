@@ -20,6 +20,17 @@ var assets = global.assets
 
 app.use(compression())
 
+if(production) {
+  app.use((req, res, next) => {
+    const host = req.header('host');
+    if (host.match(/^www\..*/i)) {
+      next();
+    } else {
+      res.redirect(301, 'https://www.' + host);
+    }
+  })
+}
+
 function layout(props) {
   return `<!DOCTYPE html>
   ${renderToStaticMarkup(<Layout {...props}></Layout>)}
