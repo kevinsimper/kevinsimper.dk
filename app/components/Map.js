@@ -4,7 +4,7 @@ export default (props) => {
   return (
     <html>
       <head>
-        <title></title>
+        <title>{props.title}</title>
         <link rel="icon" type="image/jpeg" href="/kevinsimper.jpg"/>
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>

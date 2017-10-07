@@ -33,9 +33,9 @@ function map(props) {
 
 function getPictures() {
   console.log('env', process.env.NODE_ENV)
-  if(process.env.NODE_ENV === 'production') {
+  if(process.env.NODE_ENV !== 'production') {
     return get('https://api.instagram.com/v1/users/self/media/recent/?access_token=' + process.env.INSTAGRAM_TOKEN).then(data => {
-      return data.data.data.slice(0, 8)
+      return data.data.data.slice(0, 10)
     })
   } else {
     return Promise.resolve([])
