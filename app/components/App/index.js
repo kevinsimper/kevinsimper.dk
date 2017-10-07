@@ -7,7 +7,7 @@ export default class App extends React.Component {
       <div className={styles.App}>
         <div className={styles.Header}>
           <div className={styles.HeaderInner}>
-            <h1>Kevin Simper</h1>
+            <h1><a href='/'>Kevin Simper</a></h1>
             <div className={styles.Menu}>
               <a href='/'>Home</a>
               <a href='/about'>About & CV</a>
