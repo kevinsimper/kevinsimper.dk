@@ -1,10 +1,9 @@
 import express from 'express'
 import compression from 'compression'
-import layout from 'pug-loader!./layout.jade'
-import map from 'pug-loader!./map/map.jade'
+import Layout from './components/Layout'
 import blogdata from './blog/posts/_data.json'
 import React from 'react'
-import { renderToString } from 'react-dom/server'
+import { renderToString, renderToStaticMarkup } from 'react-dom/server'
 import App from './components/App'
 import Content from './components/Content'
 import About from './components/About'
@@ -18,6 +17,12 @@ var production = process.env.NODE_ENV === 'production'
 var assets = global.assets
 
 app.use(compression())
+
+function layout(props) {
+  return `<!DOCTYPE html>
+  ${renderToStaticMarkup(<Layout {...props}></Layout>)}
+  `
+}
 
 function getPictures() {
   console.log('env', process.env.NODE_ENV)

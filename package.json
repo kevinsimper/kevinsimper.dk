@@ -26,8 +26,6 @@
     "history": "^4.2.0",
     "moment": "^2.15.1",
     "opbeat": "^4.13.0",
-    "pug": "^2.0.0-beta11",
-    "pug-loader": "^2.3.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-router": "^4.1.1",
