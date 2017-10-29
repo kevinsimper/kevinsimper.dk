@@ -56,9 +56,8 @@ function getPictures() {
   }
 }
 
+const data = getPictures()
 app.get('/', (req, res, next) => {
-  console.log(req)
-  let data = getPictures()
   data
     .then(images => {
       let content = renderToString(

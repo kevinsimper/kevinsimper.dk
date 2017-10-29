@@ -34,5 +34,5 @@ app.use(express.static('public', { maxAge: 86400000 }))
 
 app.use(reload(__dirname + '/dist/server'))
 
-const PORT = 9000
+const { PORT = 9000 } = process.env
 app.listen(PORT, () => console.log('Listening on', PORT))
