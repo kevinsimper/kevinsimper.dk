@@ -1,0 +1,35 @@
+.Header {
+  background-color: #3F51B5;
+  color: white;
+  min-height: 80px;
+  display: flex;
+  justify-content: center;
+}
+.HeaderInner {
+  max-width: 960px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media(min-width: 600px) {
+    flex-direction: row;
+  }
+  h1 {
+    display: inline;
+    margin: 0;
+    a {
+      color: white;
+    }
+  }
+}
+
+.Menu {
+  display: flex;
+  a {
+    padding: 10px;
+    color: white;
+  }
+  flex-direction: column;
+  @media(min-width: 900px) {
+    flex-direction: row;
+  }
+}
