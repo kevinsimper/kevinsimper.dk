@@ -12,6 +12,8 @@ import Contact from './components/Contact'
 import About from './components/About'
 import Instagram from './components/Instagram'
 import Frontpage from './components/Frontpage'
+import Header from './components/Header'
+import Footer from './components/Footer'
 
 module.hot.status(status => {
   if (status === 'idle') {

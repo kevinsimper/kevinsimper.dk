@@ -4,10 +4,11 @@ import styles from './style.scss'
 export default function Header() {
   return (
     <div className={styles.Header}>
-      <div className={styles.HeaderInner}>
+      <div className={styles.HeaderInner} id='mainmenu'>
         <h1>
           <a href="/">Kevin Simper</a>
         </h1>
+        <button id="toggleMenu" className={styles.ShowMenu}>Show Menu</button>
         <div className={styles.Menu}>
           <a href="/">Home</a>
           <a href="/about">About & CV</a>
@@ -19,6 +20,11 @@ export default function Header() {
           <a href="https://linkedin.com/in/kevinsimper">LinkedIn</a>
         </div>
       </div>
+      <script dangerouslySetInnerHTML={{__html: `
+        toggleMenu.addEventListener('click', e => {
+          mainmenu.classList.toggle('MenuShown')
+        })
+      `}} />
     </div>
   )
 }

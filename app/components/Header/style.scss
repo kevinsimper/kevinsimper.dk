@@ -22,14 +22,27 @@
   }
 }
 
+.ShowMenu {
+  color: white;
+  background-color: transparent;
+  border: white 1px solid;
+  padding: 10px;
+  margin: 10px;
+}
+
 .Menu {
   display: flex;
   a {
     padding: 10px;
     color: white;
   }
+  display: none;
   flex-direction: column;
   @media(min-width: 900px) {
     flex-direction: row;
   }
+}
+
+:global .MenuShown :local .Menu {
+  display: flex;
 }
