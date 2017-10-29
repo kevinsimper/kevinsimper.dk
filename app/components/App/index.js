@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from '../Footer'
 import styles from './style.scss'
 
 export default class App extends React.Component {
@@ -23,6 +24,7 @@ export default class App extends React.Component {
           </div>
         </div>
         <div>{this.props.children}</div>
+        <Footer/>
       </div>
     )
   }
