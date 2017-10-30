@@ -1,6 +1,21 @@
 {
   "presentations": [
     {
+      "name": "How to stay secure/anonymouse in a modern age",
+      "location": "WonderCoders - 26. October 2017",
+      "description": "I gave a 20 minutes presentation about how to communicate and browse securely, how to use tor and using encryption easily with Keybase.io"
+    },
+    {
+      "name": "Serverless workshop",
+      "location": "CopenhagenJS - 23. October 2017",
+      "description": "I gave a practical workshop on how to use AWS Lambda and API Gateway where everybody got to deploy their own serverless workshop."
+    },
+    {
+      "name": "What I learned teaching workshops",
+      "location": "DockerCon Europe Organizer Summit - 16. October 2017",
+      "description": "I gave a talk about what I learned giving workshops at the Docker meetup group and some tips and tricks to do it better."
+    },
+    {
       "name": "What is Cloud Native",
       "location": "Docker Copenhagen - 3. August 2017",
       "description": "A gave a 25 min presentation about Cloud Native and what it means."
