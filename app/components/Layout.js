@@ -6,9 +6,6 @@ export default props => {
       <head>
         <title>{props.title}</title>
         <link rel="icon" type="image/jpeg" href="/kevinsimper.jpg" />
-        <link rel="stylesheet" href="/vendor/css/pure.css" />
-        <link rel="stylesheet" href="/vendor/css/pure-grid.css" />
-        <link rel="stylesheet" href="/css/main.css" />
         <link
           rel="stylesheet"
           href="https://yandex.st/highlightjs/8.0/styles/default.min.css"
@@ -19,9 +16,9 @@ export default props => {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <script src="https://yandex.st/highlightjs/8.0/highlight.min.js" />
-        {props.production && <script src={props.assets.main.js} />}
+        {props.production && <script src={`https://cdn.kevinsimper.dk${props.assets.main.js}`} />}
         {props.production && (
-          <link rel="stylesheet" href={props.assets.main.css} />
+          <link rel="stylesheet" href={`https://cdn.kevinsimper.dk${props.assets.main.css}`} />
         )}
         {!props.production && <script src="/build/main.bundle.js" />}
         {!props.production && <link rel="stylesheet" href="/build/main.css" />}

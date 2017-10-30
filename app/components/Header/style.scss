@@ -28,10 +28,12 @@
   border: white 1px solid;
   padding: 10px;
   margin: 10px;
+  @media(min-width: 900px) {
+    display: none;
+  }
 }
 
 .Menu {
-  display: flex;
   a {
     padding: 10px;
     color: white;
@@ -39,6 +41,7 @@
   display: none;
   flex-direction: column;
   @media(min-width: 900px) {
+    display: flex;
     flex-direction: row;
   }
 }
