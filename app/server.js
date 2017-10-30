@@ -11,6 +11,7 @@ import Instagram from './components/Instagram'
 import About from './components/About'
 import Contact from './components/Contact'
 import Frontpage from './components/Frontpage'
+import ActivitiesPage from './components/ActivitiesPage'
 import { get } from 'axios'
 
 var app = express.Router()
@@ -148,6 +149,24 @@ app.get('/map', (req, res) => {
     map({
       production,
       assets
+    })
+  )
+})
+
+app.get('/activities', (req, res) => {
+  let content = renderToString(
+    <App>
+      <Content>
+        <ActivitiesPage blogdata={blogdata}/>
+      </Content>
+    </App>
+  )
+  res.send(
+    layout({
+      content,
+      production,
+      assets,
+      title: 'All activities - Kevin Simper'
     })
   )
 })

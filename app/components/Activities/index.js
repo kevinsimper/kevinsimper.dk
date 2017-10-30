@@ -25,7 +25,7 @@ function Medium(props) {
 
 export default class Activities extends Component {
   render() {
-    const { blogposts } = this.props
+    const { blogposts, limit } = this.props
     let allActivity = [].concat(data.activities, blogposts).sort((a, b) => {
       if (moment(a.date).isBefore(b.date)) {
         return 1
@@ -33,10 +33,11 @@ export default class Activities extends Component {
         return -1
       }
     })
+    const _limit = limit || allActivity.length
     return (
       <div>
         <h2>My latest activities</h2>
-        {allActivity.map((post, key) => {
+        {allActivity.slice(0, _limit).map((post, key) => {
           if (post.hasOwnProperty('slug')) {
             return <Blogpost post={post} key={key} />
           } else {
