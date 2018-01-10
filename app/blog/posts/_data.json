@@ -1,5 +1,10 @@
 [
 	{
+		"slug": "docker-multi-stage-private-github",
+		"title": "How we do Docker Multistage builds and share Github private repositories",
+		"date": "Wed, 10 Jan 2018 14:20:10 +0000"
+	},
+	{
 		"slug": "gode-commit-messages",
 		"title": "Hvordan du kan laver gode commit messages og gøre dine kollegaer glade",
 		"date": "Mon, 28 Oct 2013 21:20:10 +0000"
