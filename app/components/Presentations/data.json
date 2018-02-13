@@ -16,6 +16,11 @@
       "description": "I gave a talk about what I learned giving workshops at the Docker meetup group and some tips and tricks to do it better."
     },
     {
+      "name": "How to not burn out as a Organizer",
+      "location": "Copenhagen Tech Week - 16. October 2017",
+      "description": "A talk about learning and ideas for being a meetup organizer through my experience running CopenhagenJS and Docker Copenhagen for 3 years."
+    },
+    {
       "name": "What is Cloud Native",
       "location": "Docker Copenhagen - 3. August 2017",
       "description": "A gave a 25 min presentation about Cloud Native and what it means."
