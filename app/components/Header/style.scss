@@ -1,5 +1,5 @@
 .Header {
-  background-color: #3F51B5;
+  background-color: #001f3f;
   color: white;
   min-height: 80px;
   display: flex;
@@ -14,8 +14,9 @@
     flex-direction: row;
   }
   h1 {
-    display: inline;
+    display: inline-block;
     margin: 0;
+    line-height: 80px;
     a {
       color: white;
     }
@@ -25,12 +26,14 @@
 .ShowMenu {
   color: white;
   background-color: transparent;
-  border: white 1px solid;
   padding: 10px;
   margin: 10px;
   @media(min-width: 900px) {
     display: none;
   }
+  position: absolute;
+  right: 0px;
+  top: 5px;
 }
 
 .Menu {

@@ -1,14 +1,17 @@
 import React from 'react'
 import styles from './style.scss'
+import menuIcon from './menu.svg'
 
 export default function Header() {
   return (
     <div className={styles.Header}>
-      <div className={styles.HeaderInner} id='mainmenu'>
+      <div className={styles.HeaderInner} id="mainmenu">
         <h1>
           <a href="/">Kevin Simper</a>
         </h1>
-        <button id="toggleMenu" className={styles.ShowMenu}>Show Menu</button>
+        <a id="toggleMenu" className={styles.ShowMenu}>
+          <img src={menuIcon} />
+        </a>
         <div className={styles.Menu}>
           <a href="/">Home</a>
           <a href="/about">About & CV</a>
@@ -20,11 +23,15 @@ export default function Header() {
           <a href="https://linkedin.com/in/kevinsimper">LinkedIn</a>
         </div>
       </div>
-      <script dangerouslySetInnerHTML={{__html: `
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
         toggleMenu.addEventListener('click', e => {
           mainmenu.classList.toggle('MenuShown')
         })
-      `}} />
+      `
+        }}
+      />
     </div>
   )
 }
