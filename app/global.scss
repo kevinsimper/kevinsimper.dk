@@ -20,3 +20,20 @@ a {
 pre {
   white-space: pre-wrap;
 }
+code {
+    background: rgba(0,0,0,.05);
+    padding: 3px 4px;
+}
+:global .embed {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+:global .embed iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
