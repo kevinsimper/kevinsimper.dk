@@ -14,7 +14,7 @@ There is, however, a problem with ssh keys with the ssh-agent and docker as you 
       With that token, you can communicate with Github over HTTPS instead of SSH and it can be revoked. It has the benefit of being more likely to be shortlived by Github tokens can not be expired so it is nearly the same as SSH tokens. One thing to consider is that it is needed inside the package.json and you don't want to commit it.
   3. **Do an npm install outside the docker build and rebuild any native
       dependencies.**
-      
+
       This will solve the problem with not authenticating inside the build process but it makes it take more steps that have to be done in the correct order and it would require you to have the same version of the tool that installs the dependencies. A process that can run solely inside docker build can easier be debugged.
 
 So there are solutions to authenticate with Github but no clear out of the box solution. So here solution we have now and how we solved it.
@@ -29,9 +29,13 @@ We then created a script which replaces the `git+ssh` to `git+https` and include
 The good thing about this is the same thing can be done locally to match the build environment. A general access token can be added to your `.bashrc` and `.bashprofile` and can be passed to the docker build process.
 
 So this package url:
+```
 git+ssh://git@github.com/connectedcars/awesome-module.git
+```
 becomes
+```
 git+https://ACCESSTOKENHERE:@github.com/connectedcars/awesome-module.git
+```
 
 The node.js that does the replacement is called `npm` and added to the docker image `$PATH` which means that the developers using the image does not need to do anything different than they normally do like `npm install`. After `npm install` has run it will revert it back to the previous URL so that it is not saved in the docker image layer.
 
@@ -58,7 +62,7 @@ To pass the token you can give an environment variable to the `docker build` com
 # Dockerfile
 FROM ...
 
-ARG GHTOKEN
+ARG GITHUB_AT
 ```
 
 And to make it easy for local testing with `docker-compose` it will be added like this:
