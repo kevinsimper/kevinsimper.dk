@@ -11,7 +11,7 @@
     "build": "npm run compile-client && npm run compile-server",
     "post-install": "npm run build",
     "start": "node server.js",
-    "fix-lint": "prettier --write --no-semi --single-quote \"**/*.js\""
+    "fix-lint": "prettier --write --no-semi --single-quote \"app/**/*.js\""
   },
   "repository": {
     "type": "git",
