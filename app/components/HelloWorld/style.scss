@@ -1,9 +1,17 @@
+.Wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
 .HelloWorld {
-  max-width: 750px;
+  color: white;
+  background: #0074D9;
+  padding: 20px;
+  line-height: 3rem;
   @media(min-width: 800px) {
-    margin: 2em;
+    padding: 5vh;
   }
   a {
+    color: white;
     text-decoration: underline;
     &:hover {
       text-decoration: none;

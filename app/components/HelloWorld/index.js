@@ -9,8 +9,8 @@ import Docker from './docker.png'
 export default class HelloWorld extends React.Component {
   render() {
     return (
-      <div>
-        <div className={styles.HelloWorld}>
+      <div className={styles.HelloWorld}>
+        <div className={styles.Wrapper}>
           <div className={styles.Intro}>
             Hi <img src={Smiley} className={styles.Smiley} />, my name is{' '}
             <strong>Kevin Simper</strong>{' '}
@@ -28,13 +28,6 @@ export default class HelloWorld extends React.Component {
             🏂, and bicycles is my prefered transportation 🚴.
           </div>
         </div>
-        <h2>My latest travels</h2>
-        <iframe
-          src="/map"
-          height="300px"
-          width="100%"
-          style={{ border: 'none', marginTop: 20 }}
-        />
       </div>
     )
   }
