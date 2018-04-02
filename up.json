@@ -1,0 +1,15 @@
+{
+  "name": "kevinsimper",
+  "hooks": {
+    "build": ["npm run compile-client && npm run compile-server"]
+  },
+  "environment": {
+    "NODE_ENV": "production",
+    "INSTAGRAM_TOKEN": "EXAMPLE"
+  },
+  "lambda": {
+    "role": "",
+    "memory": 1024,
+    "timeout": 0
+  }
+}
