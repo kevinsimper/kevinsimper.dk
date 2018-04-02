@@ -4,7 +4,8 @@ import styles from './style.scss'
 export default function Footer() {
   return (
     <div className={styles.Footer}>
-      Contact me, I love speaking to new people!
+      Contact me, I love speaking to new people!<br />
+      <a href="/contact">Contact</a>
     </div>
   )
 }
