@@ -8,7 +8,8 @@
     {
       "name": "Serverless workshop",
       "location": "CopenhagenJS - 23. October 2017",
-      "description": "I gave a practical workshop on how to use AWS Lambda and API Gateway where everybody got to deploy their own serverless workshop."
+      "description": "I gave a practical workshop on how to use AWS Lambda and API Gateway where everybody got to deploy their own serverless workshop.",
+      "type": "workshop"
     },
     {
       "name": "What I learned teaching workshops",
@@ -43,7 +44,8 @@
     {
       "name": "Learn to be a DevOps - Workshop",
       "location": "Docker Copenhagen - 4. October 2016",
-      "description": "A workshop that teaches the flow of continuous integration and continuous deployment."
+      "description": "A workshop that teaches the flow of continuous integration and continuous deployment.",
+      "type": "workshop"
     },
     {
       "name": "Distributed file system with IPFS",
@@ -53,7 +55,8 @@
     {
       "name": "React Workshop",
       "location": "React Lima, Peru - 14. June 2016",
-      "description": "Made a workshop on how to get started with React and the attendees made a contact formular."
+      "description": "Made a workshop on how to get started with React and the attendees made a contact formular.",
+      "type": "workshop"
     },
     {
       "name": "Universal Apps - The good, the bad and the ugly",
@@ -78,12 +81,14 @@
     {
       "name": "Kubernetes Introduction - Workshop 3 hours",
       "location": "Docker Copenhagen - February 2016",
-      "description": "Made a workshop with 5 scenarios on how to use Kubernetes, from launching a Kubernetes cluster on your own computer to the hardest scenario of launching a fault-tolerant Redis cluster."
+      "description": "Made a workshop with 5 scenarios on how to use Kubernetes, from launching a Kubernetes cluster on your own computer to the hardest scenario of launching a fault-tolerant Redis cluster.",
+      "type": "workshop"
     },
     {
       "name": "Introduction to HTML and CSS",
       "location": "Codher Introduction Weekend - January 2016",
-      "description": "Prepared a introduction to learn a group of girls how to think in HTML, \"everything is a square\" and the semantic of html tags."
+      "description": "Prepared a introduction to learn a group of girls how to think in HTML, \"everything is a square\" and the semantic of html tags.",
+      "type": "workshop"
     },
     {
       "name": "How do you survive key-loss with Docker?",
