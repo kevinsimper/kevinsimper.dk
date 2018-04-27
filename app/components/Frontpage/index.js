@@ -19,9 +19,7 @@ export default class Frontpage extends Component {
           />
           <div style={{ background: '#b73a60' }}>
             <Content>
-              <h2 style={{ color: 'white' }}>
-                My latest videoes
-              </h2>
+              <h2 style={{ color: 'white' }}>My latest videoes</h2>
               <div className={'embed'} style={{ margin: '20px 0' }}>
                 <iframe
                   width="560"

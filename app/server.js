@@ -12,6 +12,7 @@ import About from './components/About'
 import Contact from './components/Contact'
 import Frontpage from './components/Frontpage'
 import ActivitiesPage from './components/ActivitiesPage'
+import KubernetesTraining from './components/KubernetesTraining'
 import { get } from 'axios'
 
 var app = express.Router()
@@ -45,13 +46,8 @@ function map(props) {
 
 function getPictures() {
   console.log('env', process.env.NODE_ENV)
+  return Promise.resolve([])
   if (process.env.NODE_ENV === 'production') {
-    return get(
-      'https://api.instagram.com/v1/users/self/media/recent/?access_token=' +
-        process.env.INSTAGRAM_TOKEN
-    ).then(data => {
-      return data.data.data.slice(0, 10)
-    })
   } else {
     return Promise.resolve([])
   }
@@ -165,6 +161,24 @@ app.get('/activities', (req, res) => {
       production,
       assets,
       title: 'All activities - Kevin Simper'
+    })
+  )
+})
+
+app.get('/kubernetes-training', (req, res) => {
+  let content = renderToString(
+    <App>
+      <Content>
+        <KubernetesTraining />
+      </Content>
+    </App>
+  )
+  res.send(
+    layout({
+      content,
+      production,
+      assets,
+      title: 'Kubernetes Training - Kevin Simper'
     })
   )
 })
