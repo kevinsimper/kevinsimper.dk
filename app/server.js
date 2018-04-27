@@ -64,9 +64,7 @@ app.get('/', (req, res, next) => {
       let content = renderToString(
         <App>
           <Instagram images={images} />
-          <Content>
-            <Frontpage images={images} blogdata={blogdata} />
-          </Content>
+          <Frontpage images={images} blogdata={blogdata} />
         </App>
       )
 
