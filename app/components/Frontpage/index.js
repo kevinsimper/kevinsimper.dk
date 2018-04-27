@@ -11,18 +11,15 @@ export default class Frontpage extends Component {
       <div className={styles.Frontpage}>
         <div className={styles.Content}>
           <HelloWorld />
-          <Content>
-            <h2>My latest travels</h2>
-            <iframe
-              src="/map"
-              height="300px"
-              width="100%"
-              style={{ border: 'none', marginTop: 20 }}
-            />
-          </Content>
-          <div style={{ background: '#7FDBFF' }}>
+          <iframe
+            src="/map"
+            height="440px"
+            width="100%"
+            style={{ border: 'none', marginBottom: -5 }}
+          />
+          <div style={{ background: '#b73a60' }}>
             <Content>
-              <h2 style={{ color: 'hsla(197, 100%, 20%, 1.0)' }}>
+              <h2 style={{ color: 'white' }}>
                 My latest videoes
               </h2>
               <div className={'embed'} style={{ margin: '20px 0' }}>
