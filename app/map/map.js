@@ -8,26 +8,28 @@ window.initMap = function() {
 
   let bounds = new google.maps.LatLngBounds()
   // remove the first location as it is copenhagen
-  places.slice(1, places.length).map(place => {
-    var marker = new google.maps.Marker({
-      map: map,
-      position: place.location,
-      icon: 'https://storage.googleapis.com/support-kms-prod/SNP_2752125_en_v0'
+
+  Object.keys(places).forEach(key => {
+    var place = places[key]
+    place.cords.slice(1, place.cords.length).map(place => {
+      var marker = new google.maps.Marker({
+        map: map,
+        position: place.location,
+        icon: 'https://storage.googleapis.com/support-kms-prod/SNP_2752125_en_v0'
+      })
+      bounds.extend(marker.getPosition())
     })
-    bounds.extend(marker.getPosition())
+    map.fitBounds(bounds)
+    var flightPlanCoordinates = place.cords.map(place => place.location)
+    var flightPath = new google.maps.Polyline({
+      path: flightPlanCoordinates,
+      geodesic: true,
+      strokeColor: place.color,
+      strokeOpacity: 1.0,
+      strokeWeight: 2
+    })
+    flightPath.setMap(map)
   })
-  map.fitBounds(bounds)
-
-  var flightPlanCoordinates = places.map(place => place.location)
-  var flightPath = new google.maps.Polyline({
-    path: flightPlanCoordinates,
-    geodesic: true,
-    strokeColor: '#FF0000',
-    strokeOpacity: 1.0,
-    strokeWeight: 2
-  })
-
-  flightPath.setMap(map)
 
   // var geocoder = new google.maps.Geocoder()
   // let name = 'latagunga'
