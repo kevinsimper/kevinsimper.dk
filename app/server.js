@@ -155,7 +155,7 @@ app.get('/activities', (req, res) => {
   let content = renderToString(
     <App>
       <Content>
-        <ActivitiesPage blogdata={blogdata}/>
+        <ActivitiesPage blogdata={blogdata} />
       </Content>
     </App>
   )

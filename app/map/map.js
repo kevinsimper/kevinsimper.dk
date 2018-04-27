@@ -15,7 +15,8 @@ window.initMap = function() {
       var marker = new google.maps.Marker({
         map: map,
         position: place.location,
-        icon: 'https://storage.googleapis.com/support-kms-prod/SNP_2752125_en_v0'
+        icon:
+          'https://storage.googleapis.com/support-kms-prod/SNP_2752125_en_v0'
       })
       bounds.extend(marker.getPosition())
     })
