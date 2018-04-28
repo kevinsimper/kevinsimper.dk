@@ -225,4 +225,35 @@ app.get('/recommends', (req, res) => {
   )
 })
 
+app.get('/login', (req, res) => {
+  let content = renderToString(
+    <App>
+      <Content>
+        <h1>Login</h1>
+        <div>
+          <label>
+            <input type="text" placeholder="username" name="username" />
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="password" placeholder="password" name="password" />
+          </label>
+        </div>
+        <div>
+          <button>Login</button>
+        </div>
+      </Content>
+    </App>
+  )
+  res.send(
+    layout({
+      content,
+      production,
+      assets,
+      title: 'Login - Kevin Simper'
+    })
+  )
+})
+
 module.exports = app
