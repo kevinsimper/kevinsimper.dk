@@ -3,8 +3,15 @@
   color: white;
   padding: 150px 30px;
   margin-top: 80px;
-  text-align: center;
   a {
     color: lightblue;
+  }
+}
+.Col {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+  div {
+    flex: 1
   }
 }
