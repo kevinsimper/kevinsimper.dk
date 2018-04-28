@@ -24,7 +24,7 @@ export default class Frontpage extends Component {
                 <iframe
                   width="560"
                   height="315"
-                  src="https://www.youtube.com/embed/eg4e-FObyJ8"
+                  src="https://www.youtube.com/embed/Dnr8Mu1Bco4"
                   frameBorder="0"
                 />
               </div>
@@ -32,7 +32,7 @@ export default class Frontpage extends Component {
                 <iframe
                   width="560"
                   height="315"
-                  src="https://www.youtube.com/embed/mLJh4lt4664"
+                  src="https://www.youtube.com/embed/eg4e-FObyJ8"
                   frameBorder="0"
                 />
               </div>
