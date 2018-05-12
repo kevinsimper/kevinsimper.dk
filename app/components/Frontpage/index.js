@@ -11,6 +11,15 @@ export default class Frontpage extends Component {
       <div className={styles.Frontpage}>
         <div className={styles.Content}>
           <HelloWorld />
+          <div style={{ background: '#3D9970'}}>
+            <Content>
+              <h2 style={{ color: 'white' }}>Upcoming events</h2>
+              <ul>
+                <li><a style={{color: 'white'}} href="https://www.meetup.com/copenhagenjs/events/250104025/">May 24th - CopenhagenJS May</a></li>
+                <li><a style={{color: 'white'}} href="https://gr8conf.eu/">May 30th & June 1st - GR8conf</a></li>
+              </ul>
+            </Content>
+          </div>
           <iframe
             src="/map"
             height="440px"
