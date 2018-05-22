@@ -3,6 +3,9 @@
   "hooks": {
     "build": ["npm run compile-client && npm run compile-server"]
   },
+  "regions": [
+    "eu-central-1"
+  ],
   "environment": {
     "NODE_ENV": "production",
     "INSTAGRAM_TOKEN": "EXAMPLE"
