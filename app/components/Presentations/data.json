@@ -1,6 +1,11 @@
 {
   "presentations": [
     {
+      "name": "WebVR with the Oculus Go",
+      "location": "CopenhagenJS - 24. May 2018",
+      "description": "How does the Oculus Go work and what is WebVR together with it? Making a duck shooting game in 2 hours."
+    },
+    {
       "name": "How to stay secure/anonymouse in a modern age",
       "location": "WonderCoders - 26. October 2017",
       "description": "I gave a 20 minutes presentation about how to communicate and browse securely, how to use tor and using encryption easily with Keybase.io"
