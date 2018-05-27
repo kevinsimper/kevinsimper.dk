@@ -16,16 +16,16 @@ export default class Frontpage extends Component {
               <h2 style={{ color: 'white' }}>Upcoming events</h2>
               <ul>
                 <li>
-                  <a
-                    style={{ color: 'white' }}
-                    href="https://www.meetup.com/copenhagenjs/events/250104025/"
-                  >
-                    May 24th - CopenhagenJS May
+                  <a style={{ color: 'white' }} href="https://gr8conf.eu/">
+                    May 30th & June 1st - GR8conf
                   </a>
                 </li>
                 <li>
-                  <a style={{ color: 'white' }} href="https://gr8conf.eu/">
-                    May 30th & June 1st - GR8conf
+                  <a
+                    style={{ color: 'white' }}
+                    href="https://www.meetup.com/Google-Cloud-Developer-Community-Copenhagen/events/250877840/"
+                  >
+                    June 7th - Learn Kubernetes - Best practices and showcases
                   </a>
                 </li>
               </ul>
