@@ -11,7 +11,7 @@ export default class Frontpage extends Component {
       <div className={styles.Frontpage}>
         <div className={styles.Content}>
           <HelloWorld />
-          <div style={{ background: '#3D9970' }}>
+          <div style={{ background: '#03A9F4' }}>
             <Content>
               <h2 style={{ color: 'white' }}>Upcoming events</h2>
               <ul>
