@@ -13,7 +13,30 @@ export default class Frontpage extends Component {
           <HelloWorld />
           <div style={{ background: '#03A9F4' }}>
             <Content>
-              <h2 style={{ color: 'white' }}>Upcoming events</h2>
+              <h2 style={{ color: 'white' }}>
+                <svg
+                  height="30px"
+                  version="1"
+                  width="30px"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 500 500"
+                  style={{
+                    verticalAlign: -5,
+                    marginRight: 10
+                  }}
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M250 41c-8 0-15 5-17 13l-43 132H49c-9 0-17 9-17 19 0 6 3 11 7 14l114 83-43 133-1 6a18 18 0 0 0 27 15l114-83 114 83c2 2 6 3 10 3a18 18 0 0 0 16-24l-43-133 114-83c4-3 7-8 7-14 0-10-7-19-17-19H310L267 54c-2-8-9-13-17-13z"
+                    fill="#ffe407"
+                    fill-rule="evenodd"
+                    style={{
+                      color: '#ffe407'
+                    }}
+                  />
+                </svg>
+                Upcoming events
+              </h2>
               <ul>
                 <li>
                   <a style={{ color: 'white' }} href="https://gr8conf.eu/">
