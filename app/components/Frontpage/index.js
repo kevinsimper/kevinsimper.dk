@@ -35,22 +35,28 @@ export default class Frontpage extends Component {
                     }}
                   />
                 </svg>
-                Upcoming events
+                Upcoming events to find me
               </h2>
               <ul>
-                <li>
-                  <a style={{ color: 'white' }} href="https://gr8conf.eu/">
-                    May 30th & June 1st - GR8conf
+                {[{
+                  title: 'May 30th & June 1st - GR8conf',
+                  link: 'https://gr8conf.eu/'
+                }, {
+                  title: 'June 1st & 2nd - JSConfEU',
+                  link: 'https://2018.jsconf.eu/'
+                }, {
+                  title: 'June 7th - Learn Kubernetes - Best practices and showcases',
+                  link: 'https://www.meetup.com/Google-Cloud-Developer-Community-Copenhagen/events/250877840/'
+                }, {
+                  title: 'July 24th & 26th - Google Cloud Next',
+                  link: 'https://cloud.withgoogle.com/next18/sf/'
+                }].map((i, key) => (
+                  <li>
+                    <a style={{ color: 'white' }} href={i.link}>
+                    {i.title}
                   </a>
                 </li>
-                <li>
-                  <a
-                    style={{ color: 'white' }}
-                    href="https://www.meetup.com/Google-Cloud-Developer-Community-Copenhagen/events/250877840/"
-                  >
-                    June 7th - Learn Kubernetes - Best practices and showcases
-                  </a>
-                </li>
+                ))}
               </ul>
             </Content>
           </div>
