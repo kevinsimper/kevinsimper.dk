@@ -26,10 +26,10 @@ export default class Frontpage extends Component {
                   }}
                 >
                   <path
-                    clip-rule="evenodd"
+                    clipRule="evenodd"
                     d="M250 41c-8 0-15 5-17 13l-43 132H49c-9 0-17 9-17 19 0 6 3 11 7 14l114 83-43 133-1 6a18 18 0 0 0 27 15l114-83 114 83c2 2 6 3 10 3a18 18 0 0 0 16-24l-43-133 114-83c4-3 7-8 7-14 0-10-7-19-17-19H310L267 54c-2-8-9-13-17-13z"
                     fill="#ffe407"
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     style={{
                       color: '#ffe407'
                     }}
@@ -38,24 +38,32 @@ export default class Frontpage extends Component {
                 Upcoming events to find me
               </h2>
               <ul>
-                {[{
-                  title: 'May 30th & June 1st - GR8conf',
-                  link: 'https://gr8conf.eu/'
-                }, {
-                  title: 'June 1st & 2nd - JSConfEU',
-                  link: 'https://2018.jsconf.eu/'
-                }, {
-                  title: 'June 7th - Learn Kubernetes - Best practices and showcases',
-                  link: 'https://www.meetup.com/Google-Cloud-Developer-Community-Copenhagen/events/250877840/'
-                }, {
-                  title: 'July 24th & 26th - Google Cloud Next',
-                  link: 'https://cloud.withgoogle.com/next18/sf/'
-                }].map((i, key) => (
+                {[
+                  {
+                    title: 'May 30th & June 1st - GR8conf',
+                    link: 'https://gr8conf.eu/',
+                    finished: true
+                  },
+                  {
+                    title: 'June 1st & 2nd - JSConfEU',
+                    link: 'https://2018.jsconf.eu/'
+                  },
+                  {
+                    title:
+                      'June 7th - Learn Kubernetes - Best practices and showcases',
+                    link:
+                      'https://www.meetup.com/Google-Cloud-Developer-Community-Copenhagen/events/250877840/'
+                  },
+                  {
+                    title: 'July 24th & 26th - Google Cloud Next',
+                    link: 'https://cloud.withgoogle.com/next18/sf/'
+                  }
+                ].filter(i => !i.finished).map((i, key) => (
                   <li key={key}>
                     <a style={{ color: 'white' }} href={i.link}>
-                    {i.title}
-                  </a>
-                </li>
+                      {i.title}
+                    </a>
+                  </li>
                 ))}
               </ul>
             </Content>
