@@ -21,6 +21,16 @@ export default class Presentations extends Component {
                 <div className={styles.Description}>
                   {presentation.description}
                 </div>
+                <ul>
+                  {presentation.links &&
+                    presentation.links.map((link, key) => (
+                      <li>
+                        <a key={key} href={link[1]}>
+                          {link[0]}
+                        </a>
+                      </li>
+                    ))}
+                </ul>
               </div>
             )
           })}
