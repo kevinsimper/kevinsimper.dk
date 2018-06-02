@@ -1,6 +1,18 @@
 {
   "presentations": [
     {
+      "name": "Docker Best Practices in development and Production",
+      "location": "Gr8Conf - 31. May 2018",
+      "description": "You should come if you know or have tried Docker but are thinking about how to get more serious about containers. What are the best practices with docker in Development, Staging and Production with regards to security.",
+      "links": [["Slides", "https://www.slideshare.net/KevinSimper/making-docker-and-kubernetes-a-success-at-your-company"]]
+    },
+    {
+      "name": "Making Docker and Kubernetes a success at your Company",
+      "location": "Gr8Conf - 31. May 2018",
+      "description": "We will talk about the benefits and downsides of using Kubernetes and how to take docker and kubernetes from theory to practice as your company. Story of how we took Connected Cars from nothing to a full self-serving platform in one year.",
+      "links": [["Slides","https://www.slideshare.net/KevinSimper/docker-best-practices-in-development-and-production"]]
+    },
+    {
       "name": "WebVR with the Oculus Go",
       "location": "CopenhagenJS - 24. May 2018",
       "description": "How does the Oculus Go work and what is WebVR together with it? Making a duck shooting game in 2 hours."
