@@ -46,13 +46,19 @@ export default class Frontpage extends Component {
                   },
                   {
                     title: 'June 1st & 2nd - JSConfEU',
-                    link: 'https://2018.jsconf.eu/'
+                    link: 'https://2018.jsconf.eu/',
+                    finished: true
                   },
                   {
                     title:
                       'June 7th - Learn Kubernetes - Best practices and showcases',
                     link:
-                      'https://www.meetup.com/Google-Cloud-Developer-Community-Copenhagen/events/250877840/'
+                      'https://www.meetup.com/Google-Cloud-Developer-Community-Copenhagen/events/250877840/',
+                      finished: true
+                  },
+                  {
+                    title: "July 11th - Waffle.js",
+                    link: 'https://wafflejs.com/?day=2018-07-11'
                   },
                   {
                     title: 'July 24th & 26th - Google Cloud Next',
