@@ -21,11 +21,6 @@ var plugins = [
 var entry = []
 if (production) {
   plugins.push(
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
-      }
-    }),
     new AssetsPlugin({
       filename: 'webpack.assets.json',
       prettyPrint: true,
