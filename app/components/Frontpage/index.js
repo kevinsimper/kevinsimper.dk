@@ -54,23 +54,25 @@ export default class Frontpage extends Component {
                       'June 7th - Learn Kubernetes - Best practices and showcases',
                     link:
                       'https://www.meetup.com/Google-Cloud-Developer-Community-Copenhagen/events/250877840/',
-                      finished: true
+                    finished: true
                   },
                   {
-                    title: "July 11th - Waffle.js",
+                    title: 'July 11th - Waffle.js',
                     link: 'https://wafflejs.com/?day=2018-07-11'
                   },
                   {
                     title: 'July 24th & 26th - Google Cloud Next',
                     link: 'https://cloud.withgoogle.com/next18/sf/'
                   }
-                ].filter(i => !i.finished).map((i, key) => (
-                  <li key={key}>
-                    <a style={{ color: 'white' }} href={i.link}>
-                      {i.title}
-                    </a>
-                  </li>
-                ))}
+                ]
+                  .filter(i => !i.finished)
+                  .map((i, key) => (
+                    <li key={key}>
+                      <a style={{ color: 'white' }} href={i.link}>
+                        {i.title}
+                      </a>
+                    </li>
+                  ))}
               </ul>
             </Content>
           </div>
