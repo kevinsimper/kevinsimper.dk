@@ -27,7 +27,6 @@
     "moment": "^2.22.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "react-router": "^4.1.1",
     "serve-favicon": "^2.5.0"
   },
   "devDependencies": {
@@ -41,7 +40,6 @@
     "chokidar": "^2.0.3",
     "css-loader": "^0.28.11",
     "express-reload": "^1.1.0",
-    "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.11",
     "html-loader": "^0.5.5",
     "ignore-file-loader": "^1.0.0",

@@ -1,9 +1,6 @@
 var webpack = require('webpack')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 var AssetsPlugin = require('assets-webpack-plugin')
-var autoprefixer = require('autoprefixer')
-var precss = require('precss')
-var colorFunction = require('postcss-color-function')
 
 var production = process.env.NODE_ENV === 'production'
 var publicPath = production ? '/build/' : '/build/'
