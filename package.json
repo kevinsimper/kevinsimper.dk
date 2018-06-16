@@ -37,7 +37,7 @@
     "babel-loader": "^6.4.1",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.11.1",
-    "chokidar": "^1.6.0",
+    "chokidar": "^2.0.3",
     "css-loader": "^0.28.0",
     "express-reload": "^1.1.0",
     "extract-text-webpack-plugin": "^2.1.0",
