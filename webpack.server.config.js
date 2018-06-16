@@ -28,31 +28,23 @@ module.exports = {
   },
   externals: nodeModules,
   module: {
-    loaders: [
-      {
-        test: /\.jsx?$/,
-        exclude: /(node_modules|bower_components)/,
-        loader: 'babel-loader', // 'babel-loader' is also a legal name to reference
-        query: {
-          presets: ['react', 'env']
-        }
-      },
+    rules: [
+      { test: /\.jsx?$/, exclude: /node_modules/, loader: "babel-loader" },
       {
         test: /\.s?css$/,
-        loaders: [
+        use: [
           'css-loader/locals?modules&localIdentName=[path][name]---[local]---[hash:base64:5]',
           'postcss-loader'
         ]
       },
-      { test: /\.json$/, loader: 'json-loader' },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
-        loaders: [
+        use: [
           'ignore-file-loader?hash=sha512&digest=hex&name=[hash].[ext]',
-          'image-webpack-loader?bypassOnDebug&interlaced=false'
+          'image-webpack-loader'
         ]
       },
-      { test: /\.md$/, loader: 'html-loader!markdown-loader' }
+      { test: /\.md$/, use: ['html-loader', 'markdown-loader'] }
     ]
   },
   plugins: [

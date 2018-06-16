@@ -83,24 +83,24 @@ app.get('/', (req, res, next) => {
 app.get('/posts/:post', (req, res) => {
   var slug = req.params.post
   var blogpost = blogdata.find(item => item.slug === slug)
-  var blogcontent = require('./blog/posts/' + slug + '.md')
+  import('./blog/posts/' + slug + '.md').then(blogcontent => {
+    let content = renderToString(
+      <App>
+        <Content>
+          <div dangerouslySetInnerHTML={{ __html: blogcontent.default }} />
+        </Content>
+      </App>
+    )
 
-  let content = renderToString(
-    <App>
-      <Content>
-        <div dangerouslySetInnerHTML={{ __html: blogcontent }} />
-      </Content>
-    </App>
-  )
-
-  res.send(
-    layout({
-      content: content,
-      production: production,
-      assets,
-      title: blogpost.title
-    })
-  )
+    res.send(
+      layout({
+        content: content,
+        production: production,
+        assets,
+        title: blogpost.title
+      })
+    )
+  })
 })
 
 app.get('/about', (req, res) => {

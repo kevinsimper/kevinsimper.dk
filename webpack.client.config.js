@@ -1,5 +1,5 @@
 var webpack = require('webpack')
-var ExtractTextPlugin = require('extract-text-webpack-plugin')
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 var AssetsPlugin = require('assets-webpack-plugin')
 var autoprefixer = require('autoprefixer')
 var precss = require('precss')
@@ -12,7 +12,9 @@ var jsName = production ? '[name]-bundle-[hash].js' : '[name].bundle.js'
 var cssName = production ? '[name]-bundle-[hash].css' : '[name].css'
 
 var plugins = [
-  new ExtractTextPlugin(cssName),
+  new MiniCssExtractPlugin({
+      filename: cssName,
+  }),
   new webpack.optimize.OccurrenceOrderPlugin(),
   new webpack.HotModuleReplacementPlugin()
 ]
@@ -37,6 +39,7 @@ if (!production) {
 }
 
 module.exports = {
+  mode: 'development',
   entry: {
     main: entry,
     map: './app/map/map.js'
@@ -47,36 +50,36 @@ module.exports = {
     filename: jsName
   },
   module: {
-    loaders: [
-      {
-        test: /\.jsx?$/,
-        exclude: /(node_modules|bower_components)/,
-        loader: 'babel-loader', // 'babel-loader' is also a legal name to reference
-        query: {
-          presets: ['react', 'env']
-        }
-      },
-      { test: /\.json$/, loader: 'json-loader' },
+    rules: [
+      { test: /\.jsx?$/, exclude: /node_modules/, loader: "babel-loader" },
       {
         test: /\.s?css$/,
-        loader: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use:
-            'css-loader?modules&localIdentName=[path][name]---[local]---[hash:base64:5]!postcss-loader'
-        })
+        use: [MiniCssExtractPlugin.loader, 'css-loader?modules&localIdentName=[path][name]---[local]---[hash:base64:5]', 'postcss-loader']
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
-        loaders: [
+        use: [
           'file-loader?hash=sha512&digest=hex&name=[hash].[ext]',
-          'image-webpack-loader?bypassOnDebug&interlaced=false'
+          'image-webpack-loader'
         ]
       },
       {
         test: /\.(woff|eot|woff2|ttf)$/,
-        loader: 'url-loader?limit=100000'
+        use: 'url-loader?limit=100000'
       }
     ]
+  },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        styles: {
+          name: 'styles',
+          test: /\.css$/,
+          chunks: 'all',
+          enforce: true
+        }
+      }
+    }
   },
   plugins: plugins,
   devtool: 'source-map'
