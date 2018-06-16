@@ -4,7 +4,7 @@ module.exports = {
       /* ...options */
     }),
     require('autoprefixer')({
-      /* ...options */
+      flexbox: false
     })
   ]
 }
