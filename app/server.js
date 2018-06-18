@@ -18,6 +18,7 @@ import { get } from 'axios'
 import Recommends from './components/Recommends'
 import LoginRoutes from './routes/login'
 import RecommendsRoutes from './routes/recommends'
+import AboutRoutes from './routes/about'
 
 var app = express.Router()
 var production = process.env.NODE_ENV === 'production'
@@ -108,41 +109,7 @@ app.get('/posts/:post', (req, res) => {
   })
 })
 
-app.get('/about', (req, res) => {
-  let content = renderToString(
-    <App>
-      <Content>
-        <About />
-      </Content>
-    </App>
-  )
-  res.send(
-    layout({
-      content,
-      production,
-      assets,
-      title: 'CV and About Kevin Simper'
-    })
-  )
-})
-
-app.get('/about/presentations', (req, res) => {
-  let content = renderToString(
-    <App>
-      <Content>
-        <Presentations />
-      </Content>
-    </App>
-  )
-  res.send(
-    layout({
-      content,
-      production,
-      assets,
-      title: 'Presentations - Kevin Simper'
-    })
-  )
-})
+app.use('/about', AboutRoutes)
 
 app.get('/contact', (req, res) => {
   let content = renderToString(
