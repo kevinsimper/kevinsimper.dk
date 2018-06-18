@@ -19,6 +19,7 @@ import Recommends from './components/Recommends'
 import LoginRoutes from './routes/login'
 import RecommendsRoutes from './routes/recommends'
 import AboutRoutes from './routes/about'
+import ContactRoutes from './routes/contact'
 
 var app = express.Router()
 var production = process.env.NODE_ENV === 'production'
@@ -110,24 +111,7 @@ app.get('/posts/:post', (req, res) => {
 })
 
 app.use('/about', AboutRoutes)
-
-app.get('/contact', (req, res) => {
-  let content = renderToString(
-    <App>
-      <Content>
-        <Contact />
-      </Content>
-    </App>
-  )
-  res.send(
-    layout({
-      content,
-      production,
-      assets,
-      title: 'Contact Kevin Simper'
-    })
-  )
-})
+app.use('/contact', ContactRoutes)
 
 app.get('/map', (req, res) => {
   res.send(
