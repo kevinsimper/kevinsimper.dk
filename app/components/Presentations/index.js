@@ -2,6 +2,22 @@ import React, { Component } from 'react'
 import data from './data.json'
 import styles from './style.scss'
 
+const Presentation = ({ presentation }) => (
+  <div className={styles.Presentation}>
+    <div className={styles.Name}>{presentation.name}</div>
+    <div className={styles.Location}>{presentation.location}</div>
+    <div className={styles.Description}>{presentation.description}</div>
+    <ul>
+      {presentation.links &&
+        presentation.links.map((link, key) => (
+          <li key={key}>
+            <a href={link[1]}>{link[0]}</a>
+          </li>
+        ))}
+    </ul>
+  </div>
+)
+
 export default class Presentations extends Component {
   render() {
     return (
@@ -13,26 +29,8 @@ export default class Presentations extends Component {
           wants to do more!
         </div>
         <div className={styles.Presentations}>
-          {data.presentations.map(presentation => {
-            return (
-              <div className={styles.Presentation}>
-                <div className={styles.Name}>{presentation.name}</div>
-                <div className={styles.Location}>{presentation.location}</div>
-                <div className={styles.Description}>
-                  {presentation.description}
-                </div>
-                <ul>
-                  {presentation.links &&
-                    presentation.links.map((link, key) => (
-                      <li>
-                        <a key={key} href={link[1]}>
-                          {link[0]}
-                        </a>
-                      </li>
-                    ))}
-                </ul>
-              </div>
-            )
+          {data.presentations.map((presentation, key) => {
+            return <Presentation presentation={presentation} key={key} />
           })}
         </div>
       </div>
