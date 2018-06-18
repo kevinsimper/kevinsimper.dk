@@ -57,6 +57,11 @@ export default class Frontpage extends Component {
                     finished: true
                   },
                   {
+                    title: 'June 19th - Introduction to Docker',
+                    link:
+                      'https://www.meetup.com/Docker-Copenhagen/events/251794160/'
+                  },
+                  {
                     title: 'July 11th - Waffle.js',
                     link: 'https://wafflejs.com/?day=2018-07-11'
                   },
