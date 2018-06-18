@@ -20,6 +20,9 @@ import LoginRoutes from './routes/login'
 import RecommendsRoutes from './routes/recommends'
 import AboutRoutes from './routes/about'
 import ContactRoutes from './routes/contact'
+import KubernetesTrainingRoutes from './routes/kubernetes-training'
+import PostsRoutes from './routes/posts'
+import MapRoutes from './routes/map'
 
 var app = express.Router()
 var production = process.env.NODE_ENV === 'production'
@@ -51,6 +54,7 @@ function map(props) {
   ${renderToStaticMarkup(<Map {...props} />)}
   `
 }
+exports.map = map
 
 function getPictures() {
   console.log('env', process.env.NODE_ENV)
@@ -87,77 +91,11 @@ app.get('/', (req, res, next) => {
     })
 })
 
-app.get('/posts/:post', (req, res) => {
-  var slug = req.params.post
-  var blogpost = blogdata.find(item => item.slug === slug)
-  import('./blog/posts/' + slug + '.md').then(blogcontent => {
-    let content = renderToString(
-      <App>
-        <Content>
-          <div dangerouslySetInnerHTML={{ __html: blogcontent.default }} />
-        </Content>
-      </App>
-    )
-
-    res.send(
-      layout({
-        content: content,
-        production: production,
-        assets,
-        title: blogpost.title
-      })
-    )
-  })
-})
-
+app.use('/posts', PostsRoutes)
 app.use('/about', AboutRoutes)
 app.use('/contact', ContactRoutes)
-
-app.get('/map', (req, res) => {
-  res.send(
-    map({
-      production,
-      assets
-    })
-  )
-})
-
-app.get('/activities', (req, res) => {
-  let content = renderToString(
-    <App>
-      <Content>
-        <ActivitiesPage blogdata={blogdata} />
-      </Content>
-    </App>
-  )
-  res.send(
-    layout({
-      content,
-      production,
-      assets,
-      title: 'All activities - Kevin Simper'
-    })
-  )
-})
-
-app.get('/kubernetes-training', (req, res) => {
-  let content = renderToString(
-    <App>
-      <Content>
-        <KubernetesTraining />
-      </Content>
-    </App>
-  )
-  res.send(
-    layout({
-      content,
-      production,
-      assets,
-      title: 'Kubernetes Training - Kevin Simper'
-    })
-  )
-})
-
+app.use('/map', MapRoutes)
+app.use('/kubernetes-training', KubernetesTrainingRoutes)
 app.use('/recommends', RecommendsRoutes)
 app.use('/login', LoginRoutes)
 
