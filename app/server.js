@@ -13,13 +13,17 @@ import Contact from './components/Contact'
 import Frontpage from './components/Frontpage'
 import ActivitiesPage from './components/ActivitiesPage'
 import KubernetesTraining from './components/KubernetesTraining'
+import Presentations from './components/Presentations'
 import { get } from 'axios'
 import Recommends from './components/Recommends'
+import LoginRoutes from './routes/login'
+import RecommendsRoutes from './routes/recommends'
 
 var app = express.Router()
 var production = process.env.NODE_ENV === 'production'
-
+exports.production = production
 var assets = global.assets
+exports.assets = assets
 
 app.use(compression())
 
@@ -39,6 +43,7 @@ function layout(props) {
   ${renderToStaticMarkup(<Layout {...props} />)}
   `
 }
+exports.layout = layout
 function map(props) {
   return `<!DOCTYPE html>
   ${renderToStaticMarkup(<Map {...props} />)}
@@ -121,6 +126,24 @@ app.get('/about', (req, res) => {
   )
 })
 
+app.get('/about/presentations', (req, res) => {
+  let content = renderToString(
+    <App>
+      <Content>
+        <Presentations />
+      </Content>
+    </App>
+  )
+  res.send(
+    layout({
+      content,
+      production,
+      assets,
+      title: 'Presentations - Kevin Simper'
+    })
+  )
+})
+
 app.get('/contact', (req, res) => {
   let content = renderToString(
     <App>
@@ -184,51 +207,7 @@ app.get('/kubernetes-training', (req, res) => {
   )
 })
 
-app.get('/recommends', (req, res) => {
-  let content = renderToString(
-    <App>
-      <Recommends />
-    </App>
-  )
-  res.send(
-    layout({
-      content,
-      production,
-      assets,
-      title: 'Recommends - Kevin Simper'
-    })
-  )
-})
-
-app.get('/login', (req, res) => {
-  let content = renderToString(
-    <App>
-      <Content>
-        <h1>Login</h1>
-        <div>
-          <label>
-            <input type="text" placeholder="username" name="username" />
-          </label>
-        </div>
-        <div>
-          <label>
-            <input type="password" placeholder="password" name="password" />
-          </label>
-        </div>
-        <div>
-          <button>Login</button>
-        </div>
-      </Content>
-    </App>
-  )
-  res.send(
-    layout({
-      content,
-      production,
-      assets,
-      title: 'Login - Kevin Simper'
-    })
-  )
-})
+app.use('/recommends', RecommendsRoutes)
+app.use('/login', LoginRoutes)
 
 module.exports = app
