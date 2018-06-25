@@ -59,11 +59,20 @@ export default class Frontpage extends Component {
                   {
                     title: 'June 19th - Introduction to Docker',
                     link:
-                      'https://www.meetup.com/Docker-Copenhagen/events/251794160/'
+                      'https://www.meetup.com/Docker-Copenhagen/events/251794160/',
+                    finished: true
                   },
                   {
                     title: 'July 11th - Waffle.js',
                     link: 'https://wafflejs.com/?day=2018-07-11'
+                  },
+                  {
+                    title: 'July 12th - SFNode',
+                    link: 'https://www.meetup.com/sfnode/events/250440975/'
+                  },
+                  {
+                    title: 'July 18th - CodeClimate Conference',
+                    link: 'https://codeclimate.com/summit/'
                   },
                   {
                     title: 'July 24th & 26th - Google Cloud Next',
