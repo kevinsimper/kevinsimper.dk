@@ -1,5 +1,10 @@
 [
 	{
+		"slug": "kubernetes-introduction",
+		"title": "Introduction to Kubernetes with Docker for Mac/Windows",
+		"date": "Wed, 27 Jun 2018 12:18:45 +0100"
+	},
+	{
 		"slug": "aframe-with-oculus-go-webvr",
 		"title": "Aframe with Oculus Go is great WebVR",
 		"date": "Mon, 23 May 2018 22:18:45 +0100"
