@@ -103,6 +103,14 @@ export default class Frontpage extends Component {
                 <iframe
                   width="560"
                   height="315"
+                  src="https://www.youtube.com/embed/6NG_cUeuNhU"
+                  frameBorder="0"
+                />
+              </div>
+              <div className={'embed'} style={{ margin: '20px 0' }}>
+                <iframe
+                  width="560"
+                  height="315"
                   src="https://www.youtube.com/embed/hSvuHBQ_7VE"
                   frameBorder="0"
                 />
