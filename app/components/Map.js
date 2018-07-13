@@ -8,7 +8,7 @@ export default props => {
         <link rel="icon" type="image/jpeg" href="/kevinsimper.jpg" />
         <link
           rel="stylesheet"
-          href="http://fonts.googleapis.com/css?family=Open+Sans:400,600"
+          href="https://fonts.googleapis.com/css?family=Open+Sans:400,600"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {props.production && <script src={props.assets.map.js} />}

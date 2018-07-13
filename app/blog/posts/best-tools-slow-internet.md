@@ -40,4 +40,5 @@ slow you can look at the menu bar to see whether you lost connection or the
 connection is just slow big difference!
 
 https://getbitbar.com/
+
 https://getbitbar.com/plugins/Network/ping.10s.sh
