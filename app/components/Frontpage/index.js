@@ -63,12 +63,27 @@ export default class Frontpage extends Component {
                     finished: true
                   },
                   {
+                    title: 'July 10th - Beer.js',
+                    link: 'https://www.meetup.com/beerjs/events/251205105/',
+                    finished: true
+                  },
+                  {
                     title: 'July 11th - Waffle.js',
-                    link: 'https://wafflejs.com/?day=2018-07-11'
+                    link: 'https://wafflejs.com/?day=2018-07-11',
+                    finished: true
                   },
                   {
                     title: 'July 12th - SFNode',
-                    link: 'https://www.meetup.com/sfnode/events/250440975/'
+                    link: 'https://www.meetup.com/sfnode/events/250440975/',
+                    finished: true
+                  },
+                  {
+                    title: 'July 14th - NodeSchool.io Oakland',
+                    link: 'https://nodeschool.io/oakland/'
+                  },
+                  {
+                    title: 'July 17th - Serverless',
+                    link: 'https://www.meetup.com/Serverless/events/252006429/'
                   },
                   {
                     title: 'July 18th - CodeClimate Conference',
