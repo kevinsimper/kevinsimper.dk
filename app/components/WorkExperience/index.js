@@ -8,7 +8,7 @@ export default class WorkExperience extends React.Component {
       <div>
         <h2>Work Experience</h2>
         <div className={styles.Experiences}>
-          {data.experiences.map(item => {
+          {data.experiences.reverse().map(item => {
             return (
               <div className={styles.Experience}>
                 <h3 className={styles.Company}>{item.company}</h3>

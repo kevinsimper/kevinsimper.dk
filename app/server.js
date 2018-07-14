@@ -11,7 +11,6 @@ import Instagram from './components/Instagram'
 import About from './components/About'
 import Contact from './components/Contact'
 import Frontpage from './components/Frontpage'
-import ActivitiesPage from './components/ActivitiesPage'
 import KubernetesTraining from './components/KubernetesTraining'
 import Presentations from './components/Presentations'
 import { get } from 'axios'
@@ -23,6 +22,7 @@ import ContactRoutes from './routes/contact'
 import KubernetesTrainingRoutes from './routes/kubernetes-training'
 import PostsRoutes from './routes/posts'
 import MapRoutes from './routes/map'
+import ActivitiesRoutes from './routes/activities'
 
 var app = express.Router()
 var production = process.env.NODE_ENV === 'production'
@@ -98,5 +98,6 @@ app.use('/map', MapRoutes)
 app.use('/kubernetes-training', KubernetesTrainingRoutes)
 app.use('/recommends', RecommendsRoutes)
 app.use('/login', LoginRoutes)
+app.use('/activities', ActivitiesRoutes)
 
 module.exports = app
