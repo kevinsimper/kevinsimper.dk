@@ -42,3 +42,13 @@ connection is just slow big difference!
 https://getbitbar.com/
 
 https://getbitbar.com/plugins/Network/ping.10s.sh
+
+## Brow.sh and html.brow.sh
+
+If elinks gives you problems or you want a little more familiar browser
+experience then brow.sh is a really awesome solution, it basicly renders
+a webpage and sends you a screenshot based on text characters.
+
+https://brow.sh/
+
+https://html.brow.sh/
