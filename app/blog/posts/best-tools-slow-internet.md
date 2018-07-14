@@ -52,3 +52,26 @@ a webpage and sends you a screenshot based on text characters.
 https://brow.sh/
 
 https://html.brow.sh/
+
+## Transfering files - IPFS or Webtorrent or RSYNC
+
+It can be super annoying download and uploading files on unreliable internet
+because the connection is dropped and you have to start over up/downloading the
+same data again.
+
+You can use tools like IPFS that are built to retry and break large files into
+small pieces that can easily be transfered.
+
+IPFS is better than webtorrent because it is able to share pieces across files
+where torrent will always encode a file again and share it even if it is the
+same in another torrent.
+
+RSYNC is good but is a active program that runs in the foreground, where IPFS
+and Webtorrent is made to work in daemon mode which means in run in the
+background.
+
+https://ipfs.io/
+
+https://webtorrent.io/
+
+https://en.wikipedia.org/wiki/Rsync
