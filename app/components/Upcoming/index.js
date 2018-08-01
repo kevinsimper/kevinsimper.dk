@@ -1,3 +1,5 @@
+import React from 'react'
+
 const events = [
   {
     title: 'May 30th & June 1st - GR8conf',

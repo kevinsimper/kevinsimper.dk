@@ -34,9 +34,8 @@ export default class About extends React.Component {
           <div>
             <h2 className={styles.Header}>Presentations</h2>
             <div>
-              I have done 30 {' '}
-              presentations at differnet meetups. It is something that I really
-              like to do and wants to do more!
+              I have done 30 presentations at differnet meetups. It is something
+              that I really like to do and wants to do more!
             </div>
             <Presentations limit={5} />
             <a href="about/presentations">See all my presentations</a>
