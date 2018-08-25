@@ -1,6 +1,16 @@
 {
   "presentations": [
     {
+      "name": "Using React-Native to launch iOS and Android in record time",
+      "location": "Copenhagen Cocoa - 23. August 2018",
+      "description": "We made a React-Native app at Connected Cars, but how did it go and what are the upsides and downsides now after it has been launched? What could be done better?"
+    },
+    {
+      "name": "Greeting you with Vision and Speech Machine Learning",
+      "localtion": "GDG Cloud London - 22. August 2018",
+      "description": "I talked about how you can use Machine Learning for recognizing faces and names with Machine Learning."
+    },
+    {
       "name": "Docker Best Practices in development and Production",
       "location": "Gr8Conf - 31. May 2018",
       "description": "You should come if you know or have tried Docker but are thinking about how to get more serious about containers. What are the best practices with docker in Development, Staging and Production with regards to security.",
