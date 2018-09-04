@@ -27,6 +27,21 @@ export default () => (
           <li>100 gram durumflour</li>
         </ul>
       </li>
+      <li>
+        Lasagne - 4 persons
+        <ul>
+          <li>500 grounded beef</li>
+          <li>1 onion</li>
+          <li>1 tomato puree</li>
+          <li>1 cut tomato</li>
+          <li>1 beef boulion</li>
+          <li>0,5 liter water</li>
+          <li>2 carrots</li>
+          <li>Salt/Paper</li>
+          <li>Cheese ontop</li>
+          <li>Lasagne plates</li>
+        </ul>
+      </li>
     </ul>
   </Content>
 )
