@@ -103,7 +103,9 @@ app.use('/activities', ActivitiesRoutes)
 app.get('/nametags', (req, res) => {
   let content = renderToString(
     <App>
-      <Content><Nametags/></Content>
+      <Content>
+        <Nametags />
+      </Content>
     </App>
   )
 

@@ -3,8 +3,10 @@ import React from 'react'
 export default () => (
   <div>
     <h1>Printing nametags</h1>
-    <p>I have helped communities print nametags. It is a great way to help people
-      start conversations.</p>
+    <p>
+      I have helped communities print nametags. It is a great way to help people
+      start conversations.
+    </p>
     <h3>I have helped:</h3>
     <ul>
       <li>Ruby Brigade</li>
@@ -15,6 +17,9 @@ export default () => (
       <li>HackYourFuture</li>
       <li>GDG Cloud London</li>
     </ul>
-    <p>I can also help you! I really like seeing communities grow and become better.</p>
+    <p>
+      I can also help you! I really like seeing communities grow and become
+      better.
+    </p>
   </div>
 )
