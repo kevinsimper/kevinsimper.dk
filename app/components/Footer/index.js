@@ -26,6 +26,8 @@ export default function Footer() {
         <div>
           <strong>Pages:</strong>
           <div>
+            <a href="/nametags">Nametags</a>
+            <br />
             <a href="/kubernetes-training">Kubernetes Training</a>
             <br />
             <a href="/recommends">Recommends</a>

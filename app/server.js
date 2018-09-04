@@ -12,6 +12,7 @@ import About from './components/About'
 import Contact from './components/Contact'
 import Frontpage from './components/Frontpage'
 import KubernetesTraining from './components/KubernetesTraining'
+import Nametags from './components/Nametags'
 import Presentations from './components/Presentations'
 import { get } from 'axios'
 import Recommends from './components/Recommends'
@@ -99,5 +100,21 @@ app.use('/kubernetes-training', KubernetesTrainingRoutes)
 app.use('/recommends', RecommendsRoutes)
 app.use('/login', LoginRoutes)
 app.use('/activities', ActivitiesRoutes)
+app.get('/nametags', (req, res) => {
+  let content = renderToString(
+    <App>
+      <Content><Nametags/></Content>
+    </App>
+  )
+
+  res.send(
+    layout({
+      content: content,
+      production: production,
+      assets,
+      title: 'Nametags - Kevin Simper'
+    })
+  )
+})
 
 module.exports = app
