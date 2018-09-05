@@ -56,6 +56,11 @@
       "description": "A talk about learning and ideas for being a meetup organizer through my experience running CopenhagenJS and Docker Copenhagen for 3 years."
     },
     {
+      "name": "How to do Serverless",
+      "location": "CopenhagenJS - 12. October 2017",
+      "description": "An introduction on how to think about serverless and a demo of how to deploy with AWS and Google Cloud in both under 10 minutes."
+    },
+    {
       "name": "What is Cloud Native",
       "location": "Docker Copenhagen - 3. August 2017",
       "description": "A gave a 25 min presentation about Cloud Native and what it means."
@@ -137,7 +142,8 @@
     {
       "name": "Introduction to Docker - Workshop",
       "location": "Docker Copenhagen - December 2015",
-      "description": "Gave a 3-hour introduction to Docker about everything you need to know. We talked about why it mattered and how to get started with Docker on their next project."
+      "description": "Gave a 3-hour introduction to Docker about everything you need to know. We talked about why it mattered and how to get started with Docker on their next project.",
+      "type": "workshop"
     },
     {
       "name": "The land of Isomorphic Apps",
