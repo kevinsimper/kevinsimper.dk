@@ -1,6 +1,13 @@
 {
   "presentations": [
     {
+      "name": "Contributing to Open Source Workshop",
+      "location": "CopenhagenJS - 4. Sep 2018",
+      "description": "A workshop about how to contribute to open source and some workshop questions to think about and discuss in a group. Finish it up with time for starting that process.",
+      "links": [["Slides", "https://www.slideshare.net/KevinSimper/contributing-opensource-workshop"]],
+      "type": "workshop"
+    },
+    {
       "name": "Using React-Native to launch iOS and Android in record time",
       "location": "Copenhagen Cocoa - 23. August 2018",
       "description": "We made a React-Native app at Connected Cars, but how did it go and what are the upsides and downsides now after it has been launched? What could be done better?"
