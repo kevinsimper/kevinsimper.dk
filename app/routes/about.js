@@ -4,7 +4,7 @@ import { renderToString } from 'react-dom/server'
 import App from '../components/App'
 import Content from '../components/Content'
 import About from '../components/About'
-import Presentations from '../components/Presentations'
+import PresentationsPage from '../components/PresentationsPage'
 import { layout, production, assets } from '../server'
 let app = express.Router()
 
@@ -30,7 +30,7 @@ app.get('/presentations', (req, res) => {
   let content = renderToString(
     <App>
       <Content>
-        <Presentations />
+        <PresentationsPage />
       </Content>
     </App>
   )
