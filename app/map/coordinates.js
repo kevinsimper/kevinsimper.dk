@@ -287,5 +287,24 @@ module.exports = {
         }
       }
     ]
+  },
+  newdelhi: {
+    color: '#079e00',
+    cords: [
+      {
+        name: 'copenhagen',
+        location: {
+          lat: 55.6760968,
+          lng: 12.568337100000008
+        }
+      },
+      {
+        name: 'kiev',
+        location: {
+          lat: 28.5272181,
+          lng: 77.0688997
+        }
+      }
+    ]
   }
 }
