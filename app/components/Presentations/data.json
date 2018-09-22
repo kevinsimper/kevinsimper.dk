@@ -1,10 +1,30 @@
 {
   "presentations": [
     {
+      "name": "How to build a P2P Chat",
+      "location": "JSLovers - 16. September 2018",
+      "description": "In this workshop, we will look at how we can use p2p libraries to give our applications real-time chat and allow games to be multiplayer. We will be building a chat application and a multiplayer game both with JavaScript. One of the major benefits of p2p is it is really cost-effective since you don't have to pay for hosting. The libraries we are going to use is called IPFS and Webtorrent, which both have large communities and active development.",
+      "type": "workshop"
+    },
+    {
+      "name": "Using React-Native to launch iOS and Android in record time",
+      "location": "JSLovers - 15. September 2018",
+      "description": "How would you build a peer to peer app on the web and what are some of the challanges? We will look at how to take advance of new libraries that makes it easy to make cool new applications like games and chat.",
+      "links": [
+        ["Slides", "https://p2p-ipfs-presentation.surge.sh/"],
+        ["Code", "https://github.com/kevinsimper/p2p-ipfs-presentation"]
+      ]
+    },
+    {
       "name": "Contributing to Open Source Workshop",
       "location": "CopenhagenJS - 4. Sep 2018",
       "description": "A workshop about how to contribute to open source and some workshop questions to think about and discuss in a group. Finish it up with time for starting that process.",
-      "links": [["Slides", "https://www.slideshare.net/KevinSimper/contributing-opensource-workshop"]],
+      "links": [
+        [
+          "Slides",
+          "https://www.slideshare.net/KevinSimper/contributing-opensource-workshop"
+        ]
+      ],
       "type": "workshop"
     },
     {
@@ -21,13 +41,23 @@
       "name": "Docker Best Practices in development and Production",
       "location": "Gr8Conf - 31. May 2018",
       "description": "You should come if you know or have tried Docker but are thinking about how to get more serious about containers. What are the best practices with docker in Development, Staging and Production with regards to security.",
-      "links": [["Slides", "https://www.slideshare.net/KevinSimper/making-docker-and-kubernetes-a-success-at-your-company"]]
+      "links": [
+        [
+          "Slides",
+          "https://www.slideshare.net/KevinSimper/making-docker-and-kubernetes-a-success-at-your-company"
+        ]
+      ]
     },
     {
       "name": "Making Docker and Kubernetes a success at your Company",
       "location": "Gr8Conf - 31. May 2018",
       "description": "We will talk about the benefits and downsides of using Kubernetes and how to take docker and kubernetes from theory to practice as your company. Story of how we took Connected Cars from nothing to a full self-serving platform in one year.",
-      "links": [["Slides","https://www.slideshare.net/KevinSimper/docker-best-practices-in-development-and-production"]]
+      "links": [
+        [
+          "Slides",
+          "https://www.slideshare.net/KevinSimper/docker-best-practices-in-development-and-production"
+        ]
+      ]
     },
     {
       "name": "WebVR with the Oculus Go",
