@@ -16,6 +16,7 @@ export default () => (
       <li>FoundersHouse Fridaybar</li>
       <li>HackYourFuture</li>
       <li>GDG Cloud London</li>
+      <li>JSLovers New Delhi</li>
     </ul>
     <p>
       I can also help you! I really like seeing communities grow and become
