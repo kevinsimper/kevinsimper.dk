@@ -24,7 +24,7 @@ export default props => {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <script src="https://cdn.jsdelivr.net/npm/prismjs@1.15.0/prism.min.js" data-manual></script>
-        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.15.0/plugins/line-numbers/prism-line-numbers.min.js" />
+        <script src="https://cdn.rawgit.com/jacob-long/b34b65ff1a56a1c772c3b4e9e204a035/raw/959da4fd550cf77ac20d42f3e7e442fdb906b6da/prism-line-numbers.js" />
         {props.production && (
           <script src={`https://cdn.kevinsimper.dk${props.assets.main.js}`} />
         )}
