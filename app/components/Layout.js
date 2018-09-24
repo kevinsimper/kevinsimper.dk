@@ -12,14 +12,19 @@ export default props => {
         />
         <link
           rel="stylesheet"
-          href="https://yandex.st/highlightjs/8.0/styles/default.min.css"
+          href="https://cdn.jsdelivr.net/npm/prismjs@1.15.0/themes/prism.min.css"
+        />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/prismjs@1.15.0/plugins/line-numbers/prism-line-numbers.css"
         />
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Open+Sans:400,600"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <script src="https://yandex.st/highlightjs/8.0/highlight.min.js" />
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.15.0/prism.min.js" data-manual></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.15.0/plugins/line-numbers/prism-line-numbers.min.js" />
         {props.production && (
           <script src={`https://cdn.kevinsimper.dk${props.assets.main.js}`} />
         )}
@@ -46,7 +51,7 @@ export default props => {
       <body>
         <div id="app" dangerouslySetInnerHTML={{ __html: props.content }} />
         <script
-          dangerouslySetInnerHTML={{ __html: `hljs.initHighlightingOnLoad();` }}
+          dangerouslySetInnerHTML={{ __html: `document.querySelectorAll('code').forEach(i => Prism.highlightElement(i))` }}
         />
       </body>
     </html>
