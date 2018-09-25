@@ -15,6 +15,7 @@ app.get('/:post', (req, res) => {
     let content = renderToString(
       <App>
         <Content>
+          <div>{blogpost.date}</div>
           <div dangerouslySetInnerHTML={{ __html: blogcontent.default }} />
         </Content>
       </App>
