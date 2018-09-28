@@ -48,10 +48,11 @@ app.get('/', (req, res) => {
 
 app.get('/accountkit',  (req, res) => {
   const { code, state, status } = req.query
-  get(`https://graph.accountkit.com/v1.1/access_token?grant_type=authorization_code&code=${code}&access_token=${accountkitToken}`).then(response => {
+  const accessToken = `https://graph.accountkit.com/v1.1/access_token?grant_type=authorization_code&code=${code}&access_token=${accountkitToken}`
+  get(accessToken).then(response => {
     const { id, access_token } = response.data
-    console.log(access_token)
-    return get(`https://graph.accountkit.com/v1.3/me/?access_token=${access_token}`)
+    const meUrl = `https://graph.accountkit.com/v1.3/me/?access_token=${access_token}`
+    return get(meUrl)
   }).then(response => {
     const email = response.data.email.address
     req.signedCookies.email = email
