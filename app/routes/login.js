@@ -54,8 +54,19 @@ app.get('/accountkit',  (req, res) => {
     return get(`https://graph.accountkit.com/v1.3/me/?access_token=${access_token}`)
   }).then(response => {
     const email = response.data.email.address
+    req.signedCookies.email = email
+    res.cookie('id', email, { signed: true })
     res.send('Hi ' + email)
   }).catch(e => console.log(e))
+})
+
+app.get('/dashboard', (req, res) => {
+  const { email } = req.signedCookies
+  if(email === 'kevin.simper@gmail.com') {
+    res.send('Hi Kevin')
+  } else {
+    res.send('Not allowed')
+  }
 })
 
 export default app

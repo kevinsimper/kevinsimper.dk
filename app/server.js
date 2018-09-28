@@ -1,5 +1,6 @@
 import express from 'express'
 import compression from 'compression'
+import cookieParser from 'cookie-parser'
 import Layout from './components/Layout'
 import Map from './components/Map'
 import blogdata from './blog/posts/_data.json'
@@ -32,6 +33,7 @@ var assets = global.assets
 exports.assets = assets
 
 app.use(compression())
+app.use(cookieParser('somethingverysecret'))
 
 if (production) {
   app.use((req, res, next) => {
