@@ -56,13 +56,13 @@ app.get('/accountkit',  (req, res) => {
     const email = response.data.email.address
     req.signedCookies.email = email
     res.cookie('id', email, { signed: true })
-    res.send('Hi ' + email)
+    res.redirect('/login/dashboard')
   }).catch(e => console.log(e))
 })
 
 app.get('/dashboard', (req, res) => {
-  const { email } = req.signedCookies
-  if(email === 'kevin.simper@gmail.com') {
+  const { id } = req.signedCookies
+  if(id === 'kevin.simper@gmail.com') {
     res.send('Hi Kevin')
   } else {
     res.send('Not allowed')
