@@ -26,7 +26,7 @@ app.get('/:post', (req, res) => {
         content: content,
         production: production,
         assets,
-        title: blogpost.title
+        title: `${blogpost.title} - Kevin Simper`
       })
     )
   })
