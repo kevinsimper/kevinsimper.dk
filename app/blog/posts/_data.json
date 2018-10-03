@@ -1,5 +1,10 @@
 [
 	{
+		"slug": "how-i-started-programming",
+		"title": "How I started programming",
+		"date": "Wed, 03 Oct 2018 10:12:00 +0100"
+	},
+	{
 		"slug": "find-most-active-meetup-members",
 		"title": "Find most active meetup members",
 		"date": "Tue, 02 Oct 2018 22:45:00 +0100"
