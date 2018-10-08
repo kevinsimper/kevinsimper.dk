@@ -15,9 +15,9 @@
       "type": "workshop"
     },
     {
-      "name": "Using React-Native to launch iOS and Android in record time",
+      "name": "Building P2P in the browser for zero cost",
       "location": "JSLovers - 15. September 2018",
-      "description": "How would you build a peer to peer app on the web and what are some of the challanges? We will look at how to take advance of new libraries that makes it easy to make cool new applications like games and chat.",
+      "description": "How would you build a peer to peer app on the web and what are some of the challenges? We will look at how to take advance of new libraries that makes it easy to make cool new applications like games and chat.",
       "links": [
         ["Slides", "https://p2p-ipfs-presentation.surge.sh/"],
         ["Code", "https://github.com/kevinsimper/p2p-ipfs-presentation"]
