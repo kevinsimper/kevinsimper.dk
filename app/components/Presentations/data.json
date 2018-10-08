@@ -2,7 +2,7 @@
   "presentations": [
     {
       "name": "How Kubernetes allows your Startup to scale",
-      "location": "TechBBQ Google Garden - 27. September 2018",
+      "location": "TechBBQ Google Garden - Copenhagen - 27. September 2018",
       "description": "With Kubernetes you can scale your startup easier with an easier way to hire talent. In this presentation, I show you how Kubernetes is the right choice.",
       "links": [
         ["Slides", "https://www.slideshare.net/KevinSimper/how-kubernetes-allows-your-startup-to-scale"]
@@ -10,13 +10,13 @@
     },
     {
       "name": "How to build a P2P Chat",
-      "location": "JSLovers - 16. September 2018",
+      "location": "JSLovers - New Delhi - 16. September 2018",
       "description": "In this workshop, we will look at how we can use p2p libraries to give our applications real-time chat and allow games to be multiplayer. We will be building a chat application and a multiplayer game both with JavaScript. One of the major benefits of p2p is it is really cost-effective since you don't have to pay for hosting. The libraries we are going to use is called IPFS and Webtorrent, which both have large communities and active development.",
       "type": "workshop"
     },
     {
       "name": "Building P2P in the browser for zero cost",
-      "location": "JSLovers - 15. September 2018",
+      "location": "JSLovers - New Delhi - 15. September 2018",
       "description": "How would you build a peer to peer app on the web and what are some of the challenges? We will look at how to take advance of new libraries that makes it easy to make cool new applications like games and chat.",
       "links": [
         ["Slides", "https://p2p-ipfs-presentation.surge.sh/"],
