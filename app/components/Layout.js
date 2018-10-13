@@ -23,7 +23,10 @@ export default props => {
           href="https://fonts.googleapis.com/css?family=Open+Sans:400,600"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.15.0/prism.min.js" data-manual></script>
+        <script
+          src="https://cdn.jsdelivr.net/npm/prismjs@1.15.0/prism.min.js"
+          data-manual
+        />
         <script src="https://cdn.rawgit.com/jacob-long/b34b65ff1a56a1c772c3b4e9e204a035/raw/959da4fd550cf77ac20d42f3e7e442fdb906b6da/prism-line-numbers.js" />
         {props.production && (
           <script src={`https://cdn.kevinsimper.dk${props.assets.main.js}`} />
@@ -51,7 +54,9 @@ export default props => {
       <body>
         <div id="app" dangerouslySetInnerHTML={{ __html: props.content }} />
         <script
-          dangerouslySetInnerHTML={{ __html: `document.querySelectorAll('code').forEach(i => Prism.highlightElement(i))` }}
+          dangerouslySetInnerHTML={{
+            __html: `document.querySelectorAll('code').forEach(i => Prism.highlightElement(i))`
+          }}
         />
       </body>
     </html>
