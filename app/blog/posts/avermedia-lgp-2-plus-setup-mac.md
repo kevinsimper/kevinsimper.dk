@@ -1,10 +1,12 @@
-# Avermedia LGP 2 Plus - How to setup Mac and my experience
+# Avermedia LGP 2 Plus - Record HDMI - Setup Mac and finally got it working
 
 I brought the Avermedia LGP 2 Plus recently from Amazon because from what I read
 it was the easiest way to record the screen and that it supported 4k passthrough
 sounded like a great way to have something a bit futureproof, 4k screens and
 projectors are beginning to be more common and the idea device would not change
 anything.
+
+**TL;DR; Solution at the end!**
 
 I opened it up and connected it to power and connected the HDMI cable to the
 computer and tried to press the record button. You couldn't or nothing happened
@@ -19,6 +21,25 @@ All the software was basicly for Windows and I only have a Mac, so couldn't use
 any of the configuration software. The updater for Mac basically told that I had
 to plug in the device. Major disappointment and of course not manual and no way
 to know what the blinking LED on the device meant.
+
+### Wrong SD format
+
+Then I read on the internet if it was because a wrong filesystem format on the
+SD Card. It says it supports ExFat but other people on the internet says it has
+to be FAT32. Next problem, DiskUtil that you can use for reformatting devices on
+Mac, will fail if you try to format SD Cards that are larger than 32 GB's to
+FAT32 for some reason.
+
+Now Google and figure out how to do it from the commandline.
+
+```bash
+# FIND THE DISK NUMBER
+$ diskutil list
+# REPLACE THE DISK NUMBER
+$ diskutil eraseDisk FAT32 AVER MBRFormat /dev/disk3 # REPLACE HERE
+```
+
+That was not the solution, still didn't work!
 
 ### Discovery
 
@@ -55,3 +76,10 @@ settings, install the VirtualBox USB Extension, start the Windows Machine,
 reboot if error, plug the USB into your Mac, click on the USB icon on the bottom
 corner on the outer frame of the Windows machine, and now do the same
 instruction as above if you had a Windows machine.
+
+## Conclusion
+
+This device is not helpful in debugging as it didn't even write a logfile to the
+SD Card, that would have been logical! Now that it is working it is quite
+magical, super easy solution that doesn't require anything intervention on the
+host computer displaying, simply plugin in two HDMI cables and it works.
