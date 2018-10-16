@@ -1,11 +1,42 @@
 {
   "presentations": [
     {
+      "name": "How to create a good CV",
+      "location": "HackYourFuture meetup - Copenhagen - 17. October 2018",
+      "description": "In this workshop presentation I tell how to create a good CV, what should it include and what should you leave out. A CV is a conversation starter and how to connect with companies in the best ways to get oppotunities.",
+      "links": [
+        [
+          "Slides",
+          "https://kevinsimper.github.io/hackyourfuture-cv-workshop-presentation/"
+        ],
+        [
+          "Meetup link",
+          "https://www.meetup.com/HackYourFuture-Copenhagen/events/255230222"
+        ]
+      ],
+      "type": "workshop"
+    },
+    {
+      "name": "Intro to Kubernetes workshop",
+      "location": "Google Cloud Community Copenhagen - Copenhagen - 11. October 2018",
+      "description": "I made the first non-profit paid workshop where I taught Kubernetes to with practical examples. In the workshop the participants got to deploy their own application first with the Kubectl CLI and then made it with the YAML files in the declaritive way.",
+      "links": [
+        [
+          "Meetup link",
+          "https://www.meetup.com/Google-Cloud-Developer-Community-Copenhagen/events/255296818/"
+        ]
+      ],
+      "type": "workshop"
+    },
+    {
       "name": "How Kubernetes allows your Startup to scale",
       "location": "TechBBQ Google Garden - Copenhagen - 27. September 2018",
       "description": "With Kubernetes you can scale your startup easier with an easier way to hire talent. In this presentation, I show you how Kubernetes is the right choice.",
       "links": [
-        ["Slides", "https://www.slideshare.net/KevinSimper/how-kubernetes-allows-your-startup-to-scale"]
+        [
+          "Slides",
+          "https://www.slideshare.net/KevinSimper/how-kubernetes-allows-your-startup-to-scale"
+        ]
       ]
     },
     {
