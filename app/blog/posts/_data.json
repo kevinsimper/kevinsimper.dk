@@ -1,5 +1,10 @@
 [
   {
+    "slug": "kubernetes-prometheus-docker-for-mac",
+    "title": "How to use Prometheus with Kubernetes on Docker for Mac",
+    "date": "Mon, 22 Oct 2018 03:34:00 +0100"
+  },
+  {
     "slug": "avermedia-lgp-2-plus-setup-mac",
     "title": "Avermedia LGP 2 Plus - Record HDMI - Setup Mac and finally got it working",
     "date": "Mon, 15 Oct 2018 22:12:00 +0100"
