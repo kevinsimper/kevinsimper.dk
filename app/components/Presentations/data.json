@@ -104,7 +104,7 @@
     {
       "name": "WebVR with the Oculus Go",
       "location": "CopenhagenJS - 24. May 2018",
-      "description": "How does the Oculus Go work and what is WebVR together with it? Making a duck shooting game in 2 hours.",
+      "description": "How does the Oculus Go work and what is WebVR together with it? I show how you can make a duck shooting game in 2 hours with A-frame and how the new React-360 compares. I also show how the Oculus Go works and how it is playing a game by livestreaming to my laptop with Facebook Live.",
       "links": [
         ["Slides", "https://webvr-presentation.surge.sh/"],
         ["Game", "http://webvr-duckgame.surge.sh/game.html"]

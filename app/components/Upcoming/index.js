@@ -58,10 +58,6 @@ const events = [
     finished: true
   },
   {
-    title: 'Oct 10 & Oct 11 - Google Cloud Next London',
-    link: 'https://cloud.withgoogle.com/next18/london'
-  },
-  {
     title: 'Oct 30 & Nov 2 - devcon 4',
     link: 'https://devcon4.ethereum.org/'
   }
