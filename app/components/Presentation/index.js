@@ -2,8 +2,10 @@ import React, { Component } from 'react'
 import styles from './style.scss'
 
 export default ({ presentation }) => (
-  <div className={styles.Presentation}>
-    <div className={styles.Name}>{presentation.name}</div>
+  <div className={styles.Presentation} id={presentation.name}>
+    <div className={styles.Name}>
+      {presentation.name} <a href={'#' + presentation.name}>#</a>
+    </div>
     <div className={styles.Location}>{presentation.location}</div>
     <div className={styles.Description}>{presentation.description}</div>
     <ul>
