@@ -25,6 +25,7 @@ import KubernetesTrainingRoutes from './routes/kubernetes-training'
 import PostsRoutes from './routes/posts'
 import MapRoutes from './routes/map'
 import ActivitiesRoutes from './routes/activities'
+import CategoriesRoutes from './routes/categories'
 
 var app = express.Router()
 var production = process.env.NODE_ENV === 'production'
@@ -102,6 +103,7 @@ app.use('/kubernetes-training', KubernetesTrainingRoutes)
 app.use('/recommends', RecommendsRoutes)
 app.use('/login', LoginRoutes)
 app.use('/activities', ActivitiesRoutes)
+app.use('/categories', CategoriesRoutes)
 app.get('/nametags', (req, res) => {
   let content = renderToString(
     <App>
@@ -119,6 +121,14 @@ app.get('/nametags', (req, res) => {
       title: 'Nametags - Kevin Simper'
     })
   )
+})
+
+app.use(function(req, res, next) {
+  res.status(404).send("Sorry can't find that!")
+})
+app.use(function(err, req, res, next) {
+  console.error(err.stack)
+  res.status(500).send('Something broke!')
 })
 
 module.exports = app
