@@ -1,5 +1,11 @@
 [
   {
+    "slug": "how-to-ingress-kubernetes",
+    "title": "How to use Ingress in Kubernetes",
+    "date": "Tue, 23 Oct 2018 14:34:00 +0100",
+    "tags": ["kubernetes"]
+  },
+  {
     "slug": "kubernetes-prometheus-docker-for-mac",
     "title": "How to use Prometheus with Kubernetes on Docker for Mac",
     "date": "Mon, 22 Oct 2018 03:34:00 +0100",
