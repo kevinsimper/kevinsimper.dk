@@ -74,7 +74,10 @@
     {
       "name": "Greeting you with Vision and Speech Machine Learning",
       "location": "GDG Cloud London - 22. August 2018",
-      "description": "I talked about how you can use Machine Learning for recognizing faces and names with Machine Learning."
+      "description": "I talked about how you can use Machine Learning for recognizing faces and names with Machine Learning.",
+      "links": [
+        ["Github repository", "https://github.com/kevinsimper/meetuplabel"]
+      ]
     },
     {
       "name": "Docker Best Practices in development and Production",
@@ -101,7 +104,11 @@
     {
       "name": "WebVR with the Oculus Go",
       "location": "CopenhagenJS - 24. May 2018",
-      "description": "How does the Oculus Go work and what is WebVR together with it? Making a duck shooting game in 2 hours."
+      "description": "How does the Oculus Go work and what is WebVR together with it? Making a duck shooting game in 2 hours.",
+      "links": [
+        ["Slides", "https://webvr-presentation.surge.sh/"],
+        ["Game", "http://webvr-duckgame.surge.sh/game.html"]
+      ]
     },
     {
       "name": "How to stay secure/anonymouse in a modern age",
