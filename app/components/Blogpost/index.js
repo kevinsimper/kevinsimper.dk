@@ -13,6 +13,14 @@ export default class Blogpost extends Component {
             {moment(new Date(post.date)).fromNow()}
           </div>
           <h3 className={styles.Header}>{post.title}</h3>
+          <h4 className={styles.Categories}>
+            {post.tags &&
+              post.tags.map(t => (
+                <span>
+                  <a href={`/categories/${t}`}>#{t}</a>{' '}
+                </span>
+              ))}
+          </h4>
         </a>
       </div>
     )
