@@ -30,13 +30,23 @@ export default () => (
     </p>
     <p>
       We will cover topics like networking, security, load-balacing, deployment,
-      scaling, tracing and analytics.
+      scaling, tracing and analytics. Look at the videos and blogposts here to
+      learn more;
+    </p>
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/6NG_cUeuNhU"
+      frameBorder="0"
+    />
+    <p>
+      <a href="/categories/kubernetes">Blogposts about Kubernetes</a>
     </p>
     <img
       style={{ float: 'right', width: 200, borderRadius: '100%' }}
       src={'https://i.imgur.com/quTEcgF.png'}
     />
-    <h3>Lets talk about how I can help you!</h3>
+    <h3>Let us talk about how I can help you!</h3>
     <Contactform />
   </div>
 )
