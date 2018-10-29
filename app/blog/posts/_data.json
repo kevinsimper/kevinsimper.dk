@@ -1,5 +1,11 @@
 [
   {
+    "slug": "wifi-spoof-your-mac-address",
+    "title": "Spoof you mac address and get wifi",
+    "date": "Mon, 29 Oct 2018 17:22:00 +0100",
+    "tags": ["tools"]
+  },
+  {
     "slug": "how-to-ingress-kubernetes",
     "title": "How to use Ingress in Kubernetes",
     "date": "Tue, 23 Oct 2018 14:34:00 +0100",
