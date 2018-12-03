@@ -58,10 +58,28 @@ const events = [
     finished: true
   },
   {
-    title: 'Oct 30 & Nov 2 - devcon 4',
-    link: 'https://devcon4.ethereum.org/'
+    title: 'Oct 30 & Nov 2 - Ethereum devcon 4',
+    link: 'https://devcon4.ethereum.org/',
+    finished: true
+  },
+  {
+    title: 'Nov 13-14 - Coldfront',
+    link: 'https://coldfront.co/',
+    finished: true
+  },
+  {
+    title: 'Nov 24 - Cloudfest.dk',
+    link: 'http://www.cloudfest.dk/',
+    finished: true
+  },
+  {
+    title: 'Nov 28 - VRConf.se',
+    link: 'http://www.vrconf.se/',
+    finished: true
   }
 ]
+
+const finished = events.filter(i => !i.finished)
 
 export default () => [
   <h2 style={{ color: 'white' }}>
@@ -89,12 +107,13 @@ export default () => [
     Upcoming events to find me
   </h2>,
   <ul>
-    {events.filter(i => !i.finished).map((i, key) => (
+    {finished.map((i, key) => (
       <li key={key}>
         <a style={{ color: 'white' }} href={i.link}>
           {i.title}
         </a>
       </li>
     ))}
+    {finished.length === 0 && <div>Sadly, no upcoming events, you should invite me!</div>}
   </ul>
 ]
