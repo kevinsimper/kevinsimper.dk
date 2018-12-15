@@ -1,9 +1,18 @@
 [
   {
+    "slug": "how-to-handle-litelement-input-onchange",
+    "title": "How to handle LitElement input onChange",
+    "date": "Sat Dec 15 2018 15:05:58 GMT+0100 (CET)",
+    "tags": []
+  },
+  {
     "slug": "you-don't-need-the-latest-npm-package-of-everything",
     "title": "You don't need the latest npm package of everything",
     "date": "Wed Dec 12 2018 21:24:00 GMT+0100 (CET)",
-    "tags": []
+    "tags": [
+      "security",
+      "nodejs"
+    ]
   },
   {
     "slug": "why-i-find-trello-useless-for-project-management",

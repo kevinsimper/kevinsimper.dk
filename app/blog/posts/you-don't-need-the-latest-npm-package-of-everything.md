@@ -37,9 +37,7 @@ package and generating a signature. Then everyone can verify with the signature
 if the package has been manipulated or if somebody tries to impersonate a
 author.
 
-We do have integrety checks right now in `package-lock.json`, but that is only a
-check that is generate when you download the package the first time so that you
-can check it against next time you download it on another machine.
+We do have integrity checks right now in `package-lock.json`, but that is only a check that it generates when you download the package the first time so that you can check it against next time you download it on another machine.
 
 ### Complain if the package you dependent on have changed signing key
 
@@ -72,3 +70,7 @@ and only download packages or really code that they have signed.
 
 Tell me what you think! Would love to hear your thoughts on this!
 https://twitter.com/kevinsimper
+
+Link to blogpost about the hack:
+
+https://blog.npmjs.org/post/180565383195/details-about-the-event-stream-incident
