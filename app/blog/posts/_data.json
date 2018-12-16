@@ -1,125 +1,105 @@
 [
   {
+    "slug": "if-voice-assistants-are-the-future-why-make-it-difficult",
+    "title": "If voice assistants are the future, why make it difficult?",
+    "date": "Sun Dec 16 2018 14:02:10 GMT+0100 (CET)",
+    "tags": []
+  },
+  {
     "slug": "how-to-handle-litelement-input-onchange",
     "title": "How to handle LitElement input onChange",
     "date": "Sat Dec 15 2018 15:05:58 GMT+0100 (CET)",
     "tags": []
   },
   {
+    "slug": "how-to-learn-programming-effectively",
+    "title": "How to learn programming effectively",
+    "date": "Fri Dec 14 2018 15:28:29 GMT+0100 (CET)",
+    "tags": []
+  },
+  {
     "slug": "you-don't-need-the-latest-npm-package-of-everything",
     "title": "You don't need the latest npm package of everything",
     "date": "Wed Dec 12 2018 21:24:00 GMT+0100 (CET)",
-    "tags": [
-      "security",
-      "nodejs"
-    ]
+    "tags": ["security", "nodejs"]
   },
   {
     "slug": "why-i-find-trello-useless-for-project-management",
     "title": "Why I find trello useless for project management",
     "date": "Thu Dec 06 2018 13:01:58 GMT+0100 (CET)",
-    "tags": [
-      "tools"
-    ]
+    "tags": ["tools"]
   },
   {
     "slug": "wifi-spoof-your-mac-address",
     "title": "Spoof you mac address and get wifi",
     "date": "Mon, 29 Oct 2018 17:22:00 +0100",
-    "tags": [
-      "tools"
-    ]
+    "tags": ["tools"]
   },
   {
     "slug": "how-to-ingress-kubernetes",
     "title": "How to use Ingress in Kubernetes",
     "date": "Tue, 23 Oct 2018 14:34:00 +0100",
-    "tags": [
-      "kubernetes"
-    ]
+    "tags": ["kubernetes"]
   },
   {
     "slug": "kubernetes-prometheus-docker-for-mac",
     "title": "How to use Prometheus with Kubernetes on Docker for Mac",
     "date": "Mon, 22 Oct 2018 03:34:00 +0100",
-    "tags": [
-      "kubernetes"
-    ]
+    "tags": ["kubernetes"]
   },
   {
     "slug": "avermedia-lgp-2-plus-setup-mac",
     "title": "Avermedia LGP 2 Plus - Record HDMI - Setup Mac and finally got it working",
     "date": "Mon, 15 Oct 2018 22:12:00 +0100",
-    "tags": [
-      "gear"
-    ]
+    "tags": ["gear"]
   },
   {
     "slug": "how-i-started-programming",
     "title": "How I started programming",
     "date": "Wed, 03 Oct 2018 10:12:00 +0100",
-    "tags": [
-      "personal"
-    ]
+    "tags": ["personal"]
   },
   {
     "slug": "find-most-active-meetup-members",
     "title": "Find most active meetup members",
     "date": "Tue, 02 Oct 2018 22:45:00 +0100",
-    "tags": [
-      "meetup",
-      "script",
-      "trick"
-    ]
+    "tags": ["meetup", "script", "trick"]
   },
   {
     "slug": "recommended-coffee-places-copenhagen",
     "title": "The best coffee places in Copenhagen",
     "date": "Wed, 5 Sep 2018 16:58:15 +0100",
-    "tags": [
-      "lists"
-    ]
+    "tags": ["lists"]
   },
   {
     "slug": "best-tools-slow-internet",
     "title": "Best tools for slow and unreliable internet",
     "date": "Fri, 13 Jul 2018 12:13:15 +0900",
-    "tags": [
-      "lists",
-      "tools"
-    ]
+    "tags": ["lists", "tools"]
   },
   {
     "slug": "kubernetes-introduction",
     "title": "Introduction to Kubernetes with Docker for Mac/Windows",
     "date": "Wed, 27 Jun 2018 12:18:45 +0100",
-    "tags": [
-      "kubernetes"
-    ]
+    "tags": ["kubernetes"]
   },
   {
     "slug": "aframe-with-oculus-go-webvr",
     "title": "Aframe with Oculus Go is great WebVR",
     "date": "Wed, 23 May 2018 22:18:45 +0100",
-    "tags": [
-      "webvr"
-    ]
+    "tags": ["webvr"]
   },
   {
     "slug": "how-to-serverless",
     "title": "How to Serverless from scratch",
     "date": "Mon, 21 May 2018 16:28:13 +0100",
-    "tags": [
-      "serverless"
-    ]
+    "tags": ["serverless"]
   },
   {
     "slug": "docker-multi-stage-private-github",
     "title": "How we do Docker Multistage builds and share Github private repositories",
     "date": "Wed, 10 Jan 2018 14:20:10 +0000",
-    "tags": [
-      "docker"
-    ]
+    "tags": ["docker"]
   },
   {
     "slug": "gode-commit-messages",
