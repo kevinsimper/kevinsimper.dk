@@ -2,13 +2,17 @@ const fs = require('fs')
 
 const postFolder = './app/blog/posts/'
 const title = process.argv[2]
-const slug = title.toLowerCase().replace(/ /g, '-')
+const slug = title
+  .toLowerCase()
+  .replace(/ /g, '-')
+  .replace(/( |\?|!|,)/g, '')
 const file = './app/blog/posts/_data.json'
+const output = postFolder + slug + '.md'
 
 console.log('New Post')
 console.log('Title:', title)
 console.log('Slug:', slug)
-console.log(postFolder + slug)
+console.log(output)
 
 let posts = JSON.parse(fs.readFileSync(file))
 
@@ -21,4 +25,4 @@ posts.unshift({
 
 fs.writeFileSync(file, JSON.stringify(posts, null, 2))
 
-fs.writeFileSync(postFolder + slug + '.md', `# ${title}`)
+fs.writeFileSync(output, `# ${title}`)
