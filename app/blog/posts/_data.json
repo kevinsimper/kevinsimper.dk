@@ -3,19 +3,19 @@
     "slug": "if-voice-assistants-are-the-future-why-make-it-difficult",
     "title": "If voice assistants are the future, why make it difficult?",
     "date": "Sun Dec 16 2018 14:02:10 GMT+0100 (CET)",
-    "tags": []
+    "tags": ["voice"]
   },
   {
     "slug": "how-to-handle-litelement-input-onchange",
     "title": "How to handle LitElement input onChange",
     "date": "Sat Dec 15 2018 15:05:58 GMT+0100 (CET)",
-    "tags": []
+    "tags": ["javascript"]
   },
   {
     "slug": "how-to-learn-programming-effectively",
     "title": "How to learn programming effectively",
     "date": "Fri Dec 14 2018 15:28:29 GMT+0100 (CET)",
-    "tags": []
+    "tags": ["learning"]
   },
   {
     "slug": "you-don't-need-the-latest-npm-package-of-everything",
@@ -265,11 +265,6 @@
     "slug": "mit-nyeste-projekt-opsamling-af-det-mest-populaerer-musik",
     "title": "Mit nyeste projekt: Opsamling af det mest populærer musik",
     "date": "Thu, 17 Nov 2011 17:27:11 +0000"
-  },
-  {
-    "slug": "happy-halloween",
-    "title": "Happy Halloween",
-    "date": "Mon, 31 Oct 2011 22:25:47 +0000"
   },
   {
     "slug": "det-forste-indlaeg-pa-bloggen",

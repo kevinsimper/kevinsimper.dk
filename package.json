@@ -12,7 +12,7 @@
     "post-install": "npm run build",
     "start": "node server.js",
     "fix-lint": "prettier --write --no-semi --single-quote \"app/**/*.js\"",
-    "deploy": "npm run build && up deploy production"
+    "deploy": "AWS_PROFILE=up up deploy production"
   },
   "repository": {
     "type": "git",

@@ -114,6 +114,8 @@ export default () => [
         </a>
       </li>
     ))}
-    {finished.length === 0 && <div>Sadly, no upcoming events, you should invite me!</div>}
+    {finished.length === 0 && (
+      <div>Sadly, no upcoming events, you should invite me!</div>
+    )}
   </ul>
 ]

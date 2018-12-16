@@ -1,14 +1,14 @@
 # How to handle LitElement input onChange
 
-I am creating an new application with LitElement and LitHtml and it works pretty well, at the start it was just to show data, but then I had to handle input tags with onchange event handlers, and I could not figure out how! I have used React and was used to writing:
+I am creating a new application with LitElement and LitHtml and it works pretty well, at the start it was just to show data, but then I had to handle input tags with onchange event handlers, and I could not figure out how! I have used React and was used to writing:
 
 ```javascript
-<input type="text" onChange={e => console.log(e.target.value)}/>
+<input type="text" onChange={e => console.log(e.target.value)} />
 ```
 
-But that didn't work of course, that is JSX and lit-element uses template literal, so it had to be something with `${}` .
+But that didn't work, of course, that is JSX and lit-element uses template literal, so it had to be something with `${}` .
 
-So after reading the documentation but not finding a single example with an <input/>, I figure this is how you uses onChange event:
+So after reading the documentation but not finding a single example with an `<input/>`, I figure this is how you uses onChange event:
 
 ```javascript
 <input type="text" @change=${e => console.log(e.target.value)}/>
@@ -23,10 +23,10 @@ So all values are now this:
 - onMouseOver -> @mouseover
 - onKeyUp -> @keyup
 
-And to show the value in a input you don't have to define it any special way, it is just like normal html:
+And to show the value in an input you don't have to define it any special way, it is just like normal html:
 
 ```javascript
-<input type="text" value="${myVariable}"/>
+<input type="text" value="${myVariable}" />
 ```
 
 And this would show the value in the DOM.

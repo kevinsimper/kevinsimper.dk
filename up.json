@@ -1,7 +1,7 @@
 {
   "name": "kevinsimper",
   "hooks": {
-    "build": ["npm run compile-client && npm run compile-server"]
+    "build": ["npm run build"]
   },
   "regions": [
     "eu-central-1"
