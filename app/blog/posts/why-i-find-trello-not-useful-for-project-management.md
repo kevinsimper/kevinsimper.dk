@@ -1,4 +1,4 @@
-# Why I find trello useless for project management
+# Why I find trello not useful for project management
 
 I really appreciate how easy trello is and easy it is to categorize tasks into
 different buckets, but there is a few things that makes it basically impossible
