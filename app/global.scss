@@ -16,10 +16,12 @@ h1, h2, h3, h4, h5 {
 
 a {
   text-decoration: none;
+  word-break: break-word;
 }
 
-pre {
-  white-space: pre-wrap;
+code {
+  white-space: pre-wrap !important;
+  font-size: 1rem !important;
 }
 pre code {
   padding: unset;
