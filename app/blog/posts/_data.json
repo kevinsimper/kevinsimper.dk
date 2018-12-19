@@ -1,5 +1,11 @@
 [
   {
+    "slug": "can-you-run-a-1-node-google-cloud-kubernetes-cluster",
+    "title": "Can you run a 1-node Google Cloud Kubernetes Cluster?",
+    "date": "Wed Dec 19 2018 01:52:29 GMT+0100 (CET)",
+    "tags": ["kubernetes", "google cloud"]
+  },
+  {
     "slug": "how-to-download-all-your-google-search-queries",
     "title": "How to download all your Google Search queries and analyze them",
     "date": "Tue Dec 18 2018 18:36:49 GMT+0100 (CET)",
