@@ -1,5 +1,11 @@
 [
   {
+    "slug": "how-to-download-all-your-google-search-queries",
+    "title": "How to download all your Google Search queries and analyze them",
+    "date": "Tue Dec 18 2018 18:36:49 GMT+0100 (CET)",
+    "tags": ["bash", "google", "tools"]
+  },
+  {
     "slug": "how-to-sort-kubernetes-kubectl-get-results",
     "title": "How to sort Kubernetes kubectl get results",
     "date": "Mon Dec 17 2018 13:35:47 GMT+0100 (CET)",
