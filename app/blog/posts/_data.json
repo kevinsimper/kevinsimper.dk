@@ -1,5 +1,11 @@
 [
   {
+    "slug": "podcasts-i-like",
+    "title": "Podcasts I like",
+    "date": "Thu Dec 27 2018 16:59:29 GMT+0100 (CET)",
+    "tags": ["podcast"]
+  },
+  {
     "slug": "can-you-run-a-1-node-google-cloud-kubernetes-cluster",
     "title": "Can you run a 1-node Google Cloud Kubernetes Cluster?",
     "date": "Wed Dec 19 2018 01:52:29 GMT+0100 (CET)",
