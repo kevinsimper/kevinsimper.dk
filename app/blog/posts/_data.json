@@ -1,5 +1,11 @@
 [
   {
+    "slug": "effective-git-workflow-how-i-use-git",
+    "title": "Effective Git workflow - How I use Git",
+    "date": "Thu Jan 03 2019 01:50:13 GMT+0100 (CET)",
+    "tags": ["git", "tools"]
+  },
+  {
     "slug": "publishing-gcphelp-cli-improving-working-with-kubernetes-on-google-cloud",
     "title": "Publishing gcphelp cli - improving working with kubernetes on Google Cloud",
     "date": "Sun Dec 30 2018 15:41:50 GMT+0100 (CET)",
