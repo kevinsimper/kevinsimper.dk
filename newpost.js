@@ -4,6 +4,8 @@ const postFolder = './app/blog/posts/'
 const title = process.argv[2]
 const slug = title
   .toLowerCase()
+  .replace(/-/g, '')
+  .replace(/  /g, ' ')
   .replace(/ /g, '-')
   .replace(/( |\?|!|,)/g, '')
 const file = './app/blog/posts/_data.json'
