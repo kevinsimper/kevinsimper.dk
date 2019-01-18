@@ -10,7 +10,10 @@ let app = express.Router()
 app.get('/', (req, res) => {
   let content = renderToString(
     <App>
-      <Recommends />
+      <Recommends
+        lasagne={parseInt(req.query.lasagne) || 4}
+        pizza={parseInt(req.query.pizza) || 2}
+      />
     </App>
   )
   res.send(
