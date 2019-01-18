@@ -35,14 +35,15 @@ export default () => (
     <ul>
       <Item>500 grounded beef</Item>
       <Item>1 onion</Item>
-      <Item>1 tomato puree</Item>
-      <Item>1 cut tomato</Item>
+      <Item>1 tomato puré</Item>
+      <Item>1 canned cuttet tomato</Item>
       <Item>1 beef boulion</Item>
       <Item>0,5 liter water</Item>
       <Item>2 carrots</Item>
-      <Item>Salt/Paper</Item>
+      <Item>Salt/Pepper</Item>
       <Item>Cheese ontop</Item>
       <Item>Lasagne plates</Item>
+      <Item>Mornay sause</Item>
     </ul>
   </Content>
 )
