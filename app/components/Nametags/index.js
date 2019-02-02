@@ -26,6 +26,12 @@ export default () => (
       I can also help you! I really like seeing communities grow and become
       better.
     </p>
+    <p>
+      <a href="https://medium.com/@kevinsimper/how-to-print-name-tags-for-your-meetup-c6293a8faf8f">
+        A bit how I initially made the labelprinter work
+      </a>
+      .
+    </p>
     <img src="https://cdn-images-1.medium.com/max/1600/1*7yWCggscg_nF1t8s57iVvg.jpeg" />
   </div>
 )
