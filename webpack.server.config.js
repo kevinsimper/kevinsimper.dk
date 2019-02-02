@@ -5,8 +5,7 @@ var precss = require('precss')
 var colorFunction = require('postcss-color-function')
 
 var nodeModules = {}
-fs
-  .readdirSync('node_modules')
+fs.readdirSync('node_modules')
   .filter(function(x) {
     return ['.bin'].indexOf(x) === -1
   })
@@ -29,11 +28,11 @@ module.exports = {
   externals: nodeModules,
   module: {
     rules: [
-      { test: /\.jsx?$/, exclude: /node_modules/, loader: "babel-loader" },
+      { test: /\.jsx?$/, exclude: /node_modules/, loader: 'babel-loader' },
       {
         test: /\.s?css$/,
         use: [
-          'css-loader/locals?modules&localIdentName=[path][name]---[local]---[hash:base64:5]',
+          'css-loader?modules=local&exportOnlyLocals=true&localIdentName=[path][name]---[local]---[hash:base64:5]',
           'postcss-loader'
         ]
       },

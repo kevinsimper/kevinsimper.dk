@@ -1,5 +1,5 @@
 var webpack = require('webpack')
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 var AssetsPlugin = require('assets-webpack-plugin')
 
 var production = process.env.NODE_ENV === 'production'
@@ -10,7 +10,7 @@ var cssName = production ? '[name]-bundle-[hash].css' : '[name].css'
 
 var plugins = [
   new MiniCssExtractPlugin({
-      filename: cssName,
+    filename: cssName
   }),
   new webpack.optimize.OccurrenceOrderPlugin(),
   new webpack.HotModuleReplacementPlugin()
@@ -43,10 +43,14 @@ module.exports = {
   },
   module: {
     rules: [
-      { test: /\.jsx?$/, exclude: /node_modules/, loader: "babel-loader" },
+      { test: /\.jsx?$/, exclude: /node_modules/, loader: 'babel-loader' },
       {
         test: /\.s?css$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader?modules&localIdentName=[path][name]---[local]---[hash:base64:5]', 'postcss-loader']
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader?modules=local&localIdentName=[path][name]---[local]---[hash:base64:5]',
+          'postcss-loader'
+        ]
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
