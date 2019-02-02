@@ -1,6 +1,11 @@
 {
   "presentations": [
     {
+      "name": "Introduction to Kubernetes KNative",
+      "location": "Cloudfest - Copenhagen - 24. November 2018",
+      "description": "Serverless is coming on Kubernetes and KNative is a serious response from Google to run ontop of Kubernetes. KNative is a serverless framework that makes it so easy to spin up and run containers on demand with all the benefits of Kubernetes and Istio."
+    },
+    {
       "name": "How to create a good CV",
       "location": "HackYourFuture meetup - Copenhagen - 17. October 2018",
       "description": "In this workshop presentation I tell how to create a good CV, what should it include and what should you leave out. A CV is a conversation starter and how to connect with companies in the best ways to get oppotunities.",
