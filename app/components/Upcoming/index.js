@@ -76,7 +76,11 @@ const events = [
     title: 'Nov 28 - VRConf.se',
     link: 'http://www.vrconf.se/',
     finished: true
-  }
+  },
+  {
+    title: `April 9th-11th - Google Cloud Next \'19`,
+    link: 'https://cloud.withgoogle.com/next/sf'
+  },
 ]
 
 const finished = events.filter(i => !i.finished)
