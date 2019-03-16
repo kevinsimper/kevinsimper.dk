@@ -1,5 +1,11 @@
 [
   {
+    "slug": "what-is-a-good-workshop",
+    "title": "What is a good workshop?",
+    "date": "Sat Mar 16 2019 01:17:16 GMT+0100 (Central European Standard Time)",
+    "tags": ["community", "learning"]
+  },
+  {
     "slug": "how-to-convert-privatekey-into-singleline",
     "title": "How to convert privatekey into singleline",
     "date": "Wed Feb 13 2019 03:52:05 GMT+0100 (Central European Standard Time)",
