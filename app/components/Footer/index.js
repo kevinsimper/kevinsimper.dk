@@ -33,6 +33,8 @@ export default function Footer() {
             <a href="/recommends">Recommends</a>
             <br />
             <a href="/contact">Contact</a>
+            <br />
+            <a href="http://kevinsimper.eth">kevinsimper.eth</a>
           </div>
         </div>
       </div>
