@@ -1,6 +1,12 @@
 {
   "presentations": [
     {
+      "name": "How a labelprinter can help your Community",
+      "location": "GDG Organizers meetup - Madrid - 2. December 2018",
+      "description": "I gave a talk to a room of organizers why a labelprinter could help them in their work as a organizer. How it can take something from the conference experience and bring it down to the community meetups",
+      "links": [["Slides", "http://labelprinter-gdg.surge.sh/"]]
+    },
+    {
       "name": "Introduction to Kubernetes KNative",
       "location": "Cloudfest - Copenhagen - 24. November 2018",
       "description": "Serverless is coming on Kubernetes and KNative is a serious response from Google to run ontop of Kubernetes. KNative is a serverless framework that makes it so easy to spin up and run containers on demand with all the benefits of Kubernetes and Istio."
