@@ -33,3 +33,7 @@ Solidity is the programming language for the Ethereum blockchain. There is sever
 and you can try to run some of these smart contracts in this online Solidity compiler, you can do that with the online developed Remix
 
 https://remix.ethereum.org/
+
+The solidity documentation is also good and contains a lot of examples:
+
+https://solidity.readthedocs.io/en/v0.5.3/
