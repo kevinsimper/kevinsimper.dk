@@ -1,6 +1,35 @@
 {
   "presentations": [
     {
+      "name": "Getting started with Kubernetes on Google Cloud",
+      "location": "Google Cloud Developer Community Copenhagen - Copenhagen - 21. Marts 2019",
+      "description": "I gave a four hour workshop were we got into Kubernetes and deployed a docker container to Google Cloud Kubernetes Engine. We used Cloud Build to build our container and push it to GCR.",
+      "type": "workshop",
+      "links": [
+        [
+          "Meetup link",
+          "https://www.meetup.com/Google-Cloud-Developer-Community-Copenhagen/events/259546988/"
+        ]
+      ]
+    },
+    {
+      "name": "Getting started with Kubernetes on Google Cloud",
+      "location": "Google Cloud Developer Community Madrid - Madrid - 16. Marts 2019",
+      "description": "I gave a four hour workshop were we got into Kubernetes and deployed a docker container to Google Cloud Kubernetes Engine. We used Cloud Build to build our container and push it to GCR.",
+      "type": "workshop",
+      "links": [
+        ["Meetup link", "https://www.meetup.com/gcdcmadrid/events/259540531/"]
+      ]
+    },
+    {
+      "name": "Making your own game in JavaScript",
+      "location": "CopenhagenJS - Copenhagen - 13. December 2018",
+      "description": "A GameJam is an event where everyone is working on creating a new game and sharing the enthusiasm for making.",
+      "links": [
+        ["Meetup link", "https://www.meetup.com/copenhagenjs/events/256814771/"]
+      ]
+    },
+    {
       "name": "How a labelprinter can help your Community",
       "location": "GDG Organizers meetup - Madrid - 2. December 2018",
       "description": "I gave a talk to a room of organizers why a labelprinter could help them in their work as a organizer. How it can take something from the conference experience and bring it down to the community meetups",
