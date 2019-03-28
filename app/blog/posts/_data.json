@@ -1,5 +1,11 @@
 [
   {
+    "slug": "trigger-a-redeploy-in-kubernetes",
+    "title": "How to trigger a redeploy in Kubernetes",
+    "date": "Thu Mar 28 2019 12:43:37 GMT+0100 (Central European Standard Time)",
+    "tags": ["kubernetes"]
+  },
+  {
     "slug": "get-started-with-blockchain-and-ethereum",
     "title": "Get started with Blockchain and Ethereum",
     "date": "Sun Mar 24 2019 19:53:09 GMT+0100 (Central European Standard Time)",
