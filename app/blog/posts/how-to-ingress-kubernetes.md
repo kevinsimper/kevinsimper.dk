@@ -11,7 +11,7 @@ it has one thing clear, the interface and how you define routes. You then have
 to choose a Ingress Controller which job is to read these Ingress resources and
 configure the traffic accordingly.
 
-# Ingress Controller
+## Ingress Controller
 
 These ingress controllers will provide different kinds of features, the most
 noticable is the "nginx ingress controller", which is also maintained by the
@@ -20,7 +20,7 @@ has been battled tested and can handle any kind of workload, and makes it
 dynamically based on changes to the Kubernetes config. This is something complex
 and only something bigger companies had the time to configure before!
 
-# NGiNX Ingress Controller
+## NGiNX Ingress Controller
 
 The nginx ingress controller is super easy to install, they have a basic
 deployment you have to apply and the based on your setup you will apply some
