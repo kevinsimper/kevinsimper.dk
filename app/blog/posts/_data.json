@@ -1,5 +1,11 @@
 [
   {
+    "slug": "sim-card-with-data-when-visiting-san-francisco",
+    "title": "Sim Card with data when visiting San Francisco",
+    "date": "Thu Apr 04 2019 13:09:08 GMT-0700 (Pacific Daylight Time)",
+    "tags": ["tools", "travel"]
+  },
+  {
     "slug": "switch-to-your-airpods-from-the-command-line",
     "title": "Switch to your Airpods from the command line",
     "date": "Sun Mar 31 2019 16:07:41 GMT+0200 (Central European Summer Time)",
@@ -9,247 +15,175 @@
     "slug": "trigger-a-redeploy-in-kubernetes",
     "title": "How to trigger a redeploy in Kubernetes",
     "date": "Thu Mar 28 2019 12:43:37 GMT+0100 (Central European Standard Time)",
-    "tags": [
-      "kubernetes"
-    ]
+    "tags": ["kubernetes"]
   },
   {
     "slug": "get-started-with-blockchain-and-ethereum",
     "title": "Get started with Blockchain and Ethereum",
     "date": "Sun Mar 24 2019 19:53:09 GMT+0100 (Central European Standard Time)",
-    "tags": [
-      "ethereum",
-      "blockchain"
-    ]
+    "tags": ["ethereum", "blockchain"]
   },
   {
     "slug": "continues-deployment-with-google-cloud-and-kubernetes",
     "title": "Continues deployment with Google Cloud and Kubernetes",
     "date": "Wed Mar 20 2019 23:32:35 GMT+0100 (Central European Standard Time)",
-    "tags": [
-      "kubernetes",
-      "google cloud"
-    ]
+    "tags": ["kubernetes", "google cloud"]
   },
   {
     "slug": "kubernetes-workshop-things-to-prepare-checklist",
     "title": "Kubernetes workshop - Things to prepare checklist",
     "date": "Wed Mar 20 2019 23:10:53 GMT+0100 (Central European Standard Time)",
-    "tags": [
-      "workshop",
-      "kubernetes"
-    ]
+    "tags": ["workshop", "kubernetes"]
   },
   {
     "slug": "what-is-a-good-workshop",
     "title": "What is a good workshop?",
     "date": "Sat Mar 16 2019 01:17:16 GMT+0100 (Central European Standard Time)",
-    "tags": [
-      "community",
-      "learning"
-    ]
+    "tags": ["community", "learning"]
   },
   {
     "slug": "how-to-convert-privatekey-into-singleline",
     "title": "How to convert privatekey into singleline",
     "date": "Wed Feb 13 2019 03:52:05 GMT+0100 (Central European Standard Time)",
-    "tags": [
-      "tools"
-    ]
+    "tags": ["tools"]
   },
   {
     "slug": "effective-git-workflow-how-i-use-git",
     "title": "Effective Git workflow - How I use Git",
     "date": "Thu Jan 03 2019 01:50:13 GMT+0100 (CET)",
-    "tags": [
-      "git",
-      "tools"
-    ]
+    "tags": ["git", "tools"]
   },
   {
     "slug": "publishing-gcphelp-cli-improving-working-with-kubernetes-on-google-cloud",
     "title": "Publishing gcphelp cli - improving working with kubernetes on Google Cloud",
     "date": "Sun Dec 30 2018 15:41:50 GMT+0100 (CET)",
-    "tags": [
-      "kubernetes",
-      "google cloud"
-    ]
+    "tags": ["kubernetes", "google cloud"]
   },
   {
     "slug": "podcasts-i-like",
     "title": "Podcasts I like",
     "date": "Thu Dec 27 2018 16:59:29 GMT+0100 (CET)",
-    "tags": [
-      "podcast"
-    ]
+    "tags": ["podcast"]
   },
   {
     "slug": "can-you-run-a-1-node-google-cloud-kubernetes-cluster",
     "title": "Can you run a 1-node Google Cloud Kubernetes Cluster?",
     "date": "Wed Dec 19 2018 01:52:29 GMT+0100 (CET)",
-    "tags": [
-      "kubernetes",
-      "google cloud"
-    ]
+    "tags": ["kubernetes", "google cloud"]
   },
   {
     "slug": "how-to-download-all-your-google-search-queries",
     "title": "How to download all your Google Search queries and analyze them",
     "date": "Tue Dec 18 2018 18:36:49 GMT+0100 (CET)",
-    "tags": [
-      "bash",
-      "google",
-      "tools"
-    ]
+    "tags": ["bash", "google", "tools"]
   },
   {
     "slug": "how-to-sort-kubernetes-kubectl-get-results",
     "title": "How to sort Kubernetes kubectl get results",
     "date": "Mon Dec 17 2018 13:35:47 GMT+0100 (CET)",
-    "tags": [
-      "kubernetes",
-      "kubectl"
-    ]
+    "tags": ["kubernetes", "kubectl"]
   },
   {
     "slug": "if-voice-assistants-are-the-future-why-make-it-difficult",
     "title": "If voice assistants are the future, why make it difficult?",
     "date": "Sun Dec 16 2018 14:02:10 GMT+0100 (CET)",
-    "tags": [
-      "voice"
-    ]
+    "tags": ["voice"]
   },
   {
     "slug": "how-to-handle-litelement-input-onchange",
     "title": "How to handle LitElement input onChange",
     "date": "Sat Dec 15 2018 15:05:58 GMT+0100 (CET)",
-    "tags": [
-      "javascript"
-    ]
+    "tags": ["javascript"]
   },
   {
     "slug": "how-to-learn-programming-effectively",
     "title": "How to learn programming effectively",
     "date": "Fri Dec 14 2018 15:28:29 GMT+0100 (CET)",
-    "tags": [
-      "learning"
-    ]
+    "tags": ["learning"]
   },
   {
     "slug": "you-don't-need-the-latest-npm-package-of-everything",
     "title": "You don't need the latest npm package of everything",
     "date": "Wed Dec 12 2018 21:24:00 GMT+0100 (CET)",
-    "tags": [
-      "security",
-      "nodejs"
-    ]
+    "tags": ["security", "nodejs"]
   },
   {
     "slug": "why-i-find-trello-not-useful-for-project-management",
     "title": "Why I find trello not useful for project management",
     "date": "Thu Dec 06 2018 13:01:58 GMT+0100 (CET)",
-    "tags": [
-      "tools"
-    ]
+    "tags": ["tools"]
   },
   {
     "slug": "wifi-spoof-your-mac-address",
     "title": "Spoof you mac address and get wifi",
     "date": "Mon, 29 Oct 2018 17:22:00 +0100",
-    "tags": [
-      "tools"
-    ]
+    "tags": ["tools"]
   },
   {
     "slug": "how-to-ingress-kubernetes",
     "title": "How to use Ingress in Kubernetes",
     "date": "Tue, 23 Oct 2018 14:34:00 +0100",
-    "tags": [
-      "kubernetes"
-    ]
+    "tags": ["kubernetes"]
   },
   {
     "slug": "kubernetes-prometheus-docker-for-mac",
     "title": "How to use Prometheus with Kubernetes on Docker for Mac",
     "date": "Mon, 22 Oct 2018 03:34:00 +0100",
-    "tags": [
-      "kubernetes"
-    ]
+    "tags": ["kubernetes"]
   },
   {
     "slug": "avermedia-lgp-2-plus-setup-mac",
     "title": "Avermedia LGP 2 Plus - Record HDMI - Setup Mac and finally got it working",
     "date": "Mon, 15 Oct 2018 22:12:00 +0100",
-    "tags": [
-      "gear"
-    ]
+    "tags": ["gear"]
   },
   {
     "slug": "how-i-started-programming",
     "title": "How I started programming",
     "date": "Wed, 03 Oct 2018 10:12:00 +0100",
-    "tags": [
-      "personal"
-    ]
+    "tags": ["personal"]
   },
   {
     "slug": "find-most-active-meetup-members",
     "title": "Find most active meetup members",
     "date": "Tue, 02 Oct 2018 22:45:00 +0100",
-    "tags": [
-      "meetup",
-      "script",
-      "trick"
-    ]
+    "tags": ["meetup", "script", "trick"]
   },
   {
     "slug": "recommended-coffee-places-copenhagen",
     "title": "The best coffee places in Copenhagen",
     "date": "Wed, 5 Sep 2018 16:58:15 +0100",
-    "tags": [
-      "lists"
-    ]
+    "tags": ["lists"]
   },
   {
     "slug": "best-tools-slow-internet",
     "title": "Best tools for slow and unreliable internet",
     "date": "Fri, 13 Jul 2018 12:13:15 +0900",
-    "tags": [
-      "lists",
-      "tools"
-    ]
+    "tags": ["lists", "tools"]
   },
   {
     "slug": "kubernetes-introduction",
     "title": "Introduction to Kubernetes with Docker for Mac/Windows",
     "date": "Wed, 27 Jun 2018 12:18:45 +0100",
-    "tags": [
-      "kubernetes"
-    ]
+    "tags": ["kubernetes"]
   },
   {
     "slug": "aframe-with-oculus-go-webvr",
     "title": "Aframe with Oculus Go is great WebVR",
     "date": "Wed, 23 May 2018 22:18:45 +0100",
-    "tags": [
-      "webvr"
-    ]
+    "tags": ["webvr"]
   },
   {
     "slug": "how-to-serverless",
     "title": "How to Serverless from scratch",
     "date": "Mon, 21 May 2018 16:28:13 +0100",
-    "tags": [
-      "serverless"
-    ]
+    "tags": ["serverless"]
   },
   {
     "slug": "docker-multi-stage-private-github",
     "title": "How we do Docker Multistage builds and share Github private repositories",
     "date": "Wed, 10 Jan 2018 14:20:10 +0000",
-    "tags": [
-      "docker"
-    ]
+    "tags": ["docker"]
   },
   {
     "slug": "gode-commit-messages",
