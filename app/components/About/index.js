@@ -13,20 +13,21 @@ export default class About extends React.Component {
         <h2>My biggest interests at the moment</h2>
         <p>
           <ul>
-            <li>Virtual Reality</li>
+            <li>Kubernetes and Google Cloud</li>
             <li>Organizing community events</li>
             <li>Public speaking and teaching</li>
             <li>Ethereum and Crypto currencies</li>
+            <li>Virtual Reality</li>
             <li>Selfdriving cars and better movement</li>
-            <li>React.js, ReasonML and Kubernetes</li>
           </ul>
         </p>
         <h2>Meetups I help organize</h2>
         <p>Check them out and join me!</p>
         <p>
           <ul>
-            <li>Copenhagen.JS</li>
-            <li>Docker Copenhagen</li>
+            <li>
+              <a href="https://copenhagenjs.dk">CopenhagenJS</a>
+            </li>
             <li>Google Cloud Community Copenhagen</li>
           </ul>
         </p>
@@ -42,6 +43,16 @@ export default class About extends React.Component {
             <a href="about/presentations">See all my presentations</a>
           </div>
           <WorkExperience />
+        </div>
+        <div>
+          <h2 className={styles.Header}>Certifications</h2>
+          <p>I am a Google Cloud Professionel Cloud Architect.</p>
+          <p>
+            Proof can be seen here:{' '}
+            <a href="https://www.credential.net/gifyqget?key=5db5c6df3703061c8d4de82373a4bfd51f681c36f10caedf031dcb4fd6da6f25">
+              https://www.credential.net/gifyqget?key=5db5c6df3703061c8d4de82373a4bfd51f681c36f10caedf031dcb4fd6da6f25
+            </a>
+          </p>
         </div>
       </div>
     )
