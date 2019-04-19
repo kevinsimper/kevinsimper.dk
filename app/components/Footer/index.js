@@ -34,7 +34,11 @@ export default function Footer() {
             <br />
             <a href="/contact">Contact</a>
             <br />
+            <a href="https://talkfrom.com">Talkfrom</a>
+            <br />
             <a href="http://kevinsimper.eth">kevinsimper.eth</a>
+            <br />
+            <a href="https://gdg-search.firebaseapp.com">GDG Search</a>
           </div>
         </div>
       </div>
