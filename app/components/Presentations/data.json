@@ -1,6 +1,27 @@
 {
   "presentations": [
     {
+      "name": "Build your first blockchain app with JS & Ethereum",
+      "location": "Berkeley, California - 14. April 2019",
+      "description": "I gave a workshop on how to get started with the Ethereum blockchain. We start with looking at mobile wallets and then we try to deploy our first smart contract with Remix. In the end we try to make our first dapp that uses the mobile wallet.",
+      "type": "workshop",
+      "links": [
+        [
+          "Meetup link",
+          "https://www.meetup.com/Berkeley-Javascript-Dojo/events/259956274/"
+        ]
+      ]
+    },
+    {
+      "name": "Build your first blockchain app with JS & Ethereum",
+      "location": "San Francisco, California - 6. April 2019",
+      "description": "I gave a workshop on how to get started with the Ethereum blockchain. We start with looking at mobile wallets and then we try to deploy our first smart contract with Remix. In the end we try to make our first dapp that uses the mobile wallet.",
+      "type": "workshop",
+      "links": [
+        ["Facebook link", "https://www.facebook.com/events/550643298758812/"]
+      ]
+    },
+    {
       "name": "WebUSB: Making a label printer work in the browser",
       "location": "WaffleJS - San Francisco - 03. April 2019",
       "description": "I learnt how to use WebUSB when I had a task to make label printing easy. I want to share with you what webusb is and how you can use it. I also implemented a printer driver in javascript so that I can print to a label printer directly from the browser. The happy future of easily connecting to custom hardware is close!",
