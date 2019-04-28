@@ -1,5 +1,7 @@
 # How to survive your first Google Cloud Next conference
 
+![](https://i.imgur.com/PdM7SNK.jpg)
+
 If you are going to Google Cloud Next for the first time, then expect a remarkable experience, it is a lot of good energy and a lot of great people! But going to a conference with 25000 people is no small feat and it is vastly different compared to any smaller conference with "only" a couple of thousands of attendees. So here are a few tips to how you can survive your first Google Cloud Next 😄
 
 This is the advice that I wish I had last year (and also had listened to 😂)
@@ -51,7 +53,7 @@ But that means if you want to relax and sit down for a bit in-between looking at
 
 ### Lunch is walk and talk
 
-Since there are very few chairs outside keynotes, that also applies for when it is lunch time! Lunch is a neat thing where you get a brown bag with a handle and then you can pick between sandwiches and salads, and it is super delicious! 
+Since there are very few chairs outside keynotes, that also applies for when it is lunch time! Lunch is a neat thing where you get a brown bag with a handle and then you can pick between sandwiches and salads, and it is super delicious!
 
 ### Talks will fill up before the day
 
