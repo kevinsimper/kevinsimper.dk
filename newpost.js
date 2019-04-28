@@ -1,4 +1,5 @@
 const fs = require('fs')
+const { execSync } = require('child_process')
 
 const postFolder = './app/blog/posts/'
 const title = process.argv[2]
@@ -28,3 +29,5 @@ posts.unshift({
 fs.writeFileSync(file, JSON.stringify(posts, null, 2))
 
 fs.writeFileSync(output, `# ${title}`)
+
+execSync('npm run fix-lint')
