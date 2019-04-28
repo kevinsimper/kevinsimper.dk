@@ -1,5 +1,11 @@
 [
   {
+    "slug": "how-to-get-started-with-the-terminal",
+    "title": "How to get started with the terminal",
+    "date": "Sun Apr 28 2019 07:17:24 GMT+0200 (Central European Summer Time)",
+    "tags": ["tools", "terminal", "bash"]
+  },
+  {
     "slug": "how-to-survive-google-cloud-next-conference",
     "title": "How to survive Google Cloud Next conference",
     "date": "Sun Apr 07 2019 18:34:03 GMT-0700 (Pacific Daylight Time)",
