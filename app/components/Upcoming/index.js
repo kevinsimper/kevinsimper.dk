@@ -79,8 +79,13 @@ const events = [
   },
   {
     title: `April 9th-11th - Google Cloud Next \'19`,
-    link: 'https://cloud.withgoogle.com/next/sf'
+    link: 'https://cloud.withgoogle.com/next/sf',
+    finished: true
   },
+  {
+    title: `May 6th-9th - Google IO \'19`,
+    link: 'https://events.google.com/io/'
+  }
 ]
 
 const finished = events.filter(i => !i.finished)
