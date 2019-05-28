@@ -1,5 +1,11 @@
 [
   {
+    "slug": "single-page-app-with-webcomponents-and-router",
+    "title": "Single page app with WebComponents and Router",
+    "date": "Mon May 27 2019 18:10:53 GMT+0200 (Central European Summer Time)",
+    "tags": ["javascript", "webcomponents"]
+  },
+  {
     "slug": "amp-email-fallback-how-will-it-work-in-normal-mail-programs",
     "title": "AMP Email fallback - how will it work in normal mail programs",
     "date": "Thu May 09 2019 11:25:10 GMT-0700 (Pacific Daylight Time)",

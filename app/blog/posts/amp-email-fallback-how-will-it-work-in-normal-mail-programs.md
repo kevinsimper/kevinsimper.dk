@@ -1,4 +1,4 @@
-# AMP Email fallback - how will it work in normal mail programs
+# AMP Email fallback - how will it work in normal mail programs?
 
 <img src="https://docs.google.com/drawings/d/e/2PACX-1vS0te50ilkPBpT8spoLTkLf5ShoLHddV2tPCo5e1aX5NWZBxkzdyHpi3UghC7cXYnbF-7OIz9Zy8QU8/pub?w=1024&amp;h=512" title="amp email fallback - amp for emails">
 
