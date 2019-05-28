@@ -1,5 +1,7 @@
 # Single page app with WebComponents and Router
 
+![](https://i.imgur.com/2X7mEDn.png)
+
 Using webcomponents is awesome and it lets you start super quickly, even without using any bundler but only replying on the browser native module loader.
 
 Let us try to create a simple app that has multiple pages that you can switch between.
