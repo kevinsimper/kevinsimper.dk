@@ -12,22 +12,9 @@ export default props => {
         />
         <link
           rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/prismjs@1.15.0/themes/prism.min.css"
-        />
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/prismjs@1.15.0/plugins/line-numbers/prism-line-numbers.css"
-        />
-        <link
-          rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Open+Sans:400,600"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <script
-          src="https://cdn.jsdelivr.net/npm/prismjs@1.15.0/prism.min.js"
-          data-manual
-        />
-        <script src="https://cdn.rawgit.com/jacob-long/b34b65ff1a56a1c772c3b4e9e204a035/raw/959da4fd550cf77ac20d42f3e7e442fdb906b6da/prism-line-numbers.js" />
         {props.production && (
           <script src={`https://cdn.kevinsimper.dk${props.assets.main.js}`} />
         )}
@@ -53,9 +40,30 @@ export default props => {
       </head>
       <body>
         <div id="app" dangerouslySetInnerHTML={{ __html: props.content }} />
+        {props.production && (
+          <div>
+            <link
+              rel="stylesheet"
+              href="https://cdn.kevinsimper.dk/prism.css"
+            />
+            <script src="https://cdn.kevinsimper.dk/prism.js" data-manual />
+          </div>
+        )}
+        {!props.production && (
+          <div>
+            <link rel="stylesheet" href="/prism.css" />
+            <script src="/prism.js" data-manual />
+          </div>
+        )}
         <script
           dangerouslySetInnerHTML={{
-            __html: `document.querySelectorAll('code').forEach(i => Prism.highlightElement(i))`
+            __html: `
+            document.querySelectorAll('pre').forEach(i => {
+              i.classList.add('line-numbers')
+            })
+            document.querySelectorAll('code').forEach(i => {
+              Prism.highlightElement(i)
+            })`
           }}
         />
       </body>

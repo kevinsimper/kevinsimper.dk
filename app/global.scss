@@ -19,9 +19,9 @@ a {
   word-break: break-word;
 }
 
-code {
+:not(pre) > code {
   white-space: pre-wrap !important;
-  font-size: 1rem !important;
+  font-size: 1rem;
 }
 pre code {
   padding: unset;
