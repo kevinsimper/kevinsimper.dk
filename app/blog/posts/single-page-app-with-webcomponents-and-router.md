@@ -7,30 +7,30 @@ Let us try to create a simple app that has multiple pages that you can switch be
 First we need a web page, call it index.html:
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<body>
-		<script>
-		console.log("Hello WebComponents!")
-		</script>
-	</body>
+  <body>
+    <script>
+      console.log('Hello WebComponents!')
+    </script>
+  </body>
 </html>
 ```
 
 You should be able to see this works by just opening it in your default browser and see something in your developer tools.
 
-Next let's try to make the browser load a javascript file with the new [Modules](<https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules>).
+Next let's try to make the browser load a javascript file with the new [Modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules).
 
-Create a `main.js`  with
+Create a `main.js` with
 
 ```javascript
-console.log("Hello WebComponents!")
+console.log('Hello WebComponents!')
 ```
 
 and include it in the html
 
 ```javascript
-<script type="module" src="./main.js"></script>
+<script type="module" src="./main.js" />
 ```
 
 With this you should be able to open that up and see it works the same, but now we are using native module loading in the browser, this means we can import other modules with `import`.
@@ -41,7 +41,6 @@ You can do that in a lot of ways, if you have Node.js installed, you can in the 
 
 ```bash
 $ npx serve
-
    ┌──────────────────────────────────────────────────┐
    │                                                  │
    │   Serving!                                       │
@@ -58,7 +57,7 @@ $ npx serve
 
 Let us make our first webcomponent with LitElement. Make a new file called `mybutton.js`.
 
-We need to load the library lit-element and we can find it on [unpkg.com](<https://unpkg.com/>)
+We need to load the library lit-element and we can find it on [unpkg.com](https://unpkg.com/)
 
 It is a super simple website that exposes all npmjs.com modules and makes it super easy to load them in the browser.
 
@@ -66,7 +65,7 @@ We can load lit-element by going to <https://unpkg.com/lit-element> and we will 
 
 Like this: <https://unpkg.com/lit-element@2.1.0/lit-element.js>
 
-The new thing with native module loading requires *all* imports to be relative, and unpkg does also support that. It will automatically rewrite the script file if you append `?module` to the URL. 
+The new thing with native module loading requires _all_ imports to be relative, and unpkg does also support that. It will automatically rewrite the script file if you append `?module` to the URL.
 
 Like this: <https://unpkg.com/lit-element@2.1.0/lit-element.js?module>
 
@@ -82,7 +81,10 @@ This makes it work in our browser!
 So in your `main.js` include LitElement
 
 ```javascript
-import { LitElement, html } from 'https://unpkg.com/lit-element@2.1.0/lit-element.js?module';
+import {
+  LitElement,
+  html
+} from 'https://unpkg.com/lit-element@2.1.0/lit-element.js?module'
 ```
 
 You will be able to go to the network tab and see it has resolved and loaded all the necessary modules.
@@ -93,24 +95,26 @@ Congrats, now you have loaded your first native browser module!
 
 ## Writing your first Webcomponent
 
-With LitElement we can write a small component that renders a simple button. LitElement exposes a class that extends the native `HTMLElement`, if it doesn't make sense don't worry to much for the example, we will not go that deep in JavaScript.
+With LitElement we can write a small component that renders a simple button. LitElement exposes a class that extends the native `HTMLElement`, if it doesn't make sense don't worry too much for the example, we will not go that deep in JavaScript.
 
 So you can now write a component and define it like this:
 
 ```javascript
 class MyButton extends LitElement {
   render() {
-    return html`<button>My Button</button>`
+    return html`
+      <button>My Button</button>
+    `
   }
 }
 ```
 
-The html in front of the string is a helper function, we are utilising [Template strings](<https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals>) and LitElement knows how to call this function.
+The html in front of the string is a helper function, we are utilising [Template strings](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) and LitElement knows how to call this function.
 
-With that component we can registering it as a web component
+With that component we can register it as a web component
 
 ```javascript
-customElements.define("my-button", MyButton)
+customElements.define('my-button', MyButton)
 ```
 
 and this is a webcomponent!
@@ -139,23 +143,23 @@ Let us try to create two pages like if we had a website with multiple pages.
 class PageA extends LitElement {
   render() {
     return html`
-      <div>Page A<div>
+      <div>Page A</div>
     `
   }
 }
-customElements.define("my-pagea", PageA)
+customElements.define('my-pagea', PageA)
 
 class PageB extends LitElement {
   render() {
     return html`
-      <div>Page B<div>
+      <div>Page B</div>
     `
   }
 }
-customElements.define("my-pageb", PageB)
+customElements.define('my-pageb', PageB)
 ```
 
-Those page are pretty simple but that is nothing that prevent us from making them full featured with a lot of functionality but for this example we keep it short.
+Those pages are pretty simple but that is nothing that prevents us from making them full featured with a lot of functionality but for this example we keep it short.
 
 And since we now have two pages we need a main entrypoint for our app, so we can make a new component responsible for showing the correct page.
 
@@ -163,13 +167,11 @@ And since we now have two pages we need a main entrypoint for our app, so we can
 class MyAwesomeApp extends LitElement {
   render() {
     return html`
-      <div>
-      	<h1>MyAwesomeApp</h1>
-      </div>
+      <div><h1>MyAwesomeApp</h1></div>
     `
   }
 }
-customElements.define("my-awesome-app", MyAwesomeApp)
+customElements.define('my-awesome-app', MyAwesomeApp)
 ```
 
 That is now our main webcomponent entrypoint, that we need to add to the HTML instead of the button.
@@ -184,7 +186,7 @@ That is now our main webcomponent entrypoint, that we need to add to the HTML in
 ...
 ```
 
-In our `MyAwesomeApp` we can define a property that define the current active route, and we can populate it with PageA.
+In our `MyAwesomeApp` we can define a property that define the currently active route, and we can populate it with PageA.
 
 ```diff
  class MyAwesomeApp extends LitElement {
@@ -196,7 +198,7 @@ In our `MyAwesomeApp` we can define a property that define the current active ro
    render() {
      return html`
        <div>
-       	 <h1>MyAwesomeApp</h1>
+         <h1>MyAwesomeApp</h1>
 +        ${this.route}
        </div>
      `
@@ -215,27 +217,28 @@ One library like that could be Navigo, https://www.npmjs.com/package/navigo
 Include that at the top of the file with unpkg.com, you can see the URL to the "module" version, <https://github.com/krasimir/navigo/blob/master/package.json#L7>
 
 ```javascript
-import Navigo from "https://unpkg.com/navigo@7.1.2/lib/navigo.es.js"
+import Navigo from 'https://unpkg.com/navigo@7.1.2/lib/navigo.es.js'
 ```
 
 It has a super simple api and it supports both new and old browsers.
 
 ```javascript
-let router = new Navigo("/", true, "#!")
+let router = new Navigo('/', true, '#!')
 ```
 
-First argument is the starting route, the next if it should use hash fragment routing, it is nicer as you don't have to configure your webserver to respond with the same HTML file to every path, and the last is what we will want to prefix our hash fragment with.
+The first argument is the starting route, the next if it should use hash fragment routing, it is nicer as you don't have to configure your webserver to respond with the same HTML file to every path, and the last is what we will want to prefix our hash fragment with.
 
 For this router we can add different routes:
 
 ```javascript
-router.on("/pagea", () => {
-  // do something
-})
-.on("/pageb", () => {})
-.on("*", () => {
-  // show home
-})
+router
+  .on('/pagea', () => {
+    // do something
+  })
+  .on('/pageb', () => {})
+  .on('*', () => {
+    // show home
+  })
 ```
 
 To activate our router we can call `router.resolve()`
@@ -282,8 +285,7 @@ The constructor function is called whenever the component is created.
 And now you have a multiple spa, you can make links inbetween pages like this
 
 ```html
-<a href="#!/pagea">Page A</a>
-<a href="#!/pageb">Page B</a>
+<a href="#!/pagea">Page A</a> <a href="#!/pageb">Page B</a>
 <a href="#!/">Home</a>
 ```
 
@@ -291,7 +293,7 @@ Try to add them yourself!
 
 ## Conclusion
 
-This is a awesome start on any small app and you can continue with making small components and building up your pages.
+This is an awesome start on any small app and you can continue with making small components and building up your pages.
 
 LitElement also supports CSS which you can see here <https://lit-element.polymer-project.org/guide/styles>
 
@@ -300,4 +302,3 @@ You can find the full example here, try making something similar!
 You can find the sourcecode here <https://github.com/kevinsimper/lit-element-with-router>
 
 and a working example here <https://kevinsimper.github.io/lit-element-with-router/>
-
