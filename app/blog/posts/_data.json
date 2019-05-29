@@ -1,5 +1,11 @@
 [
   {
+    "slug": "oculus-quest-is-an-amazing-vr-experience",
+    "title": "Oculus Quest is an amazing VR experience",
+    "date": "Wed May 29 2019 17:43:08 GMT+0200 (Central European Summer Time)",
+    "tags": ["vr", "oculus"]
+  },
+  {
     "slug": "single-page-app-with-webcomponents-and-router",
     "title": "Single page app with WebComponents and Router",
     "date": "Mon May 27 2019 18:10:53 GMT+0200 (Central European Summer Time)",
@@ -207,7 +213,7 @@
     "slug": "aframe-with-oculus-go-webvr",
     "title": "Aframe with Oculus Go is great WebVR",
     "date": "Wed, 23 May 2018 22:18:45 +0100",
-    "tags": ["webvr"]
+    "tags": ["webvr", "vr"]
   },
   {
     "slug": "how-to-serverless",
