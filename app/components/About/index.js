@@ -13,11 +13,15 @@ export default class About extends React.Component {
         <h2>My biggest interests at the moment</h2>
         <p>
           <ul>
-            <li>Kubernetes and Google Cloud</li>
+            <li>
+              <a href="/categories/kubernetes">Kubernetes</a> and Google Cloud
+            </li>
             <li>Organizing community events</li>
             <li>Public speaking and teaching</li>
             <li>Ethereum and Crypto currencies</li>
-            <li>Virtual Reality</li>
+            <li>
+              <a href="/categories/vr">Virtual Reality</a>
+            </li>
             <li>Selfdriving cars and better movement</li>
           </ul>
         </p>
@@ -28,7 +32,11 @@ export default class About extends React.Component {
             <li>
               <a href="https://copenhagenjs.dk">CopenhagenJS</a>
             </li>
-            <li>Google Cloud Community Copenhagen</li>
+            <li>
+              <a href="https://www.meetup.com/Google-Cloud-Developer-Community-Copenhagen/">
+                GDG Cloud Copenhagen
+              </a>
+            </li>
           </ul>
         </p>
         <div className={styles.Content}>
