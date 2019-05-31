@@ -5,6 +5,7 @@ import Layout from './components/Layout'
 import Map from './components/Map'
 import blogdata from './blog/posts/_data.json'
 import React from 'react'
+import rss from 'rss'
 import { renderToString, renderToStaticMarkup } from 'react-dom/server'
 import App from './components/App'
 import Content from './components/Content'
@@ -121,6 +122,33 @@ app.get('/nametags', (req, res) => {
       title: 'Nametags - Kevin Simper'
     })
   )
+})
+app.get('/feed/rss.xml', (req, res) => {
+  const url =
+    process.env.NODE_ENV === 'production'
+      ? `https://www.kevinsimper.dk`
+      : `${req.protocol}://${req.hostname}:9000`
+  let feed = new rss({
+    name: 'Kevin Simper',
+    site_url: url
+  })
+  let blogs = Promise.all(
+    blogdata.map(blog => {
+      return import(`./blog/posts/${blog.slug}.md`).then(content => {
+        return {
+          title: blog.title,
+          description: content.default,
+          url: `${url}/posts/${blog.slug}`,
+          guid: `${blog.slug}`
+        }
+      })
+    })
+  ).then(blogs => {
+    blogs.forEach(b => {
+      feed.item(b)
+    })
+    res.send(feed.xml({ indent: true }))
+  })
 })
 
 app.use(function(req, res, next) {
