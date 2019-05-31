@@ -129,8 +129,10 @@ app.get('/feed/rss.xml', (req, res) => {
       ? `https://www.kevinsimper.dk`
       : `${req.protocol}://${req.hostname}:9000`
   let feed = new rss({
-    name: 'Kevin Simper',
-    site_url: url
+    title: 'Kevin Simper',
+    site_url: url,
+    managingEditor: 'Kevin Simper',
+    webMaster: 'Kevin Simper'
   })
   let blogs = Promise.all(
     blogdata.map(blog => {
@@ -138,6 +140,7 @@ app.get('/feed/rss.xml', (req, res) => {
         return {
           title: blog.title,
           description: content.default,
+          author: 'Kevin Simper',
           url: `${url}/posts/${blog.slug}`,
           guid: `${blog.slug}`
         }
