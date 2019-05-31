@@ -5,7 +5,6 @@ import Layout from './components/Layout'
 import Map from './components/Map'
 import blogdata from './blog/posts/_data.json'
 import React from 'react'
-import rss from 'rss'
 import { renderToString, renderToStaticMarkup } from 'react-dom/server'
 import App from './components/App'
 import Content from './components/Content'
@@ -27,6 +26,7 @@ import PostsRoutes from './routes/posts'
 import MapRoutes from './routes/map'
 import ActivitiesRoutes from './routes/activities'
 import CategoriesRoutes from './routes/categories'
+import FeedRoutes from './routes/feed'
 
 var app = express.Router()
 var production = process.env.NODE_ENV === 'production'
@@ -105,6 +105,7 @@ app.use('/recommends', RecommendsRoutes)
 app.use('/login', LoginRoutes)
 app.use('/activities', ActivitiesRoutes)
 app.use('/categories', CategoriesRoutes)
+app.use('/feed', FeedRoutes)
 app.get('/nametags', (req, res) => {
   let content = renderToString(
     <App>
@@ -122,36 +123,6 @@ app.get('/nametags', (req, res) => {
       title: 'Nametags - Kevin Simper'
     })
   )
-})
-app.get('/feed/rss.xml', (req, res) => {
-  const url =
-    process.env.NODE_ENV === 'production'
-      ? `https://www.kevinsimper.dk`
-      : `${req.protocol}://${req.hostname}:9000`
-  let feed = new rss({
-    title: 'Kevin Simper',
-    site_url: url,
-    managingEditor: 'Kevin Simper',
-    webMaster: 'Kevin Simper'
-  })
-  let blogs = Promise.all(
-    blogdata.map(blog => {
-      return import(`./blog/posts/${blog.slug}.md`).then(content => {
-        return {
-          title: blog.title,
-          description: content.default,
-          author: 'Kevin Simper',
-          url: `${url}/posts/${blog.slug}`,
-          guid: `${blog.slug}`
-        }
-      })
-    })
-  ).then(blogs => {
-    blogs.forEach(b => {
-      feed.item(b)
-    })
-    res.send(feed.xml({ indent: true }))
-  })
 })
 
 app.use(function(req, res, next) {
