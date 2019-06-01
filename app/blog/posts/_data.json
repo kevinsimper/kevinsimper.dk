@@ -1,5 +1,11 @@
 [
   {
+    "slug": "how-to-get-the-port-of-express.js-app-devtip",
+    "title": "How to get the port of Express.js app - DevTip",
+    "date": "Sat Jun 01 2019 18:22:38 GMT+0200 (Central European Summer Time)",
+    "tags": ["nodejs", "devtip"]
+  },
+  {
     "slug": "why-you-should-use-a-servicemesh-with-kubernetes",
     "title": "Why you should use a Servicemesh with Kubernetes",
     "date": "Fri May 31 2019 02:43:01 GMT+0200 (Central European Summer Time)",
