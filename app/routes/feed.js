@@ -1,6 +1,7 @@
 import express from 'express'
 import rss from 'rss'
 import blogdata from '../blog/posts/_data.json'
+import dayjs from 'dayjs'
 
 let app = express()
 
@@ -22,6 +23,7 @@ app.get('/rss.xml', (req, res) => {
           title: blog.title,
           description: content.default,
           author: 'Kevin Simper',
+          date: dayjs(blog.date).toDate(),
           url: `${url}/posts/${blog.slug}`,
           guid: `${blog.slug}`
         }
