@@ -1,5 +1,11 @@
 [
   {
+    "slug": "building-js-apps-with-npm-packages-without-build-steps",
+    "title": "Building JS apps with npm packages without build steps",
+    "date": "Sun Jun 02 2019 03:59:36 GMT+0200 (Central European Summer Time)",
+    "tags": ["javascript"]
+  },
+  {
     "slug": "how-to-get-the-port-of-express.js-app-devtip",
     "title": "How to get the port of Express.js app - DevTip",
     "date": "Sat Jun 01 2019 18:22:38 GMT+0200 (Central European Summer Time)",
