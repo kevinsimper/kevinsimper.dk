@@ -28,7 +28,7 @@ app.get('/:post', (req, res) => {
           >
             <h3>Subscribe</h3>
             <div>I will write once a while about what I do!</div>
-            <div style={{ display: 'flex' }}>
+            <div style={{ display: 'flex', maxWidth: 500 }}>
               <input
                 type="email"
                 placeholder="youremail@mail.com"
