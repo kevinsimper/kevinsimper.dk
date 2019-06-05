@@ -19,18 +19,55 @@ app.get('/:post', (req, res) => {
         <Content>
           <div>{blogpost.date}</div>
           <div dangerouslySetInnerHTML={{ __html: blogcontent.default }} />
+          <hr style={{ margin: '40px 0 0' }} />
+          <form
+            style={{ margin: '20px 0' }}
+            action="https://kevinsimper.us18.list-manage.com/subscribe/post?u=86d243154d55f1cdbc293d5bd&amp;id=a0e9448354"
+            method="post"
+            target="_blank"
+          >
+            <h3>Subscribe</h3>
+            <div>I will write once a while about what I do!</div>
+            <div style={{ display: 'flex' }}>
+              <input
+                type="email"
+                placeholder="youremail@mail.com"
+                value=""
+                name="EMAIL"
+                style={{ width: '100%', fontSize: '1rem', padding: '0 10px' }}
+              />
+              <input
+                type="submit"
+                value="Subscribe"
+                name="subscribe"
+                style={{
+                  fontSize: '1rem',
+                  padding: 15,
+                  background: '#4CAF50',
+                  color: 'white'
+                }}
+              />
+            </div>
+          </form>
           <hr />
-          {previous && (
-            <p>
-              Previous post:{' '}
-              <a href={`/posts/${previous.slug}`}>{previous.title}</a>
-            </p>
-          )}
-          {newer && (
-            <p>
-              Newer post: <a href={`/posts/${newer.slug}`}>{newer.title}</a>
-            </p>
-          )}
+          <table style={{ margin: '20px 0' }}>
+            {previous && (
+              <tr>
+                <td>Previous&nbsp;post:</td>
+                <td>
+                  <a href={`/posts/${previous.slug}`}>{previous.title}</a>
+                </td>
+              </tr>
+            )}
+            {newer && (
+              <tr>
+                <td>Newer&nbsp;post:</td>
+                <td>
+                  <a href={`/posts/${newer.slug}`}>{newer.title}</a>
+                </td>
+              </tr>
+            )}
+          </table>
         </Content>
       </App>
     )
