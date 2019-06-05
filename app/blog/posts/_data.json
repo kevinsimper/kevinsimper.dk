@@ -1,5 +1,11 @@
 [
   {
+    "slug": "why-i-like-going-to-tech-meetups",
+    "title": "Why I like going to tech meetups",
+    "date": "Wed Jun 05 2019 15:34:14 GMT+0200 (Central European Summer Time)",
+    "tags": ["meetup", "community"]
+  },
+  {
     "slug": "building-js-apps-with-npm-packages-without-build-steps",
     "title": "Building JS apps with npm packages without build steps",
     "date": "Sun Jun 02 2019 03:59:36 GMT+0200 (Central European Summer Time)",
