@@ -21,7 +21,7 @@ a {
 
 :not(pre) > code {
   white-space: pre-wrap !important;
-  font-size: 1rem;
+  font-size: 1rem !important;
 }
 pre code {
   padding: unset;
