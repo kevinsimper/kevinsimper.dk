@@ -46,13 +46,13 @@ export default props => {
               rel="stylesheet"
               href="https://cdn.kevinsimper.dk/prism.css"
             />
-            <script src="https://cdn.kevinsimper.dk/prism.js" data-manual />
+            <script src="https://cdn.kevinsimper.dk/highlight-prism.js" data-manual />
           </div>
         )}
         {!props.production && (
           <div>
             <link rel="stylesheet" href="/prism.css" />
-            <script src="/prism.js" data-manual />
+            <script src="/highlight-prism.js" data-manual />
           </div>
         )}
         <script
