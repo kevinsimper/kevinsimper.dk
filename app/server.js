@@ -40,10 +40,10 @@ app.use(cookieParser('somethingverysecret'))
 if (production) {
   app.use((req, res, next) => {
     const host = req.header('host')
-    if (host.match(/^www\..*/i)) {
-      next()
-    } else {
+    if (!host.match(/^www\..*/i) && host.includes('kevinsimper.dk')) {
       res.redirect(301, 'https://www.' + host)
+    } else {
+      next()
     }
   })
 }
