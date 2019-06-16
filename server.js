@@ -29,7 +29,7 @@ if (production) {
 } else {
   global.assets = defaultAssets
 }
-
+console.log(JSON.stringify({production, assets: global.assets }))
 app.use(express.static('public', { maxAge: 86400000 }))
 
 app.use(reload(__dirname + '/dist/server'))

@@ -8,7 +8,7 @@ export default props => {
         <link
           rel="icon"
           type="image/jpeg"
-          href="https://cdn.kevinsimper.dk/favicon.jpg"
+          href="/favicon.jpg"
         />
         <link
           rel="stylesheet"
@@ -16,12 +16,12 @@ export default props => {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {props.production && (
-          <script src={`https://cdn.kevinsimper.dk${props.assets.main.js}`} />
+          <script src={`${props.assets.main.js}`} />
         )}
         {props.production && (
           <link
             rel="stylesheet"
-            href={`https://cdn.kevinsimper.dk${props.assets.main.css}`}
+            href={`${props.assets.main.css}`}
           />
         )}
         {!props.production && <script src="/build/main.bundle.js" />}
@@ -44,9 +44,12 @@ export default props => {
           <div>
             <link
               rel="stylesheet"
-              href="https://cdn.kevinsimper.dk/prism.css"
+              href="/prism.css"
             />
-            <script src="https://cdn.kevinsimper.dk/highlight-prism.js" data-manual />
+            <script
+              src="/highlight-prism.js"
+              data-manual
+            />
           </div>
         )}
         {!props.production && (
