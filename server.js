@@ -31,6 +31,7 @@ if (production) {
 }
 console.log(JSON.stringify({production, assets: global.assets }))
 app.use(express.static('public', { maxAge: 86400000 }))
+app.use('/posts', express.static('app/blog/posts', { maxAge: 86400000 }))
 
 app.use(reload(__dirname + '/dist/server'))
 
