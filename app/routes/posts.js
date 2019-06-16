@@ -8,6 +8,39 @@ import { layout, production, assets } from '../server'
 import blogdata from '../blog/posts/_data.json'
 let app = express.Router()
 
+const form = (
+  <form
+    style={{ margin: '20px 0' }}
+    action="https://kevinsimper.us18.list-manage.com/subscribe/post?u=86d243154d55f1cdbc293d5bd&amp;id=a0e9448354"
+    method="post"
+    target="_blank"
+  >
+    <h3>Subscribe</h3>
+    <div>I will write once a while about what I do!</div>
+    <div style={{ display: 'flex', maxWidth: 500 }}>
+      <input
+        type="email"
+        placeholder="youremail@mail.com"
+        value=""
+        name="EMAIL"
+        style={{ width: '100%', fontSize: '1rem', padding: '0 10px' }}
+      />
+      <input
+        type="submit"
+        value="Subscribe"
+        name="subscribe"
+        style={{
+          fontSize: '1rem',
+          padding: 15,
+          background: '#4CAF50',
+          color: 'white',
+          border: 0
+        }}
+      />
+    </div>
+  </form>
+)
+
 app.get('/:post', (req, res) => {
   var slug = req.params.post
   var blogpost = blogdata.find(item => item.slug === slug)
@@ -20,35 +53,7 @@ app.get('/:post', (req, res) => {
           <div>{blogpost.date}</div>
           <div dangerouslySetInnerHTML={{ __html: blogcontent.default }} />
           <hr style={{ margin: '40px 0 0' }} />
-          <form
-            style={{ margin: '20px 0' }}
-            action="https://kevinsimper.us18.list-manage.com/subscribe/post?u=86d243154d55f1cdbc293d5bd&amp;id=a0e9448354"
-            method="post"
-            target="_blank"
-          >
-            <h3>Subscribe</h3>
-            <div>I will write once a while about what I do!</div>
-            <div style={{ display: 'flex', maxWidth: 500 }}>
-              <input
-                type="email"
-                placeholder="youremail@mail.com"
-                value=""
-                name="EMAIL"
-                style={{ width: '100%', fontSize: '1rem', padding: '0 10px' }}
-              />
-              <input
-                type="submit"
-                value="Subscribe"
-                name="subscribe"
-                style={{
-                  fontSize: '1rem',
-                  padding: 15,
-                  background: '#4CAF50',
-                  color: 'white'
-                }}
-              />
-            </div>
-          </form>
+          {form}
           <hr />
           <table style={{ margin: '20px 0' }}>
             {previous && (
