@@ -19,6 +19,9 @@ var publicPath = production ? '/build/' : '/build/'
 module.exports = {
   entry: './app/server.js',
   target: 'node',
+  node: {
+    __dirname: true
+  },
   output: {
     path: __dirname + '/dist/',
     publicPath: publicPath,

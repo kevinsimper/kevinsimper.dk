@@ -1,3 +1,6 @@
+import { readFile, readdirSync } from 'fs'
+import { join } from 'path'
+import marked from 'marked'
 import express from 'express'
 import React from 'react'
 import { renderToString } from 'react-dom/server'
@@ -46,12 +49,12 @@ app.get('/:post', (req, res) => {
   var blogpost = blogdata.find(item => item.slug === slug)
   const previous = blogdata[blogdata.indexOf(blogpost) + 1]
   const newer = blogdata[blogdata.indexOf(blogpost) - 1]
-  import('../blog/posts/' + slug + '.md').then(blogcontent => {
+  readFile(join(__dirname, '../blog/posts/' + slug + '.md'), 'utf8', (err, blogcontent) => {
     let content = renderToString(
       <App>
         <Content>
           <div>{blogpost.date}</div>
-          <div dangerouslySetInnerHTML={{ __html: blogcontent.default }} />
+          <div dangerouslySetInnerHTML={{ __html: marked(blogcontent) }} />
           <hr style={{ margin: '40px 0 0' }} />
           {form}
           <hr />
