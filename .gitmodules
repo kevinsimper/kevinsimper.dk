@@ -1,0 +1,3 @@
+[submodule "app/blog/posts/images"]
+	path = app/blog/posts/images
+	url = git@github.com:kevinsimper/kevinsimper.dk-images.git
