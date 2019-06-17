@@ -8,7 +8,28 @@ Typically cloud provider, they try to provide building blocks that you can build
 
 You will need a Google Cloud account, you can get started for free entirely but you will need to put in a credit card because they limit abuse.
 
-[TOC]
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [Create a small example app](#create-a-small-example-app)
+  - [Creating a small node.js server](#creating-a-small-nodejs-server)
+  - [Creating a docker image](#creating-a-docker-image)
+  - [Push it to Github](#push-it-to-github)
+- [Setting up Continuous Integration with Cloud Build](#setting-up-continuous-integration-with-cloud-build)
+  - [Creating a new project](#creating-a-new-project)
+  - [Setting up Cloud Build](#setting-up-cloud-build)
+- [Deploying and running on Cloud Run](#deploying-and-running-on-cloud-run)
+- [Deploy a new version manually](#deploy-a-new-version-manually)
+- [Deploying automatically with Cloud Build](#deploying-automatically-with-cloud-build)
+  - [Defining build steps in `cloudbuild.yaml`](#defining-build-steps-in-cloudbuildyaml)
+  - [Pushing the docker image](#pushing-the-docker-image)
+  - [Add the final step, deploying with the gcloud cli](#add-the-final-step-deploying-with-the-gcloud-cli)
+  - [Running gcloud and deploy cloud run](#running-gcloud-and-deploy-cloud-run)
+  - [Add gcloud command to cloud build](#add-gcloud-command-to-cloud-build)
+  - [Permission denied on Cloud Build](#permission-denied-on-cloud-build)
+- [Conclusion - a what to do next](#conclusion---a-what-to-do-next)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Create a small example app
 
