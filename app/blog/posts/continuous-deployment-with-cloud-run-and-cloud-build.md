@@ -1,6 +1,6 @@
 # Continuous Deployment with Cloud Run and Cloud Build
 
-Google recently launched Cloud Run at their Next 19 conference. It is a service where you provide it a Docker image and it then runs it, autoscaled up and down and you only pay for what you use, a really simple service that builds on top of many years of work from Google and others, something we can now take advance of!
+Google Cloud recently launched Cloud Run at their Next 19 conference. It is a service where you provide it a Docker image and it then runs it, autoscaled up and down and you only pay for what you use, a really simple service that builds on top of many years of work from Google and others, something we can now take advance of!
 
 In this example, I want to show how you can combine Cloud Build and Cloud Run, so that whenever you make a small change to your app, it deploys it automatically. Each service is super simple in its interface but to combine them takes a few extra steps.
 
@@ -33,7 +33,7 @@ You will need a Google Cloud account, you can get started for free entirely but 
 
 ## Create a small example app
 
-Let us create a small app first that we will use. Let us create a small node.js server. If you already know how to do this you can skip to the next section here:
+Let us create a small app first that we will use. Let us create a small node.js server. If you already know how to do this you can skip to the next section here: [Setting up Continuous Integration with Cloud Build](#setting-up-continuous-integration-with-cloud-build)
 
 ### Creating a small node.js server
 
@@ -515,5 +515,7 @@ I hope you found the tutorial helpful and in cases better than the Google Cloud 
 I want to also compare this to [Continuously deploying with Kubernetes](/posts/continues-deployment-with-google-cloud-and-kubernetes), which I also wrote a (much shorter) blog post about. Kubernetes is awesome and in fact Cloud Run is built on top of Kubernetes with two frameworks called Istio and KNative, and the cool thing is that Google Cloud runs all this behind the scenes. The nice thing is that if you wanted to could run all this on your laptop, kubernetes and all, and is pretty mindblowing!
 
 What I would do next is mapping a [custom domain to my Cloud Run](https://cloud.google.com/run/docs/mapping-custom-domains). After that, I would learn how to deploy secrets with [Cloud Build and KMS](https://cloud.google.com/cloud-build/docs/securing-builds/use-encrypted-secrets-credentials) and finally, I would learn how to configure [Cloud Run with Cloud SQL](https://cloud.google.com/run/docs/configuring/connect-cloudsql) to enable you to build apps super fast.
+
+https://github.com/kevinsimper/cloud-run-continuous-deployment-example
 
 Make something awesome 😄
