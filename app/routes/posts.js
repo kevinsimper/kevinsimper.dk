@@ -54,7 +54,7 @@ app.get('/:post', (req, res) => {
       <App>
         <Content>
           <div>{blogpost.date}</div>
-          <div dangerouslySetInnerHTML={{ __html: marked(blogcontent) }} />
+          <div dangerouslySetInnerHTML={{ __html: marked(blogcontent).replace(/<img/g, '<img loading="lazy"') }} />
           <hr style={{ margin: '40px 0 0' }} />
           {form}
           <hr />
