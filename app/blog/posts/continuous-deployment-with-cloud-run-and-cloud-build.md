@@ -97,7 +97,7 @@ For this last step in creating our app, we need to push it to Github. In theory,
 
 You can navigate to https://github.com and create a new repository and follow the instructions to on how to create a new git repository.
 
-Protip: Use the tool hub from github to do it all from the command line. [http://hub.gihub.com/](http://hub.gihub.com/)
+Protip: Use the tool hub from github to do it all from the command line. [http://hub.github.com/](http://hub.github.com/)
 
 ## Setting up Continuous Integration with Cloud Build
 
@@ -364,11 +364,11 @@ $ gcloud config set project ##PROJECT_ID FROM THE COMMAND JUST BEFORE
 
 Cool, here is the output of me running the `gcloud beta run services list`
 
-````bash
+```bash
 $ gcloud beta run services list
    SERVICE                                       REGION       LATEST REVISION                                                               SERVING REVISION                                                              LAST DEPLOYED BY        LAST DEPLOYED AT
 ✔  cloud-run-continuous-deployment-example       us-central1  cloud-run-continuous-deployment-example-f5877201-f683-4ed1-93fb-90728754eca6  cloud-run-continuous-deployment-example-f5877201-f683-4ed1-93fb-90728754eca6  kevin.simper@gmail.com  2019-06-15T21:20:30.148Z
-````
+```
 
 The cli produces very long lines, it can be hard to read, but you should see the name of the service "cloud-run-continuous-deployment-example". Great!
 
@@ -456,7 +456,7 @@ We got a "PERMISSION_DENIED: The caller does not have permission".
 
 That is because everyone does not have access to deploy our service. We need to give access to everyone that needs that permission.
 
-Cloud Build does have a user when it runs these builds and the solutions are that we can give Cloud Build access to deploy our Cloud Run service. That is done through IAM roles, everything in Cloud Providers are done through some kind of IAM, which stands for *Identity and Access Management*. It sounds complicated, but it is not something to be afraid of and it is something you can learn step by step.
+Cloud Build does have a user when it runs these builds and the solutions are that we can give Cloud Build access to deploy our Cloud Run service. That is done through IAM roles, everything in Cloud Providers are done through some kind of IAM, which stands for _Identity and Access Management_. It sounds complicated, but it is not something to be afraid of and it is something you can learn step by step.
 
 First, we need to navigate to IAM, search for it:
 
@@ -469,8 +469,6 @@ Here you will find the stock Service Accounts, and this is also here when you Ac
 Look for the **Member** called "Cloud Build Service Account", number 2 in my list and click the Edit icon. The one that has the email that ends with `@cloudbuild.gserviceaccount.com`
 
 ![image-20190617055545930](images/ci-cloud-run/image-20190617055545930.png)
-
-
 
 And out will a sidebar show up:
 
