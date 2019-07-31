@@ -49,45 +49,56 @@ app.get('/:post', (req, res) => {
   var blogpost = blogdata.find(item => item.slug === slug)
   const previous = blogdata[blogdata.indexOf(blogpost) + 1]
   const newer = blogdata[blogdata.indexOf(blogpost) - 1]
-  readFile(join(__dirname, '../blog/posts/' + slug + '.md'), 'utf8', (err, blogcontent) => {
-    let content = renderToString(
-      <App>
-        <Content>
-          <div>{blogpost.date}</div>
-          <div dangerouslySetInnerHTML={{ __html: marked(blogcontent).replace(/<img/g, '<img loading="lazy"') }} />
-          <hr style={{ margin: '40px 0 0' }} />
-          {form}
-          <hr />
-          <table style={{ margin: '20px 0' }}>
-            {previous && (
-              <tr>
-                <td>Previous&nbsp;post:</td>
-                <td>
-                  <a href={`/posts/${previous.slug}`}>{previous.title}</a>
-                </td>
-              </tr>
-            )}
-            {newer && (
-              <tr>
-                <td>Newer&nbsp;post:</td>
-                <td>
-                  <a href={`/posts/${newer.slug}`}>{newer.title}</a>
-                </td>
-              </tr>
-            )}
-          </table>
-        </Content>
-      </App>
-    )
+  readFile(
+    join(__dirname, '../blog/posts/' + slug + '.md'),
+    'utf8',
+    (err, blogcontent) => {
+      let content = renderToString(
+        <App>
+          <Content>
+            <div>{blogpost.date}</div>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: marked(blogcontent).replace(
+                  /<img/g,
+                  '<img loading="lazy"'
+                )
+              }}
+            />
+            <hr style={{ margin: '40px 0 0' }} />
+            {form}
+            <hr />
+            <table style={{ margin: '20px 0' }}>
+              {previous && (
+                <tr>
+                  <td>Previous&nbsp;post:</td>
+                  <td>
+                    <a href={`/posts/${previous.slug}`}>{previous.title}</a>
+                  </td>
+                </tr>
+              )}
+              {newer && (
+                <tr>
+                  <td>Newer&nbsp;post:</td>
+                  <td>
+                    <a href={`/posts/${newer.slug}`}>{newer.title}</a>
+                  </td>
+                </tr>
+              )}
+            </table>
+          </Content>
+        </App>
+      )
 
-    res.send(
-      layout({
-        content: content,
-        production: production,
-        assets,
-        title: `${blogpost.title} - Kevin Simper`
-      })
-    )
-  })
+      res.send(
+        layout({
+          content: content,
+          production: production,
+          assets,
+          title: `${blogpost.title} - Kevin Simper`
+        })
+      )
+    }
+  )
 })
 export default app

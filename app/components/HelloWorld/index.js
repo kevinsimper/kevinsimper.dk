@@ -24,8 +24,8 @@ export default class HelloWorld extends React.Component {
           </div>
           <div className={styles.SecondIntro}>
             I also like to organize meetups and make{' '}
-            <a href="/about/presentations">presentations</a> 💻. I really like to snowboard
-            🏂, and bicycles is my prefered transportation 🚴.
+            <a href="/about/presentations">presentations</a> 💻. I really like
+            to snowboard 🏂, and bicycles is my prefered transportation 🚴.
           </div>
         </div>
       </div>

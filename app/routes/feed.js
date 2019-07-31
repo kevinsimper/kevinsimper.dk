@@ -1,5 +1,5 @@
 import express from 'express'
-import {join } from 'path'
+import { join } from 'path'
 import marked from 'marked'
 import { promises } from 'fs'
 import rss from 'rss'
@@ -21,16 +21,18 @@ app.get('/rss.xml', (req, res) => {
   })
   let blogs = Promise.all(
     blogdata.map(blog => {
-      return promises.readFile(join(__dirname,`./app/blog/posts/${blog.slug}.md`), 'utf8').then(blogcontent => {
-        return {
-          title: blog.title,
-          description: marked(blogcontent),
-          author: 'Kevin Simper',
-          date: dayjs(blog.date).toDate(),
-          url: `${url}/posts/${blog.slug}`,
-          guid: `${blog.slug}`
-        }
-      })
+      return promises
+        .readFile(join(__dirname, `./app/blog/posts/${blog.slug}.md`), 'utf8')
+        .then(blogcontent => {
+          return {
+            title: blog.title,
+            description: marked(blogcontent),
+            author: 'Kevin Simper',
+            date: dayjs(blog.date).toDate(),
+            url: `${url}/posts/${blog.slug}`,
+            guid: `${blog.slug}`
+          }
+        })
     })
   ).then(blogs => {
     blogs.forEach(b => {

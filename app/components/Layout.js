@@ -5,24 +5,15 @@ export default props => {
     <html>
       <head>
         <title>{props.title}</title>
-        <link
-          rel="icon"
-          type="image/jpeg"
-          href="/favicon.jpg"
-        />
+        <link rel="icon" type="image/jpeg" href="/favicon.jpg" />
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Open+Sans:400,600"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {props.production && <script src={`${props.assets.main.js}`} />}
         {props.production && (
-          <script src={`${props.assets.main.js}`} />
-        )}
-        {props.production && (
-          <link
-            rel="stylesheet"
-            href={`${props.assets.main.css}`}
-          />
+          <link rel="stylesheet" href={`${props.assets.main.css}`} />
         )}
         {!props.production && <script src="/build/main.bundle.js" />}
         {!props.production && <link rel="stylesheet" href="/build/main.css" />}
@@ -42,14 +33,8 @@ export default props => {
         <div id="app" dangerouslySetInnerHTML={{ __html: props.content }} />
         {props.production && (
           <div>
-            <link
-              rel="stylesheet"
-              href="/prism.css"
-            />
-            <script
-              src="/highlight-prism.js"
-              data-manual
-            />
+            <link rel="stylesheet" href="/prism.css" />
+            <script src="/highlight-prism.js" data-manual />
           </div>
         )}
         {!props.production && (
