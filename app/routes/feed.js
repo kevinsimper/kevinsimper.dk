@@ -22,7 +22,10 @@ app.get('/rss.xml', (req, res) => {
   let blogs = Promise.all(
     blogdata.map(blog => {
       return promises
-        .readFile(join(__dirname, `./app/blog/posts/${blog.slug}.md`), 'utf8')
+        .readFile(
+          join(__dirname, `../../app/blog/posts/${blog.slug}.md`),
+          'utf8'
+        )
         .then(blogcontent => {
           return {
             title: blog.title,
