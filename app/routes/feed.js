@@ -16,8 +16,7 @@ app.get('/rss.xml', (req, res) => {
   let feed = new rss({
     title: 'Kevin Simper',
     site_url: url,
-    managingEditor: 'Kevin Simper',
-    webMaster: 'Kevin Simper'
+    webMaster: 'kevin.simper@gmail.com'
   })
   let blogs = Promise.all(
     blogdata.map(blog => {
@@ -32,7 +31,7 @@ app.get('/rss.xml', (req, res) => {
             description: marked(blogcontent),
             author: 'Kevin Simper',
             date: dayjs(blog.date).toDate(),
-            url: `${url}/posts/${blog.slug}`,
+            url: encodeURI(`${url}/posts/${blog.slug}`),
             guid: `${blog.slug}`
           }
         })
@@ -41,6 +40,7 @@ app.get('/rss.xml', (req, res) => {
     blogs.forEach(b => {
       feed.item(b)
     })
+    res.setHeader('Content-Type', 'application/rss+xml')
     res.send(feed.xml({ indent: true }))
   })
 })
