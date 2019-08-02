@@ -40,8 +40,14 @@ app.use(cookieParser('somethingverysecret'))
 if (production) {
   app.use((req, res, next) => {
     const host = req.header('host')
+    if (
+      req.header('X-Forwarded-Proto') &&
+      req.header('X-Forwarded-Proto') === 'http'
+    ) {
+      res.redirect(301, 'https://' + host + req.originalUrl)
+    }
     if (!host.match(/^www\..*/i) && host === 'kevinsimper.dk') {
-      res.redirect(301, 'https://www.' + host)
+      res.redirect(301, 'https://www.' + host + req.originalUrl)
     } else {
       next()
     }
