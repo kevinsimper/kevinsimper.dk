@@ -18,6 +18,7 @@ export default function Footer() {
               placeholder="youremail@mail.com"
               value=""
               name="EMAIL"
+              onChange={() => {}}
             />
             <input type="submit" value="Subscribe" name="subscribe" />
           </form>

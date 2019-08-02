@@ -27,7 +27,7 @@ export default class Activities extends Component {
   render() {
     const { blogposts, limit } = this.props
     let allActivity = [].concat(data.activities, blogposts).sort((a, b) => {
-      if (moment(a.date).isBefore(b.date)) {
+      if (moment(new Date(a.date)).isBefore(new Date(b.date))) {
         return 1
       } else {
         return -1

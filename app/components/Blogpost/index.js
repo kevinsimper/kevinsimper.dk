@@ -15,8 +15,8 @@ export default class Blogpost extends Component {
           <h3 className={styles.Header}>{post.title}</h3>
           <h4 className={styles.Categories}>
             {post.tags &&
-              post.tags.map(t => (
-                <span>
+              post.tags.map((t, id) => (
+                <span key={id}>
                   <a href={`/categories/${t}`}>#{t}</a>{' '}
                 </span>
               ))}
