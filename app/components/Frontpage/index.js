@@ -26,38 +26,23 @@ export default class Frontpage extends Component {
           <div style={{ background: '#b73a60' }}>
             <Content>
               <h2 style={{ color: 'white' }}>My latest videoes</h2>
-              <div className={'embed'} style={{ margin: '20px 0' }}>
-                <iframe
-                  width="560"
-                  height="315"
-                  src="https://www.youtube.com/embed/6NG_cUeuNhU"
-                  frameBorder="0"
-                />
-              </div>
-              <div className={'embed'} style={{ margin: '20px 0' }}>
-                <iframe
-                  width="560"
-                  height="315"
-                  src="https://www.youtube.com/embed/hSvuHBQ_7VE"
-                  frameBorder="0"
-                />
-              </div>
-              <div className={'embed'} style={{ margin: '20px 0' }}>
-                <iframe
-                  width="560"
-                  height="315"
-                  src="https://www.youtube.com/embed/Dnr8Mu1Bco4"
-                  frameBorder="0"
-                />
-              </div>
-              <div className={'embed'}>
-                <iframe
-                  width="560"
-                  height="315"
-                  src="https://www.youtube.com/embed/eg4e-FObyJ8"
-                  frameBorder="0"
-                />
-              </div>
+              {[
+                'https://www.youtube.com/embed/6NG_cUeuNhU',
+                'https://www.youtube.com/embed/hSvuHBQ_7VE',
+                'https://www.youtube.com/embed/Dnr8Mu1Bco4',
+                'https://www.youtube.com/embed/eg4e-FObyJ8'
+              ].map((video, id) => {
+                return (
+                  <div className={'embed'} style={{ margin: '20px 0' }}>
+                    <iframe
+                      width="560"
+                      height="315"
+                      src={video}
+                      frameBorder="0"
+                    />
+                  </div>
+                )
+              })}
             </Content>
           </div>
           <Content>
