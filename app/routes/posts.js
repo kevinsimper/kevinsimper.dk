@@ -66,6 +66,13 @@ app.get('/:post', (req, res, next) => {
                 )
               }}
             />
+            Tags:{' '}
+            {blogpost.tags &&
+              blogpost.tags.map((t, id) => (
+                <span key={id}>
+                  <a href={`/categories/${t}`}>#{t}</a>{' '}
+                </span>
+              ))}
             <hr style={{ margin: '40px 0 0' }} />
             {form}
             <hr />
