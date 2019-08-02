@@ -44,9 +44,10 @@ const form = (
   </form>
 )
 
-app.get('/:post', (req, res) => {
+app.get('/:post', (req, res, next) => {
   var slug = req.params.post
   var blogpost = blogdata.find(item => item.slug === slug)
+  if (!blogpost) next()
   const previous = blogdata[blogdata.indexOf(blogpost) + 1]
   const newer = blogdata[blogdata.indexOf(blogpost) - 1]
   readFile(
