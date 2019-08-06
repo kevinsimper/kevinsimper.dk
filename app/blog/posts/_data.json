@@ -1,5 +1,11 @@
 [
   {
+    "slug": "how-i-plan-a-new-meetup",
+    "title": "How I plan a new meetup",
+    "date": "Tue Aug 06 2019 21:34:27 GMT+0200 (Central European Summer Time)",
+    "tags": ["community", "events"]
+  },
+  {
     "slug": "i-moved-my-website-to-google-cloud-run",
     "title": "I moved my website to Google Cloud Run",
     "date": "Wed Jul 31 2019 14:06:49 GMT+0200 (Central European Summer Time)",
