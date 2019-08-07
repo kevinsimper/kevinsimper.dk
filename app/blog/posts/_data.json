@@ -1,9 +1,15 @@
 [
   {
+    "slug": "how-to-give-your-first-presentation",
+    "title": "How to give your first presentation",
+    "date": "Wed Aug 07 2019 19:49:37 GMT+0200 (Central European Summer Time)",
+    "tags": ["speaking", "meetup"]
+  },
+  {
     "slug": "how-i-plan-a-new-meetup",
     "title": "How I plan a new meetup",
     "date": "Tue Aug 06 2019 21:34:27 GMT+0200 (Central European Summer Time)",
-    "tags": ["community", "events"]
+    "tags": ["community", "events", "meetup"]
   },
   {
     "slug": "i-moved-my-website-to-google-cloud-run",
