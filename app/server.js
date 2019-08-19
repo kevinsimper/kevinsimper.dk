@@ -27,6 +27,7 @@ import MapRoutes from './routes/map'
 import ActivitiesRoutes from './routes/activities'
 import CategoriesRoutes from './routes/categories'
 import FeedRoutes from './routes/feed'
+import { server } from './routes/graphql'
 
 var app = express.Router()
 var production = process.env.NODE_ENV === 'production'
@@ -130,6 +131,8 @@ app.get('/nametags', (req, res) => {
     })
   )
 })
+
+server.applyMiddleware({ app })
 
 app.use(function(req, res, next) {
   res.status(404).send("Sorry can't find that!")
