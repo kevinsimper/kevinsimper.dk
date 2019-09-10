@@ -1,5 +1,11 @@
 [
   {
+    "slug": "how-to-get-started-with-bazel-buildtool",
+    "title": "How to get started with Bazel buildtool",
+    "date": "Sat Sep 07 2019 23:39:37 GMT+0200 (Central European Summer Time)",
+    "tags": ["build-tool", "docker"]
+  },
+  {
     "slug": "making-community-impact-that-lasts",
     "title": "Making community impact that lasts",
     "date": "Thu Sep 05 2019 22:46:29 GMT+0200 (Central European Summer Time)",
