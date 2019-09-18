@@ -1,6 +1,54 @@
 {
   "presentations": [
     {
+      "name": "Google Assistant workshop - Learn to make your own assistant skill",
+      "location": "Trifork, Copenhagen - 10. September 2019",
+      "description": "In this workshop we will look at the Google Assistant and what we can do with it. Everyone will at the end have made their own skill that they can use from their phone, speaker or hub.",
+      "type": "workshop",
+      "links": [
+        [
+          "Meetup link",
+          "https://www.meetup.com/gdg-cloud-copenhagen/events/264396925/"
+        ]
+      ]
+    },
+    {
+      "name": "Public Speaking Workshop - Learn how to give your first tech talk",
+      "location": "Pleo, Copenhagen - 10. September 2019",
+      "description": "In this workshop we wanted to put focus on how to get started with public speaking. How to approach it, how to come up with ideas, how to write it down and how to present it. This was in collaboration with Zoey Chow.",
+      "type": "workshop",
+      "links": [
+        [
+          "Meetup link",
+          "https://www.meetup.com/copenhagenjs/events/264037209/"
+        ]
+      ]
+    },
+    {
+      "name": "JavaScript testing workshop - learn how to write test",
+      "location": "FoundersHouse, Copenhagen - 29. August 2019",
+      "description": "In this workshop I gave a presentation and help the workshop students learn how to get started writing test in JavaScript. It was a really great workshop where getting the hang of it and hands-on was the goal as hearing about testing theory doesn't make you good at testing only. This was in collaboration with Mohsen Asfia.",
+      "type": "workshop",
+      "links": [
+        [
+          "Meetup link",
+          "https://www.meetup.com/copenhagenjs/events/264005168/"
+        ]
+      ]
+    },
+    {
+      "name": "Learn GraphQL with JavaScript Workshop",
+      "location": "Pleo, Copenhagen - 20. May 2019",
+      "description": "In this workshop, we will look at GraphQL as frontend developers and learn how to use GraphQL to make a single page application. GraphQL is a really awesome toolkit to talk to APIs much more conveniently. Knowing it, you can really create an awesome user experience with much quicker speed and much less code.",
+      "type": "workshop",
+      "links": [
+        [
+          "Meetup link",
+          "https://www.meetup.com/copenhagenjs/events/261479115/"
+        ]
+      ]
+    },
+    {
       "name": "Build your first blockchain app with JS & Ethereum",
       "location": "Berkeley, California - 14. April 2019",
       "description": "I gave a workshop on how to get started with the Ethereum blockchain. We start with looking at mobile wallets and then we try to deploy our first smart contract with Remix. In the end we try to make our first dapp that uses the mobile wallet.",
@@ -38,7 +86,7 @@
       "links": [
         [
           "Meetup link",
-          "https://www.meetup.com/Google-Cloud-Developer-Community-Copenhagen/events/259546988/"
+          "https://www.meetup.com/gdg-cloud-copenhagen/events/259546988/"
         ]
       ]
     },
