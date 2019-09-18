@@ -198,6 +198,15 @@
       ]
     },
     {
+      "name": "Introduction to Docker for Developers",
+      "location": "Docker Copenhagen - 19. June 2018",
+      "description": "I talked about how you can use Machine Learning for recognizing faces and names with Machine Learning.",
+      "type": "workshop",
+      "links": [
+        ["Meetup link", "https://www.meetup.com/Docker-Copenhagen/events/251794160/"]
+      ]
+    },
+    {
       "name": "Docker Best Practices in development and Production",
       "location": "Gr8Conf - 31. May 2018",
       "description": "You should come if you know or have tried Docker but are thinking about how to get more serious about containers. What are the best practices with docker in Development, Staging and Production with regards to security.",
