@@ -1,6 +1,25 @@
 {
   "presentations": [
     {
+      "name": "Why is my build times so long?",
+      "location": "TwentyThree, Copenhagen - 19. September 2019",
+      "description": "In this talk i focus on how we can bring down build times, evaluating what works and doesn't work. What kind of tool that we need to solve all this. Bringing down build time can greatly improve the productivity of all the developers on a team.",
+      "links": [
+        [
+          "Meetup link",
+          "https://www.meetup.com/copenhagenjs/events/264368457/"
+        ],
+        [
+          "Slideshare",
+          "https://www.slideshare.net/KevinSimper/why-is-my-build-times-so-long"
+        ],
+        [
+          "Live version",
+          "https://how-to-solve-long-build-time.surge.sh/"
+        ]
+      ]
+    },
+    {
       "name": "Google Assistant workshop - Learn to make your own assistant skill",
       "location": "Trifork, Copenhagen - 10. September 2019",
       "description": "In this workshop we will look at the Google Assistant and what we can do with it. Everyone will at the end have made their own skill that they can use from their phone, speaker or hub.",
