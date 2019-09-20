@@ -7,6 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - uses: "actions/docker/cli@master"
+    - uses: "docker://gcr.io/cloud-builders/bazel"
       with:
-        args: "build -t user/repo ."
+        entrypoint: /bin/bash
+        args: -c "bazel version && docker version && docker images && bazel build //:build"
