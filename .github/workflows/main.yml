@@ -6,8 +6,6 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - name: run
-      uses: ngalaiko/bazel-action@0.29.0
+    - uses: "actions/docker/cli@master"
       with:
-        args: build :build
+        args: "build -t user/repo ."
