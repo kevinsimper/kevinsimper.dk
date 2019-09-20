@@ -1,7 +1,0 @@
-web:
-  build: .
-  ports:
-   - "9000:9000"
-  environment:
-    - NODE_ENV=production
-    - INSTAGRAM_TOKEN=
