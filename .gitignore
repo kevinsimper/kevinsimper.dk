@@ -3,3 +3,9 @@ temp/
 dist/
 public/build/
 docker-cloud.yml
+bazel-bin
+bazel-genfiles
+bazel-kevinsimper.dk
+bazel-out
+bazel-testlogs
+bazel.log
