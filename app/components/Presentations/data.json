@@ -1,6 +1,25 @@
 {
   "presentations": [
     {
+      "name": "How Cloud Run is the final destination in my Cloud Native journey",
+      "location": "Dokk1, Aarhus - 24. September 2019",
+      "description": "In this talk I will look at my cloud native journey, how I came here and why I think Cloud Run is the final destination. What did we solve along the way and how I combine my tools to do the best job I can. But do we still miss some things and what is the downsides? Let us talk about that.",
+      "links": [
+        [
+          "Meetup link",
+          "https://www.meetup.com/Cloud-Native-Aarhus/events/264325804/"
+        ],
+        [
+          "Live version",
+          "https://cloud-run-final-destination.surge.sh/"
+        ],
+        [
+          "Demo code",
+          "https://github.com/kevinsimper/cloud-native-aarhus-cloud-run-demo"
+        ]
+      ]
+    },
+    {
       "name": "Why is my build times so long?",
       "location": "TwentyThree, Copenhagen - 19. September 2019",
       "description": "In this talk i focus on how we can bring down build times, evaluating what works and doesn't work. What kind of tool that we need to solve all this. Bringing down build time can greatly improve the productivity of all the developers on a team.",
