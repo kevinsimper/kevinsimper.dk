@@ -1,18 +1,34 @@
 {
   "presentations": [
     {
+      "name": "Why serverless never really worked for me until now!",
+      "location": "GDG Cloud Copenhagen, Copenhagen - 30. September 2019",
+      "description": "In this presentation I want to talk about how I have tried serverless many times but always had issues. I could see the potential but it was always difficult to see it end to end, and when you are busy to often end up defaulting to what you already know. Now Google has launched Cloud Run and it looks to be the perfect solution, but does such a solution exist? Come and hear how I approach serverless with Cloud Run, Cloud Build, Berglas, Cloud KMS and bazel.build",
+      "links": [
+        [
+          "Meetup link",
+          "https://www.meetup.com/gdg-cloud-copenhagen/events/264932714/"
+        ],
+        [
+          "Live version",
+          "https://why-serverless-never-worked-before-now.surge.sh/#1"
+        ],
+        [
+          "Demo code",
+          "https://github.com/kevinsimper/cloud-run-kms-berglas-example"
+        ]
+      ]
+    },
+    {
       "name": "How Cloud Run is the final destination in my Cloud Native journey",
-      "location": "Dokk1, Aarhus - 24. September 2019",
+      "location": "Cloud Native Aarhus, Dokk1, Aarhus - 24. September 2019",
       "description": "In this talk I will look at my cloud native journey, how I came here and why I think Cloud Run is the final destination. What did we solve along the way and how I combine my tools to do the best job I can. But do we still miss some things and what is the downsides? Let us talk about that.",
       "links": [
         [
           "Meetup link",
           "https://www.meetup.com/Cloud-Native-Aarhus/events/264325804/"
         ],
-        [
-          "Live version",
-          "https://cloud-run-final-destination.surge.sh/"
-        ],
+        ["Live version", "https://cloud-run-final-destination.surge.sh/"],
         [
           "Demo code",
           "https://github.com/kevinsimper/cloud-native-aarhus-cloud-run-demo"
@@ -21,7 +37,7 @@
     },
     {
       "name": "Why is my build times so long?",
-      "location": "TwentyThree, Copenhagen - 19. September 2019",
+      "location": "CopenhagenJS - 19. September 2019",
       "description": "In this talk i focus on how we can bring down build times, evaluating what works and doesn't work. What kind of tool that we need to solve all this. Bringing down build time can greatly improve the productivity of all the developers on a team.",
       "links": [
         [
@@ -32,10 +48,7 @@
           "Slideshare",
           "https://www.slideshare.net/KevinSimper/why-is-my-build-times-so-long"
         ],
-        [
-          "Live version",
-          "https://how-to-solve-long-build-time.surge.sh/"
-        ]
+        ["Live version", "https://how-to-solve-long-build-time.surge.sh/"]
       ]
     },
     {
@@ -52,14 +65,11 @@
     },
     {
       "name": "Public Speaking Workshop - Learn how to give your first tech talk",
-      "location": "Pleo, Copenhagen - 10. September 2019",
+      "location": "Pleo, Copenhagen - 2. September 2019",
       "description": "In this workshop we wanted to put focus on how to get started with public speaking. How to approach it, how to come up with ideas, how to write it down and how to present it. This was in collaboration with Zoey Chow.",
       "type": "workshop",
       "links": [
-        [
-          "Meetup link",
-          "https://www.meetup.com/copenhagenjs/events/264037209/"
-        ]
+        ["Meetup link", "https://www.meetup.com/copenhagenjs/events/264037209/"]
       ]
     },
     {
@@ -68,10 +78,7 @@
       "description": "In this workshop I gave a presentation and help the workshop students learn how to get started writing test in JavaScript. It was a really great workshop where getting the hang of it and hands-on was the goal as hearing about testing theory doesn't make you good at testing only. This was in collaboration with Mohsen Asfia.",
       "type": "workshop",
       "links": [
-        [
-          "Meetup link",
-          "https://www.meetup.com/copenhagenjs/events/264005168/"
-        ]
+        ["Meetup link", "https://www.meetup.com/copenhagenjs/events/264005168/"]
       ]
     },
     {
@@ -80,10 +87,7 @@
       "description": "In this workshop, we will look at GraphQL as frontend developers and learn how to use GraphQL to make a single page application. GraphQL is a really awesome toolkit to talk to APIs much more conveniently. Knowing it, you can really create an awesome user experience with much quicker speed and much less code.",
       "type": "workshop",
       "links": [
-        [
-          "Meetup link",
-          "https://www.meetup.com/copenhagenjs/events/261479115/"
-        ]
+        ["Meetup link", "https://www.meetup.com/copenhagenjs/events/261479115/"]
       ]
     },
     {
@@ -241,7 +245,10 @@
       "description": "I talked about how you can use Machine Learning for recognizing faces and names with Machine Learning.",
       "type": "workshop",
       "links": [
-        ["Meetup link", "https://www.meetup.com/Docker-Copenhagen/events/251794160/"]
+        [
+          "Meetup link",
+          "https://www.meetup.com/Docker-Copenhagen/events/251794160/"
+        ]
       ]
     },
     {
