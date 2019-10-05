@@ -2,7 +2,6 @@ genrule(
   name = "build",
   srcs = glob([
     "app/**",
-    "BUILD",
     "dist/**",
     "Dockerfile",
     "import.js",
@@ -16,7 +15,15 @@ genrule(
     "webpack.server.config.js",
     "wordpress.xml"
   ]),
-  cmd = "tar -czh . | docker build -t kevinsimper.dk - > $@",
+  cmd = "tar -czh . | docker build -q -t kevinsimper.dk - > $@",
   outs = ["build.txt"],
   tags = ["local"]
+)
+
+genrule(
+  name = "run",
+  srcs = ["build.txt"],
+  cmd = "echo docker run -it --rm -p 9000:9000 $$(cat $(location build.txt)) > $@",
+  outs = ["run_blog.sh"],
+  executable = True
 )
