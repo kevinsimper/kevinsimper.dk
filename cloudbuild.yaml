@@ -6,7 +6,13 @@ steps:
         'https://github.com/kevinsimper/kevinsimper.dk-images.git',
         'app/blog/posts/images',
       ]
+  - name: gcr.io/cloud-builders/bazel
+    args: ['build', '//:docker']
   - name: gcr.io/cloud-builders/docker
-    args: ['build', '-t', 'gcr.io/kevinsimper/kevinsimper.dk:$SHORT_SHA', '.']
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        docker tag $(cat bazel-bin/build.txt) gcr.io/kevinsimper/kevinsimper.dk:$SHORT_SHA
   - name: gcr.io/cloud-builders/docker
     args: ['push', 'gcr.io/kevinsimper/kevinsimper.dk:$SHORT_SHA']

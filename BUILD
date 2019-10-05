@@ -1,5 +1,5 @@
 genrule(
-  name = "build",
+  name = "docker",
   srcs = glob([
     "app/**",
     "dist/**",
