@@ -12,7 +12,9 @@ export default class Instagram extends Component {
               <div
                 className={[styles.Picture, styles.PictureBig].join(' ')}
                 style={{
-                  backgroundImage: `url(${image.images.standard_resolution.url})`
+                  backgroundImage: `url(${
+                    image.images.standard_resolution.url
+                  })`
                 }}
               />
               <div
