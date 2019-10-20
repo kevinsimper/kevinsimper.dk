@@ -1,9 +1,15 @@
 [
   {
+    "slug": "how-to-bazel-pass-environment-variables",
+    "title": "How to Bazel pass environment variables",
+    "date": "Sun Oct 20 2019 19:55:14 GMT+0200 (Central European Summer Time)",
+    "tags": ["build-tool", "bazel", "devtip"]
+  },
+  {
     "slug": "how-to-get-started-with-bazel-buildtool",
     "title": "How to get started with Bazel buildtool",
     "date": "Sat Sep 07 2019 23:39:37 GMT+0200 (Central European Summer Time)",
-    "tags": ["build-tool", "docker"]
+    "tags": ["build-tool", "docker", "bazel"]
   },
   {
     "slug": "making-community-impact-that-lasts",
