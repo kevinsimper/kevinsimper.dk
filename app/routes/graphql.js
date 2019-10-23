@@ -1,4 +1,5 @@
 import { ApolloServer, gql } from 'apollo-server-express'
+import { makeExecutableSchema } from 'graphql-tools'
 import { join } from 'path'
 import marked from 'marked'
 import blogdata from '../blog/posts/_data.json'
@@ -12,6 +13,8 @@ const typeDefs = gql`
     date: String
     tags: [String]
     content: String
+    previousPosts(first: Int!): [Post]
+    newerPosts(first: Int!): [Post]
   }
   type Query {
     hello: String
@@ -45,8 +48,23 @@ const resolvers = {
         })
       )
     }
+  },
+  Post: {
+    previousPosts: (parent, args) => {
+      const previous = blogdata.findIndex(i => i.slug === parent.slug) - 1
+      return [blogdata[previous]]
+    },
+    newerPosts: (parent, args) => {
+      const newer = blogdata.findIndex(i => i.slug === parent.slug) + 1
+      return [blogdata[newer]]
+    }
   }
 }
+
+export const schema = makeExecutableSchema({
+  typeDefs,
+  resolvers
+})
 
 export const server = new ApolloServer({
   typeDefs,
