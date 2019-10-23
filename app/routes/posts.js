@@ -1,14 +1,13 @@
-import { readFile, readdirSync } from 'fs'
-import { join } from 'path'
-import marked from 'marked'
-import express from 'express'
-import React from 'react'
+import { graphql } from 'graphql'
 import { renderToString } from 'react-dom/server'
+import React from 'react'
+import express from 'express'
+
+import { layout, production, assets } from '../server'
+import { schema } from './graphql.js'
 import App from '../components/App'
 import Content from '../components/Content'
-import Recommends from '../components/Recommends'
-import { layout, production, assets } from '../server'
-import blogdata from '../blog/posts/_data.json'
+
 let app = express.Router()
 
 const form = (
@@ -25,6 +24,7 @@ const form = (
         type="email"
         placeholder="youremail@mail.com"
         value=""
+        onChange={() => {}}
         name="EMAIL"
         style={{ width: '100%', fontSize: '1rem', padding: '0 10px' }}
       />
@@ -45,30 +45,51 @@ const form = (
 )
 
 app.get('/:post', (req, res, next) => {
-  var slug = req.params.post
-  var blogpost = blogdata.find(item => item.slug === slug)
-  if (!blogpost) next()
-  const previous = blogdata[blogdata.indexOf(blogpost) + 1]
-  const newer = blogdata[blogdata.indexOf(blogpost) - 1]
-  readFile(
-    join(__dirname, '../blog/posts/' + slug + '.md'),
-    'utf8',
-    (err, blogcontent) => {
-      let content = renderToString(
+  const slug = req.params.post
+
+  graphql(
+    schema,
+    `
+      {
+        post(slug: "${slug}") {
+          slug
+          title
+          date
+          tags
+          content
+          previousPosts(first: 1) {
+            title
+            slug
+          }
+          newerPosts(first: 1) {
+            title
+            slug
+          }
+        }
+      }
+    `
+  )
+    .then(({ data }) => {
+      const {
+        date,
+        content,
+        tags,
+        newerPosts,
+        previousPosts,
+        title
+      } = data.post
+      let outputcontent = renderToString(
         <App>
           <Content>
-            <div>{blogpost.date}</div>
+            <div>{date}</div>
             <div
               dangerouslySetInnerHTML={{
-                __html: marked(blogcontent).replace(
-                  /<img/g,
-                  '<img loading="lazy"'
-                )
+                __html: content
               }}
             />
             Tags:{' '}
-            {blogpost.tags &&
-              blogpost.tags.map((t, id) => (
+            {tags &&
+              tags.map((t, id) => (
                 <span key={id}>
                   <a href={`/categories/${t}`}>#{t}</a>{' '}
                 </span>
@@ -77,19 +98,23 @@ app.get('/:post', (req, res, next) => {
             {form}
             <hr />
             <table style={{ margin: '20px 0' }}>
-              {previous && (
+              {previousPosts && (
                 <tr>
                   <td>Previous&nbsp;post:</td>
                   <td>
-                    <a href={`/posts/${previous.slug}`}>{previous.title}</a>
+                    <a href={`/posts/${previousPosts[0].slug}`}>
+                      {previousPosts[0].title}
+                    </a>
                   </td>
                 </tr>
               )}
-              {newer && (
+              {newerPosts && (
                 <tr>
                   <td>Newer&nbsp;post:</td>
                   <td>
-                    <a href={`/posts/${newer.slug}`}>{newer.title}</a>
+                    <a href={`/posts/${newerPosts[0].slug}`}>
+                      {newerPosts[0].title}
+                    </a>
                   </td>
                 </tr>
               )}
@@ -97,16 +122,17 @@ app.get('/:post', (req, res, next) => {
           </Content>
         </App>
       )
-
       res.send(
         layout({
-          content: content,
+          content: outputcontent,
           production: production,
           assets,
-          title: `${blogpost.title} - Kevin Simper`
+          title: `${title} - Kevin Simper`
         })
       )
-    }
-  )
+    })
+    .catch(e => {
+      next(e)
+    })
 })
 export default app

@@ -1,11 +1,13 @@
-import express from 'express'
-import React from 'react'
 import { renderToString } from 'react-dom/server'
+import React from 'react'
+import express from 'express'
+
+import { layout, production, assets } from '../server'
+import About from '../components/About'
 import App from '../components/App'
 import Content from '../components/Content'
-import About from '../components/About'
 import PresentationsPage from '../components/PresentationsPage'
-import { layout, production, assets } from '../server'
+
 let app = express.Router()
 
 app.get('/', (req, res) => {

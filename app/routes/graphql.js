@@ -1,9 +1,12 @@
 import { ApolloServer, gql } from 'apollo-server-express'
-import { makeExecutableSchema } from 'graphql-tools'
-import { join } from 'path'
 import marked from 'marked'
-import blogdata from '../blog/posts/_data.json'
+
+import { join } from 'path'
+import { makeExecutableSchema } from 'graphql-tools'
 import { promises } from 'fs'
+
+import blogdata from '../blog/posts/_data.json'
+
 const readFile = promises.readFile
 
 const typeDefs = gql`

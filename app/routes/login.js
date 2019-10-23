@@ -1,10 +1,12 @@
-import express from 'express'
-import React from 'react'
+import { get } from 'axios'
 import { renderToString } from 'react-dom/server'
+import React from 'react'
+import express from 'express'
+
+import { layout, production, assets } from '../server'
 import App from '../components/App'
 import Content from '../components/Content'
-import { layout, production, assets } from '../server'
-import { get } from 'axios'
+
 let app = express.Router()
 
 const prod = process.env.NODE_ENV === 'production'
