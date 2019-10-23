@@ -18,35 +18,37 @@ const typeDefs = gql`
   }
   type Query {
     hello: String
+    post(slug: String!): Post
     posts(first: Int): [Post]
   }
 `
 
+const transformBlogpost = ({ slug, title, date, tags }) => {
+  const blogcontent = readFile(
+    join(__dirname, '../blog/posts/' + slug + '.md'),
+    'utf8'
+  )
+  return blogcontent.then(blogc => {
+    const content = marked(blogc).replace(/<img/g, '<img loading="lazy"')
+    return {
+      content,
+      slug,
+      title,
+      date,
+      tags
+    }
+  })
+}
+
 const resolvers = {
   Query: {
     hello: () => 'Hello world!',
+    post: (parent, args) => {
+      const blog = blogdata.find(i => i.slug === args.slug)
+      return transformBlogpost(blog)
+    },
     posts: () => {
-      return Promise.all(
-        blogdata.map(({ slug, title, date, tags }) => {
-          const blogcontent = readFile(
-            join(__dirname, '../blog/posts/' + slug + '.md'),
-            'utf8'
-          )
-          return blogcontent.then(blogc => {
-            const content = marked(blogc).replace(
-              /<img/g,
-              '<img loading="lazy"'
-            )
-            return {
-              content,
-              slug,
-              title,
-              date,
-              tags
-            }
-          })
-        })
-      )
+      return Promise.all(blogdata.map(transformBlogpost))
     }
   },
   Post: {
