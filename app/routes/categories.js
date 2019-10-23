@@ -1,11 +1,13 @@
-import express from 'express'
-import React from 'react'
 import { renderToString } from 'react-dom/server'
+import React from 'react'
+import express from 'express'
+
+import { layout, production, assets } from '../server'
+import Activities from '../components/Activities/blogs'
 import App from '../components/App'
 import Content from '../components/Content'
-import Activities from '../components/Activities/blogs'
 import blogdata from '../blog/posts/_data.json'
-import { layout, production, assets } from '../server'
+
 let app = express.Router()
 
 app.get('/:category', (req, res, next) => {

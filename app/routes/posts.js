@@ -1,12 +1,13 @@
-import express from 'express'
-import React from 'react'
+import { graphql } from 'graphql'
 import { renderToString } from 'react-dom/server'
+import React from 'react'
+import express from 'express'
+
+import { layout, production, assets } from '../server'
+import { schema } from './graphql.js'
 import App from '../components/App'
 import Content from '../components/Content'
-import Recommends from '../components/Recommends'
-import { layout, production, assets } from '../server'
-import { graphql } from 'graphql'
-import { schema } from './graphql.js'
+
 let app = express.Router()
 
 const form = (
