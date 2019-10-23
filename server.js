@@ -29,11 +29,26 @@ if (production) {
 } else {
   global.assets = defaultAssets
 }
-console.log(JSON.stringify({production, assets: global.assets }))
+console.log(JSON.stringify({ production, assets: global.assets }))
 app.use(express.static('public', { maxAge: 86400000 }))
 app.use('/posts', express.static('app/blog/posts', { maxAge: 86400000 }))
 
-app.use(reload(__dirname + '/dist/server'))
+if (!production) {
+  var chokidar = require('chokidar')
+  var watcher = chokidar.watch('./dist')
+  watcher.on('ready', function() {
+    watcher.on('all', function() {
+      console.log('Clearing /dist/ module cache from server')
+      Object.keys(require.cache).forEach(function(id) {
+        if (/[\/\\]dist[\/\\]/.test(id)) delete require.cache[id]
+      })
+    })
+  })
+}
+
+app.use((req, res, next) =>
+  require(__dirname + '/dist/server').app(req, res, next)
+)
 
 const { PORT = 9000 } = process.env
 app.listen(PORT, () => console.log(`Listening on http://localhost:${PORT}`))

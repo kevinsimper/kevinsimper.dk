@@ -28,12 +28,9 @@ import ActivitiesRoutes from './routes/activities'
 import CategoriesRoutes from './routes/categories'
 import FeedRoutes from './routes/feed'
 import { server } from './routes/graphql'
-
+import { assets, production, layout, map } from './consts.js'
+export { assets, production, layout, map }
 var app = express.Router()
-var production = process.env.NODE_ENV === 'production'
-exports.production = production
-var assets = global.assets
-exports.assets = assets
 
 app.use(compression())
 app.use(cookieParser('somethingverysecret'))
@@ -54,19 +51,6 @@ if (production) {
     }
   })
 }
-
-function layout(props) {
-  return `<!DOCTYPE html>
-  ${renderToStaticMarkup(<Layout {...props} />)}
-  `
-}
-exports.layout = layout
-function map(props) {
-  return `<!DOCTYPE html>
-  ${renderToStaticMarkup(<Map {...props} />)}
-  `
-}
-exports.map = map
 
 function getPictures() {
   console.log('env', process.env.NODE_ENV)
@@ -142,4 +126,4 @@ app.use(function(err, req, res, next) {
   res.status(500).send('Something broke!')
 })
 
-module.exports = app
+export { app }

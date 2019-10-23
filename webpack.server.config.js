@@ -57,7 +57,6 @@ module.exports = {
     // new webpack.BannerPlugin('require("source-map-support").install();',
     //                          { raw: true, entryOnly: false })
   ],
-  devtool: 'eval-cheap-module-source-map',
   node: {
     __dirname: true,
     process: true
