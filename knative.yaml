@@ -1,0 +1,30 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  labels:
+    cloud.googleapis.com/location: europe-west1
+  name: kevinsimper
+  namespace: '241421431505'
+spec:
+  template:
+    metadata:
+      annotations:
+        autoscaling.knative.dev/maxScale: '1000'
+      labels:
+        client.knative.dev/nonce: 0d359e42-0fce-475d-8d5f-ac5786cc7ecf
+    spec:
+      containerConcurrency: 80
+      containers:
+        - env:
+            - name: NODE_ENV
+              value: production
+          image: ##IMAGE##
+          resources:
+            limits:
+              cpu: 1000m
+              memory: 512Mi
+      serviceAccountName: 241421431505-compute@developer.gserviceaccount.com
+      timeoutSeconds: 300
+  traffic:
+    - latestRevision: true
+      percent: 100
