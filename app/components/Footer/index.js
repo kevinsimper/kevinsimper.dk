@@ -40,6 +40,10 @@ export default function Footer() {
             <a href="http://kevinsimper.eth">kevinsimper.eth</a>
             <br />
             <a href="https://gdg-search.firebaseapp.com">GDG Search</a>
+            <br />
+            <a href="https://copenhagenjs.dk/speaker/?name=kevin-simper">
+              CopenhagenJS Speaker Profile
+            </a>
           </div>
         </div>
       </div>
