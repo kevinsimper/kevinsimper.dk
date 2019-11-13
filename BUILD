@@ -15,7 +15,7 @@ genrule(
     "webpack.server.config.js",
     "wordpress.xml"
   ]),
-  cmd = "tar -czh . | docker build -q -t kevinsimper.dk - > $@",
+  cmd = "tar --exclude='./node_modules' -czh . | docker build -q -t kevinsimper.dk - > $@",
   outs = ["build.txt"],
   tags = ["local"]
 )
