@@ -98,26 +98,28 @@ app.get('/:post', (req, res, next) => {
             {form}
             <hr />
             <table style={{ margin: '20px 0' }}>
-              {previousPosts && (
-                <tr>
-                  <td>Previous&nbsp;post:</td>
-                  <td>
-                    <a href={`/posts/${previousPosts[0].slug}`}>
-                      {previousPosts[0].title}
-                    </a>
-                  </td>
-                </tr>
-              )}
-              {newerPosts && (
-                <tr>
-                  <td>Newer&nbsp;post:</td>
-                  <td>
-                    <a href={`/posts/${newerPosts[0].slug}`}>
-                      {newerPosts[0].title}
-                    </a>
-                  </td>
-                </tr>
-              )}
+              {previousPosts.length > 0 &&
+                previousPosts[0] && (
+                  <tr>
+                    <td>Previous&nbsp;post:</td>
+                    <td>
+                      <a href={`/posts/${previousPosts[0].slug}`}>
+                        {previousPosts[0].title}
+                      </a>
+                    </td>
+                  </tr>
+                )}
+              {newerPosts.length > 0 &&
+                newerPosts[0] && (
+                  <tr>
+                    <td>Newer&nbsp;post:</td>
+                    <td>
+                      <a href={`/posts/${newerPosts[0].slug}`}>
+                        {newerPosts[0].title}
+                      </a>
+                    </td>
+                  </tr>
+                )}
             </table>
           </Content>
         </App>
