@@ -12,7 +12,7 @@ export default ({ presentation }) => (
       {presentation.links &&
         presentation.links.map((link, key) => (
           <li key={key}>
-            <a href={link[1]}>{link[0]}</a>
+            <a href={link.link}>{link.text}</a>
           </li>
         ))}
     </ul>

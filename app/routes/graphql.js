@@ -1,12 +1,10 @@
 import { ApolloServer, gql } from 'apollo-server-express'
 import marked from 'marked'
-
 import { join } from 'path'
 import { makeExecutableSchema } from 'graphql-tools'
 import { promises } from 'fs'
-
 import blogdata from '../blog/posts/_data.json'
-
+import PresentationsData from '../components/Presentations/data.json'
 const readFile = promises.readFile
 
 const typeDefs = gql`
@@ -19,10 +17,21 @@ const typeDefs = gql`
     previousPosts(first: Int!): [Post]
     newerPosts(first: Int!): [Post]
   }
+  type Link {
+    text: String
+    link: String
+  }
+  type Presentation {
+    name: String
+    location: String
+    description: String
+    links: [Link]
+  }
   type Query {
     hello: String
     post(slug: String!): Post
     posts(first: Int): [Post]
+    presentations: [Presentation]
   }
 `
 
@@ -52,6 +61,9 @@ const resolvers = {
     },
     posts: () => {
       return Promise.all(blogdata.map(transformBlogpost))
+    },
+    presentations: () => {
+      return PresentationsData.presentations
     }
   },
   Post: {
