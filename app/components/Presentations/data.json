@@ -5,18 +5,18 @@
       "location": "GDG Cloud Copenhagen, Copenhagen - 30. September 2019",
       "description": "In this presentation I want to talk about how I have tried serverless many times but always had issues. I could see the potential but it was always difficult to see it end to end, and when you are busy to often end up defaulting to what you already know. Now Google has launched Cloud Run and it looks to be the perfect solution, but does such a solution exist? Come and hear how I approach serverless with Cloud Run, Cloud Build, Berglas, Cloud KMS and bazel.build",
       "links": [
-        [
-          "Meetup link",
-          "https://www.meetup.com/gdg-cloud-copenhagen/events/264932714/"
-        ],
-        [
-          "Live version",
-          "https://why-serverless-never-worked-before-now.surge.sh/#1"
-        ],
-        [
-          "Demo code",
-          "https://github.com/kevinsimper/cloud-run-kms-berglas-example"
-        ]
+        {
+          "text": "Meetup link",
+          "link": "https://www.meetup.com/gdg-cloud-copenhagen/events/264932714/"
+        },
+        {
+          "text": "Live version",
+          "link": "https://why-serverless-never-worked-before-now.surge.sh/#1"
+        },
+        {
+          "text": "Demo code",
+          "link": "https://github.com/kevinsimper/cloud-run-kms-berglas-example"
+        }
       ]
     },
     {
@@ -24,15 +24,18 @@
       "location": "Cloud Native Aarhus, Dokk1, Aarhus - 24. September 2019",
       "description": "In this talk I will look at my cloud native journey, how I came here and why I think Cloud Run is the final destination. What did we solve along the way and how I combine my tools to do the best job I can. But do we still miss some things and what is the downsides? Let us talk about that.",
       "links": [
-        [
-          "Meetup link",
-          "https://www.meetup.com/Cloud-Native-Aarhus/events/264325804/"
-        ],
-        ["Live version", "https://cloud-run-final-destination.surge.sh/"],
-        [
-          "Demo code",
-          "https://github.com/kevinsimper/cloud-native-aarhus-cloud-run-demo"
-        ]
+        {
+          "text": "Meetup link",
+          "link": "https://www.meetup.com/Cloud-Native-Aarhus/events/264325804/"
+        },
+        {
+          "text": "Live version",
+          "link": "https://cloud-run-final-destination.surge.sh/"
+        },
+        {
+          "text": "Demo code",
+          "link": "https://github.com/kevinsimper/cloud-native-aarhus-cloud-run-demo"
+        }
       ]
     },
     {
@@ -40,15 +43,18 @@
       "location": "CopenhagenJS - 19. September 2019",
       "description": "In this talk i focus on how we can bring down build times, evaluating what works and doesn't work. What kind of tool that we need to solve all this. Bringing down build time can greatly improve the productivity of all the developers on a team.",
       "links": [
-        [
-          "Meetup link",
-          "https://www.meetup.com/copenhagenjs/events/264368457/"
-        ],
-        [
-          "Slideshare",
-          "https://www.slideshare.net/KevinSimper/why-is-my-build-times-so-long"
-        ],
-        ["Live version", "https://how-to-solve-long-build-time.surge.sh/"]
+        {
+          "text": "Meetup link",
+          "link": "https://www.meetup.com/copenhagenjs/events/264368457/"
+        },
+        {
+          "text": "Slideshare",
+          "link": "https://www.slideshare.net/KevinSimper/why-is-my-build-times-so-long"
+        },
+        {
+          "text": "Live version",
+          "link": "https://how-to-solve-long-build-time.surge.sh/"
+        }
       ]
     },
     {
@@ -57,10 +63,10 @@
       "description": "In this workshop we will look at the Google Assistant and what we can do with it. Everyone will at the end have made their own skill that they can use from their phone, speaker or hub.",
       "type": "workshop",
       "links": [
-        [
-          "Meetup link",
-          "https://www.meetup.com/gdg-cloud-copenhagen/events/264396925/"
-        ]
+        {
+          "text": "Meetup link",
+          "link": "https://www.meetup.com/gdg-cloud-copenhagen/events/264396925/"
+        }
       ]
     },
     {
@@ -69,7 +75,10 @@
       "description": "In this workshop we wanted to put focus on how to get started with public speaking. How to approach it, how to come up with ideas, how to write it down and how to present it. This was in collaboration with Zoey Chow.",
       "type": "workshop",
       "links": [
-        ["Meetup link", "https://www.meetup.com/copenhagenjs/events/264037209/"]
+        {
+          "text": "Meetup link",
+          "link": "https://www.meetup.com/copenhagenjs/events/264037209/"
+        }
       ]
     },
     {
@@ -78,7 +87,10 @@
       "description": "In this workshop I gave a presentation and help the workshop students learn how to get started writing test in JavaScript. It was a really great workshop where getting the hang of it and hands-on was the goal as hearing about testing theory doesn't make you good at testing only. This was in collaboration with Mohsen Asfia.",
       "type": "workshop",
       "links": [
-        ["Meetup link", "https://www.meetup.com/copenhagenjs/events/264005168/"]
+        {
+          "text": "Meetup link",
+          "link": "https://www.meetup.com/copenhagenjs/events/264005168/"
+        }
       ]
     },
     {
@@ -87,7 +99,10 @@
       "description": "In this workshop, we will look at GraphQL as frontend developers and learn how to use GraphQL to make a single page application. GraphQL is a really awesome toolkit to talk to APIs much more conveniently. Knowing it, you can really create an awesome user experience with much quicker speed and much less code.",
       "type": "workshop",
       "links": [
-        ["Meetup link", "https://www.meetup.com/copenhagenjs/events/261479115/"]
+        {
+          "text": "Meetup link",
+          "link": "https://www.meetup.com/copenhagenjs/events/261479115/"
+        }
       ]
     },
     {
@@ -96,10 +111,10 @@
       "description": "I gave a workshop on how to get started with the Ethereum blockchain. We start with looking at mobile wallets and then we try to deploy our first smart contract with Remix. In the end we try to make our first dapp that uses the mobile wallet.",
       "type": "workshop",
       "links": [
-        [
-          "Meetup link",
-          "https://www.meetup.com/Berkeley-Javascript-Dojo/events/259956274/"
-        ]
+        {
+          "text": "Meetup link",
+          "link": "https://www.meetup.com/Berkeley-Javascript-Dojo/events/259956274/"
+        }
       ]
     },
     {
@@ -108,7 +123,10 @@
       "description": "I gave a workshop on how to get started with the Ethereum blockchain. We start with looking at mobile wallets and then we try to deploy our first smart contract with Remix. In the end we try to make our first dapp that uses the mobile wallet.",
       "type": "workshop",
       "links": [
-        ["Facebook link", "https://www.facebook.com/events/550643298758812/"]
+        {
+          "text": "Facebook link",
+          "link": "https://www.facebook.com/events/550643298758812/"
+        }
       ]
     },
     {
@@ -116,8 +134,14 @@
       "location": "WaffleJS - San Francisco - 03. April 2019",
       "description": "I learnt how to use WebUSB when I had a task to make label printing easy. I want to share with you what webusb is and how you can use it. I also implemented a printer driver in javascript so that I can print to a label printer directly from the browser. The happy future of easily connecting to custom hardware is close!",
       "links": [
-        ["Event link", "https://wafflejs.com/?day=2019-04-03"],
-        ["Presentation", "https://labelprinter-presentation.surge.sh/"]
+        {
+          "text": "Event link",
+          "link": "https://wafflejs.com/?day=2019-04-03"
+        },
+        {
+          "text": "Presentation",
+          "link": "https://labelprinter-presentation.surge.sh/"
+        }
       ]
     },
     {
@@ -126,10 +150,10 @@
       "description": "I gave a four hour workshop were we got into Kubernetes and deployed a docker container to Google Cloud Kubernetes Engine. We used Cloud Build to build our container and push it to GCR.",
       "type": "workshop",
       "links": [
-        [
-          "Meetup link",
-          "https://www.meetup.com/gdg-cloud-copenhagen/events/259546988/"
-        ]
+        {
+          "text": "Meetup link",
+          "link": "https://www.meetup.com/gdg-cloud-copenhagen/events/259546988/"
+        }
       ]
     },
     {
@@ -138,7 +162,10 @@
       "description": "I gave a four hour workshop were we got into Kubernetes and deployed a docker container to Google Cloud Kubernetes Engine. We used Cloud Build to build our container and push it to GCR.",
       "type": "workshop",
       "links": [
-        ["Meetup link", "https://www.meetup.com/gcdcmadrid/events/259540531/"]
+        {
+          "text": "Meetup link",
+          "link": "https://www.meetup.com/gcdcmadrid/events/259540531/"
+        }
       ]
     },
     {
@@ -146,14 +173,22 @@
       "location": "CopenhagenJS - Copenhagen - 13. December 2018",
       "description": "A GameJam is an event where everyone is working on creating a new game and sharing the enthusiasm for making.",
       "links": [
-        ["Meetup link", "https://www.meetup.com/copenhagenjs/events/256814771/"]
+        {
+          "text": "Meetup link",
+          "link": "https://www.meetup.com/copenhagenjs/events/256814771/"
+        }
       ]
     },
     {
       "name": "How a labelprinter can help your Community",
       "location": "GDG Organizers meetup - Madrid - 2. December 2018",
       "description": "I gave a talk to a room of organizers why a labelprinter could help them in their work as a organizer. How it can take something from the conference experience and bring it down to the community meetups",
-      "links": [["Slides", "http://labelprinter-gdg.surge.sh/"]]
+      "links": [
+        {
+          "text": "Slides",
+          "link": "http://labelprinter-gdg.surge.sh/"
+        }
+      ]
     },
     {
       "name": "Introduction to Kubernetes KNative",
@@ -165,14 +200,14 @@
       "location": "HackYourFuture meetup - Copenhagen - 17. October 2018",
       "description": "In this workshop presentation I tell how to create a good CV, what should it include and what should you leave out. A CV is a conversation starter and how to connect with companies in the best ways to get oppotunities.",
       "links": [
-        [
-          "Slides",
-          "https://kevinsimper.github.io/hackyourfuture-cv-workshop-presentation/"
-        ],
-        [
-          "Meetup link",
-          "https://www.meetup.com/HackYourFuture-Copenhagen/events/255230222"
-        ]
+        {
+          "text": "Slides",
+          "link": "https://kevinsimper.github.io/hackyourfuture-cv-workshop-presentation/"
+        },
+        {
+          "text": "Meetup link",
+          "link": "https://www.meetup.com/HackYourFuture-Copenhagen/events/255230222"
+        }
       ],
       "type": "workshop"
     },
@@ -181,10 +216,10 @@
       "location": "Google Cloud Community Copenhagen - Copenhagen - 11. October 2018",
       "description": "I made the first non-profit paid workshop where I taught Kubernetes to with practical examples. In the workshop the participants got to deploy their own application first with the Kubectl CLI and then made it with the YAML files in the declaritive way.",
       "links": [
-        [
-          "Meetup link",
-          "https://www.meetup.com/Google-Cloud-Developer-Community-Copenhagen/events/255296818/"
-        ]
+        {
+          "text": "Meetup link",
+          "link": "https://www.meetup.com/Google-Cloud-Developer-Community-Copenhagen/events/255296818/"
+        }
       ],
       "type": "workshop"
     },
@@ -193,10 +228,10 @@
       "location": "TechBBQ Google Garden - Copenhagen - 27. September 2018",
       "description": "With Kubernetes you can scale your startup easier with an easier way to hire talent. In this presentation, I show you how Kubernetes is the right choice.",
       "links": [
-        [
-          "Slides",
-          "https://www.slideshare.net/KevinSimper/how-kubernetes-allows-your-startup-to-scale"
-        ]
+        {
+          "text": "Slides",
+          "link": "https://www.slideshare.net/KevinSimper/how-kubernetes-allows-your-startup-to-scale"
+        }
       ]
     },
     {
@@ -210,8 +245,14 @@
       "location": "JSLovers - New Delhi - 15. September 2018",
       "description": "How would you build a peer to peer app on the web and what are some of the challenges? We will look at how to take advance of new libraries that makes it easy to make cool new applications like games and chat.",
       "links": [
-        ["Slides", "https://p2p-ipfs-presentation.surge.sh/"],
-        ["Code", "https://github.com/kevinsimper/p2p-ipfs-presentation"]
+        {
+          "text": "Slides",
+          "link": "https://p2p-ipfs-presentation.surge.sh/"
+        },
+        {
+          "text": "Code",
+          "link": "https://github.com/kevinsimper/p2p-ipfs-presentation"
+        }
       ]
     },
     {
@@ -219,10 +260,10 @@
       "location": "CopenhagenJS - 4. Sep 2018",
       "description": "A workshop about how to contribute to open source and some workshop questions to think about and discuss in a group. Finish it up with time for starting that process.",
       "links": [
-        [
-          "Slides",
-          "https://www.slideshare.net/KevinSimper/contributing-opensource-workshop"
-        ]
+        {
+          "text": "Slides",
+          "link": "https://www.slideshare.net/KevinSimper/contributing-opensource-workshop"
+        }
       ],
       "type": "workshop"
     },
@@ -236,7 +277,10 @@
       "location": "GDG Cloud London - 22. August 2018",
       "description": "I talked about how you can use Machine Learning for recognizing faces and names with Machine Learning.",
       "links": [
-        ["Github repository", "https://github.com/kevinsimper/meetuplabel"]
+        {
+          "text": "Github repository",
+          "link": "https://github.com/kevinsimper/meetuplabel"
+        }
       ]
     },
     {
@@ -245,10 +289,10 @@
       "description": "I talked about how you can use Machine Learning for recognizing faces and names with Machine Learning.",
       "type": "workshop",
       "links": [
-        [
-          "Meetup link",
-          "https://www.meetup.com/Docker-Copenhagen/events/251794160/"
-        ]
+        {
+          "text": "Meetup link",
+          "link": "https://www.meetup.com/Docker-Copenhagen/events/251794160/"
+        }
       ]
     },
     {
@@ -256,10 +300,10 @@
       "location": "Gr8Conf - 31. May 2018",
       "description": "You should come if you know or have tried Docker but are thinking about how to get more serious about containers. What are the best practices with docker in Development, Staging and Production with regards to security.",
       "links": [
-        [
-          "Slides",
-          "https://www.slideshare.net/KevinSimper/making-docker-and-kubernetes-a-success-at-your-company"
-        ]
+        {
+          "text": "Slides",
+          "link": "https://www.slideshare.net/KevinSimper/making-docker-and-kubernetes-a-success-at-your-company"
+        }
       ]
     },
     {
@@ -267,10 +311,10 @@
       "location": "Gr8Conf - 31. May 2018",
       "description": "We will talk about the benefits and downsides of using Kubernetes and how to take docker and kubernetes from theory to practice as your company. Story of how we took Connected Cars from nothing to a full self-serving platform in one year.",
       "links": [
-        [
-          "Slides",
-          "https://www.slideshare.net/KevinSimper/docker-best-practices-in-development-and-production"
-        ]
+        {
+          "text": "Slides",
+          "link": "https://www.slideshare.net/KevinSimper/docker-best-practices-in-development-and-production"
+        }
       ]
     },
     {
@@ -278,8 +322,14 @@
       "location": "CopenhagenJS - 24. May 2018",
       "description": "How does the Oculus Go work and what is WebVR together with it? I show how you can make a duck shooting game in 2 hours with A-frame and how the new React-360 compares. I also show how the Oculus Go works and how it is playing a game by livestreaming to my laptop with Facebook Live.",
       "links": [
-        ["Slides", "https://webvr-presentation.surge.sh/"],
-        ["Game", "http://webvr-duckgame.surge.sh/game.html"]
+        {
+          "text": "Slides",
+          "link": "https://webvr-presentation.surge.sh/"
+        },
+        {
+          "text": "Game",
+          "link": "http://webvr-duckgame.surge.sh/game.html"
+        }
       ]
     },
     {
