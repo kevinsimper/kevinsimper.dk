@@ -15,13 +15,16 @@ app.get('/rss.xml', (req, res) => {
     process.env.NODE_ENV === 'production'
       ? `https://www.kevinsimper.dk`
       : `${req.protocol}://${req.hostname}:9000`
+
   let feed = new rss({
     title: 'Kevin Simper',
     site_url: url,
     webMaster: 'kevin.simper@gmail.com'
   })
-  let blogs = Promise.all(
-    blogdata.map(blog => {
+
+  const posts = blogdata.filter(d => !d.skip)
+  Promise.all(
+    posts.map(blog => {
       return promises
         .readFile(
           join(__dirname, `../../app/blog/posts/${blog.slug}.md`),
