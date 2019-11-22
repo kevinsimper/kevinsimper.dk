@@ -1,5 +1,11 @@
 [
   {
+    "slug": "continuous-deployment-with-cloud-run-and-cloud-build-workshop-resources",
+    "title": "Continuous Deployment with Cloud Run and Cloud Build - workshop resources",
+    "date": "Fri Nov 22 2019 19:06:52 GMT+0100 (Central European Standard Time)",
+    "tags": ["workshop", "google cloud", "community"]
+  },
+  {
     "slug": "how-to-bazel-pass-environment-variables",
     "title": "How to Bazel pass environment variables",
     "date": "Sun Oct 20 2019 19:55:14 GMT+0200 (Central European Summer Time)",
