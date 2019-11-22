@@ -131,6 +131,10 @@ https://www.youtube.com/watch?v=GhSAQ19f4HA
   <iframe allowfullscreen frameborder="0" src="https://www.youtube.com/embed/GhSAQ19f4HA" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
 </div>
 
+I have also written a blogpost with screenshots of each step:
+
+https://www.kevinsimper.dk/posts/continuous-deployment-with-cloud-run-and-cloud-build
+
 ## Slides for the workshop
 
 I wrote some simple slides in markdown. This is mostly to show at the start, in the break and at the end to round up. Most of it will be the workshop host showing his/her screen.
