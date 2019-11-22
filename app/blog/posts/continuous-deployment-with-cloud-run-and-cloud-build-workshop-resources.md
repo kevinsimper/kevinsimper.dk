@@ -7,22 +7,21 @@ If you want to teach your GDG how to do Continuous Deployment with Cloud Run and
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-**Table of Contents** _generated with [DocToc](https://github.com/thlorenz/doctoc)_
+**Table of Contents**
 
-- [Continuous Deployment with Cloud Run and Cloud Build - workshop resources](#continuous-deployment-with-cloud-run-and-cloud-build---workshop-resources)
-  - [Meetup Description](#meetup-description)
-  - [Sign up form](#sign-up-form)
-    - [Google Forms](#google-forms)
-    - [Ti.to](#tito)
-    - [EventBrite](#eventbrite)
-  - [Email 1-2 days before the workshop](#email-1-2-days-before-the-workshop)
-  - [Content at the workshop](#content-at-the-workshop)
-  - [Slides for the workshop](#slides-for-the-workshop)
-  - [Considerations with materials and attendees](#considerations-with-materials-and-attendees)
-  - [Food and drinks during the workshop](#food-and-drinks-during-the-workshop)
-  - [Budget](#budget)
-  - [Follow up email](#follow-up-email)
-  - [Conclusion](#conclusion)
+- [Meetup Description](#meetup-description)
+- [Sign up form](#sign-up-form)
+  - [Google Forms](#google-forms)
+  - [Ti.to](#tito)
+  - [EventBrite](#eventbrite)
+- [Email 1-2 days before the workshop](#email-1-2-days-before-the-workshop)
+- [Content at the workshop](#content-at-the-workshop)
+- [Slides for the workshop](#slides-for-the-workshop)
+- [Considerations with materials and attendees](#considerations-with-materials-and-attendees)
+- [Food and drinks during the workshop](#food-and-drinks-during-the-workshop)
+- [Budget](#budget)
+- [Follow up email](#follow-up-email)
+- [Conclusion](#conclusion)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
