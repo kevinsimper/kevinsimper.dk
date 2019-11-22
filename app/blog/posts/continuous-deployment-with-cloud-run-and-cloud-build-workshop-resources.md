@@ -4,7 +4,27 @@ A friend asked me for what resources I made during the workshop i did and if cou
 
 If you want to teach your GDG how to do Continuous Deployment with Cloud Run and Cloud Build, I made some materials you can use for inspiration and what a schedule could look like. I do make these materials from scratch and because I put a lot of energy into making it great and personal. A workshop for me I also a lot about the person presenting and how he/she makes the whole process of learning feel.
 
-[TOC]
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+**Table of Contents** _generated with [DocToc](https://github.com/thlorenz/doctoc)_
+
+- [Continuous Deployment with Cloud Run and Cloud Build - workshop resources](#continuous-deployment-with-cloud-run-and-cloud-build---workshop-resources)
+  - [Meetup Description](#meetup-description)
+  - [Sign up form](#sign-up-form)
+    - [Google Forms](#google-forms)
+    - [Ti.to](#tito)
+    - [EventBrite](#eventbrite)
+  - [Email 1-2 days before the workshop](#email-1-2-days-before-the-workshop)
+  - [Content at the workshop](#content-at-the-workshop)
+  - [Slides for the workshop](#slides-for-the-workshop)
+  - [Considerations with materials and attendees](#considerations-with-materials-and-attendees)
+  - [Food and drinks during the workshop](#food-and-drinks-during-the-workshop)
+  - [Budget](#budget)
+  - [Follow up email](#follow-up-email)
+  - [Conclusion](#conclusion)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Meetup Description
 
