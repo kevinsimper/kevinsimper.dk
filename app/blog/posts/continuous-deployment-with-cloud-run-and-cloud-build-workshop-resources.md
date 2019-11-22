@@ -1,8 +1,10 @@
 # Continuous Deployment with Cloud Run and Cloud Build - workshop resources
 
-A friend asked me for what resources I made during the workshop i did and if could use some of it, so I prepared this for him :) I hope you can also use it! https://www.meetup.com/gdg-cloud-copenhagen/events/266466598/
+A friend asked me for what resources I made during the workshop i did and if he could use some of it, so I prepared this for him :) I hope you can also use it!
 
-If you want to teach your GDG how to do Continuous Deployment with Cloud Run and Cloud Build, I made some materials you can use for inspiration and what a schedule could look like. I do make these materials from scratch and because I put a lot of energy into making it great and personal. A workshop for me I also a lot about the person presenting and how he/she makes the whole process of learning feel.
+You can see the original event here: https://www.meetup.com/gdg-cloud-copenhagen/events/266466598/
+
+You can use for inspiration and what a schedule could look like. I do make these materials from scratch each time, because I think it is difficult to generalize and I put a lot of energy into making it great and personal. A workshop for me I also a lot about the person presenting and how he/she makes the whole process of learning feel.
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
