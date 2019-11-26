@@ -4,8 +4,7 @@ const { execSync } = require('child_process')
 const postFolder = './app/blog/posts/'
 const dataFile = './app/blog/posts/_data.json'
 
-function newPost() {
-  const title = process.argv[2]
+function newPost({ title }) {
   const slug = title
     .toLowerCase()
     .replace(/-/g, '')
@@ -23,7 +22,7 @@ function newPost() {
 
 function main() {
   let posts = JSON.parse(fs.readFileSync(dataFile))
-  const post = newPost()
+  const post = newPost({ title: process.argv[2] })
   posts.unshift(post)
   fs.writeFileSync(dataFile, JSON.stringify(posts, null, 2))
 
