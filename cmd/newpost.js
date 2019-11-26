@@ -2,32 +2,40 @@ const fs = require('fs')
 const { execSync } = require('child_process')
 
 const postFolder = './app/blog/posts/'
-const title = process.argv[2]
-const slug = title
-  .toLowerCase()
-  .replace(/-/g, '')
-  .replace(/  /g, ' ')
-  .replace(/ /g, '-')
-  .replace(/( |\?|!|,)/g, '')
-const file = './app/blog/posts/_data.json'
-const output = postFolder + slug + '.md'
+const dataFile = './app/blog/posts/_data.json'
 
-console.log('New Post')
-console.log('Title:', title)
-console.log('Slug:', slug)
-console.log(output)
+function newPost() {
+  const title = process.argv[2]
+  const slug = title
+    .toLowerCase()
+    .replace(/-/g, '')
+    .replace(/  /g, ' ')
+    .replace(/ /g, '-')
+    .replace(/( |\?|!|,)/g, '')
 
-let posts = JSON.parse(fs.readFileSync(file))
+  return {
+    slug,
+    title,
+    date: new Date().toString(),
+    tags: []
+  }
+}
 
-posts.unshift({
-  slug,
-  title,
-  date: new Date().toString(),
-  tags: []
-})
+function main() {
+  let posts = JSON.parse(fs.readFileSync(dataFile))
+  const post = newPost()
+  posts.unshift(post)
+  fs.writeFileSync(dataFile, JSON.stringify(posts, null, 2))
 
-fs.writeFileSync(file, JSON.stringify(posts, null, 2))
+  const outputMd = postFolder + post.slug + '.md'
+  fs.writeFileSync(outputMd, `# ${post.title}`)
 
-fs.writeFileSync(output, `# ${title}`)
+  console.log('New Post')
+  console.log('Title:', post.title)
+  console.log('Slug:', post.slug)
+  console.log(output)
 
-execSync('npm run fix-lint')
+  execSync('npm run fix-lint')
+}
+
+main()
