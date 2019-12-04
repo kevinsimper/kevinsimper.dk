@@ -1,3 +1,12 @@
+import { renderToString } from 'react-dom/server'
+import React from 'react'
+
+import { layout, production, assets } from '../consts'
+import App from '../components/App'
+import Frontpage from '../components/Frontpage'
+import Instagram from '../components/Instagram'
+import blogdata from '../blog/posts/_data.json'
+
 function getPictures() {
   console.log('env', process.env.NODE_ENV)
   return Promise.resolve([])
