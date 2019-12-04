@@ -22,6 +22,7 @@ import Nametags from './components/Nametags'
 import PostsRoutes from './routes/posts'
 import RecommendsRoutes from './routes/recommends'
 import blogdata from './blog/posts/_data.json'
+import { homeRoute } from './routes/home.js'
 
 export { assets, production, layout, map }
 var app = express.Router()
@@ -46,41 +47,7 @@ if (production) {
   })
 }
 
-function getPictures() {
-  console.log('env', process.env.NODE_ENV)
-  return Promise.resolve([])
-  if (process.env.NODE_ENV === 'production') {
-  } else {
-    return Promise.resolve([])
-  }
-}
-
-const data = getPictures()
-app.get('/', (req, res, next) => {
-  data
-    .then(images => {
-      let content = renderToString(
-        <App>
-          <Instagram images={images} />
-          <Frontpage images={images} blogdata={blogdata} />
-        </App>
-      )
-
-      res.send(
-        layout({
-          content: content,
-          production: production,
-          assets,
-          title: 'Kevin Simper - Full-Stack Developer'
-        })
-      )
-    })
-    .catch(e => {
-      console.log(e)
-      next(new Error('Something happend!'))
-    })
-})
-
+app.get('/', homeRoute)
 app.use('/posts', PostsRoutes)
 app.use('/about', AboutRoutes)
 app.use('/contact', ContactRoutes)
