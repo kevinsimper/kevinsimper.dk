@@ -101,5 +101,6 @@ export const schema = makeExecutableSchema({
 export const server = new ApolloServer({
   typeDefs,
   resolvers,
-  playground: true
+  playground: true,
+  introspection: true
 })
