@@ -27,11 +27,16 @@ const typeDefs = gql`
     description: String
     links: [Link]
   }
+  type Video {
+    youtubeId: String
+    title: String
+  }
   type Query {
     hello: String
     post(slug: String!): Post
     posts(first: Int): [Post]
     presentations: [Presentation]
+    videos: [Video]
   }
 `
 
@@ -52,6 +57,13 @@ const transformBlogpost = ({ slug, title, date, tags }) => {
   })
 }
 
+const videos = [
+  { youtubeId: '6NG_cUeuNhU' },
+  { youtubeId: 'hSvuHBQ_7VE' },
+  { youtubeId: 'Dnr8Mu1Bco4' },
+  { youtubeId: 'eg4e-FObyJ8' }
+]
+
 const resolvers = {
   Query: {
     hello: () => 'Hello world!',
@@ -64,6 +76,9 @@ const resolvers = {
     },
     presentations: () => {
       return PresentationsData.presentations
+    },
+    videos: () => {
+      return videos
     }
   },
   Post: {
