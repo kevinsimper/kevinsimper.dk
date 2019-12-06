@@ -1,4 +1,5 @@
 import { ApolloServer, gql } from 'apollo-server-express'
+import { graphql } from 'graphql'
 import marked from 'marked'
 import { join } from 'path'
 import { makeExecutableSchema } from 'graphql-tools'
@@ -97,6 +98,10 @@ export const schema = makeExecutableSchema({
   typeDefs,
   resolvers
 })
+
+export const makeQuery = query => {
+  return graphql(schema, query)
+}
 
 export const server = new ApolloServer({
   typeDefs,

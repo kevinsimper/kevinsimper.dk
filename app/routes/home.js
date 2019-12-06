@@ -1,11 +1,10 @@
 import { renderToString } from 'react-dom/server'
 import React from 'react'
-
 import { layout, production, assets } from '../consts'
 import App from '../components/App'
 import Frontpage from '../components/Frontpage'
 import Instagram from '../components/Instagram'
-import blogdata from '../blog/posts/_data.json'
+import { makeQuery } from './graphql'
 
 function getPictures() {
   console.log('env', process.env.NODE_ENV)
@@ -19,12 +18,27 @@ function getPictures() {
 const data = getPictures()
 
 export const homeRoute = (req, res, next) => {
-  data
-    .then(images => {
+  const posts = makeQuery(
+    `
+      {
+        posts {
+          slug
+          title
+          date
+          tags
+        }
+      }
+    `
+  )
+
+  Promise.all([posts, data])
+    .then(combined => {
+      const posts = combined[0].data.posts
+      const images = combined[1]
       let content = renderToString(
         <App>
           <Instagram images={images} />
-          <Frontpage images={images} blogdata={blogdata} />
+          <Frontpage images={images} blogdata={posts} />
         </App>
       )
 

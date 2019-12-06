@@ -1,10 +1,9 @@
-import { graphql } from 'graphql'
 import { renderToString } from 'react-dom/server'
 import React from 'react'
 import express from 'express'
 
 import { layout, production, assets } from '../server'
-import { schema } from './graphql.js'
+import { makeQuery } from './graphql.js'
 import App from '../components/App'
 import Content from '../components/Content'
 
@@ -47,8 +46,7 @@ const form = (
 app.get('/:post', (req, res, next) => {
   const slug = req.params.post
 
-  graphql(
-    schema,
+  makeQuery(
     `
       {
         post(slug: "${slug}") {
