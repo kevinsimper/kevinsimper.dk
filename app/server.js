@@ -1,23 +1,18 @@
-import { renderToString } from 'react-dom/server'
-import React from 'react'
 import compression from 'compression'
 import cookieParser from 'cookie-parser'
 import express from 'express'
-
+import { NameTagsRoute } from './routes/nametags'
 import { assets, production, layout, map } from './consts.js'
 import { homeRoute } from './routes/home.js'
 import { server } from './routes/graphql'
 import AboutRoutes from './routes/about'
 import ActivitiesRoutes from './routes/activities'
-import App from './components/App'
 import CategoriesRoutes from './routes/categories'
 import ContactRoutes from './routes/contact'
-import Content from './components/Content'
 import FeedRoutes from './routes/feed'
 import KubernetesTrainingRoutes from './routes/kubernetes-training'
 import LoginRoutes from './routes/login'
 import MapRoutes from './routes/map'
-import Nametags from './components/Nametags'
 import PostsRoutes from './routes/posts'
 import RecommendsRoutes from './routes/recommends'
 import { SocialMediaRoute } from './routes/social'
@@ -57,6 +52,7 @@ app.use('/activities', ActivitiesRoutes)
 app.use('/categories', CategoriesRoutes)
 app.use('/feed', FeedRoutes)
 app.get('/social', SocialMediaRoute)
+app.get('/nametags', NameTagsRoute)
 
 server.applyMiddleware({ app })
 
