@@ -37,7 +37,7 @@ export default class Activities extends Component {
     return (
       <div>
         {allActivity.slice(0, _limit).map((post, key) => {
-          if (post.hasOwnProperty('slug')) {
+          if (post.slug) {
             return <Blogpost post={post} key={key} />
           } else {
             return <Medium post={post} key={key} />
