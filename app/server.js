@@ -20,6 +20,7 @@ import MapRoutes from './routes/map'
 import Nametags from './components/Nametags'
 import PostsRoutes from './routes/posts'
 import RecommendsRoutes from './routes/recommends'
+import { SocialMediaRoute } from './routes/social'
 
 export { assets, production, layout, map }
 var app = express.Router()
@@ -55,24 +56,7 @@ app.use('/login', LoginRoutes)
 app.use('/activities', ActivitiesRoutes)
 app.use('/categories', CategoriesRoutes)
 app.use('/feed', FeedRoutes)
-app.get('/nametags', (req, res) => {
-  let content = renderToString(
-    <App>
-      <Content>
-        <Nametags />
-      </Content>
-    </App>
-  )
-
-  res.send(
-    layout({
-      content: content,
-      production: production,
-      assets,
-      title: 'Nametags - Kevin Simper'
-    })
-  )
-})
+app.get('/social', SocialMediaRoute)
 
 server.applyMiddleware({ app })
 
