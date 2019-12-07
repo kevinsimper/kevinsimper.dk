@@ -3,6 +3,7 @@
   color: white;
   display: flex;
   justify-content: center;
+  flex-shrink: 0;
 }
 .HeaderInner {
   max-width: 960px;
