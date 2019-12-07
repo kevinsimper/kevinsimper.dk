@@ -15,6 +15,7 @@ export const SearchRoute = (req, res, next) => {
           title
           date
           tags
+          markdown
         }
       }
     `
@@ -25,13 +26,17 @@ export const SearchRoute = (req, res, next) => {
         <App>
           <Content>
             <h1>Search - {query}</h1>
-            <ul>
-              {posts.map(p => (
-                <li>
-                  <a href={`/posts/${p.slug}`}>{p.title}</a>
-                </li>
+            <p>Found {posts.length} results.</p>
+            <div>
+              {posts.map((p, key) => (
+                <div key={key}>
+                  <h3 style={{ margin: '16px 0 6px' }}>
+                    <a href={`/posts/${p.slug}`}>{p.title}</a>
+                  </h3>
+                  <div>{p.markdown.slice(0, 200)}</div>
+                </div>
               ))}
-            </ul>
+            </div>
           </Content>
         </App>
       )

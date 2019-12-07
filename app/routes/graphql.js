@@ -15,6 +15,7 @@ const typeDefs = gql`
     date: String
     tags: [String]
     content: String
+    markdown: String
     previousPosts(first: Int!): [Post]
     newerPosts(first: Int!): [Post]
   }
@@ -51,6 +52,7 @@ const transformBlogpost = ({ slug, title, date, tags }) => {
     const content = marked(blogc).replace(/<img/g, '<img loading="lazy"')
     return {
       content,
+      markdown: blogc,
       slug,
       title,
       date,
