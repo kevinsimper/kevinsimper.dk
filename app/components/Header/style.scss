@@ -10,7 +10,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media (min-width: 900px) {
+  @media (min-width: 920px) {
     flex-direction: row;
   }
   h1 {
@@ -28,7 +28,7 @@
   background-color: transparent;
   padding: 10px;
   margin: 10px;
-  @media (min-width: 900px) {
+  @media (min-width: 920px) {
     display: none;
   }
   position: absolute;
@@ -43,12 +43,27 @@
   }
   display: none;
   flex-direction: column;
-  @media (min-width: 900px) {
+  @media (min-width: 920px) {
     display: flex;
     flex-direction: row;
   }
 }
 
+.Search {
+  display: none;
+  input {
+    padding: 5px 10px;
+    border: 0;
+    font-size: 1rem;
+  }
+  @media (min-width: 920px) {
+    display: block;
+  }
+}
+
 :global .MenuShown :local .Menu {
   display: flex;
+}
+:global .MenuShown :local .Search {
+  display: block;
 }
