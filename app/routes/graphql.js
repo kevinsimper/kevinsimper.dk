@@ -38,6 +38,7 @@ const typeDefs = gql`
     posts(first: Int): [Post]
     presentations: [Presentation]
     videos: [Video]
+    search(query: String!): [Post]
   }
 `
 
@@ -58,6 +59,8 @@ const transformBlogpost = ({ slug, title, date, tags }) => {
   })
 }
 
+const posts = Promise.all(blogdata.map(transformBlogpost))
+
 const videos = [
   { youtubeId: '6NG_cUeuNhU' },
   { youtubeId: 'hSvuHBQ_7VE' },
@@ -73,13 +76,27 @@ const resolvers = {
       return transformBlogpost(blog)
     },
     posts: () => {
-      return Promise.all(blogdata.map(transformBlogpost))
+      return posts
     },
     presentations: () => {
       return PresentationsData.presentations
     },
     videos: () => {
       return videos
+    },
+    search: (parent, args) => {
+      const query = args.query
+      return posts.then(posts => {
+        return posts.filter(p => {
+          if (p.title.toLowerCase().includes(query.toLowerCase())) {
+            return true
+          }
+          if (p.content.toLowerCase().includes(query.toLowerCase())) {
+            return true
+          }
+          return false
+        })
+      })
     }
   },
   Post: {
