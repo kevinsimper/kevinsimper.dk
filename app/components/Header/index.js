@@ -12,6 +12,9 @@ export default function Header() {
         <a id="toggleMenu" className={styles.ShowMenu}>
           <img src={menuIcon} />
         </a>
+        <form method="GET" action="/search" className={styles.Search}>
+          <input name="q" type="search" placeholder="Search.." />
+        </form>
         <div className={styles.Menu}>
           <a href="/">Home</a>
           <a href="/about">About & CV</a>
