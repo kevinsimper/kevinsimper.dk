@@ -26,6 +26,19 @@ export const SearchRoute = (req, res, next) => {
         <App>
           <Content>
             <h1>Search - {query}</h1>
+            <form method="GET" action="/search">
+              <input
+                style={{
+                  fontSize: '1.5rem',
+                  padding: '5px 10px',
+                  border: '1px solid grey'
+                }}
+                name="q"
+                type="search"
+                placeholder="Search.."
+                value={query}
+              />
+            </form>
             <p>Found {posts.length} results.</p>
             <div>
               {posts.map((p, key) => (
