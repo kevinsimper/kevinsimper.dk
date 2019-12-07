@@ -22,6 +22,11 @@ export const SearchRoute = (req, res, next) => {
   )
     .then(graphRes => {
       const posts = graphRes.data.search
+      const formatter = new Intl.DateTimeFormat('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      })
       let content = renderToString(
         <App>
           <Content>
@@ -41,14 +46,19 @@ export const SearchRoute = (req, res, next) => {
             </form>
             <p>Found {posts.length} results.</p>
             <div>
-              {posts.map((p, key) => (
-                <div key={key}>
-                  <h3 style={{ margin: '16px 0 6px' }}>
-                    <a href={`/posts/${p.slug}`}>{p.title}</a>
-                  </h3>
-                  <div>{p.markdown.slice(0, 200)}</div>
-                </div>
-              ))}
+              {posts.map((p, key) => {
+                return (
+                  <div key={key}>
+                    <h3 style={{ margin: '16px 0 6px' }}>
+                      <a href={`/posts/${p.slug}`}>{p.title}</a>
+                    </h3>
+                    <div>
+                      <i>{formatter.format(new Date(p.date))}</i> -{' '}
+                      {p.markdown.slice(0, 200)}
+                    </div>
+                  </div>
+                )
+              })}
             </div>
           </Content>
         </App>
