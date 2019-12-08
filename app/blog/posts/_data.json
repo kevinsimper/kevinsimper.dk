@@ -1,5 +1,11 @@
 [
   {
+    "slug": "my-programming-stack-of-2020",
+    "title": "My programming stack of 2020",
+    "date": "Sun Dec 08 2019 01:20:17 GMT+0100 (Central European Standard Time)",
+    "tags": ["programming", "tools"]
+  },
+  {
     "slug": "continuous-deployment-with-cloud-run-and-cloud-build-workshop-resources",
     "title": "Continuous Deployment with Cloud Run and Cloud Build - workshop resources",
     "date": "Fri Nov 22 2019 19:06:52 GMT+0100 (Central European Standard Time)",
