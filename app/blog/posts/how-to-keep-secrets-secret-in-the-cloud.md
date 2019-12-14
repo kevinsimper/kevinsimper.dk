@@ -1,5 +1,7 @@
 # How to keep secrets secret in the cloud
 
+![](https://i.imgur.com/V1SF7RA.jpg)
+
 In this article, I want to show you how to do proper secret management that doesn't compromise on the easiness of use and works with any frameworks or programming language you use!
 
 It is too easy to leak secrets knowingly and unknowingly, both because of programming mistakes and people have too wide access to the important stuff. 
@@ -187,3 +189,7 @@ Storing secrets is more difficult than just storing it in plaintext, there is no
 With Berglas it is easy to get started and the inertia is small if you begin to learn the tools and see it as a requirement instead optional. 
 
 You will sleep better knowing you did a great job! ;)
+
+---
+
+Photo by [Stéphane Mingot](https://unsplash.com/@smingot)
