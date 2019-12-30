@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './style.scss'
 
 export default () => (
-  <form action="https://formspree.io/kevin.simper@gmail.com" method="POST">
+  <form action="https://contactform.dk/kevin.simper@gmail.com" method="POST">
     <label className={styles.Label}>Message</label>
     <textarea className={styles.Textarea} name="Message" />
     <label className={styles.Label}>Name</label>
