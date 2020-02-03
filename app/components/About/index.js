@@ -18,7 +18,9 @@ export default class About extends React.Component {
             </li>
             <li>Organizing community events</li>
             <li>Public speaking and teaching</li>
-            <li>Ethereum and Crypto currencies</li>
+            <li>
+              <a href="/categories/ethereum">Ethereum</a> and Crypto currencies
+            </li>
             <li>
               <a href="/categories/vr">Virtual Reality</a>
             </li>
