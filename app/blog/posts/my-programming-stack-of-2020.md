@@ -53,7 +53,7 @@ I don't use Kubernetes in smaller projects as Kubernetes is a big setup that bot
 
 It is also not limiting in the sense of old serverless where the cloud provider was providing the runtime. That had a major downside that you couldn't decide new runtimes and was often stuck on very old versions of example Node.js and some runtimes did simply not exist! That is not a problem with Cloud Run.
 
-Cloud Run also has the scale of Google which means that the product cost very little and it doesn't matter to Google. Opposite to other smaller hosting startups, they can't afford having a lot of customers that don't pay much. Google is betting on that you will grow big and stay on the platform.
+Cloud Run also has the scale of Google which means that the product cost very little and it doesn't matter to Google. Opposite to other smaller hosting startups, Google can afford having a lot of customers that don't pay much, they are betting on that you will grow big and stay on the platform.
 
 ### TypeScript
 
