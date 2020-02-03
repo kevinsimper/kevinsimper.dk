@@ -45,7 +45,7 @@ function main() {
   console.log('New Post')
   console.log('Title:', post.title)
   console.log('Slug:', post.slug)
-  console.log(output)
+  console.log(outputMd)
 
   execSync('npm run fix-lint')
 }

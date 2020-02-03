@@ -1,5 +1,11 @@
 [
   {
+    "slug": "my-programming-stack-of-2020",
+    "title": "My programming stack of 2020",
+    "date": "Mon Feb 03 2020 20:19:17 GMT+0100 (Central European Standard Time)",
+    "tags": ["programming", "tools"]
+  },
+  {
     "slug": "how-to-keep-secrets-secret-in-the-cloud",
     "title": "How to keep secrets secret in the cloud",
     "date": "Thu Dec 12 2019 16:35:40 GMT+0100 (Central European Standard Time)",
