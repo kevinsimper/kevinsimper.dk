@@ -14,7 +14,8 @@ export default class About extends React.Component {
         <p>
           <ul>
             <li>
-              <a href="/categories/kubernetes">Kubernetes</a> and Google Cloud
+              <a href="/categories/kubernetes">Kubernetes</a> and{' '}
+              <a href="/categories/google%20cloud">Google Cloud</a>
             </li>
             <li>
               <a href="/categories/community">Organizing community events</a>
