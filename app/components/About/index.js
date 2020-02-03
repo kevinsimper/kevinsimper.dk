@@ -16,15 +16,18 @@ export default class About extends React.Component {
             <li>
               <a href="/categories/kubernetes">Kubernetes</a> and Google Cloud
             </li>
-            <li>Organizing community events</li>
-            <li>Public speaking and teaching</li>
+            <li>
+              <a href="/categories/community">Organizing community events</a>
+            </li>
+            <li>
+              <a href="/categories/speaking">Public speaking and teaching</a>
+            </li>
             <li>
               <a href="/categories/ethereum">Ethereum</a> and Crypto currencies
             </li>
             <li>
               <a href="/categories/vr">Virtual Reality</a>
             </li>
-            <li>Selfdriving cars and better movement</li>
           </ul>
         </p>
         <h2>Meetups I help organize</h2>
@@ -35,7 +38,7 @@ export default class About extends React.Component {
               <a href="https://copenhagenjs.dk">CopenhagenJS</a>
             </li>
             <li>
-              <a href="https://www.meetup.com/Google-Cloud-Developer-Community-Copenhagen/">
+              <a href="https://www.meetup.com/gdg-cloud-copenhagen/">
                 GDG Cloud Copenhagen
               </a>
             </li>
