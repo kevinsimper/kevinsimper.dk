@@ -4,7 +4,7 @@ metadata:
   labels:
     cloud.googleapis.com/location: europe-west1
   name: kevinsimper
-  namespace: '241421431505'
+  namespace: kevinsimper
 spec:
   template:
     metadata:
