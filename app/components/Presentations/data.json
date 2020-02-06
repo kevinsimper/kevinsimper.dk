@@ -1,6 +1,21 @@
 {
   "presentations": [
     {
+      "name": "Why use GraphQL Fragments",
+      "location": "Copenhagen GraphQL, Copenhagen - 12. December 2019",
+      "description": "In this presentation I show what the problem is if you don't use graphql fragments and I show how to easily get started with GraphQL fragments in your codebase.",
+      "links": [
+        {
+          "text": "Meetup link",
+          "link": "https://www.meetup.com/Copenhagen-GraphQL-Meetup-Group/events/266490979/"
+        },
+        {
+          "text": "Presentation",
+          "link": "https://why-use-graphql-fragments.surge.sh/"
+        }
+      ]
+    },
+    {
       "name": "Serverless workshop with Cloud Run and Cloud Build",
       "location": "GDG Cloud Copenhagen, Copenhagen - 19. November 2019",
       "description": "In this workshop we are going to learn about Google Cloud new product called Cloud Run which was launched this year. It is a super interesting product that allows you to run any Docker container and you only pay for what you use! Meaning this is the perfect product for developers that are making new product, startups or even for side-projects!",
