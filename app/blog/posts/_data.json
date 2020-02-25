@@ -1,5 +1,11 @@
 [
   {
+    "slug": "how-to-use-typescript-and-jest-mocks",
+    "title": "How to use TypeScript and Jest mocks",
+    "date": "Tue Feb 25 2020 18:46:17 GMT+0100 (Central European Standard Time)",
+    "tags": ["programming", "devtip", "testing"]
+  },
+  {
     "slug": "dao-are-terrifying-and-inevitable",
     "title": "DAO's are terrifying and inevitable",
     "date": "Wed Feb 19 2020 18:38:56 GMT+0100 (Central European Standard Time)",
