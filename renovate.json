@@ -2,6 +2,7 @@
   "extends": ["config:base"],
   "separateMinorPatch": true,
   "stabilityDays": 7,
+  "prCreation": "not-pending",
   "patch": {
     "enabled": false
   }
