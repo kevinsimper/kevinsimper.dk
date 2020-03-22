@@ -33,6 +33,8 @@ export default function Footer() {
             <br />
             <a href="/recommends">Recommends</a>
             <br />
+            <a href="/projects">Projects</a>
+            <br />
             <a href="/contact">Contact</a>
             <br />
             <a href="https://talkfrom.com">Talkfrom</a>

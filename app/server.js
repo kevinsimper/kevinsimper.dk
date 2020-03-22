@@ -17,6 +17,7 @@ import PostsRoutes from './routes/posts'
 import RecommendsRoutes from './routes/recommends'
 import { SocialMediaRoute } from './routes/social'
 import { SearchRoute } from './routes/search'
+import { ProjectsRoute } from './routes/projects'
 
 export { assets, production, layout, map }
 var app = express.Router()
@@ -55,6 +56,7 @@ app.use('/feed', FeedRoutes)
 app.get('/social', SocialMediaRoute)
 app.get('/nametags', NameTagsRoute)
 app.get('/search', SearchRoute)
+app.get('/projects', ProjectsRoute)
 
 server.applyMiddleware({ app })
 
