@@ -139,7 +139,11 @@ app.get('/login/github/callback', (req, res) => {
 })
 ```
 
-We need to take that code and exchange it for a access token from the GitHub API. We can use the javascript `fetch` . I recommend using that in Node.js as well as it make you remember the api better for next time you want to use it in the browser.
+We need to take that code and exchange it for a access token from the GitHub API. We can use the javascript `fetch` .
+
+The reason is that if GitHub returned it in the URL, somebody could steal it inbetween us, but since the "code" can't be used without the client_secret it is worthless to an attacker.
+
+I recommend using fetch in node.js which is not our only choice. One could use the built in http module to do a http request or axios. The downside using something else than fetch is that you have to learn to different module apis.
 
 It has been made in the npm package called `node-fetch`, so we need to install that.
 
