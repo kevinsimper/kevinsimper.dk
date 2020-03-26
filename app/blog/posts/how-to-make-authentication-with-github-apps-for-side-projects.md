@@ -106,8 +106,9 @@ and we can update our `npm start` script to require dotenv
 and to test it you can now use this in your code:
 
 ```
-console.log(process.env.GITHUB_CLIENT_ID)
-console.log(process.env.GITHUB_CLIENT_SECRET)
+const client_id = process.env.GITHUB_CLIENT_ID
+const client_secret = process.env.GITHUB_CLIENT_SECRET
+console.log({ client_id, client_secret })
 ```
 
 ### Redirect to GitHub
@@ -151,14 +152,14 @@ Now we can include it at the top and begin making our function to get the token.
 ```javascript
 import fetch from 'node-fetch'
 
-async function getAccessToken({ code, client, client_secret }) {
+async function getAccessToken({ code, client_id, client_secret }) {
   const request = await fetch('https://github.com/login/oauth/access_token', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
-      client,
+      client_id,
       client_secret,
       code
     })
@@ -168,7 +169,8 @@ async function getAccessToken({ code, client, client_secret }) {
 }
 ```
 
-In the above function we made a http call to github, marking it as a POST request and the content type to JSON. Providing `client` and `client_secret` as arguments allows us to easily move the function to another file with little refactoring.
+In the above function we made a http call to github, marking it as a POST request and the content type to JSON. Providing `client_id` and `client_secret` as arguments allows us to easily move the function to another file with little refactoring.
+https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/#2-users-are-redirected-back-to-your-site-by-github
 
 We then get a response back and here is the special part, it is a text string containing keypairs with = and & between. I am not sure why they don't respond with JSON, but let us parse that. Node.js has built in the `URLSearchParams` that the browser also has, which lets us easily get the `access_token` out of it. You can read about it here: https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams
 
@@ -186,11 +188,11 @@ But it looks like this:
 Now we can use it in our redirect route:
 
 ```diff
-+ const client = process.env.GITHUB_CLIENT_ID
++ const client_id = process.env.GITHUB_CLIENT_ID
 + const client_secret = process.env.GITHUB_CLIENT_SECRET
   app.get('/login/github/callback', (req, res) => {
     const code = req.query.code
-+   const access_token = getAccessToken({ code, client, client_secret })
++   const access_token = getAccessToken({ code, client_id, client_secret })
   })
 ```
 
@@ -214,7 +216,7 @@ We can then use that to check if the user is who we expect:
 ```diff
  app.get('/login/github/callback', (req, res) => {
    const code = req.query.code
-   const access_token = getAccessToken({ code, client, client_secret })
+   const access_token = getAccessToken({ code, client_id, client_secret })
 +  const user = fetchGitHubUser(access_token)
 +  if (user.id === 1126497) {
 +    res.send('Hello Kevin Simper')
@@ -270,7 +272,7 @@ So now when the user has successfully logged in from GitHub, we can set their Gi
 ```diff
  app.get('/login/github/callback', (req, res) => {
    const code = req.query.code
-   const access_token = getAccessToken({ code, client, client_secret })
+   const access_token = getAccessToken({ code, client_id, client_secret })
    const user = fetchGitHubUser(access_token)
 -  if (user.id === 1126497) {
 -    res.send('Hello Kevin Simper')
@@ -323,3 +325,7 @@ For security do not to depend on the user id from github and not the email for e
 From here you if you want other developers to use your GitHub app you have to update the settings to allow others. Do that from you Developer Settings on github.com.
 
 If you have any questions or want to show me your implementation please send me an email, I would love to chat! 😄
+
+---
+
+Thanks to (Abdallah)[https://aabedraba.com/] for reading draft.
