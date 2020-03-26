@@ -1,5 +1,11 @@
 [
   {
+    "slug": "how-to-make-authentication-with-github-apps-for-side-projects",
+    "title": "How to make authentication with Github Apps for side projects",
+    "date": "Sat Mar 21 2020 00:25:39 GMT+0100 (Central European Standard Time)",
+    "tags": ["programming", "security"]
+  },
+  {
     "slug": "how-to-use-typescript-and-jest-mocks",
     "title": "How to use TypeScript and Jest mocks",
     "date": "Tue Feb 25 2020 18:46:17 GMT+0100 (Central European Standard Time)",
