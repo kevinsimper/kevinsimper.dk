@@ -332,4 +332,4 @@ If you have any questions or want to show me your implementation please send me 
 
 ---
 
-Thanks to (Abdallah)[https://aabedraba.com/] for reading draft.
+Thanks to [Abdallah](https://aabedraba.com/) for reading draft.
