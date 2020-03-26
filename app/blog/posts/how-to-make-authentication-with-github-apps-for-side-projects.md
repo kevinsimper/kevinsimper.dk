@@ -1,14 +1,14 @@
 # How to make authentication with Github Apps for side projects
 
-Making a secure way to log into your app can be difficult. On top of making login secure you have to implement a lot of other features like "forgot password" and 2-factor. These features are essential but do not bring add that much value, so why not leverage other platforms that already implemented all this.
+Making a secure way to log into your app can be difficult. On top of making login secure you have to implement a lot of other features like "forgot password" and 2-factor. These features are essential but do not bring/add that much value, so why not leverage other platforms that already implemented all this.
 
-I want to encourage doing this for side projects espically since writing and maintaining auth and authorization as the code in this example is very small once you know how. Doing it with GitHub is also useful if your audience is developers as they likely already have an account.
+I want to encourage doing this for side projects specially since writing and maintaining auth and authorization as the code in this example is very small once you know how. Doing it with GitHub is also useful if your audience is developers as they likely already have an account.
 
 GitHub also introduced "GitHub Apps", which is their improved platform that allows better permissions compared to the previous which had really broad permissions.
 
 ## How does it work?
 
-We need to know who a user is. We want to ask GitHub to ask the user if they want to forward the user's information to us. So the user starts on our website, they click "Login with GitHub" and we redirect them to github.com with 2 parameters:
+We need to know who a user is. We want to ask GitHub to ask the user if they want to forward their information to us. So the user starts on our website, they click "Login with GitHub" and we redirect them to github.com with 2 parameters:
 
 - the unique id of our GitHub app
 - the url the user should be redirected back to
@@ -17,7 +17,7 @@ In our GitHub app, we have already configured that we want read-only access to t
 
 The user is then greeted with a page that asks if they want to give us the information. When they do they are redirected back to our website with a short code in the URL. That short code string we can exchange for an api access token by sending it to the GitHub api together with our client id and client secret.
 
-With the access token, we can fetch all the data from the api, like the user's email and GitHub user id that we can save to our database to know who next time they log in.
+With the access token, we can fetch all the data from the api, like the user's email and their GitHub user id that we can save to our database to know who they are next time they log in.
 
 ## Example with Node.js
 
@@ -130,7 +130,7 @@ After that if the user agrees with the GitHub prompt, she will be redirected bac
 
 ### Redirect route
 
-GitHub sends a `code` along as a URL query parameter, this we can grab with express with `req.query.code`.
+GitHub sends a `code` along in the URL as a query parameter (you can check the url where you'll see the `code` parameter .../callback/?code=...), this we can grab with express with `req.query.code`.
 
 ```javascript
 app.get('/login/github/callback', (req, res) => {
@@ -322,7 +322,7 @@ PRO TIP: You can also offer to store the users information on GitHub, this way y
 
 For security do not to depend on the user id from github and not the email for example, as a user can switch their email.
 
-From here you if you want other developers to use your GitHub app you have to update the settings to allow others. Do that from you Developer Settings on github.com.
+From here if you want other developers to use your GitHub app you have to update the settings to allow others. Do that from you Developer Settings on github.com.
 
 If you have any questions or want to show me your implementation please send me an email, I would love to chat! 😄
 
