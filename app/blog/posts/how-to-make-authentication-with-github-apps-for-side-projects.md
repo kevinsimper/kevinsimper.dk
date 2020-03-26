@@ -330,6 +330,10 @@ From here if you want other developers to use your GitHub app you have to update
 
 If you have any questions or want to show me your implementation please send me an email, I would love to chat! 😄
 
+### Find the source code on GitHub
+
+https://github.com/kevinsimper/node-github-auth-example/
+
 ---
 
 Thanks to [Abdallah](https://aabedraba.com/) for reading draft.
