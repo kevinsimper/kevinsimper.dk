@@ -29,7 +29,7 @@ export default function Header() {
         toggleMenu.addEventListener('click', e => {
           mainmenu.classList.toggle('MenuShown')
         })
-      `
+      `,
         }}
       />
     </div>

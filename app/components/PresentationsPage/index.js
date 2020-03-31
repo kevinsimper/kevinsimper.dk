@@ -11,11 +11,12 @@ export default () => (
     </p>
     <ul>
       <li>
-        {data.presentations.filter(p => p.type !== 'workshop').length}{' '}
+        {data.presentations.filter((p) => p.type !== 'workshop').length}{' '}
         presentations
       </li>
       <li>
-        {data.presentations.filter(p => p.type === 'workshop').length} workshops
+        {data.presentations.filter((p) => p.type === 'workshop').length}{' '}
+        workshops
       </li>
     </ul>
     <h3>The list in chronological order:</h3>

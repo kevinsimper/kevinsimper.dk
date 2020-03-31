@@ -19,7 +19,7 @@ export const NameTagsRoute = (req, res) => {
       content: content,
       production: production,
       assets,
-      title: 'Nametags - Kevin Simper'
+      title: 'Nametags - Kevin Simper',
     })
   )
 }

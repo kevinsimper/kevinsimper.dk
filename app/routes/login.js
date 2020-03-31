@@ -33,7 +33,7 @@ app.get('/', (req, res) => {
       content,
       production,
       assets,
-      title: 'Login - Kevin Simper'
+      title: 'Login - Kevin Simper',
     })
   )
 })

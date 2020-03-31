@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
       content,
       production,
       assets,
-      title: 'Recommends - Kevin Simper'
+      title: 'Recommends - Kevin Simper',
     })
   )
 })

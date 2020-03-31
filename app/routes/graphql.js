@@ -48,7 +48,7 @@ const transformBlogpost = ({ slug, title, date, tags }) => {
     join(__dirname, '../blog/posts/' + slug + '.md'),
     'utf8'
   )
-  return blogcontent.then(blogc => {
+  return blogcontent.then((blogc) => {
     const content = marked(blogc).replace(/<img/g, '<img loading="lazy"')
     return {
       content,
@@ -56,7 +56,7 @@ const transformBlogpost = ({ slug, title, date, tags }) => {
       slug,
       title,
       date,
-      tags
+      tags,
     }
   })
 }
@@ -67,14 +67,14 @@ const videos = [
   { youtubeId: '6NG_cUeuNhU' },
   { youtubeId: 'hSvuHBQ_7VE' },
   { youtubeId: 'Dnr8Mu1Bco4' },
-  { youtubeId: 'eg4e-FObyJ8' }
+  { youtubeId: 'eg4e-FObyJ8' },
 ]
 
 const resolvers = {
   Query: {
     hello: () => 'Hello world!',
     post: (parent, args) => {
-      const blog = blogdata.find(i => i.slug === args.slug)
+      const blog = blogdata.find((i) => i.slug === args.slug)
       return transformBlogpost(blog)
     },
     posts: () => {
@@ -88,8 +88,8 @@ const resolvers = {
     },
     search: (parent, args) => {
       const query = args.query
-      return posts.then(posts => {
-        return posts.filter(p => {
+      return posts.then((posts) => {
+        return posts.filter((p) => {
           if (p.title.toLowerCase().includes(query.toLowerCase())) {
             return true
           }
@@ -99,26 +99,26 @@ const resolvers = {
           return false
         })
       })
-    }
+    },
   },
   Post: {
     previousPosts: (parent, args) => {
-      const previous = blogdata.findIndex(i => i.slug === parent.slug) - 1
+      const previous = blogdata.findIndex((i) => i.slug === parent.slug) - 1
       return [blogdata[previous]]
     },
     newerPosts: (parent, args) => {
-      const newer = blogdata.findIndex(i => i.slug === parent.slug) + 1
+      const newer = blogdata.findIndex((i) => i.slug === parent.slug) + 1
       return [blogdata[newer]]
-    }
-  }
+    },
+  },
 }
 
 export const schema = makeExecutableSchema({
   typeDefs,
-  resolvers
+  resolvers,
 })
 
-export const makeQuery = query => {
+export const makeQuery = (query) => {
   return graphql(schema, query)
 }
 
@@ -126,5 +126,5 @@ export const server = new ApolloServer({
   typeDefs,
   resolvers,
   playground: true,
-  introspection: true
+  introspection: true,
 })

@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
       content,
       production,
       assets,
-      title: 'CV and About Kevin Simper'
+      title: 'CV and About Kevin Simper',
     })
   )
 })
@@ -41,7 +41,7 @@ app.get('/presentations', (req, res) => {
       content,
       production,
       assets,
-      title: 'Presentations - Kevin Simper'
+      title: 'Presentations - Kevin Simper',
     })
   )
 })

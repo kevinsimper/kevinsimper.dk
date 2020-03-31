@@ -32,7 +32,7 @@ export const ProjectsRoute = (req, res) => {
       content: content,
       production: production,
       assets,
-      title: 'Projects - Kevin Simper'
+      title: 'Projects - Kevin Simper',
     })
   )
 }

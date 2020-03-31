@@ -20,12 +20,12 @@ export const SearchRoute = (req, res, next) => {
       }
     `
   )
-    .then(graphRes => {
+    .then((graphRes) => {
       const posts = graphRes.data.search
       const formatter = new Intl.DateTimeFormat('en-US', {
         year: 'numeric',
         month: 'long',
-        day: 'numeric'
+        day: 'numeric',
       })
       let content = renderToString(
         <App>
@@ -36,7 +36,7 @@ export const SearchRoute = (req, res, next) => {
                 style={{
                   fontSize: '1.5rem',
                   padding: '5px 10px',
-                  border: '1px solid grey'
+                  border: '1px solid grey',
                 }}
                 name="q"
                 type="search"
@@ -69,7 +69,7 @@ export const SearchRoute = (req, res, next) => {
           content: content,
           production: production,
           assets,
-          title: 'Search - Kevin Simper'
+          title: 'Search - Kevin Simper',
         })
       )
     })

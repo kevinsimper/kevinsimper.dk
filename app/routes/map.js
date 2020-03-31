@@ -8,7 +8,7 @@ app.get('/', (req, res) => {
   res.send(
     map({
       production,
-      assets
+      assets,
     })
   )
 })

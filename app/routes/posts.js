@@ -36,7 +36,7 @@ const form = (
           padding: 15,
           background: '#4CAF50',
           color: 'white',
-          border: 0
+          border: 0,
         }}
       />
     </div>
@@ -74,7 +74,7 @@ app.get('/:post', (req, res, next) => {
         tags,
         newerPosts,
         previousPosts,
-        title
+        title,
       } = data.post
       let outputcontent = renderToString(
         <App>
@@ -82,7 +82,7 @@ app.get('/:post', (req, res, next) => {
             <div>{date}</div>
             <div
               dangerouslySetInnerHTML={{
-                __html: content
+                __html: content,
               }}
             />
             Tags:{' '}
@@ -96,28 +96,26 @@ app.get('/:post', (req, res, next) => {
             {form}
             <hr />
             <table style={{ margin: '20px 0' }}>
-              {previousPosts.length > 0 &&
-                previousPosts[0] && (
-                  <tr>
-                    <td>Previous&nbsp;post:</td>
-                    <td>
-                      <a href={`/posts/${previousPosts[0].slug}`}>
-                        {previousPosts[0].title}
-                      </a>
-                    </td>
-                  </tr>
-                )}
-              {newerPosts.length > 0 &&
-                newerPosts[0] && (
-                  <tr>
-                    <td>Newer&nbsp;post:</td>
-                    <td>
-                      <a href={`/posts/${newerPosts[0].slug}`}>
-                        {newerPosts[0].title}
-                      </a>
-                    </td>
-                  </tr>
-                )}
+              {previousPosts.length > 0 && previousPosts[0] && (
+                <tr>
+                  <td>Previous&nbsp;post:</td>
+                  <td>
+                    <a href={`/posts/${previousPosts[0].slug}`}>
+                      {previousPosts[0].title}
+                    </a>
+                  </td>
+                </tr>
+              )}
+              {newerPosts.length > 0 && newerPosts[0] && (
+                <tr>
+                  <td>Newer&nbsp;post:</td>
+                  <td>
+                    <a href={`/posts/${newerPosts[0].slug}`}>
+                      {newerPosts[0].title}
+                    </a>
+                  </td>
+                </tr>
+              )}
             </table>
           </Content>
         </App>
@@ -127,11 +125,11 @@ app.get('/:post', (req, res, next) => {
           content: outputcontent,
           production: production,
           assets,
-          title: `${title} - Kevin Simper`
+          title: `${title} - Kevin Simper`,
         })
       )
     })
-    .catch(e => {
+    .catch((e) => {
       next(e)
     })
 })

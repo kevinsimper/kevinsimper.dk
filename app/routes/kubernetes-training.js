@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
       content,
       production,
       assets,
-      title: 'Kubernetes Training - Kevin Simper'
+      title: 'Kubernetes Training - Kevin Simper',
     })
   )
 })

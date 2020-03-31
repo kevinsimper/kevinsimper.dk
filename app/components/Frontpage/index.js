@@ -32,7 +32,7 @@ export default class Frontpage extends Component {
                 'https://www.youtube.com/embed/6NG_cUeuNhU',
                 'https://www.youtube.com/embed/hSvuHBQ_7VE',
                 'https://www.youtube.com/embed/Dnr8Mu1Bco4',
-                'https://www.youtube.com/embed/eg4e-FObyJ8'
+                'https://www.youtube.com/embed/eg4e-FObyJ8',
               ].map((video, id) => {
                 return (
                   <div className={'embed'} style={{ margin: '20px 0' }}>

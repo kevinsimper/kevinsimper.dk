@@ -37,7 +37,7 @@ export const SocialMediaRoute = (req, res) => {
       content: content,
       production: production,
       assets,
-      title: 'Social Media - Kevin Simper'
+      title: 'Social Media - Kevin Simper',
     })
   )
 }

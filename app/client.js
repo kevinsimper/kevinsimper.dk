@@ -15,7 +15,7 @@ import Frontpage from './components/Frontpage'
 import Header from './components/Header'
 import Footer from './components/Footer'
 
-module.hot.status(status => {
+module.hot.status((status) => {
   if (status === 'idle') {
     setTimeout(() => {
       window.location.reload()

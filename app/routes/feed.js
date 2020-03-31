@@ -19,30 +19,30 @@ app.get('/rss.xml', (req, res) => {
   let feed = new rss({
     title: 'Kevin Simper',
     site_url: url,
-    webMaster: 'kevin.simper@gmail.com'
+    webMaster: 'kevin.simper@gmail.com',
   })
 
-  const posts = blogdata.filter(d => !d.skip)
+  const posts = blogdata.filter((d) => !d.skip)
   Promise.all(
-    posts.map(blog => {
+    posts.map((blog) => {
       return promises
         .readFile(
           join(__dirname, `../../app/blog/posts/${blog.slug}.md`),
           'utf8'
         )
-        .then(blogcontent => {
+        .then((blogcontent) => {
           return {
             title: blog.title,
             description: marked(blogcontent),
             author: 'Kevin Simper',
             date: dayjs(blog.date).toDate(),
             url: encodeURI(`${url}/posts/${blog.slug}`),
-            guid: `${blog.slug}`
+            guid: `${blog.slug}`,
           }
         })
     })
-  ).then(blogs => {
-    blogs.forEach(b => {
+  ).then((blogs) => {
+    blogs.forEach((b) => {
       feed.item(b)
     })
     res.setHeader('Content-Type', 'application/rss+xml')

@@ -32,7 +32,7 @@ export const homeRoute = (req, res, next) => {
   )
 
   Promise.all([posts, data])
-    .then(combined => {
+    .then((combined) => {
       const posts = combined[0].data.posts
       const images = combined[1]
       let content = renderToString(
@@ -47,11 +47,11 @@ export const homeRoute = (req, res, next) => {
           content: content,
           production: production,
           assets,
-          title: 'Kevin Simper - Full-Stack Developer'
+          title: 'Kevin Simper - Full-Stack Developer',
         })
       )
     })
-    .catch(e => {
+    .catch((e) => {
       console.log(e)
       next(new Error('Something happend!'))
     })

@@ -12,7 +12,7 @@ let app = express.Router()
 
 app.get('/:category', (req, res, next) => {
   const cat = req.params.category
-  const category = blogdata.filter(b => {
+  const category = blogdata.filter((b) => {
     if (b.hasOwnProperty('tags')) {
       return b.tags.includes(cat)
     } else {
@@ -36,7 +36,7 @@ app.get('/:category', (req, res, next) => {
       content,
       production,
       assets,
-      title: 'Category - Kevin Simper'
+      title: 'Category - Kevin Simper',
     })
   )
 })

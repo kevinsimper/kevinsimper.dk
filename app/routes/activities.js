@@ -22,7 +22,7 @@ app.get('/', (req, res, next) => {
       }
     `
   )
-    .then(graphRes => {
+    .then((graphRes) => {
       const posts = graphRes.data.posts
       let content = renderToString(
         <App>
@@ -36,7 +36,7 @@ app.get('/', (req, res, next) => {
           content,
           production,
           assets,
-          title: 'All activities - Kevin Simper'
+          title: 'All activities - Kevin Simper',
         })
       )
     })

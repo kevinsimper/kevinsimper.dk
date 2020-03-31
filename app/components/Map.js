@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default props => {
+export default (props) => {
   return (
     <html>
       <head>
@@ -26,7 +26,7 @@ export default props => {
           })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
           ga('create', 'UA-4309863-18', 'auto');
           ga('send', 'pageview');
-        `
+        `,
           }}
         />
       </head>

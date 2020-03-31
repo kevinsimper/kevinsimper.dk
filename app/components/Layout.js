@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default props => {
+export default (props) => {
   return (
     <html>
       <head>
@@ -25,7 +25,7 @@ export default props => {
           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
           })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
           ga('create', 'UA-4309863-18', 'auto');
-          ga('send', 'pageview');`
+          ga('send', 'pageview');`,
           }}
         />
       </head>
@@ -51,7 +51,7 @@ export default props => {
             })
             document.querySelectorAll('code').forEach(i => {
               Prism.highlightElement(i)
-            })`
+            })`,
           }}
         />
       </body>
