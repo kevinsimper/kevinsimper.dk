@@ -11,7 +11,7 @@ export const ProjectsRoute = (req, res) => {
         <h1>Projects that I work on</h1>
         <ul>
           <li>
-            <a href="https://gdg-search.firebaseapp.com/">GDG Search</a>
+            <a href="https://gdgsearch.com/">GDG Search</a>
           </li>
           <li>
             <a href="https://contactform.dk/">Contactform.dk</a>
