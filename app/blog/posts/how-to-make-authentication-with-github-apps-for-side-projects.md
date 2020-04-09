@@ -133,7 +133,7 @@ After that if the user agrees with the GitHub prompt, she will be redirected bac
 GitHub sends a `code` along in the URL as a query parameter (you can check the url where you'll see the `code` parameter .../callback/?code=...), this we can grab with express with `req.query.code`.
 
 ```javascript
-app.get('/login/github/callback', (req, res) => {
+app.get('/login/github/callback', async (req, res) => {
   const code = req.query.code
   // next step here
 })
@@ -160,13 +160,13 @@ async function getAccessToken({ code, client_id, client_secret }) {
   const request = await fetch('https://github.com/login/oauth/access_token', {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
     },
     body: JSON.stringify({
       client_id,
       client_secret,
-      code
-    })
+      code,
+    }),
   })
   const text = await request.text()
   // text contains the response
@@ -174,7 +174,7 @@ async function getAccessToken({ code, client_id, client_secret }) {
 ```
 
 In the above function we made a http call to github, marking it as a POST request and the content type to JSON. Providing `client_id` and `client_secret` as arguments allows us to easily move the function to another file with little refactoring.
-https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/#2-users-are-redirected-back-to-your-site-by-github
+https://developer.github.com/apps/building-github-apps/identifying-and-authorizing-users-for-github-apps/#2-users-are-redirected-back-to-your-site-by-github
 
 We then get a response back and here is the special part, it is a text string containing keypairs with = and & between. I am not sure why they don't respond with JSON, but let us parse that. Node.js has built in the `URLSearchParams` that the browser also has, which lets us easily get the `access_token` out of it. You can read about it here: https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams
 
@@ -194,9 +194,9 @@ Now we can use it in our redirect route:
 ```diff
 + const client_id = process.env.GITHUB_CLIENT_ID
 + const client_secret = process.env.GITHUB_CLIENT_SECRET
-  app.get('/login/github/callback', (req, res) => {
+  app.get('/login/github/callback', async (req, res) => {
     const code = req.query.code
-+   const access_token = getAccessToken({ code, client_id, client_secret })
++   const access_token = await getAccessToken({ code, client_id, client_secret })
   })
 ```
 
@@ -208,8 +208,8 @@ https://developer.github.com/v3/users/
 async function fetchGitHubUser(token) {
   const request = await fetch('https://api.github.com/user', {
     headers: {
-      Authorization: 'token ' + token
-    }
+      Authorization: 'token ' + token,
+    },
   })
   return await request.json()
 }
@@ -218,10 +218,10 @@ async function fetchGitHubUser(token) {
 We can then use that to check if the user is who we expect:
 
 ```diff
- app.get('/login/github/callback', (req, res) => {
+ app.get('/login/github/callback', async (req, res) => {
    const code = req.query.code
-   const access_token = getAccessToken({ code, client_id, client_secret })
-+  const user = fetchGitHubUser(access_token)
+   const access_token = await getAccessToken({ code, client_id, client_secret })
++  const user = await fetchGitHubUser(access_token)
 +  if (user.id === 1126497) {
 +    res.send('Hello Kevin Simper')
 +  } else {
@@ -274,10 +274,10 @@ Now we have access to an object on the request handler called `session`. Here ev
 So now when the user has successfully logged in from GitHub, we can set their GitHub access_token and id.
 
 ```diff
- app.get('/login/github/callback', (req, res) => {
+ app.get('/login/github/callback', async (req, res) => {
    const code = req.query.code
-   const access_token = getAccessToken({ code, client_id, client_secret })
-   const user = fetchGitHubUser(access_token)
+   const access_token = await getAccessToken({ code, client_id, client_secret })
+   const user = await fetchGitHubUser(access_token)
 -  if (user.id === 1126497) {
 -    res.send('Hello Kevin Simper')
 -  } else {
