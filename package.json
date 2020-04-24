@@ -44,7 +44,7 @@
     "autoprefixer-loader": "3.2.0",
     "babel-loader": "8.0.6",
     "chokidar": "3.3.1",
-    "css-loader": "2.1.0",
+    "css-loader": "3.5.3",
     "express-reload": "1.1.0",
     "file-loader": "5.1.0",
     "html-loader": "1.0.0",
