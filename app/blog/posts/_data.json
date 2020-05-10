@@ -1,5 +1,11 @@
 [
   {
+    "slug": "the-modern-frontend-workflow",
+    "title": "The modern frontend workflow",
+    "date": "Sun May 10 2020 19:24:16 GMT+0200 (Central European Summer Time)",
+    "tags": ["programming", "javascript"]
+  },
+  {
     "slug": "how-to-make-authentication-with-github-apps-for-side-projects",
     "title": "How to make authentication with Github Apps for side projects",
     "date": "Thu Mar 26 2020 22:25:39 GMT+0100 (Central European Standard Time)",
