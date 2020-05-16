@@ -1,14 +1,14 @@
 # The modern frontend workflow
 
-We need better websites and for that we need better workflows. Creating frontends has often been seen as a "easier" task than backend. The reason was that the tools was not there to create the right building blocks. Frontend code was often built on top of whatever backend programming language that was chosen, leading to frontend code that had to adapt to the structure of the backend. That meant that testing was often done in the browser as it was the backend that dictated how the resulting html strucure would look like. Frontend developers than often worked around that and made an interactive app ontop.
+We need better websites and for that we need better workflows. Creating frontends has often been seen as a "easier" task than backend. The reason was that the tools were not there to create the right building blocks. Frontend code was often built on top of whatever backend programming language that was chosen, leading to frontend code that had to adapt to the structure of the backend. That meant that testing was often done in the browser as it was the backend that dictated how the resulting html strucure would look like. Frontend developers then often worked around that and made an interactive app on top.
 
 If the app was made in Ruby on Rails, that meant you as a frontend developer had to know how to spin up a Ruby applications and edit ERB templates (Embedded Ruby templates).
 
-SPA (Single Page Application) become possible when browsers became much faster, but that was not without problems either. The app would be built in javascript, interacting with an API exposed by the backend. This is much more flexible, but the whole responsible now lied on the shoulders of the frontend developers. That was a fine seperation, but it dependent on both teams working at the same speed. If frontend was quicker than backend or reverse, teams would be waiting and problems was spread across teams.
+SPA (Single Page Application) became possible when browsers became much faster, but that was not without problems either. The app would be built in javascript, interacting with an API exposed by the backend. This is much more flexible, but the whole responsibility now lied on the shoulders of the frontend developers. That was a fine seperation, but it is dependent on both teams working at the same speed. If frontend was quicker than backend or reverse, teams would be waiting and problems were spread across teams.
 
-Making a SPA requires more work and knowledge for a small team. The overhead is the need to expose the data as a API and then in the frontend consume that API. And while making, exposing and consuming the API, mistakes are often made, mistakes that would have been avoided by a backend rendered app. That created a new title, the "FullStack developer", which supposedly knows who to navigate both the frontend and the backend, often spreading themselves thin in the pursuit.
+Making a SPA requires more work and knowledge for a small team. The overhead is the need to expose the data as API and then in the frontend consume that API. And while making, exposing and consuming the API, mistakes are often made, mistakes that would have been avoided by a backend rendered app. That created a new title, the "FullStack developer", a developer who supposedly knows who to navigate both the frontend and the backend, often spreading themselves thin in the pursuit.
 
-And where did we come from? "We need better websites", yes that! We need people that can focus solely on the user interfaces and user experience and not have to care about backend and all that makes it complicated in between. We need people that care about error messages and accessiblity and creating seamless interfaces that are easy to navigate. Not how to handle scale a backend with cloud native.
+And where did we come from? "We need better websites", yes that! We need people that can focus solely on the user interfaces and user experience and not have to care about backend and all that makes it complicated in between. We need people that care about error messages and accessiblity and creating seamless interfaces that are easy to navigate. Not how to handle scalability of backend with cloud native.
 
 ## The modern frontend workflow
 
@@ -36,7 +36,7 @@ https://storybook.js.org/
 
 ### Components with React.js
 
-React.js is the most popular framework to create interactive experiences in the browser and the reason why is the ability to create small components that you can easily compose into larger ones. Webcomponents is the the standard, but being a standard it is both more low level and moves slower. They both benefit, but React.js benefits right now by being the most popular and therefore having the most atttention in terms of tools and extensions built for it.
+React.js is the most popular framework to create interactive experiences in the browser and the reason why is the ability to create small components that you can easily compose into larger ones. Webcomponents is the the standard, but by being a standard it is both more low level and moves slower. They both benefit, but React.js benefits right now by being the most popular and therefore having the most attention in terms of tools and extensions built for it.
 
 Building something for others to consume, Webcomponents. Building something to consume yourself, choose React.js and you are sure to be developing minimal components that can be adapted easily.
 
@@ -44,13 +44,13 @@ https://reactjs.org/docs/components-and-props.html
 
 ### CSS modules
 
-All visual, all colors and styling are made with CSS, but CSS are dificult because of the fact it is Cascading as the name says. CSS Modules allows you to focus on the styling for one component at a time, allowing less concerns about how it affect the whole app and avoding side effects.
+All visual, all colors and styling are made with CSS, but CSS is difficult because of the fact that it is Cascading, as the name says. CSS Modules allows you to focus on the styling for one component at a time, allowing less concerns about how it will affect the whole app and avoiding side effects.
 
 https://github.com/css-modules/css-modules
 
 ### No setup hot reloading
 
-Frameworks like create-react-app and Next.js makes it so you can create an app with nearly now setup and the app automatically refresh whenever the file are saved in your editor. No manually actions to refresh the browser is needed anymore.
+Frameworks like create-react-app and Next.js makes it so you can create an app with nearly no-setup and the app automatically refreshes whenever the files are saved in your editor. No manually actions to refresh the browser is needed anymore.
 
 https://reactjs.org/docs/create-a-new-react-app.html
 
@@ -66,11 +66,11 @@ https://graphql.org/learn/queries/#fragments
 
 ### Testing with Jest, Typescript and Cypress
 
-Emulating the chaos that is the real life is not easy and testing is needed. Jest is first class javascript test runner allowing even simulated browser environments with jsdom. 
+Emulating the chaos, that real life is, is not easy and testing is needed. Jest is first class javascript test runner allowing even simulated browser environments with jsdom. 
 
-TypeScript has become the defactor standard for creating large enterprise apps. Sharing and collaborating on large codebases is no small tasks and strict structure is achivable with TypeScript allowing interactions between to be more aligned.
+TypeScript has become the de facto standard for creating large enterprise apps. Sharing and collaborating on large codebases is no small tasks and strict structure is achievable with TypeScript allowing interactions between to be more aligned.
 
-Cypress is world class browser automation, creating integration tests that simulate real world users is easy. Real users do not need to know how you made the app, their focus is on achieve a task, try that with Cypress and avoid doing manual testing over and over again in the browser to test flows end-to-end.
+Cypress is world class browser automation, creating integration tests that simulate real world users easily. Real users do not need to know how you made the app, their focus is on achieving a task, try that with Cypress and avoid doing manual testing over and over again in the browser to test flows end-to-end.
 
 https://jestjs.io/
 
@@ -80,9 +80,8 @@ https://www.cypress.io/how-it-works
 
 ## Conclusion
 
-The modern frontend workflow is free from lock-in, allows resuable building blocks *with webcomponents*, easily sharable flows *with storybooks*, building highly interactive components *with react.js*, expressive encapsulated styling *with css modules*, quick iterations and developing *with cra or next*, declartive data fetching *with graphql*, ensure extensive testing *with jest and typescript* and simulate real world browsers e2e testing with Cypress.
+The modern frontend workflow is free from lock-in, allows resuable building blocks *with webcomponents*, easily sharable flows *with storybooks*, building highly interactive components *with react.js*, expressive encapsulated styling *with css modules*, quick iterations and developing *with cra or next*, declartive data fetching *with graphql*, ensures extensive testing *with jest and typescript* and simulates real world browsers e2e testing with Cypress.
 
-The days where frontend developers are forced into backend teritory is over, frontend can be made with the best tools that cover every aspect and can avoid any slowdown that you have experienced in the past. It creates progressive enhancement with webcomponents that backend can use without taking all the responsiblity.
+The days where frontend developers are forced into backend territory are over, frontend can be made with the best tools that cover every aspect and can avoid any slowdown that you have experienced in the past. It creates progressive enhancement with webcomponents that backend can use without taking all the responsibility.
 
 These tools are for the next decade! Go build the future!
-
