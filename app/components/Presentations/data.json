@@ -476,7 +476,17 @@
     {
       "name": "The land of Isomorphic Apps",
       "location": "CopenhagenJS - November 2015",
-      "description": "Talked about my experience creating a universal app. What to do and especially what not to do!"
+      "description": "Talked about my experience creating a universal app. What to do and especially what not to do!",
+      "links": [
+        {
+          "text": "Slides",
+          "link": "https://isomorphic-apps.surge.sh/"
+        },
+        {
+          "text": "Repository",
+          "link": "https://github.com/kevinsimper/isomorphic-apps-presentation"
+        }
+      ]
     },
     {
       "name": "Face Recognition on old pictures",
