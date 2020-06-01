@@ -6,9 +6,9 @@ If the app was made in Ruby on Rails, that meant you as a frontend developer had
 
 SPA (Single Page Application) became possible when browsers became much faster, but that was not without problems either. The app would be built in javascript, interacting with an API exposed by the backend. This is much more flexible, but the whole responsibility now lied on the shoulders of the frontend developers. That was a fine separation, but it is dependent on both teams working at the same speed. If frontend was quicker than backend or reverse, teams would be waiting and problems were spread across teams.
 
-Making a SPA requires more work and knowledge for a small team. The overhead is the need to expose the data as API and then in the frontend consume that API. And while making, exposing and consuming the API, mistakes are often made, mistakes that would have been avoided by a backend rendered app. That created a new title, the "FullStack developer", a developer who supposedly knows who to navigate both the frontend and the backend, often spreading themselves thin in the pursuit.
+Making a SPA requires more work and knowledge for a small team. The overhead is the need to expose the data as an API and then in the frontend consume that API. And while making, exposing and consuming the API, mistakes are often made, mistakes that would have been avoided by a backend rendered app. That created a new title, the "FullStack developer", who supposedly knows how to navigate both the frontend and the backend, often spreading themselves thin in the pursuit.
 
-And where did we come from? "We need better websites", yes that! We need people that can focus solely on the user interfaces and user experience and not have to care about backend and all that makes it complicated in between. We need people that care about error messages and accessibility and creating seamless interfaces that are easy to navigate. Not how to handle the scalability of backend with cloud-native.
+And where did we come from? "We need better websites", yes that! We need people that can focus solely on the user interfaces and user experience and not have to care about backend and all that makes it complicated in between. We need people that care about error messages and accessibility and creating seamless interfaces that are easy to navigate. Not how to handle the scaling a backend with cloud-native.
 
 ## The modern frontend workflow
 
@@ -66,7 +66,7 @@ https://graphql.org/learn/queries/#fragments
 
 ### Testing with Jest, Typescript, and Cypress
 
-Emulating the chaos, that real life is, is not easy and testing is needed. Jest is a first-class javascript test runner allowing even simulated browser environments with jsdom.
+Emulating the chaos that is the real-life is not easy and testing is needed. Jest is a first-class javascript test runner allowing even simulated browser environments with jsdom.
 
 TypeScript has become the de facto standard for creating large enterprise apps. Sharing and collaborating on large codebases is no small task and strict structure is achievable with TypeScript allowing interactions between to be more aligned.
 
