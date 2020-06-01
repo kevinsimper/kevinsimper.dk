@@ -10,10 +10,10 @@ var cssName = production ? '[name]-bundle-[hash].css' : '[name].css'
 
 var plugins = [
   new MiniCssExtractPlugin({
-    filename: cssName
+    filename: cssName,
   }),
   new webpack.optimize.OccurrenceOrderPlugin(),
-  new webpack.HotModuleReplacementPlugin()
+  new webpack.HotModuleReplacementPlugin(),
 ]
 var entry = []
 if (production) {
@@ -21,7 +21,7 @@ if (production) {
     new AssetsPlugin({
       filename: 'webpack.assets.json',
       prettyPrint: true,
-      path: path
+      path: path,
     })
   )
 }
@@ -34,36 +34,51 @@ module.exports = {
   mode: 'development',
   entry: {
     main: entry,
-    map: './app/map/map.js'
+    map: './app/map/map.js',
   },
   output: {
     path: path,
     publicPath: publicPath,
-    filename: jsName
+    filename: jsName,
   },
   module: {
     rules: [
-      { test: /\.jsx?$/, exclude: /node_modules/, loader: 'babel-loader' },
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        options: {
+          presets: ['@babel/preset-react'],
+        },
+      },
       {
         test: /\.s?css$/,
         use: [
           MiniCssExtractPlugin.loader,
-          'css-loader?modules=local&localIdentName=[path][name]---[local]---[hash:base64:5]',
-          'postcss-loader'
-        ]
+          {
+            loader: 'css-loader',
+            options: {
+              modules: {
+                mode: 'local',
+                localIdentName: '[path][name]---[local]---[hash:base64:5]',
+              },
+            },
+          },
+          'postcss-loader',
+        ],
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
         use: [
           'file-loader?hash=sha512&digest=hex&name=[hash].[ext]',
-          'image-webpack-loader'
-        ]
+          'image-webpack-loader',
+        ],
       },
       {
         test: /\.(woff|eot|woff2|ttf)$/,
-        use: 'url-loader?limit=100000'
-      }
-    ]
+        use: 'url-loader?limit=100000',
+      },
+    ],
   },
   optimization: {
     splitChunks: {
@@ -72,11 +87,11 @@ module.exports = {
           name: 'styles',
           test: /\.css$/,
           chunks: 'all',
-          enforce: true
-        }
-      }
-    }
+          enforce: true,
+        },
+      },
+    },
   },
   plugins: plugins,
-  devtool: 'source-map'
+  devtool: 'source-map',
 }
