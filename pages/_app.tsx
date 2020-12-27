@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }) {
           <a href="/">
             <h1 className="text-2xl">KevinSimper</h1>
           </a>
-          <div>
+          <div className="overflow-x-auto">
             <a className="pr-2" href="/">
               Home
             </a>
@@ -40,7 +40,7 @@ function MyApp({ Component, pageProps }) {
         <Component {...pageProps} />
       </div>
       <footer className="bg-indigo-900 text-white p-8">
-        <div className="max-w-screen-md mx-auto flex justify-around">
+        <div className="max-w-screen-md mx-auto flex flex-col md:flex-row justify-around">
           <a href="/social">Contact me!</a>
           <form method="GET" action="/search">
             <input

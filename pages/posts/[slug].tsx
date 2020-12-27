@@ -10,6 +10,7 @@ const components = {
   h3: (props) => <h3 className="text-xl py-2" {...props} />,
   p: (props) => <p className="py-2" {...props} />,
   a: (props) => <a className="text-purple-600" {...props} />,
+  pre: (props) => <pre className="overflow-auto" {...props} />,
   Test: <div />,
 }
 
