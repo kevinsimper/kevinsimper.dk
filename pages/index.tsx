@@ -18,7 +18,14 @@ function HomePage({ posts }) {
                 <div>{post.date}</div>
                 <ul className="flex">
                   {post.tags?.map((tag) => (
-                    <li className="pr-1">#{tag}</li>
+                    <li className="pr-1">
+                      <a
+                        className="text-purple-600"
+                        href={`/categories/${tag}`}
+                      >
+                        #{tag}
+                      </a>
+                    </li>
                   ))}
                 </ul>
               </a>

@@ -1,10 +1,11 @@
 import React from 'react'
 import { readFileSync } from 'fs'
 
-function CategoryPage({ category, posts }) {
+function SearchPage({ query, posts }) {
   return (
     <div>
-      <h1 className="text-2xl">Category: {category}</h1>
+      <h1 className="text-2xl">Searched: {query}</h1>
+      <p>Found {posts.length} results</p>
 
       {posts.map((post) => {
         return (
@@ -38,19 +39,26 @@ export async function getServerSideProps(context) {
     tags: string[]
   }[] = JSON.parse(readFileSync(path + '_data.json', 'utf8'))
 
-  const category = context.params.category
+  const query = context.query.query
 
-  const posts = data.filter((b) => {
-    if (b.hasOwnProperty('tags')) {
-      return b.tags.includes(category)
-    } else {
-      return false
+  if (!query) {
+    return { props: { query: '', posts: [] } }
+  }
+
+  const posts = data.filter((p) => {
+    if (p.title.toLowerCase().includes(query.toLowerCase())) {
+      return true
     }
+    const content = readFileSync(path + p.slug + '.md', 'utf8')
+    if (content.toLowerCase().includes(query.toLowerCase())) {
+      return true
+    }
+    return false
   })
 
   return {
-    props: { category, posts },
+    props: { query, posts },
   }
 }
 
-export default CategoryPage
+export default SearchPage
