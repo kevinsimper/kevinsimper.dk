@@ -30,6 +30,9 @@ function MyApp({ Component, pageProps }) {
             <a className="pr-2" href="/nametags">
               Nametags
             </a>
+            <a className="pr-2" href="/projects">
+              Projects
+            </a>
           </div>
         </div>
       </header>
