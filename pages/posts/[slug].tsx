@@ -13,12 +13,27 @@ const components = {
   Test: <div />,
 }
 
-function PostPage({ source, title }) {
+function PostPage({ source, title, tags }) {
   const router = useRouter()
   const { slug } = router.query
 
   const content = hydrate(source, { components })
-  return <div>{content}</div>
+  return (
+    <div>
+      <article>{content}</article>
+      <div>
+        Tags:{' '}
+        {tags &&
+          tags.map((t, id) => (
+            <span key={id}>
+              <a className="text-purple-600" href={`/categories/${t}`}>
+                #{t}
+              </a>{' '}
+            </span>
+          ))}
+      </div>
+    </div>
+  )
 }
 
 export async function getServerSideProps(context) {
@@ -47,6 +62,7 @@ export async function getServerSideProps(context) {
     props: {
       title: post.title,
       source: mdxSource,
+      tags: post.tags,
     },
   }
 }
