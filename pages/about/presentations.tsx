@@ -3,6 +3,20 @@ import { readFileSync } from 'fs'
 function HomePage({ presentations }) {
   return (
     <div>
+      <h1 className="text-2xl">Presentations</h1>
+      <p>
+        I have given <strong>{presentations.length}</strong> presentations and
+        workshops in total.
+      </p>
+      <ul>
+        <li>
+          {presentations.filter((p) => p.type !== 'workshop').length}{' '}
+          presentations
+        </li>
+        <li>
+          {presentations.filter((p) => p.type === 'workshop').length} workshops
+        </li>
+      </ul>
       {presentations.map((presentation) => {
         return (
           <div id={presentation.name} className="py-2">

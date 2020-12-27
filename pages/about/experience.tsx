@@ -3,6 +3,7 @@ import { readFileSync } from 'fs'
 function HomePage({ experiences }) {
   return (
     <div>
+      <h1 className="text-2xl">Work Experience</h1>
       {experiences.map((experience) => {
         return (
           <div className="py-2">
