@@ -37,8 +37,16 @@ function MyApp({ Component, pageProps }) {
         <Component {...pageProps} />
       </div>
       <footer className="bg-indigo-900 text-white p-8">
-        <div className="max-w-screen-md mx-auto">
+        <div className="max-w-screen-md mx-auto flex justify-around">
           <a href="/social">Contact me</a>
+          <form method="GET" action="/search">
+            <input
+              className="p-2"
+              name="q"
+              type="search"
+              placeholder="Search.."
+            />
+          </form>
         </div>
       </footer>
     </div>
