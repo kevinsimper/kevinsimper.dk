@@ -39,7 +39,7 @@ export async function getServerSideProps(context) {
     tags: string[]
   }[] = JSON.parse(readFileSync(path + '_data.json', 'utf8'))
 
-  const query = context.query.query
+  const query = context.query.q
 
   if (!query) {
     return { props: { query: '', posts: [] } }
