@@ -2,8 +2,6 @@ FROM node:14-slim
 
 EXPOSE 9000
 
-ENV NODE_ENV production
-
 WORKDIR /app
 
 ADD package.json package-lock.json /app/
@@ -13,5 +11,7 @@ RUN npm i
 ADD . /app
 
 RUN npm run build
+
+ENV NODE_ENV production
 
 CMD npm start
