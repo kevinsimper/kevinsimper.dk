@@ -27,13 +27,20 @@ function MyApp({ Component, pageProps }) {
             <a className="pr-2" href="/social">
               Recommends
             </a>
+            <a className="pr-2" href="/nametags">
+              Nametags
+            </a>
           </div>
         </div>
       </header>
-      <div className="max-w-screen-md mx-auto p-4 flex-1">
+      <div className="max-w-screen-md mx-auto p-4 flex-1 w-full">
         <Component {...pageProps} />
       </div>
-      <footer className="bg-indigo-900 text-white p-8">Contact me</footer>
+      <footer className="bg-indigo-900 text-white p-8">
+        <div className="max-w-screen-md mx-auto">
+          <a href="/social">Contact me</a>
+        </div>
+      </footer>
     </div>
   )
 }
