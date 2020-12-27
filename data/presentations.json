@@ -1,0 +1,522 @@
+{
+  "presentations": [
+    {
+      "name": "Why use GraphQL Fragments",
+      "location": "Copenhagen GraphQL, Copenhagen - 12. December 2019",
+      "description": "In this presentation I show what the problem is if you don't use graphql fragments and I show how to easily get started with GraphQL fragments in your codebase.",
+      "links": [
+        {
+          "text": "Meetup link",
+          "link": "https://www.meetup.com/Copenhagen-GraphQL-Meetup-Group/events/266490979/"
+        },
+        {
+          "text": "Presentation",
+          "link": "https://why-use-graphql-fragments.surge.sh/"
+        }
+      ]
+    },
+    {
+      "name": "Serverless workshop with Cloud Run and Cloud Build",
+      "location": "GDG Cloud Copenhagen, Copenhagen - 19. November 2019",
+      "description": "In this workshop we are going to learn about Google Cloud new product called Cloud Run which was launched this year. It is a super interesting product that allows you to run any Docker container and you only pay for what you use! Meaning this is the perfect product for developers that are making new product, startups or even for side-projects!",
+      "links": [
+        {
+          "text": "Meetup link",
+          "link": "https://www.meetup.com/gdg-cloud-copenhagen/events/266466598/"
+        },
+        {
+          "text": "Workshop resources",
+          "link": "https://www.kevinsimper.dk/posts/continuous-deployment-with-cloud-run-and-cloud-build-workshop-resources"
+        }
+      ]
+    },
+    {
+      "name": "Why serverless never really worked for me until now!",
+      "location": "GDG Cloud Copenhagen, Copenhagen - 30. September 2019",
+      "description": "In this presentation I want to talk about how I have tried serverless many times but always had issues. I could see the potential but it was always difficult to see it end to end, and when you are busy to often end up defaulting to what you already know. Now Google has launched Cloud Run and it looks to be the perfect solution, but does such a solution exist? Come and hear how I approach serverless with Cloud Run, Cloud Build, Berglas, Cloud KMS and bazel.build",
+      "links": [
+        {
+          "text": "Meetup link",
+          "link": "https://www.meetup.com/gdg-cloud-copenhagen/events/264932714/"
+        },
+        {
+          "text": "Live version",
+          "link": "https://why-serverless-never-worked-before-now.surge.sh/#1"
+        },
+        {
+          "text": "Demo code",
+          "link": "https://github.com/kevinsimper/cloud-run-kms-berglas-example"
+        }
+      ]
+    },
+    {
+      "name": "How Cloud Run is the final destination in my Cloud Native journey",
+      "location": "Cloud Native Aarhus, Dokk1, Aarhus - 24. September 2019",
+      "description": "In this talk I will look at my cloud native journey, how I came here and why I think Cloud Run is the final destination. What did we solve along the way and how I combine my tools to do the best job I can. But do we still miss some things and what is the downsides? Let us talk about that.",
+      "links": [
+        {
+          "text": "Meetup link",
+          "link": "https://www.meetup.com/Cloud-Native-Aarhus/events/264325804/"
+        },
+        {
+          "text": "Live version",
+          "link": "https://cloud-run-final-destination.surge.sh/"
+        },
+        {
+          "text": "Demo code",
+          "link": "https://github.com/kevinsimper/cloud-native-aarhus-cloud-run-demo"
+        }
+      ]
+    },
+    {
+      "name": "Why is my build times so long?",
+      "location": "CopenhagenJS - 19. September 2019",
+      "description": "In this talk i focus on how we can bring down build times, evaluating what works and doesn't work. What kind of tool that we need to solve all this. Bringing down build time can greatly improve the productivity of all the developers on a team.",
+      "links": [
+        {
+          "text": "Meetup link",
+          "link": "https://www.meetup.com/copenhagenjs/events/264368457/"
+        },
+        {
+          "text": "Slideshare",
+          "link": "https://www.slideshare.net/KevinSimper/why-is-my-build-times-so-long"
+        },
+        {
+          "text": "Live version",
+          "link": "https://how-to-solve-long-build-time.surge.sh/"
+        }
+      ]
+    },
+    {
+      "name": "Google Assistant workshop - Learn to make your own assistant skill",
+      "location": "Trifork, Copenhagen - 10. September 2019",
+      "description": "In this workshop we will look at the Google Assistant and what we can do with it. Everyone will at the end have made their own skill that they can use from their phone, speaker or hub.",
+      "type": "workshop",
+      "links": [
+        {
+          "text": "Meetup link",
+          "link": "https://www.meetup.com/gdg-cloud-copenhagen/events/264396925/"
+        }
+      ]
+    },
+    {
+      "name": "Public Speaking Workshop - Learn how to give your first tech talk",
+      "location": "Pleo, Copenhagen - 2. September 2019",
+      "description": "In this workshop we wanted to put focus on how to get started with public speaking. How to approach it, how to come up with ideas, how to write it down and how to present it. This was in collaboration with Zoey Chow.",
+      "type": "workshop",
+      "links": [
+        {
+          "text": "Meetup link",
+          "link": "https://www.meetup.com/copenhagenjs/events/264037209/"
+        }
+      ]
+    },
+    {
+      "name": "JavaScript testing workshop - learn how to write test",
+      "location": "FoundersHouse, Copenhagen - 29. August 2019",
+      "description": "In this workshop I gave a presentation and help the workshop students learn how to get started writing test in JavaScript. It was a really great workshop where getting the hang of it and hands-on was the goal as hearing about testing theory doesn't make you good at testing only. This was in collaboration with Mohsen Asfia.",
+      "type": "workshop",
+      "links": [
+        {
+          "text": "Meetup link",
+          "link": "https://www.meetup.com/copenhagenjs/events/264005168/"
+        }
+      ]
+    },
+    {
+      "name": "Learn GraphQL with JavaScript Workshop",
+      "location": "Pleo, Copenhagen - 20. May 2019",
+      "description": "In this workshop, we will look at GraphQL as frontend developers and learn how to use GraphQL to make a single page application. GraphQL is a really awesome toolkit to talk to APIs much more conveniently. Knowing it, you can really create an awesome user experience with much quicker speed and much less code.",
+      "type": "workshop",
+      "links": [
+        {
+          "text": "Meetup link",
+          "link": "https://www.meetup.com/copenhagenjs/events/261479115/"
+        }
+      ]
+    },
+    {
+      "name": "Build your first blockchain app with JS & Ethereum",
+      "location": "Berkeley, California - 14. April 2019",
+      "description": "I gave a workshop on how to get started with the Ethereum blockchain. We start with looking at mobile wallets and then we try to deploy our first smart contract with Remix. In the end we try to make our first dapp that uses the mobile wallet.",
+      "type": "workshop",
+      "links": [
+        {
+          "text": "Meetup link",
+          "link": "https://www.meetup.com/Berkeley-Javascript-Dojo/events/259956274/"
+        }
+      ]
+    },
+    {
+      "name": "Build your first blockchain app with JS & Ethereum",
+      "location": "San Francisco, California - 6. April 2019",
+      "description": "I gave a workshop on how to get started with the Ethereum blockchain. We start with looking at mobile wallets and then we try to deploy our first smart contract with Remix. In the end we try to make our first dapp that uses the mobile wallet.",
+      "type": "workshop",
+      "links": [
+        {
+          "text": "Facebook link",
+          "link": "https://www.facebook.com/events/550643298758812/"
+        }
+      ]
+    },
+    {
+      "name": "WebUSB: Making a label printer work in the browser",
+      "location": "WaffleJS - San Francisco - 03. April 2019",
+      "description": "I learnt how to use WebUSB when I had a task to make label printing easy. I want to share with you what webusb is and how you can use it. I also implemented a printer driver in javascript so that I can print to a label printer directly from the browser. The happy future of easily connecting to custom hardware is close!",
+      "links": [
+        {
+          "text": "Event link",
+          "link": "https://wafflejs.com/?day=2019-04-03"
+        },
+        {
+          "text": "Presentation",
+          "link": "https://labelprinter-presentation.surge.sh/"
+        }
+      ]
+    },
+    {
+      "name": "Getting started with Kubernetes on Google Cloud",
+      "location": "Google Cloud Developer Community Copenhagen - Copenhagen - 21. Marts 2019",
+      "description": "I gave a four hour workshop were we got into Kubernetes and deployed a docker container to Google Cloud Kubernetes Engine. We used Cloud Build to build our container and push it to GCR.",
+      "type": "workshop",
+      "links": [
+        {
+          "text": "Meetup link",
+          "link": "https://www.meetup.com/gdg-cloud-copenhagen/events/259546988/"
+        }
+      ]
+    },
+    {
+      "name": "Getting started with Kubernetes on Google Cloud",
+      "location": "Google Cloud Developer Community Madrid - Madrid - 16. Marts 2019",
+      "description": "I gave a four hour workshop were we got into Kubernetes and deployed a docker container to Google Cloud Kubernetes Engine. We used Cloud Build to build our container and push it to GCR.",
+      "type": "workshop",
+      "links": [
+        {
+          "text": "Meetup link",
+          "link": "https://www.meetup.com/gcdcmadrid/events/259540531/"
+        }
+      ]
+    },
+    {
+      "name": "Making your own game in JavaScript",
+      "location": "CopenhagenJS - Copenhagen - 13. December 2018",
+      "description": "A GameJam is an event where everyone is working on creating a new game and sharing the enthusiasm for making.",
+      "links": [
+        {
+          "text": "Meetup link",
+          "link": "https://www.meetup.com/copenhagenjs/events/256814771/"
+        }
+      ]
+    },
+    {
+      "name": "How a labelprinter can help your Community",
+      "location": "GDG Organizers meetup - Madrid - 2. December 2018",
+      "description": "I gave a talk to a room of organizers why a labelprinter could help them in their work as a organizer. How it can take something from the conference experience and bring it down to the community meetups",
+      "links": [
+        {
+          "text": "Slides",
+          "link": "http://labelprinter-gdg.surge.sh/"
+        }
+      ]
+    },
+    {
+      "name": "Introduction to Kubernetes KNative",
+      "location": "Cloudfest - Copenhagen - 24. November 2018",
+      "description": "Serverless is coming on Kubernetes and KNative is a serious response from Google to run ontop of Kubernetes. KNative is a serverless framework that makes it so easy to spin up and run containers on demand with all the benefits of Kubernetes and Istio."
+    },
+    {
+      "name": "How to create a good CV",
+      "location": "HackYourFuture meetup - Copenhagen - 17. October 2018",
+      "description": "In this workshop presentation I tell how to create a good CV, what should it include and what should you leave out. A CV is a conversation starter and how to connect with companies in the best ways to get oppotunities.",
+      "links": [
+        {
+          "text": "Slides",
+          "link": "https://kevinsimper.github.io/hackyourfuture-cv-workshop-presentation/"
+        },
+        {
+          "text": "Meetup link",
+          "link": "https://www.meetup.com/HackYourFuture-Copenhagen/events/255230222"
+        }
+      ],
+      "type": "workshop"
+    },
+    {
+      "name": "Intro to Kubernetes workshop",
+      "location": "Google Cloud Community Copenhagen - Copenhagen - 11. October 2018",
+      "description": "I made the first non-profit paid workshop where I taught Kubernetes to with practical examples. In the workshop the participants got to deploy their own application first with the Kubectl CLI and then made it with the YAML files in the declaritive way.",
+      "links": [
+        {
+          "text": "Meetup link",
+          "link": "https://www.meetup.com/Google-Cloud-Developer-Community-Copenhagen/events/255296818/"
+        }
+      ],
+      "type": "workshop"
+    },
+    {
+      "name": "How Kubernetes allows your Startup to scale",
+      "location": "TechBBQ Google Garden - Copenhagen - 27. September 2018",
+      "description": "With Kubernetes you can scale your startup easier with an easier way to hire talent. In this presentation, I show you how Kubernetes is the right choice.",
+      "links": [
+        {
+          "text": "Slides",
+          "link": "https://www.slideshare.net/KevinSimper/how-kubernetes-allows-your-startup-to-scale"
+        }
+      ]
+    },
+    {
+      "name": "How to build a P2P Chat",
+      "location": "JSLovers - New Delhi - 16. September 2018",
+      "description": "In this workshop, we will look at how we can use p2p libraries to give our applications real-time chat and allow games to be multiplayer. We will be building a chat application and a multiplayer game both with JavaScript. One of the major benefits of p2p is it is really cost-effective since you don't have to pay for hosting. The libraries we are going to use is called IPFS and Webtorrent, which both have large communities and active development.",
+      "type": "workshop"
+    },
+    {
+      "name": "Building P2P in the browser for zero cost",
+      "location": "JSLovers - New Delhi - 15. September 2018",
+      "description": "How would you build a peer to peer app on the web and what are some of the challenges? We will look at how to take advance of new libraries that makes it easy to make cool new applications like games and chat.",
+      "links": [
+        {
+          "text": "Slides",
+          "link": "https://p2p-ipfs-presentation.surge.sh/"
+        },
+        {
+          "text": "Code",
+          "link": "https://github.com/kevinsimper/p2p-ipfs-presentation"
+        }
+      ]
+    },
+    {
+      "name": "Contributing to Open Source Workshop",
+      "location": "CopenhagenJS - 4. Sep 2018",
+      "description": "A workshop about how to contribute to open source and some workshop questions to think about and discuss in a group. Finish it up with time for starting that process.",
+      "links": [
+        {
+          "text": "Slides",
+          "link": "https://www.slideshare.net/KevinSimper/contributing-opensource-workshop"
+        }
+      ],
+      "type": "workshop"
+    },
+    {
+      "name": "Using React-Native to launch iOS and Android in record time",
+      "location": "Copenhagen Cocoa - 23. August 2018",
+      "description": "We made a React-Native app at Connected Cars, but how did it go and what are the upsides and downsides now after it has been launched? What could be done better?"
+    },
+    {
+      "name": "Greeting you with Vision and Speech Machine Learning",
+      "location": "GDG Cloud London - 22. August 2018",
+      "description": "I talked about how you can use Machine Learning for recognizing faces and names with Machine Learning.",
+      "links": [
+        {
+          "text": "Github repository",
+          "link": "https://github.com/kevinsimper/meetuplabel"
+        }
+      ]
+    },
+    {
+      "name": "Introduction to Docker for Developers",
+      "location": "Docker Copenhagen - 19. June 2018",
+      "description": "I talked about how you can use Machine Learning for recognizing faces and names with Machine Learning.",
+      "type": "workshop",
+      "links": [
+        {
+          "text": "Meetup link",
+          "link": "https://www.meetup.com/Docker-Copenhagen/events/251794160/"
+        }
+      ]
+    },
+    {
+      "name": "Docker Best Practices in development and Production",
+      "location": "Gr8Conf - 31. May 2018",
+      "description": "You should come if you know or have tried Docker but are thinking about how to get more serious about containers. What are the best practices with docker in Development, Staging and Production with regards to security.",
+      "links": [
+        {
+          "text": "Slides",
+          "link": "https://www.slideshare.net/KevinSimper/making-docker-and-kubernetes-a-success-at-your-company"
+        }
+      ]
+    },
+    {
+      "name": "Making Docker and Kubernetes a success at your Company",
+      "location": "Gr8Conf - 31. May 2018",
+      "description": "We will talk about the benefits and downsides of using Kubernetes and how to take docker and kubernetes from theory to practice as your company. Story of how we took Connected Cars from nothing to a full self-serving platform in one year.",
+      "links": [
+        {
+          "text": "Slides",
+          "link": "https://www.slideshare.net/KevinSimper/docker-best-practices-in-development-and-production"
+        }
+      ]
+    },
+    {
+      "name": "WebVR with the Oculus Go",
+      "location": "CopenhagenJS - 24. May 2018",
+      "description": "How does the Oculus Go work and what is WebVR together with it? I show how you can make a duck shooting game in 2 hours with A-frame and how the new React-360 compares. I also show how the Oculus Go works and how it is playing a game by livestreaming to my laptop with Facebook Live.",
+      "links": [
+        {
+          "text": "Slides",
+          "link": "https://webvr-presentation.surge.sh/"
+        },
+        {
+          "text": "Game",
+          "link": "http://webvr-duckgame.surge.sh/game.html"
+        }
+      ]
+    },
+    {
+      "name": "How to stay secure/anonymouse in a modern age",
+      "location": "WonderCoders - 26. October 2017",
+      "description": "I gave a 20 minutes presentation about how to communicate and browse securely, how to use tor and using encryption easily with Keybase.io"
+    },
+    {
+      "name": "Serverless workshop",
+      "location": "CopenhagenJS - 23. October 2017",
+      "description": "I gave a practical workshop on how to use AWS Lambda and API Gateway where everybody got to deploy their own serverless workshop.",
+      "type": "workshop"
+    },
+    {
+      "name": "What I learned teaching workshops",
+      "location": "DockerCon Europe Organizer Summit - 16. October 2017",
+      "description": "I gave a talk about what I learned giving workshops at the Docker meetup group and some tips and tricks to do it better."
+    },
+    {
+      "name": "How to not burn out as a Organizer",
+      "location": "Copenhagen Tech Week - 16. October 2017",
+      "description": "A talk about learning and ideas for being a meetup organizer through my experience running CopenhagenJS and Docker Copenhagen for 3 years."
+    },
+    {
+      "name": "How to do Serverless",
+      "location": "CopenhagenJS - 12. October 2017",
+      "description": "An introduction on how to think about serverless and a demo of how to deploy with AWS and Google Cloud in both under 10 minutes."
+    },
+    {
+      "name": "What is Cloud Native",
+      "location": "Docker Copenhagen - 3. August 2017",
+      "description": "A gave a 25 min presentation about Cloud Native and what it means."
+    },
+    {
+      "name": "Introduction to Docker",
+      "location": "Docker Copenhagen - 13. July 2017",
+      "description": "I gave a 2 hours introduction to docker and a live code demo."
+    },
+    {
+      "name": "Creating an intelligent Facebook bot",
+      "location": "Copenhagen JavaScript - 19. January 2017",
+      "description": "I showed how to make a facebook messenger bot that used speech recognition."
+    },
+    {
+      "name": "How to be an awesome developer and get paid well at the same time!",
+      "location": "ITU Innovators - 6. October 2016",
+      "description": "What does it take to be an awesome developer and how do you ensure you get paid well."
+    },
+    {
+      "name": "Learn to be a DevOps - Workshop",
+      "location": "Docker Copenhagen - 4. October 2016",
+      "description": "A workshop that teaches the flow of continuous integration and continuous deployment.",
+      "type": "workshop"
+    },
+    {
+      "name": "Distributed file system with IPFS",
+      "location": "Foo Cafe Copenhagen - 19. September 2016",
+      "description": "A presentation about distributed hash tables, hashing of files and hands on use of IPFS."
+    },
+    {
+      "name": "React Workshop",
+      "location": "React Lima, Peru - 14. June 2016",
+      "description": "Made a workshop on how to get started with React and the attendees made a contact formular.",
+      "type": "workshop"
+    },
+    {
+      "name": "Universal Apps - The good, the bad and the ugly",
+      "location": "React Lima, Peru - 14. June 2016",
+      "description": "My experiences on developing universal apps and what to do and what not to do."
+    },
+    {
+      "name": "How to deploy with Docker",
+      "location": "Cusco Developer Group, Peru - May 2016",
+      "description": "I showed how to deploy a website from scracth with Docker."
+    },
+    {
+      "name": "Docker Introduction - What you need to know",
+      "location": "IT University of Copenhagen - Marts 2016",
+      "description": "Talked about why Docker matters and the reason why it is a billion dollar company. Showed a demo on how to use Docker."
+    },
+    {
+      "name": "Swarm 1.1 release and Introduction",
+      "location": "Docker Copenhagen - Marts 2016",
+      "description": "Showed the newest version of Docker, including that of rescheduling of containers."
+    },
+    {
+      "name": "Kubernetes Introduction - Workshop 3 hours",
+      "location": "Docker Copenhagen - February 2016",
+      "description": "Made a workshop with 5 scenarios on how to use Kubernetes, from launching a Kubernetes cluster on your own computer to the hardest scenario of launching a fault-tolerant Redis cluster.",
+      "type": "workshop"
+    },
+    {
+      "name": "Introduction to HTML and CSS",
+      "location": "Codher Introduction Weekend - January 2016",
+      "description": "Prepared a introduction to learn a group of girls how to think in HTML, \"everything is a square\" and the semantic of html tags.",
+      "type": "workshop"
+    },
+    {
+      "name": "How do you survive key-loss with Docker?",
+      "location": "Docker Copenhagen - January 2016",
+      "description": "Gave a thorough guide on how docker hub can survive a key loss with their Docker Notary project. Talking about how they switch out root keys and their standard they have published."
+    },
+    {
+      "name": "JavaScript Jeopardy",
+      "location": "CopenhagenJS - January 2016",
+      "description": "Prepared a 30 multiple-choice about everything from founders of projects to how to change the inline style of a element with basic JavaScript."
+    },
+    {
+      "name": "Introduction to Docker - Workshop",
+      "location": "Docker Copenhagen - December 2015",
+      "description": "Gave a 3-hour introduction to Docker about everything you need to know. We talked about why it mattered and how to get started with Docker on their next project.",
+      "type": "workshop"
+    },
+    {
+      "name": "The land of Isomorphic Apps",
+      "location": "CopenhagenJS - November 2015",
+      "description": "Talked about my experience creating a universal app. What to do and especially what not to do!",
+      "links": [
+        {
+          "text": "Slides",
+          "link": "https://isomorphic-apps.surge.sh/"
+        },
+        {
+          "text": "Repository",
+          "link": "https://github.com/kevinsimper/isomorphic-apps-presentation"
+        }
+      ]
+    },
+    {
+      "name": "Face Recognition on old pictures",
+      "location": "Hack4DK - October 2015",
+      "description": "During a hackathon, I worked on doing facial recognition and then gave a presentation on what I found interesting with the results and how to get started with it."
+    },
+    {
+      "name": "Introduction to webtorrent",
+      "location": "Copenhagen Frontenders - August 2015",
+      "description": "I had been hacking around with webtorrent and gave a talk about this project. I showed some small projects that I have made and explained the concept of webtorrent and what made it work."
+    },
+    {
+      "name": "Lessons learnt building with Reflux.js",
+      "location": "CopenhagenJS - May 2015",
+      "description": "I talked about lesson learned working with Reflux.js, a simple flux implementation. I showed why a unidirectional flow was a positive thing for both the development and debugging part of web development."
+    },
+    {
+      "name": "Docker Hosting - How to ship those containers?",
+      "location": "Docker Copenhagen - February 2015",
+      "description": "We all love containers, but what are the actually easiest ways to get started hosting those containers online. I showed an example on how to get started with hosting containers on Tutum (now Docker Cloud)."
+    },
+    {
+      "name": "Firespeed prototyping with Firebase",
+      "location": "CopenhagenJS - April 2014",
+      "description": "I had been working on Firebase some time and showed how it was awesome for small and quick prototypes where you wanted something awesome quick."
+    },
+    {
+      "name": "20 minutes Super Mario",
+      "location": "CopenhagenJS - Februar 2014",
+      "description": "I showed how you could build a Super Mario clone in literally 20 minutes of time with Crafty.js and all the built in modules."
+    }
+  ]
+}

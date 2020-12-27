@@ -9,3 +9,5 @@ bazel-kevinsimper.dk
 bazel-out
 bazel-testlogs
 bazel.log
+
+.next
