@@ -4,7 +4,7 @@ steps:
       [
         'clone',
         'https://github.com/kevinsimper/kevinsimper.dk-images.git',
-        'app/blog/posts/images',
+        'public/posts/images',
       ]
   - name: gcr.io/cloud-builders/bazel
     args: ['build', '//:docker']
