@@ -49,7 +49,7 @@ export async function getServerSideProps(context) {
     slug: string
     title: string
     date: string
-    tags: string[]
+    tags?: string[]
   }[] = JSON.parse(readFileSync(path + '_data.json', 'utf8'))
 
   const slug = context.params.slug
@@ -69,7 +69,7 @@ export async function getServerSideProps(context) {
     props: {
       title: post.title,
       source: mdxSource,
-      tags: post.tags,
+      tags: post.tags || [],
     },
   }
 }
