@@ -7,6 +7,7 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title>Kevin Simper</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <link rel="icon" type="image/jpeg" href="/favicon.jpg" />
       </Head>
       <header className="bg-indigo-700">
         <div className="max-w-screen-md mx-auto text-white p-4">
