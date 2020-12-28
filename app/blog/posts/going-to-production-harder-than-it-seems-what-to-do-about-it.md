@@ -14,13 +14,13 @@ You are supposed to do a simple feature, it is only talking to a single API, how
 10. You did not plan how to release the new feature that had to replace an old version
 11. You did not plan that a refactor was needed to make the feature
 
-#### “Testing in production”
+## “Testing in production”
 
 You should test all you can locally and in staging but a feature is only properly done when it is in production. Saying a feature is anywhere done before it is actually shipped is an understatement.
 
 Get the ball rolling early and deploy a minimal version to production as early as possible! This will highlight any dependency you may need help with from others, this you can get help with alongside that will not slow you down if you first figure it the day before release.
 
-#### Get your logging framework right early on
+## Get your logging framework right early on
 
 Logs are vital to debug and locally it is easy to follow, there is not much traffic and you can follow each line easily.
 
@@ -39,7 +39,7 @@ You will need your logging framework to do:
 
 It is more difficult but considers your service as it is in production always, as soon as you begin making a difference you begin making a matrix of different ways your app can work and you need to explain to all what the difference is between prod/staging/dev/test/etc. and nobody can remember.
 
-Say you use Twilio in production likesendSMS(), don’t add in your code if(env === prod) { sendSMS() } else { // do nothing because staging}. Only the developers will remember and your staging will begin to drift away from looking like production. 
+Say you use Twilio in production likesendSMS(), don’t add in your code if(env === prod) { sendSMS() } else { // do nothing because staging}. Only the developers will remember and your staging will begin to drift away from looking like production.
 
 The solution is in staging also use Twilio exactly like in production. Create another account and use those instead. This will make your application predictable. Predictable is key for quick development!
 

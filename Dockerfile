@@ -6,7 +6,7 @@ WORKDIR /app
 
 ADD package.json package-lock.json /app/
 
-RUN yarn global add node-gyp && yarn
+RUN npm i
 
 ADD . /app
 

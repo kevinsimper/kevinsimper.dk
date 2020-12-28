@@ -4,14 +4,9 @@
   "description": "My personal blog",
   "main": "server.js",
   "scripts": {
-    "watch-server": "webpack --mode=development -w --progress --config webpack.server.config.js",
-    "watch": "npm run watch-server",
-    "compile-server": "NODE_ENV=production webpack --mode=production --bail --progress --config webpack.server.config.js",
-    "compile-client": "NODE_ENV=production webpack --mode=production --bail --progress --config webpack.client.config.js",
-    "build": "npm run compile-client && npm run compile-server",
-    "post-install": "npm run build",
-    "start": "node server.js",
-    "fix-lint": "prettier --write --no-semi --single-quote \"app/**/*.js*\""
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
   "repository": {
     "type": "git",
@@ -20,7 +15,11 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@mdx-js/loader": "^1.6.22",
+    "@mdx-js/mdx": "^1.6.22",
+    "@next/mdx": "^10.0.4",
     "apollo-server-express": "2.14.1",
+    "autoprefixer": "^10.1.0",
     "axios": "0.19.2",
     "compression": "1.7.4",
     "cookie-parser": "1.4.5",
@@ -30,38 +29,20 @@
     "history": "4.10.1",
     "marked": "1.1.0",
     "moment": "2.26.0",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
+    "next": "^10.0.4",
+    "next-mdx-remote": "^2.0.0",
+    "postcss": "^8.2.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "rss": "1.2.2",
-    "serve-favicon": "2.5.0"
+    "serve-favicon": "2.5.0",
+    "tailwindcss": "^2.0.2"
   },
   "devDependencies": {
-    "@babel/core": "7.10.2",
-    "@babel/preset-env": "7.10.2",
-    "@babel/preset-react": "7.10.1",
-    "assets-webpack-plugin": "3.9.12",
-    "autoprefixer-loader": "3.2.0",
-    "babel-loader": "8.1.0",
+    "@types/react": "^17.0.0",
     "chokidar": "3.4.0",
-    "css-loader": "3.5.3",
     "express-reload": "1.2.0",
-    "file-loader": "6.0.0",
-    "html-loader": "1.1.0",
-    "ignore-file-loader": "1.0.0",
-    "image-webpack-loader": "6.0.0",
-    "json-loader": "0.5.7",
-    "markdown-loader": "5.1.0",
-    "mini-css-extract-plugin": "0.9.0",
-    "postcss-color-function": "4.1.0",
-    "postcss-loader": "3.0.0",
-    "precss": "4.0.0",
     "prettier": "2.0.5",
-    "source-map-support": "0.5.19",
-    "style-loader": "1.2.1",
-    "url-loader": "4.1.0",
-    "webpack": "4.43.0",
-    "webpack-cli": "3.3.11",
-    "webpack-dev-server": "3.11.0",
-    "webpack-hot-middleware": "2.25.0"
+    "typescript": "^4.1.3"
   }
 }

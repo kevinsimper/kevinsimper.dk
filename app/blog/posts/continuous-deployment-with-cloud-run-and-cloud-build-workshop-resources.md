@@ -112,7 +112,7 @@ Prerequisites to have done before tomorrow:
 - You should have a Google Cloud account or sign up here https://cloud.google.com/
 - Bring a computer with charger, it doesn't matter if it is Mac/Win/Chrome
 - If you want to try it out locally have Docker-for-Desktop installed, but it is not necessary, but I recommend it:
-  - [Mac](https://docs.docker.com/v17.12/docker-for-mac/install/) - I recommend installing with brew.sh "$ brew cask install docker"
+  - [Mac](https://docs.docker.com/v17.12/docker-for-mac/install/) - I recommend installing with brew.sh "\$ brew cask install docker"
   - [Windows](https://docs.docker.com/v17.12/docker-for-windows/install/) - I recommend installing with Chocolatey https://chocolatey.org/packages/docker-desktop/2.1.0.4#files
   - [Linux](https://docs.docker.com/v17.12/install/linux/docker-ce/ubuntu/#install-using-the-repository) - That is native docker
 - Github user account, this is for the Continues Deployment examples https://github.com/
@@ -128,10 +128,6 @@ What will you build with Cloud Run? 😄
 In this video I go through all the steps the attendees needs to do in one go:
 
 https://www.youtube.com/watch?v=GhSAQ19f4HA
-
-<div style="position: relative; padding-bottom: 56.25%; padding-top: 25; height: 0">
-  <iframe allowfullscreen frameborder="0" src="https://www.youtube.com/embed/GhSAQ19f4HA" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-</div>
 
 I have also written a blogpost with screenshots of each step:
 
