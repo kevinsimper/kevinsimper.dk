@@ -3,6 +3,7 @@ import { readFileSync } from 'fs'
 import mdx from '@mdx-js/mdx'
 import renderToString from 'next-mdx-remote/render-to-string'
 import hydrate from 'next-mdx-remote/hydrate'
+import Head from 'next/head'
 
 const components = {
   h1: (props) => <h1 className="text-3xl py-2" {...props} />,
@@ -21,6 +22,9 @@ function PostPage({ source, title, tags }) {
   const content = hydrate(source, { components })
   return (
     <div>
+      <Head>
+        <title>{title}</title>
+      </Head>
       <article>{content}</article>
       <div>
         Tags:{' '}

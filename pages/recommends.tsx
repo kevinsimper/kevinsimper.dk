@@ -1,4 +1,5 @@
 import React from 'react'
+import Head from 'next/head'
 
 const Item = ({ children }) => (
   <li style={{ listStyleType: 'none' }}>
@@ -24,6 +25,9 @@ function SocialPage() {
   return (
     <div>
       <h1 className="text-2xl">Stuff I recommend</h1>
+      <Head>
+        <title>Stuff I recommend - Kevin Simper</title>
+      </Head>
       <p>Recipes:</p>
       <div className="mb-2">
         <h3 className="text-xl">Pancakes - 20 pancakes</h3>

@@ -1,8 +1,13 @@
 import 'tailwindcss/tailwind.css'
+import Head from 'next/head'
 
 function MyApp({ Component, pageProps }) {
   return (
     <div className="flex flex-col min-h-screen">
+      <Head>
+        <title>Kevin Simper</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <header className="bg-indigo-700">
         <div className="max-w-screen-md mx-auto text-white p-4">
           <a href="/">
@@ -36,13 +41,15 @@ function MyApp({ Component, pageProps }) {
           </div>
         </div>
       </header>
-      <div className="max-w-screen-md mx-auto p-4 flex-1 w-full">
+      <div className="max-w-screen-md mx-auto p-4 mb-8 flex-1 w-full">
         <Component {...pageProps} />
       </div>
       <footer className="bg-indigo-900 text-white p-8">
         <div className="max-w-screen-md mx-auto flex flex-col md:flex-row justify-around">
-          <a href="/social">Contact me!</a>
-          <form method="GET" action="/search">
+          <a href="/social" className="py-2">
+            Contact me!
+          </a>
+          <form method="GET" action="/search" className="py-2">
             <input
               className="p-2"
               name="q"
@@ -50,7 +57,7 @@ function MyApp({ Component, pageProps }) {
               placeholder="Search.."
             />
           </form>
-          <div>
+          <div className="py-2">
             <strong>Pages:</strong>
             <div>
               <a href="/nametags">Nametags</a>

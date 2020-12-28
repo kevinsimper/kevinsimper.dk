@@ -1,9 +1,13 @@
 import React from 'react'
+import Head from 'next/head'
 
 function SocialPage() {
   return (
     <div>
       <h1 className="text-2xl">Find me on social media</h1>
+      <Head>
+        <title>Social media - Kevin Simper</title>
+      </Head>
       <ul>
         <li className="my-2">
           <a href="https://github.com/kevinsimper">Github</a>

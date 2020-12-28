@@ -1,11 +1,14 @@
 import React from 'react'
 import { readFileSync } from 'fs'
+import Head from 'next/head'
 
 function CategoryPage({ category, posts }) {
   return (
     <div>
       <h1 className="text-2xl">Category: {category}</h1>
-
+      <Head>
+        <title>Viewing {category} category</title>
+      </Head>
       {posts.map((post) => {
         return (
           <div className="py-2">

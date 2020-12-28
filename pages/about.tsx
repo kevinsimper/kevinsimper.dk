@@ -1,9 +1,13 @@
 import React from 'react'
+import Head from 'next/head'
 
 function AboutPage() {
   return (
     <div>
       <h1 className="text-2xl">About me</h1>
+      <Head>
+        <title>About - Kevin Simper</title>
+      </Head>
       <p>My name Kevin and I like to make new stuff.</p>
       <h2 className="text-xl mt-4">My biggest interests at the moment</h2>
       <p>
