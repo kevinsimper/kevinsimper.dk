@@ -12,6 +12,8 @@ const components = {
   p: (props) => <p className="py-2" {...props} />,
   a: (props) => <a className="text-purple-600" {...props} />,
   pre: (props) => <pre className="overflow-auto" {...props} />,
+  ul: (props) => <ol className="pl-10 list-disc" {...props} />,
+  ol: (props) => <ol className="pl-10 list-decimal" {...props} />,
   Test: <div />,
 }
 
