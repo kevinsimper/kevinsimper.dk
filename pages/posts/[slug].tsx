@@ -9,11 +9,11 @@ const components = {
   h1: (props) => <h1 className="text-3xl py-2" {...props} />,
   h2: (props) => <h2 className="text-2xl py-2" {...props} />,
   h3: (props) => <h3 className="text-xl py-2" {...props} />,
-  p: (props) => <p className="py-2" {...props} />,
+  p: (props) => <p className="pb-5" {...props} />,
   a: (props) => <a className="text-purple-600" {...props} />,
   pre: (props) => <pre className="overflow-auto" {...props} />,
-  ul: (props) => <ol className="pl-10 list-disc" {...props} />,
-  ol: (props) => <ol className="pl-10 list-decimal" {...props} />,
+  ul: (props) => <ol className="pl-10 pb-4 list-disc" {...props} />,
+  ol: (props) => <ol className="pl-10 pb-4 list-decimal" {...props} />,
   Test: <div />,
 }
 

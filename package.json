@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "fix-lint": "prettier --write --no-semi --single-quote \"app/**/*.js*\""
   },
   "repository": {
     "type": "git",
