@@ -19,6 +19,8 @@ spec:
             - name: NODE_ENV
               value: production
           image: ##IMAGE##
+          ports:
+            - containerPort: 3000
           resources:
             limits:
               cpu: 1000m

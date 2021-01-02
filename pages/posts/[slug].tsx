@@ -11,7 +11,7 @@ const components = {
   h3: (props) => <h3 className="text-xl py-2" {...props} />,
   p: (props) => <p className="pb-5" {...props} />,
   a: (props) => <a className="text-purple-600" {...props} />,
-  pre: (props) => <pre className="overflow-auto" {...props} />,
+  pre: (props) => <pre className="overflow-auto pb-4" {...props} />,
   ul: (props) => <ol className="pl-10 pb-4 list-disc" {...props} />,
   ol: (props) => <ol className="pl-10 pb-4 list-decimal" {...props} />,
   Test: <div />,
