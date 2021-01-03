@@ -1,5 +1,11 @@
 [
   {
+    "slug": "the-hard-things-about-new-applications",
+    "title": "The hard things about new applications",
+    "date": "Sun Jan 03 2021 23:21:59 GMT+0100 (Central European Standard Time)",
+    "tags": ["programming", "workflow"]
+  },
+  {
     "slug": "writing-better-typescript-with-explicit-return-values",
     "title": "Writing better typescript with explicit return values",
     "date": "Sat Jan 02 2021 23:19:38 GMT+0100 (Central European Standard Time)",
