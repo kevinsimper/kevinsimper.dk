@@ -41,7 +41,7 @@
   },
   "devDependencies": {
     "@types/react": "^17.0.0",
-    "chokidar": "3.4.0",
+    "chokidar": "3.5.1",
     "express-reload": "1.2.0",
     "prettier": "2.0.5",
     "typescript": "^4.1.3"
