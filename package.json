@@ -24,7 +24,7 @@
     "axios": "0.19.2",
     "compression": "1.7.4",
     "cookie-parser": "1.4.5",
-    "dayjs": "1.8.28",
+    "dayjs": "1.10.4",
     "express": "4.17.1",
     "graphql": "15.0.0",
     "history": "4.10.1",
