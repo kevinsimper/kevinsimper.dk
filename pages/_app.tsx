@@ -39,6 +39,9 @@ function MyApp({ Component, pageProps }) {
             <a className="pr-2" href="/projects">
               Projects
             </a>
+            <a className="pr-2" href="/map">
+              Map
+            </a>
           </div>
         </div>
       </header>
