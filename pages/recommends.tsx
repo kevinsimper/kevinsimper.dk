@@ -1,5 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 
 const Item = ({ children }) => (
   <li style={{ listStyleType: 'none' }}>
@@ -19,9 +20,17 @@ const Button = ({ href, children }) => (
   </a>
 )
 
-function SocialPage() {
-  const pizza = 4
-  const lasagne = 6
+function RecommendsPage() {
+  const router = useRouter()
+  const pizza = router.query?.pizza?.toString()
+    ? parseInt(router.query?.pizza?.toString())
+    : 4
+  const lasagne = router.query?.lasagne?.toString()
+    ? parseInt(router.query?.lasagne?.toString())
+    : 4
+  const pancake = router.query?.pancake?.toString()
+    ? parseInt(router.query?.pancake?.toString())
+    : 20
   return (
     <div>
       <h1 className="text-2xl">Stuff I recommend</h1>
@@ -30,17 +39,39 @@ function SocialPage() {
       </Head>
       <p>Recipes:</p>
       <div className="mb-2">
-        <h3 className="text-xl">Pancakes - 20 pancakes</h3>
+        <h3 className="text-xl">
+          Pancakes -{' '}
+          <input
+            type="text"
+            style={{ width: 25 }}
+            defaultValue={pancake}
+            onBlur={(e) => {
+              router.push('?pancake=' + e.target.value)
+            }}
+          />{' '}
+          pancakes
+        </h3>
         <ul>
-          <Item>250 gram flour</Item>
-          <Item>3 eggs</Item>
-          <Item>6 dl milk</Item>
-          <Item>2 spoon sugar</Item>
-          <Item>1 nip salt</Item>
+          <Item>{(250 / 20) * pancake} gram flour</Item>
+          <Item>{(3 / 20) * pancake} eggs</Item>
+          <Item>{(6 / 20) * pancake} dl milk</Item>
+          <Item>{(2 / 20) * pancake} spoon sugar</Item>
+          <Item>{(1 / 20) * pancake} nip salt</Item>
         </ul>
       </div>
       <div className="mb-2">
-        <h3 className="text-xl">Pizza - {pizza} pizzas</h3>
+        <h3 className="text-xl">
+          Pizza -{' '}
+          <input
+            type="text"
+            style={{ width: 25 }}
+            defaultValue={pizza}
+            onBlur={(e) => {
+              router.push('?pizza=' + e.target.value)
+            }}
+          />{' '}
+          pizzas
+        </h3>
         <ul>
           <Item>{0.5 * (pizza / 2)} yeast</Item>
           <Item>{3 * (pizza / 2)} lukewarm water</Item>
@@ -51,7 +82,18 @@ function SocialPage() {
         </ul>
       </div>
       <div className="mb-2">
-        <h3 className="text-xl">Lasagne - {lasagne} persons</h3>
+        <h3 className="text-xl">
+          Lasagne -{' '}
+          <input
+            type="text"
+            style={{ width: 25 }}
+            defaultValue={lasagne}
+            onBlur={(e) => {
+              router.push('?lasagne=' + e.target.value)
+            }}
+          />{' '}
+          persons
+        </h3>
         <ul>
           <Item>{500 * (lasagne / 4)} grounded beef</Item>
           <Item>{1 * (lasagne / 4)} onion</Item>
@@ -70,4 +112,4 @@ function SocialPage() {
   )
 }
 
-export default SocialPage
+export default RecommendsPage

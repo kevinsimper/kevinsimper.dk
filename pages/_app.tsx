@@ -30,7 +30,7 @@ function MyApp({ Component, pageProps }) {
             <a className="pr-2" href="/social">
               Social
             </a>
-            <a className="pr-2" href="/social">
+            <a className="pr-2" href="/recommends">
               Recommends
             </a>
             <a className="pr-2" href="/nametags">
