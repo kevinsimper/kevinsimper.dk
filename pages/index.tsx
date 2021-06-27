@@ -12,13 +12,13 @@ function HomePage({ posts }) {
       <div>
         {posts.map((post) => {
           return (
-            <div className="py-2">
+            <div key={post.slug} className="py-2">
               <a href={'/posts/' + post.slug}>
                 <h3 className="text-xl text-purple-600">{post.title}</h3>
                 <div>{post.date}</div>
                 <ul className="flex">
-                  {post.tags?.map((tag) => (
-                    <li className="pr-1">
+                  {post.tags?.map((tag, key) => (
+                    <li key={tag} className="pr-1">
                       <a
                         className="text-purple-600"
                         href={`/categories/${tag}`}
