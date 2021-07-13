@@ -71,7 +71,13 @@ function BryllupPage() {
         <p className="py-3">
           Gavekoordinator:
           <br />
-          Ønskeliste ligger i facebookgruppen: Sofie og Kevins bryllup
+          Ønskeliste ligger i facebookgruppen:{' '}
+          <a
+            className="text-blue-800"
+            href="https://www.facebook.com/groups/1727390757458431"
+          >
+            Sofie og Kevins bryllup
+          </a>
         </p>
 
         <p className="py-3">
