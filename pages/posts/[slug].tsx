@@ -1,9 +1,9 @@
 import { useRouter } from 'next/router'
 import { readFileSync } from 'fs'
 import mdx from '@mdx-js/mdx'
-import renderToString from 'next-mdx-remote/render-to-string'
-import hydrate from 'next-mdx-remote/hydrate'
+import { serialize } from 'next-mdx-remote/serialize'
 import Head from 'next/head'
+import { MDXRemote } from 'next-mdx-remote'
 
 const components = {
   h1: (props) => <h1 className="text-3xl py-2" {...props} />,
@@ -21,13 +21,12 @@ function PostPage({ source, title, tags }) {
   const router = useRouter()
   const { slug } = router.query
 
-  const content = hydrate(source, { components })
   return (
     <div>
       <Head>
         <title>{title}</title>
       </Head>
-      <article>{content}</article>
+      <article><MDXRemote {...source} components={components} /></article>
       <div>
         Tags:{' '}
         {tags &&
@@ -63,7 +62,7 @@ export async function getServerSideProps(context) {
 
   const markdown = readFileSync(path + '/' + post.slug + '.md', 'utf8')
 
-  const mdxSource = await renderToString(markdown, { components })
+  const mdxSource = await serialize(markdown)
 
   return {
     props: {
