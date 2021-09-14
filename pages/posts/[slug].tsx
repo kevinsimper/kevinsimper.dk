@@ -1,6 +1,5 @@
 import { useRouter } from 'next/router'
 import { readFileSync } from 'fs'
-import mdx from '@mdx-js/mdx'
 import { serialize } from 'next-mdx-remote/serialize'
 import Head from 'next/head'
 import { MDXRemote } from 'next-mdx-remote'
@@ -26,7 +25,9 @@ function PostPage({ source, title, tags }) {
       <Head>
         <title>{title}</title>
       </Head>
-      <article><MDXRemote {...source} components={components} /></article>
+      <article>
+        <MDXRemote {...source} components={components} />
+      </article>
       <div>
         Tags:{' '}
         {tags &&
