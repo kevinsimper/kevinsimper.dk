@@ -1,6 +1,22 @@
 {
   "presentations": [
     {
+      "name": "Advice for a great career",
+      "location": "KEA, Copenhagen - 19. October 2021",
+      "description": "I was asked to give advice to a class of frontend developers. I gave a presentation about how I got a career, what my advice was and what a good job application looked like."
+    },
+    {
+      "name": "Serverless in practice at GreenMobility",
+      "location": "GDG Cloud Copenhagen, Online - 25. August 2021",
+      "description": "I have been working at GreenMobility for more than a year and all that we are building are on Google Cloud with Serverless. In this presentation I want to share my experience using Cloud Run everyday for production workloads, how it scales for us, what we pay, what I would have done differently and what my plans are going into the future.",
+      "links": [
+        {
+          "text": "Meetup link",
+          "link": "https://www.meetup.com/gdg-cloud-copenhagen/events/280187065/"
+        }
+      ]
+    },
+    {
       "name": "Why use GraphQL Fragments",
       "location": "Copenhagen GraphQL, Copenhagen - 12. December 2019",
       "description": "In this presentation I show what the problem is if you don't use graphql fragments and I show how to easily get started with GraphQL fragments in your codebase.",
