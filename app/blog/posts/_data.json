@@ -1,9 +1,15 @@
 [
   {
+    "slug": "trekking-close-to-copenhagen-skaneleden",
+    "title": "Trekking close to Copenhagen - Skåneleden",
+    "date": "Mon Nov 08 2021 23:34:23 GMT+0100 (Central European Standard Time)",
+    "tags": ["trekking", "vacation"]
+  },
+  {
     "slug": "linearly-hard",
     "title": "Linearly hard",
     "date": "Mon Sep 20 2021 23:23:15 GMT+0200 (Central European Summer Time)",
-    "tags": []
+    "tags": ["programming"]
   },
   {
     "slug": "the-hard-things-about-new-applications",
