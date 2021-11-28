@@ -66,7 +66,13 @@ function MyApp({ Component, pageProps }) {
           </div>
         </Menu>
       </header>
-      <div className="max-w-screen-md mx-auto p-4 mb-8 flex-1 w-full">
+      <div
+        className={`${
+          Component?.pageStyle?.fullWidth
+            ? ''
+            : 'max-w-screen-md mx-auto p-4 mb-8'
+        } flex-1 w-full`}
+      >
         <Component {...pageProps} />
       </div>
       <footer className="bg-indigo-900 text-white p-8">

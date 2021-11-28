@@ -313,13 +313,16 @@ const places = {
 
 function MapPage({ GOOGLE_MAPS_PK, time }) {
   return (
-    <div className="map" style={{ minHeight: '50vh' }}>
+    <div className="map" style={{ minHeight: 'calc(100vh - 158px)' }}>
       <style>
         {`html, body, #root, .map {
       height: 100%
     }`}
       </style>
-      <div className="flex" style={{ minHeight: '50vh', height: '100%' }}>
+      <div
+        className="flex"
+        style={{ minHeight: 'calc(100vh - 158px)', height: '100%' }}
+      >
         <MapSimple
           apiKey={GOOGLE_MAPS_PK}
           focusCenter={{ lat: 55.6832338, lon: 12.5819998 }}
@@ -334,8 +337,7 @@ function MapPage({ GOOGLE_MAPS_PK, time }) {
                 var marker = new google.maps.Marker({
                   map: map,
                   position: place.location,
-                  icon:
-                    'https://storage.googleapis.com/support-kms-prod/SNP_2752125_en_v0',
+                  icon: 'https://storage.googleapis.com/support-kms-prod/SNP_2752125_en_v0',
                 })
                 bounds.extend(marker.getPosition())
               })
@@ -357,6 +359,10 @@ function MapPage({ GOOGLE_MAPS_PK, time }) {
       </div>
     </div>
   )
+}
+
+MapPage.pageStyle = {
+  fullWidth: true,
 }
 
 export async function getServerSideProps(context) {
