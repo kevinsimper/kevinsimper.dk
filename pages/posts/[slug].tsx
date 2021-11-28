@@ -16,7 +16,7 @@ const components = {
   Test: <div />,
 }
 
-function PostPage({ source, title, tags }) {
+function PostPage({ source, title, tags, published }) {
   const router = useRouter()
   const { slug } = router.query
 
@@ -26,6 +26,7 @@ function PostPage({ source, title, tags }) {
         <title>{title}</title>
       </Head>
       <article>
+        <div className="text-right">{new Date(published).toISOString()}</div>
         <MDXRemote {...source} components={components} />
       </article>
       <div>
@@ -69,6 +70,7 @@ export async function getServerSideProps(context) {
     props: {
       title: post.title,
       source: mdxSource,
+      published: post.date,
       tags: post.tags || [],
     },
   }
