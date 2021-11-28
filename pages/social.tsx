@@ -10,7 +10,7 @@ function SocialPage() {
       </Head>
       <ul>
         <li className="my-2">
-          <a href="https://github.com/kevinsimper">Github</a>
+          <a href="https://github.com/kevinsimper">GitHub</a>
         </li>
         <li className="my-2">
           <a href="https://twitter.com/kevinsimper">Twitter</a>
