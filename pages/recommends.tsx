@@ -1,5 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 const Item = ({ children }) => (
@@ -31,13 +32,17 @@ function RecommendsPage() {
   const pancake = router.query?.pancake?.toString()
     ? parseInt(router.query?.pancake?.toString())
     : 20
+
   return (
     <div>
-      <h1 className="text-2xl">Stuff I recommend</h1>
+      <h1 className="text-3xl mb-2">Stuff I recommend</h1>
       <Head>
         <title>Stuff I recommend - Kevin Simper</title>
       </Head>
-      <p>Recipes:</p>
+      <Link href={{ pathname: '/climbs' }}>
+        <a className="text-purple-600">Climbs I have done on bike</a>
+      </Link>
+      <h2 className="text-2xl py-2">Recipes:</h2>
       <div className="mb-2">
         <h3 className="text-xl">
           Pancakes -{' '}
@@ -45,7 +50,7 @@ function RecommendsPage() {
             type="text"
             style={{ width: 25 }}
             defaultValue={pancake}
-            onBlur={(e) => {
+            onChange={(e) => {
               router.push('?pancake=' + e.target.value)
             }}
           />{' '}
@@ -66,7 +71,7 @@ function RecommendsPage() {
             type="text"
             style={{ width: 25 }}
             defaultValue={pizza}
-            onBlur={(e) => {
+            onChange={(e) => {
               router.push('?pizza=' + e.target.value)
             }}
           />{' '}
@@ -88,7 +93,7 @@ function RecommendsPage() {
             type="text"
             style={{ width: 25 }}
             defaultValue={lasagne}
-            onBlur={(e) => {
+            onChange={(e) => {
               router.push('?lasagne=' + e.target.value)
             }}
           />{' '}
