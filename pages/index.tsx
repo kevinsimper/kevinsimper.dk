@@ -3,7 +3,22 @@ import { readFileSync } from 'fs'
 function HomePage({ posts }) {
   return (
     <div>
-      <div className="md:-mx-8 my-4 md:my-6 md:p-8 p-4 rounded text-2xl leading-tight bg-indigo-200 text-purple-900">
+      <div
+        className="rounded"
+        style={{
+          backgroundImage: 'url(https://i.imgur.com/TXDOXbD.png)',
+          height: 400,
+          backgroundSize: 'cover',
+          backgroundPositionX: 'calc(50% - -50px)',
+        }}
+      ></div>
+      <div
+        className="my-4 md:my-6 md:p-8 p-6 rounded text-2xl md:leading-tight bg-indigo-500 text-white"
+        style={{
+          background:
+            'linear-gradient(297deg, rgba(125,52,173,1) 11%, rgba(99,102,241,1) 100%)',
+        }}
+      >
         Hi, my name is Kevin Simper. I work at GreenMobility as Tech Lead and
         like to write about tech. I also like to make videos on youtube about
         programming and organize meetups.

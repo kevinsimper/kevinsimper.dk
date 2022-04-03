@@ -44,7 +44,13 @@ function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="icon" type="image/jpeg" href="/favicon.jpg" />
       </Head>
-      <header className="bg-indigo-700">
+      <header
+        className="bg-indigo-700"
+        style={{
+          background:
+            'linear-gradient(297deg, rgba(105,44,145,1) 11%, rgba(55,58,199,1) 100%)',
+        }}
+      >
         <div className="max-w-screen-md mx-auto flex md:block justify-between text-white p-4">
           <a href="/">
             <h1 className="text-2xl">KevinSimper</h1>
