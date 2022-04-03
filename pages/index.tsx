@@ -15,20 +15,17 @@ function HomePage({ posts }) {
             <div key={post.slug} className="py-2">
               <a href={'/posts/' + post.slug}>
                 <h3 className="text-xl text-purple-600">{post.title}</h3>
-                <div>{new Date(post.date).toISOString()}</div>
-                <ul className="flex">
-                  {post.tags?.map((tag, key) => (
-                    <li key={tag} className="pr-1">
-                      <a
-                        className="text-purple-600"
-                        href={`/categories/${tag}`}
-                      >
-                        #{tag}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
               </a>
+              <div>{new Date(post.date).toISOString()}</div>
+              <ul className="flex">
+                {post.tags?.map((tag, key) => (
+                  <li key={tag} className="pr-1">
+                    <a className="text-purple-600" href={`/categories/${tag}`}>
+                      #{tag}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
           )
         })}
