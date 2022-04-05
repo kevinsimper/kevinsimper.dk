@@ -8,9 +8,6 @@ Typically cloud provider, they try to provide building blocks that you can build
 
 You will need a Google Cloud account, you can get started for free entirely but you will need to put in a credit card because they limit abuse.
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
 - [Create a small example app](#create-a-small-example-app)
   - [Creating a small node.js server](#creating-a-small-nodejs-server)
   - [Creating a docker image](#creating-a-docker-image)
@@ -28,8 +25,6 @@ You will need a Google Cloud account, you can get started for free entirely but 
   - [Add gcloud command to cloud build](#add-gcloud-command-to-cloud-build)
   - [Permission denied on Cloud Build](#permission-denied-on-cloud-build)
 - [Conclusion - a what to do next](#conclusion---a-what-to-do-next)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Create a small example app
 
@@ -283,8 +278,14 @@ We will create a file called `cloudbuild.yaml` and define the first step that it
 
 ```yaml
 steps:
-- name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/cloud-run-cd-example/cloud-run-continuous-deployment-example:$SHORT_SHA', '.']
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      [
+        'build',
+        '-t',
+        'gcr.io/cloud-run-cd-example/cloud-run-continuous-deployment-example:$SHORT_SHA',
+        '.',
+      ]
 ```
 
 This will do the same as before, but we need to go to Cloud Build in the Google Cloud Console and click Edit under Triggers
@@ -313,10 +314,20 @@ Update the `cloudbuild.yaml` to push the docker image manually like this:
 
 ```yaml
 steps:
-- name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/cloud-run-cd-example/cloud-run-continuous-deployment-example:$SHORT_SHA', '.']
-- name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/cloud-run-cd-example/cloud-run-continuous-deployment-example:$SHORT_SHA']
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      [
+        'build',
+        '-t',
+        'gcr.io/cloud-run-cd-example/cloud-run-continuous-deployment-example:$SHORT_SHA',
+        '.',
+      ]
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      [
+        'push',
+        'gcr.io/cloud-run-cd-example/cloud-run-continuous-deployment-example:$SHORT_SHA',
+      ]
 ```
 
 And push that to GitHub
@@ -430,12 +441,30 @@ We can now add it as the third step in our `cloudbuild.yaml`
 
 ```yaml
 steps:
-- name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/cloud-run-cd-example/cloud-run-continuous-deployment-example:$SHORT_SHA', '.']
-- name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/cloud-run-cd-example/cloud-run-continuous-deployment-example:$SHORT_SHA']
-- name: 'gcr.io/cloud-builders/gcloud'
-  args: ['beta', 'run', 'deploy', 'cloud-run-continuous-deployment-example', '--image=gcr.io/cloud-run-cd-example/cloud-run-continuous-deployment-example:$SHORT_SHA', '--region=us-central1']
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      [
+        'build',
+        '-t',
+        'gcr.io/cloud-run-cd-example/cloud-run-continuous-deployment-example:$SHORT_SHA',
+        '.',
+      ]
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      [
+        'push',
+        'gcr.io/cloud-run-cd-example/cloud-run-continuous-deployment-example:$SHORT_SHA',
+      ]
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args:
+      [
+        'beta',
+        'run',
+        'deploy',
+        'cloud-run-continuous-deployment-example',
+        '--image=gcr.io/cloud-run-cd-example/cloud-run-continuous-deployment-example:$SHORT_SHA',
+        '--region=us-central1',
+      ]
 ```
 
 So now Cloud Build will run a container that has the gcloud sdk cli and it will execute the same command that we ran just earlier, but notice how we used the `$SHORT_SHA` template variable, that one will be updated for each build. That is how we will deploy the newest version after it has been built always automatically.

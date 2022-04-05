@@ -6,9 +6,6 @@ You can see the original event here: https://www.meetup.com/gdg-cloud-copenhagen
 
 You can use for inspiration and what a schedule could look like. I do make these materials from scratch each time, because I think it is difficult to generalize and I put a lot of energy into making it great and personal. A workshop for me I also a lot about the person presenting and how he/she makes the whole process of learning feel.
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
 **Table of Contents**
 
 - [Meetup Description](#meetup-description)
@@ -24,8 +21,6 @@ You can use for inspiration and what a schedule could look like. I do make these
 - [Budget](#budget)
 - [Follow up email](#follow-up-email)
 - [Conclusion](#conclusion)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Meetup Description
 
