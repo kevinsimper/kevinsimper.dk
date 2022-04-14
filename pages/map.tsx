@@ -1,6 +1,6 @@
 import { MapSimple } from '../components/MapSimple'
 
-const places = {
+export const places = {
   southamerica: {
     color: '#FF0000',
     cords: [
@@ -8,14 +8,14 @@ const places = {
         name: 'copenhagen',
         location: {
           lat: 55.6760968,
-          lng: 12.568337100000008,
+          lng: 12.5683371,
         },
       },
       {
         name: 'Fort Lauderdale',
         location: {
           lat: 26.1224386,
-          lng: -80.13731740000003,
+          lng: -80.1373174,
         },
       },
       {
@@ -36,7 +36,7 @@ const places = {
         name: 'Fort Lauderdale',
         location: {
           lat: 26.1224386,
-          lng: -80.13731740000003,
+          lng: -80.1373174,
         },
       },
       {
@@ -106,7 +106,7 @@ const places = {
         name: 'Mancora',
         location: {
           lat: -4.1034782,
-          lng: -81.04510370000003,
+          lng: -81.0451037,
         },
       },
       {
@@ -190,7 +190,7 @@ const places = {
         name: 'Copenhagen',
         location: {
           lat: 55.6760968,
-          lng: 12.568337100000008,
+          lng: 12.5683371,
         },
       },
     ],
@@ -202,7 +202,7 @@ const places = {
         name: 'copenhagen',
         location: {
           lat: 55.6760968,
-          lng: 12.568337100000008,
+          lng: 12.5683371,
         },
       },
       {
@@ -221,7 +221,7 @@ const places = {
         name: 'copenhagen',
         location: {
           lat: 55.6760968,
-          lng: 12.568337100000008,
+          lng: 12.5683371,
         },
       },
       {
@@ -240,7 +240,7 @@ const places = {
         name: 'copenhagen',
         location: {
           lat: 55.6760968,
-          lng: 12.568337100000008,
+          lng: 12.5683371,
         },
       },
       {
@@ -259,7 +259,7 @@ const places = {
         name: 'copenhagen',
         location: {
           lat: 55.6760968,
-          lng: 12.568337100000008,
+          lng: 12.5683371,
         },
       },
       {
@@ -278,7 +278,7 @@ const places = {
         name: 'copenhagen',
         location: {
           lat: 55.6760968,
-          lng: 12.568337100000008,
+          lng: 12.5683371,
         },
       },
       {
@@ -297,7 +297,7 @@ const places = {
         name: 'copenhagen',
         location: {
           lat: 55.6760968,
-          lng: 12.568337100000008,
+          lng: 12.5683371,
         },
       },
       {
