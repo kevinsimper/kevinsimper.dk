@@ -82,18 +82,21 @@ function MyApp({ Component, pageProps }) {
         <Component {...pageProps} />
       </div>
       <footer className="bg-indigo-900 text-white p-8">
-        <div className="max-w-screen-md mx-auto flex flex-col md:flex-row justify-around">
-          <a href="/social" className="py-2">
-            Contact me!
-          </a>
-          <form method="GET" action="/search" className="py-2">
-            <input
-              className="p-2"
-              name="q"
-              type="search"
-              placeholder="Search.."
-            />
-          </form>
+        <div className="max-w-screen-md mx-auto flex flex-col md:flex-row gap-4 justify-around">
+          <div className="flex-1">
+            <a href="/social" className="py-2">
+              Contact me!
+            </a>
+            <form method="GET" action="/search" className="py-4">
+              Search blogposts:
+              <input
+                className="p-2 text-black w-full"
+                name="q"
+                type="search"
+                placeholder="Search and press enter.."
+              />
+            </form>
+          </div>
           <div className="py-2">
             <strong>Pages:</strong>
             <div>

@@ -63,13 +63,13 @@ We need to load the library lit-element and we can find it on [unpkg.com](https:
 
 It is a super simple website that exposes all npmjs.com modules and makes it super easy to load them in the browser.
 
-We can load lit-element by going to <https://unpkg.com/lit-element> and we will be redirected to the latest version if we want to include the specific version.
+We can load lit-element by going to https://unpkg.com/lit-element and we will be redirected to the latest version if we want to include the specific version.
 
-Like this: <https://unpkg.com/lit-element@2.1.0/lit-element.js>
+Like this: https://unpkg.com/lit-element@2.1.0/lit-element.js
 
 The new thing with native module loading requires _all_ imports to be relative, and unpkg does also support that. It will automatically rewrite the script file if you append `?module` to the URL.
 
-Like this: <https://unpkg.com/lit-element@2.1.0/lit-element.js?module>
+Like this: https://unpkg.com/lit-element@2.1.0/lit-element.js?module
 
 You will see that it has rewritten imports like this
 
@@ -85,7 +85,7 @@ So in your `main.js` include LitElement
 ```javascript
 import {
   LitElement,
-  html
+  html,
 } from 'https://unpkg.com/lit-element@2.1.0/lit-element.js?module'
 ```
 
@@ -104,9 +104,7 @@ So you can now write a component and define it like this:
 ```javascript
 class MyButton extends LitElement {
   render() {
-    return html`
-      <button>My Button</button>
-    `
+    return html` <button>My Button</button> `
   }
 }
 ```
@@ -144,18 +142,14 @@ Let us try to create two pages like if we had a website with multiple pages.
 ```javascript
 class PageA extends LitElement {
   render() {
-    return html`
-      <div>Page A</div>
-    `
+    return html` <div>Page A</div> `
   }
 }
 customElements.define('my-pagea', PageA)
 
 class PageB extends LitElement {
   render() {
-    return html`
-      <div>Page B</div>
-    `
+    return html` <div>Page B</div> `
   }
 }
 customElements.define('my-pageb', PageB)
@@ -168,9 +162,7 @@ And since we now have two pages we need a main entrypoint for our app, so we can
 ```javascript
 class MyAwesomeApp extends LitElement {
   render() {
-    return html`
-      <div><h1>MyAwesomeApp</h1></div>
-    `
+    return html` <div><h1>MyAwesomeApp</h1></div> `
   }
 }
 customElements.define('my-awesome-app', MyAwesomeApp)
@@ -216,7 +208,7 @@ We now need a router library, such a library has responsibility to look at the U
 
 One library like that could be Navigo, https://www.npmjs.com/package/navigo
 
-Include that at the top of the file with unpkg.com, you can see the URL to the "module" version, <https://github.com/krasimir/navigo/blob/master/package.json#L7>
+Include that at the top of the file with unpkg.com, you can see the URL to the "module" version, https://github.com/krasimir/navigo/blob/master/package.json#L7
 
 ```javascript
 import Navigo from 'https://unpkg.com/navigo@7.1.2/lib/navigo.es.js'
@@ -297,10 +289,10 @@ Try to add them yourself!
 
 This is an awesome start on any small app and you can continue with making small components and building up your pages.
 
-LitElement also supports CSS which you can see here <https://lit-element.polymer-project.org/guide/styles>
+LitElement also supports CSS which you can see here https://lit-element.polymer-project.org/guide/styles
 
 You can find the full example here, try making something similar!
 
-You can find the sourcecode here <https://github.com/kevinsimper/lit-element-with-router>
+You can find the sourcecode here https://github.com/kevinsimper/lit-element-with-router
 
-and a working example here <https://kevinsimper.github.io/lit-element-with-router/>
+and a working example here https://kevinsimper.github.io/lit-element-with-router/

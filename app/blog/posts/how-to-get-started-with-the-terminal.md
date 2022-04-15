@@ -30,7 +30,7 @@ You can open all kinds of files and the program that will open the file is deter
 
 If you try to open a `.html` your browser will show the file.
 
-You can also override that behaviour on Mac by providing the name of the app you want to use like this,  eg. `open -a "Google Chrome" index.html`
+You can also override that behaviour on Mac by providing the name of the app you want to use like this, eg. `open -a "Google Chrome" index.html`
 
 ## Know how to lookup help
 
@@ -42,5 +42,4 @@ Or you can ask for the manual by using the program `man` which is a tool to load
 
 You know the essentials and enough to become dangerous with the command line, the key is to keep pracicing and becoming more and more familiar with the terminal. Try to think when you do something that you do often if you can replace that action with a command in the terminal and often that is the case, you will save time and mouse clicks which in the end will make you more productive, but at the start it feels like a very steep learning curve!
 
-If you combine this with git, you should read my next blogpost about effective git workflow! <https://www.kevinsimper.dk/posts/effective-git-workflow-how-i-use-git>
-
+If you combine this with git, you should read my next blogpost about effective git workflow! https://www.kevinsimper.dk/posts/effective-git-workflow-how-i-use-git

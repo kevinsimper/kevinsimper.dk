@@ -16,7 +16,7 @@ Knowing how to keep your private key safe, but also without accidentally loosing
 
 ### Get familiar with a test network
 
-There exist the main network, which is the real network and then there exist a test network which is used for development, but it is just as real as the main network. 
+There exist the main network, which is the real network and then there exist a test network which is used for development, but it is just as real as the main network.
 
 It is funny as the networks are identical, the only difference with blockchains is that the real one is the one most people support, so in theory the test network could become real, but that is very unlikely.
 
@@ -28,7 +28,7 @@ https://faucet.rinkeby.io/
 
 Solidity is the programming language for the Ethereum blockchain. There is several ways you can started, the most fun is probrably Crypto Zombies which is a fun tutorial, learning how to write a smart contract for a small tamagotchi game.
 
-<https://cryptozombies.io/>
+https://cryptozombies.io/
 
 and you can try to run some of these smart contracts in this online Solidity compiler, you can do that with the online developed Remix
 

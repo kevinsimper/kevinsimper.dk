@@ -8,7 +8,7 @@ There is the website unpkg.com which you can use to load npm packages, and if yo
 
 Next problem is that many packages don't have a `"module"` in their package.json yet, that is where pikapkg can help you, it will highlight packages that support "modules".
 
-<https://www.pikapkg.com/>
+https://www.pikapkg.com/
 
 You can even see packages that don't have any dependencies!
 
@@ -16,7 +16,7 @@ There can still be problems loading npm packages, as some of them load other pac
 
 But sometimes that is because the npm package is focused on node.js which by default can't load import/export packages, but sometimes the ES module code is still published, sometimes it is in a folder called `src`, so would be able to load the code with unplug.com by doing `import "https://unpkg.com/MYPACKAGE/src/index.js?module"` , but there is no easy way to look at the folders published in the `.tar` files that npmjs.org serves.
 
-That you can solve with jsdelivr.com, they can be used as a CDN, but they also show any npmjs package contain on their website. <https://www.jsdelivr.com/package/npm/lit-element>
+That you can solve with jsdelivr.com, they can be used as a CDN, but they also show any npmjs package contain on their website. https://www.jsdelivr.com/package/npm/lit-element
 
 ### In conclusion
 

@@ -63,7 +63,7 @@ This can be a bit frustrating if you discover this too late and the talk has bee
 
 ### Do try to find the swag early on
 
-There are often a few places where you can get some awesome conference swag that is more than a nice tshirt and some cool stickers. Last year I got the second book of "The Site Reliability Workbook" for free and signed by all authors!! And I got a cool 2fa key by Google! <https://landing.google.com/sre/books/>
+There are often a few places where you can get some awesome conference swag that is more than a nice tshirt and some cool stickers. Last year I got the second book of "The Site Reliability Workbook" for free and signed by all authors!! And I got a cool 2fa key by Google! https://landing.google.com/sre/books/
 
 ### You can loan free smartphone power bank
 
