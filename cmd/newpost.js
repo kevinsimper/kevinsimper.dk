@@ -1,5 +1,7 @@
 const fs = require('fs')
+const prompts = require('prompts')
 const { execSync } = require('child_process')
+const { open } = require('./help/index')
 
 const postFolder = './app/blog/posts/'
 const dataFile = './app/blog/posts/_data.json'
@@ -24,16 +26,21 @@ function newPost({ title }) {
     slug,
     title,
     date: new Date().toString(),
-    tags: []
+    tags: [],
   }
 }
 
-function main() {
-  const title = process.argv[2]
+async function main() {
+  const { title } = await prompts({
+    type: 'text',
+    name: 'title',
+    message: 'Title',
+  })
+
   if (!title) {
-    console.error('No title provided!')
-    process.exit(1)
+    return false
   }
+
   let posts = getPosts()
   const post = newPost({ title })
   posts.unshift(post)
@@ -48,6 +55,8 @@ function main() {
   console.log(outputMd)
 
   execSync('npm run fix-lint')
+
+  open(post)
 }
 
 if (require.main === module) main()
