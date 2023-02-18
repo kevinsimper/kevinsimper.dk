@@ -20,13 +20,25 @@ function HomePage() {
                 experience.company
               )}
             </h2>
-            <div>{experience.title}</div>
             <div>{experience.location}</div>
-            <div>
-              Started {experience.start}
-              {experience.end ? ' - ' + experience.end : ''}
+            <div className="space-y-2 my-2">
+              {(experience.advancements || [experience]).map((advancements) => {
+                return (
+                  <div className="flex">
+                    <div className="w-1/4">{advancements.title}</div>
+                    <div className="flex-1">
+                      <div>
+                        Started {advancements.start}
+                        {advancements.end
+                          ? ' - ' + advancements.end
+                          : ' - Currently'}
+                      </div>
+                      <div>{advancements.description}</div>
+                    </div>
+                  </div>
+                )
+              })}
             </div>
-            <div>{experience.description}</div>
           </div>
         )
       })}

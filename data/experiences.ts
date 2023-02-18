@@ -2,14 +2,29 @@ export default [
   {
     company: 'GreenMobility',
     location: 'Landgreven 3, 1301 Copenhagen, Denmark',
-    start: '05/2020',
-    end: '',
-    title: 'Tech Lead',
-    description: `
-      Helping GreenMobility scale to more cities. When I started we had 400 vehicles in Copenhagen and Aarhus.
-      I think electric car sharing is the coolest. It improves the cities by having fewer cars standing still,
-      vehicles that does not pollute with both smoke and noise.
-    `,
+    advancements: [
+      {
+        start: '04/2022',
+        end: '',
+        title: 'CTO',
+        description: `
+          Helping GreenMobility scale to more cities. When I started we had 400 vehicles in Copenhagen and Aarhus.
+          I think electric car sharing is the coolest. It improves the cities by having fewer cars standing still,
+          vehicles that does not pollute with both smoke and noise.
+        `,
+      },
+      {
+        start: '05/2020',
+        end: '03/2022',
+        title: 'Tech Lead',
+        description: `
+          Helping GreenMobility scale to more cities. When I started we had 400 vehicles in Copenhagen and Aarhus.
+          I think electric car sharing is the coolest. It improves the cities by having fewer cars standing still,
+          vehicles that does not pollute with both smoke and noise.
+        `,
+      },
+    ],
+
     link: 'https://www.greenmobility.com/',
   },
   {
@@ -24,21 +39,23 @@ export default [
   {
     company: 'Connected Cars',
     location: 'Banemarksvej 2B, 2600 Glostrup, Denmark',
-    start: '08/2017',
-    end: '05/2018',
-    title: 'VP Engineering',
-    description:
-      'Started from the start working on making a platform for Connected Cars for Volkswagen, Audi, Skoda and Volkswagen. It is built with Node.js and React and deployed with Docker and Kubernetes.',
-    link: 'https://connectedcars.io/',
-  },
-  {
-    company: 'Connected Cars',
-    location: 'Banemarksvej 2B, 2600 Glostrup, Denmark',
-    start: '10/2016',
-    end: '07/2017',
-    title: 'CTO / Full Stack Developer',
-    description:
-      'Started from the start working on making a platform for Connected Cars for Volkswagen, Audi, Skoda and Volkswagen. It is built with Node.js and React and deployed with Docker and Kubernetes.',
+    advancements: [
+      {
+        start: '08/2017',
+        end: '05/2018',
+        title: 'VP Engineering',
+        description:
+          'Started from the start working on making a platform for Connected Cars for Volkswagen, Audi, Skoda and Volkswagen. It is built with Node.js and React and deployed with Docker and Kubernetes.',
+      },
+      {
+        start: '10/2016',
+        end: '07/2017',
+        title: 'CTO / Full Stack Developer',
+        description:
+          'Started from the start working on making a platform for Connected Cars for Volkswagen, Audi, Skoda and Volkswagen. It is built with Node.js and React and deployed with Docker and Kubernetes.',
+      },
+    ],
+
     link: 'https://connectedcars.io/',
   },
   {
