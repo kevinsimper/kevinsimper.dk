@@ -39,8 +39,8 @@ function RecommendsPage() {
       <Head>
         <title>Stuff I recommend - Kevin Simper</title>
       </Head>
-      <Link href={{ pathname: '/climbs' }}>
-        <a className="text-purple-600">Climbs I have done on bike</a>
+      <Link href={{ pathname: '/climbs' }} className="text-purple-600">
+        Climbs I have done on bike
       </Link>
       <h2 className="text-2xl py-2">Recipes:</h2>
       <div className="mb-2">

@@ -16,7 +16,7 @@ const components = {
   Test: <div />,
 }
 
-function PostPage({ source, title, tags, published }) {
+function PostPage({ source, title, tags, published, next, prev }) {
   const router = useRouter()
   const { slug } = router.query
 
@@ -29,17 +29,50 @@ function PostPage({ source, title, tags, published }) {
         <div className="text-right">{new Date(published).toISOString()}</div>
         <MDXRemote {...source} components={components} />
       </article>
-      <div>
-        Tags:{' '}
-        {tags &&
-          tags.map((t, id) => (
-            <span key={id}>
-              <a className="text-purple-600" href={`/categories/${t}`}>
-                #{t}
-              </a>{' '}
-            </span>
-          ))}
-      </div>
+      <table>
+        <tbody>
+          {tags.length > 0 && (
+            <tr>
+              <td align="right">
+                <strong>Tags:</strong>
+              </td>
+              <td>
+                {tags.map((t, id) => (
+                  <span key={id}>
+                    <a className="text-purple-600" href={`/categories/${t}`}>
+                      #{t}
+                    </a>{' '}
+                  </span>
+                ))}
+              </td>
+            </tr>
+          )}
+          {prev && (
+            <tr>
+              <td align="right">
+                <strong>Previous:</strong>
+              </td>
+              <td>
+                <a className="text-purple-600" href={'/posts/' + prev.slug}>
+                  {prev.title}
+                </a>
+              </td>
+            </tr>
+          )}
+          {next && (
+            <tr>
+              <td align="right">
+                <strong>Next:</strong>
+              </td>
+              <td>
+                <a className="text-purple-600" href={'/posts/' + next.slug}>
+                  {next.title}
+                </a>
+              </td>
+            </tr>
+          )}
+        </tbody>
+      </table>
     </div>
   )
 }
@@ -62,6 +95,10 @@ export async function getServerSideProps(context) {
     }
   }
 
+  const index = data.indexOf(post)
+  const next = index + 1 !== data.length ? data[index + 1] : null
+  const prev = index != 0 ? data[index - 1] : null
+
   const markdown = readFileSync(path + '/' + post.slug + '.md', 'utf8')
 
   const mdxSource = await serialize(markdown)
@@ -72,6 +109,8 @@ export async function getServerSideProps(context) {
       source: mdxSource,
       published: post.date,
       tags: post.tags || [],
+      next,
+      prev,
     },
   }
 }
