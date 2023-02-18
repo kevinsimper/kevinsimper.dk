@@ -88,7 +88,7 @@ function MyApp({ Component, pageProps }) {
               Contact me!
             </a>
             <form method="GET" action="/search" className="py-4">
-              Search blogposts:
+              <div className="py-2">Search:</div>
               <input
                 className="p-2 text-black w-full"
                 name="q"
@@ -102,8 +102,6 @@ function MyApp({ Component, pageProps }) {
             <div>
               <a href="/nametags">Nametags</a>
               <br />
-              <a href="/kubernetes-training">Kubernetes Training</a>
-              <br />
               <a href="/recommends">Recommends</a>
               <br />
               <a href="/projects">Projects</a>
@@ -114,10 +112,8 @@ function MyApp({ Component, pageProps }) {
               <br />
               <a href="http://kevinsimper.eth">kevinsimper.eth</a>
               <br />
-              <a href="https://gdg-search.firebaseapp.com">GDG Search</a>
-              <br />
               <a href="https://copenhagenjs.dk/speaker/?name=kevin-simper">
-                CopenhagenJS Speaker Profile
+                CopenhagenJS Speaker
               </a>
             </div>
           </div>

@@ -10,59 +10,59 @@ function AboutPage() {
       </Head>
       <p>My name Kevin and I like to make new stuff.</p>
       <h2 className="text-xl mt-4">My biggest interests at the moment</h2>
-      <p>
-        <ul>
-          <li>
-            <a className="text-purple-600" href="/categories/kubernetes">
-              Kubernetes
-            </a>{' '}
-            and{' '}
-            <a className="text-purple-600" href="/categories/google%20cloud">
-              Google Cloud
-            </a>
-          </li>
-          <li>
-            <a className="text-purple-600" href="/categories/community">
-              Organizing community events
-            </a>
-          </li>
-          <li>
-            <a className="text-purple-600" href="/categories/speaking">
-              Public speaking and teaching
-            </a>
-          </li>
-          <li>
-            <a className="text-purple-600" href="/categories/ethereum">
-              Ethereum
-            </a>{' '}
-            and Crypto currencies
-          </li>
-          <li>
-            <a className="text-purple-600" href="/categories/vr">
-              Virtual Reality
-            </a>
-          </li>
-        </ul>
-      </p>
+
+      <ul>
+        <li>
+          <a className="text-purple-600" href="/categories/kubernetes">
+            Kubernetes
+          </a>{' '}
+          and{' '}
+          <a className="text-purple-600" href="/categories/google%20cloud">
+            Google Cloud
+          </a>
+        </li>
+        <li>
+          <a className="text-purple-600" href="/categories/community">
+            Organizing community events
+          </a>
+        </li>
+        <li>
+          <a className="text-purple-600" href="/categories/speaking">
+            Public speaking and teaching
+          </a>
+        </li>
+        <li>
+          <a className="text-purple-600" href="/categories/ethereum">
+            Ethereum
+          </a>{' '}
+          and Crypto currencies
+        </li>
+        <li>
+          <a className="text-purple-600" href="/categories/vr">
+            Virtual Reality
+          </a>
+        </li>
+      </ul>
+
       <h2 className="text-xl mt-4">Meetups I help organize</h2>
       <p>Check them out and join me!</p>
-      <p>
-        <ul>
-          <li>
-            <a className="text-purple-600" href="https://copenhagenjs.dk">
-              CopenhagenJS
-            </a>
-          </li>
-          <li>
-            <a
-              className="text-purple-600"
-              href="https://www.meetup.com/gdg-cloud-copenhagen/"
-            >
-              GDG Cloud Copenhagen
-            </a>
-          </li>
-        </ul>
-      </p>
+
+      <ul>
+        <li>
+          <a className="text-purple-600" href="https://copenhagenjs.dk">
+            CopenhagenJS
+          </a>
+        </li>
+        <li>
+          <a
+            className="text-purple-600"
+            href="https://www.meetup.com/gdg-cloud-copenhagen/"
+          >
+            GDG Cloud Copenhagen
+          </a>
+        </li>
+      </ul>
+
       <div>
         <div>
           <h2 className="text-xl mt-4">Presentations</h2>

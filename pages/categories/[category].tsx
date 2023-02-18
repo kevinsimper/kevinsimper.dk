@@ -14,17 +14,17 @@ function CategoryPage({ category, posts }) {
           <div className="py-2">
             <a href={'/posts/' + post.slug}>
               <h3 className="text-xl text-purple-600">{post.title}</h3>
-              <div>{post.date}</div>
-              <ul className="flex">
-                {post.tags?.map((tag) => (
-                  <li className="pr-1">
-                    <a className="text-purple-600" href={`/categories/${tag}`}>
-                      #{tag}
-                    </a>
-                  </li>
-                ))}
-              </ul>
             </a>
+            <div>{post.date}</div>
+            <ul className="flex">
+              {post.tags?.map((tag) => (
+                <li className="pr-1">
+                  <a className="text-purple-600" href={`/categories/${tag}`}>
+                    #{tag}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
         )
       })}

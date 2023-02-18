@@ -19,8 +19,8 @@ function HomePage({ posts }) {
             'linear-gradient(297deg, rgba(125,52,173,1) 11%, rgba(99,102,241,1) 100%)',
         }}
       >
-        Hi, my name is Kevin Simper. I work at GreenMobility as Tech Lead and
-        like to write about tech. I also like to make videos on youtube about
+        Hi, my name is Kevin Simper. I work at GreenMobility as CTO and like to
+        write about tech. I also like to make videos on youtube about
         programming and organize meetups.
       </div>
       <h2 className="text-xl my-2">My latest posts:</h2>
@@ -31,7 +31,7 @@ function HomePage({ posts }) {
               <a href={'/posts/' + post.slug}>
                 <h3 className="text-xl text-purple-600">{post.title}</h3>
               </a>
-              <div>{new Date(post.date).toISOString()}</div>
+              <div>{new Date(post.date).toISOString().split('T')[0]}</div>
               <ul className="flex">
                 {post.tags?.map((tag, key) => (
                   <li key={tag} className="pr-1">

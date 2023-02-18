@@ -3,27 +3,42 @@ import Head from 'next/head'
 
 function SocialPage() {
   return (
-    <div>
-      <h1 className="text-2xl">Find me on social media</h1>
+    <div className="py-6">
       <Head>
         <title>Social media - Kevin Simper</title>
       </Head>
-      <ul>
-        <li className="my-2">
-          <a href="https://github.com/kevinsimper">GitHub</a>
+      <h1 className="text-2xl text-center">Find me on social media</h1>
+      <ul className="grid lg:grid-cols-4 gap-3 my-4 content-center items-center">
+        <li className="text-center border-2 bg-black text-white rounded-full">
+          <a
+            className="block aspect-square flex place-items-center"
+            href="https://github.com/kevinsimper"
+          >
+            <div className="flex-1">GitHub</div>
+          </a>
         </li>
-        <li className="my-2">
-          <a href="https://twitter.com/kevinsimper">Twitter</a>
+        <li className="text-center border-2 bg-blue-400 text-white rounded-full">
+          <a
+            className="block aspect-square flex place-items-center"
+            href="https://twitter.com/kevinsimper"
+          >
+            <div className="flex-1">Twitter</div>
+          </a>
         </li>
-        <li className="my-2">
-          <a href="https://www.facebook.com/kevinsimper">Facebook</a>
+        <li className="text-center border-2 rounded-full">
+          <a
+            className="block aspect-square flex place-items-center"
+            href="https://linkedin.com/in/kevinsimper"
+          >
+            <div className="flex-1">LinkedIn</div>
+          </a>
         </li>
-        <li className="my-2">
-          <a href="https://linkedin.com/in/kevinsimper">LinkedIn</a>
-        </li>
-        <li className="my-2">
-          <a href="https://www.youtube.com/channel/UCarQbOR6-lCqaa0d_MB9iGQ">
-            YouTube
+        <li className="text-center border-2 bg-red-600 text-white rounded-full">
+          <a
+            className="block aspect-square flex place-items-center"
+            href="https://www.youtube.com/channel/UCarQbOR6-lCqaa0d_MB9iGQ"
+          >
+            <div className="flex-1">YouTube</div>
           </a>
         </li>
       </ul>
