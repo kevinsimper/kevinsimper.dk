@@ -4,12 +4,12 @@ import { serialize } from 'next-mdx-remote/serialize'
 import Head from 'next/head'
 import { MDXRemote } from 'next-mdx-remote'
 
-const components = {
+export const components = {
   h1: (props) => <h1 className="text-3xl py-2" {...props} />,
   h2: (props) => <h2 className="text-2xl py-2" {...props} />,
   h3: (props) => <h3 className="text-xl py-2" {...props} />,
   p: (props) => <p className="pb-5" {...props} />,
-  a: (props) => <a className="text-purple-600" {...props} />,
+  a: (props) => <a className="text-purple-600 hover:underline" {...props} />,
   pre: (props) => <pre className="overflow-auto pb-4" {...props} />,
   ul: (props) => <ol className="pl-10 pb-4 list-disc" {...props} />,
   ol: (props) => <ol className="pl-10 pb-4 list-decimal" {...props} />,
