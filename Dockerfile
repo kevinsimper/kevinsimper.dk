@@ -6,7 +6,7 @@ WORKDIR /app
 
 ADD package.json package-lock.json /app/
 
-RUN npm i
+RUN npm i --legacy-peer-deps
 
 ADD . /app
 
