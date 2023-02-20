@@ -43,6 +43,11 @@ function MyApp({ Component, pageProps }) {
         <title>Kevin Simper</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="icon" type="image/jpeg" href="/favicon.jpg" />
+        // stylesheet
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css"
+        />
       </Head>
       <header
         className="bg-indigo-700"
