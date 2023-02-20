@@ -12,36 +12,36 @@ Quick estimate that would be 50 lines of code. Let us try to make it here:
 
 ```typescript
 app.post('/signup', async (req, res) => {
-	const { email, password } = req.body
-	
-	if(email.indexOf('@') === -1 && password.length < 8) {
-		return res.json({
-			error: 'Not correct email or too short password'
-		})
-	}
-	
-	const existing = await prisma.user.findOne({
-	  where: {
-	    email: email
-	  }
-	})
-	
-	if(existing) {
-	  return res.json({
-	    error: 'User already exists'
-	  })
-	}
-	
-	const created = await prisma.user.create({
-		data: {
-			email,
-			password
-		}
-	})
-	
-	return res.json({
-	  success: 'Your user was created!'
-	})
+  const { email, password } = req.body
+
+  if (email.indexOf('@') === -1 && password.length < 8) {
+    return res.json({
+      error: 'Not correct email or too short password',
+    })
+  }
+
+  const existing = await prisma.user.findOne({
+    where: {
+      email: email,
+    },
+  })
+
+  if (existing) {
+    return res.json({
+      error: 'User already exists',
+    })
+  }
+
+  const created = await prisma.user.create({
+    data: {
+      email,
+      password,
+    },
+  })
+
+  return res.json({
+    success: 'Your user was created!',
+  })
 })
 ```
 
@@ -51,55 +51,55 @@ Now we have to extend it, we have to check their voucher code. Let us add it:
 
 ```typescript
 app.post('/signup', async (req, res) => {
-	const { email, password, voucher } = req.body
-	
-	if(email.indexOf('@') === -1 && password.length < 8 && voucher.length > 0) {
-		return res.json({
-			error: 'Not correct email or too short password'
-		})
-	}
-	
-	const existing = await prisma.user.findOne({
-	  where: {
-	    email: email
-	  }
-	})
-	
-	if(existing) {
-	  return res.json({
-	    error: 'User already exists'
-	  })
-	}
-  
+  const { email, password, voucher } = req.body
+
+  if(email.indexOf('@') === -1 && password.length < 8 && voucher.length > 0) {
+    return res.json({
+      error: 'Not correct email or too short password'
+    })
+  }
+
+  const existing = await prisma.user.findOne({
+    where: {
+      email: email
+    }
+  })
+
+  if(existing) {
+    return res.json({
+      error: 'User already exists'
+    })
+  }
+
   const voucherExist = await prisma.voucher.findOne({
-		where: {
+    where: {
       voucher: voucher
     }
   })
-  
+
   if(!voucherExist) {
     return res.json({
       message: 'Voucher code was incorrect'
     })
   }
-	
-	const created = await prisma.user.create({
-		data: {
-			email,
-			password
-		}
-	})
-  
+
+  const created = await prisma.user.create({
+    data: {
+      email,
+      password
+    }
+  })
+
   const credits = await prisma.credits.create({
     data: {
-			amount: voucher.amount
+      amount: voucher.amount
       userId: created.id
     }
   })
-	
-	return res.json({
-	  success: 'Your user was created!'
-	})
+
+  return res.json({
+    success: 'Your user was created!'
+  })
 })
 ```
 
@@ -124,9 +124,9 @@ There is a few best practices we can do, it would be something we could do witho
 ```typescript
 const { email, password, voucher } = req.body
 
-if(email.indexOf('@') === -1 && password.length < 8 && voucher.length > 0) {
+if (email.indexOf('@') === -1 && password.length < 8 && voucher.length > 0) {
   return res.json({
-	  error: 'Not correct email or too short password'
+    error: 'Not correct email or too short password',
   })
 }
 ```
@@ -149,15 +149,15 @@ So a natural part of our program after validating the input into our program is 
 ### Error handling
 
 ```typescript
-if(existing) {
+if (existing) {
   return res.json({
-  	error: 'User already exists'
+    error: 'User already exists',
   })
 }
 
-if(!voucherExist) {
+if (!voucherExist) {
   return res.json({
-  	message: 'Voucher code was incorrect'
+    message: 'Voucher code was incorrect',
   })
 }
 ```
@@ -178,69 +178,69 @@ Let us try to refactor the program with those 3 steps in mind
 
 ```typescript
 function validate(req, res) {
-	const { email, password, voucher } = req.body
-	
-	if(email.indexOf('@') === -1 && password.length < 8 && voucher.length > 0) {
-		return res.json({
-			error: 'Not correct email or too short password'
-		})
-	}
+  const { email, password, voucher } = req.body
+
+  if(email.indexOf('@') === -1 && password.length < 8 && voucher.length > 0) {
+    return res.json({
+      error: 'Not correct email or too short password'
+    })
+  }
 }
 
 function createUser(res, { email, password, voucher }}) {
-	const existing = await prisma.user.findOne({
-	  where: {
-	    email: email
-	  }
-	})
-  
+  const existing = await prisma.user.findOne({
+    where: {
+      email: email
+    }
+  })
+
   const voucherExist = await prisma.voucher.findOne({
-		where: {
+    where: {
       voucher: voucher
     }
   })
-  
-	
-	const created = await prisma.user.create({
-		data: {
-			email,
-			password
-		}
-	})
-  
+
+
+  const created = await prisma.user.create({
+    data: {
+      email,
+      password
+    }
+  })
+
   const credits = await prisma.credits.create({
     data: {
-			amount: voucher.amount
+      amount: voucher.amount
       userId: created.id
     }
   })
 
-	return created
+  return created
 }
 
 function handleError() {
-		if(existing) {
-	  return res.json({
-	    error: 'User already exists'
-	  })
-	}
-	if(!voucherExist) {
-		return res.json({
-			error: 'Voucher code was incorrect'
-		})
-	}
+    if(existing) {
+    return res.json({
+      error: 'User already exists'
+    })
+  }
+  if(!voucherExist) {
+    return res.json({
+      error: 'Voucher code was incorrect'
+    })
+  }
 }
 
 app.post('/signup', async (req, res) => {
-	const validated = validate(req, res)
+  const validated = validate(req, res)
 
-	const createUser = await createUser(res, validated)
+  const createUser = await createUser(res, validated)
 
-	const handleError = handleError(createUser)
-	
-	return res.json({
-	  success: 'Your user was created!'
-	})
+  const handleError = handleError(createUser)
+
+  return res.json({
+    success: 'Your user was created!'
+  })
 })
 ```
 
@@ -254,21 +254,21 @@ So let us try only handling `res` calls inside the http handler.
 
 ```typescript
 function validate(req) {
-  const { email, password, voucher } = req.body;
+  const { email, password, voucher } = req.body
 
-  if (email.indexOf("@") === -1 && password.length < 8 && voucher.length > 0) {
+  if (email.indexOf('@') === -1 && password.length < 8 && voucher.length > 0) {
     return {
-      type: "error",
-      message: "Not correct email or too short password",
-    };
+      type: 'error',
+      message: 'Not correct email or too short password',
+    }
   }
 
   return {
-    type: "success",
+    type: 'success',
     email,
     password,
     voucher,
-  };
+  }
 }
 
 async function createUser({ email, password, voucher }) {
@@ -276,25 +276,25 @@ async function createUser({ email, password, voucher }) {
     where: {
       email: email,
     },
-  });
+  })
   if (existing) {
     return {
-      type: "error",
-      message: "User already exists",
-    };
+      type: 'error',
+      message: 'User already exists',
+    }
   }
 
   const voucherExist = await prisma.voucher.findOne({
     where: {
       voucher: voucher,
     },
-  });
+  })
 
   if (!voucherExist) {
     return {
-      type: "error",
-      message: "Voucher code was incorrect",
-    };
+      type: 'error',
+      message: 'Voucher code was incorrect',
+    }
   }
 
   const created = await prisma.user.create({
@@ -302,45 +302,45 @@ async function createUser({ email, password, voucher }) {
       email,
       password,
     },
-  });
+  })
 
   const credits = await prisma.credits.create({
     data: {
       amount: voucher.amount,
       userId: created.id,
     },
-  });
+  })
 
   return {
-    type: "success",
+    type: 'success',
     user: created,
-  };
+  }
 }
 
-app.post("/signup", async (req, res) => {
-  const validated = validate(req, res);
-  if (validated.type === "error") {
+app.post('/signup', async (req, res) => {
+  const validated = validate(req, res)
+  if (validated.type === 'error') {
     return res.json({
       error: validated.message,
-    });
+    })
   }
 
   const createUser = await createUser({
     email: validated.email,
     password: validated.password,
     voucher: validated.voucher,
-  });
+  })
 
-  if (createUser.type === "error") {
+  if (createUser.type === 'error') {
     return res.json({
       error: createUser.message,
-    });
+    })
   }
 
   return res.json({
-    success: "Your user was created!",
-  });
-});
+    success: 'Your user was created!',
+  })
+})
 ```
 
 You can see now every function now returns a small object indicating what kind of response comes back. There is different formats for that, one pattern is for example ts-results which I have written more about here, [Writing better typescript with explicit return values](/posts/writing-better-typescript-with-explicit-return-values)
@@ -359,37 +359,37 @@ Now the "complicated" voucher code can even be refactored out into its own funct
 
 ```typescript
 async function checkVoucher(voucher) {
-	const voucherExist = await prisma.voucher.findOne({
-		where: {
-			voucher: voucher,
-		},
-	});
+  const voucherExist = await prisma.voucher.findOne({
+    where: {
+      voucher: voucher,
+    },
+  })
 
-	if (!voucherExist) {
-		return {
-			type: "error",
-			message: "Voucher code was incorrect",
-		};
-	}
+  if (!voucherExist) {
+    return {
+      type: 'error',
+      message: 'Voucher code was incorrect',
+    }
+  }
 
-	return {
-		type: "success",
-		voucher: voucherExist,
-	};
+  return {
+    type: 'success',
+    voucher: voucherExist,
+  }
 }
 
 async function createCredits(amount, userId) {
-	const credits = await prisma.credits.create({
-		data: {
-			amount: amount,
-			userId: userId,
-		},
-	});
+  const credits = await prisma.credits.create({
+    data: {
+      amount: amount,
+      userId: userId,
+    },
+  })
 
-	return {
-		type: "success",
-		credits,
-	};
+  return {
+    type: 'success',
+    credits,
+  }
 }
 
 async function createUser({ email, password, voucher }) {
@@ -397,35 +397,35 @@ async function createUser({ email, password, voucher }) {
     where: {
       email: email,
     },
-  });
+  })
   if (existing) {
     return {
-      type: "error",
-      message: "User already exists",
-    };
+      type: 'error',
+      message: 'User already exists',
+    }
   }
 
-  const voucherExist = await checkVoucher(voucher);
-	if (voucherExist.type === "error") {
-		return {
-			type: "error",
-			message: voucherExist.message,
-		};
-	}
+  const voucherExist = await checkVoucher(voucher)
+  if (voucherExist.type === 'error') {
+    return {
+      type: 'error',
+      message: voucherExist.message,
+    }
+  }
 
   const created = await prisma.user.create({
     data: {
       email,
       password,
     },
-  });
+  })
 
-  const credits = await createCredits(voucherExist.voucher.amount, created.id);
+  const credits = await createCredits(voucherExist.voucher.amount, created.id)
 
   return {
-    type: "success",
+    type: 'success',
     user: created,
-  };
+  }
 }
 ```
 
