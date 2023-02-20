@@ -3,6 +3,12 @@ import { readFileSync } from 'fs'
 import { serialize } from 'next-mdx-remote/serialize'
 import Head from 'next/head'
 import { MDXRemote } from 'next-mdx-remote'
+import Prism from 'prismjs'
+import { useEffect } from 'react'
+
+require('prismjs/components/prism-javascript')
+require('prismjs/components/prism-typescript')
+require('prismjs/components/prism-jsx')
 
 export const components = {
   h1: (props) => <h1 className="text-3xl py-2" {...props} />,
@@ -19,6 +25,10 @@ export const components = {
 function PostPage({ source, title, tags, published, next, prev }) {
   const router = useRouter()
   const { slug } = router.query
+
+  useEffect(() => {
+    Prism.highlightAll()
+  }, [])
 
   return (
     <div>
