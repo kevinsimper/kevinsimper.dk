@@ -1,21 +1,27 @@
 [
   {
+    "slug": "how-to-structure-a-http-route",
+    "title": "How to structure a http route",
+    "date": "Mon Feb 20 2023 13:07:14 GMT+0100 (Central European Standard Time)",
+    "tags": ["programming", "javascript", "nodejs"]
+  },
+  {
     "slug": "the-difficulties-of-finding-the-right-people",
     "title": "The difficulties of finding the right people",
     "date": "Sat Feb 18 2023 20:37:11 GMT+0100 (Central European Standard Time)",
-    "tags": []
+    "tags": ["hiring"]
   },
   {
     "slug": "the-next-interesting-database",
     "title": "The next interesting database",
     "date": "Sat Feb 18 2023 03:00:54 GMT+0100 (Central European Standard Time)",
-    "tags": []
+    "tags": ["programming", "cloud"]
   },
   {
     "slug": "turborepo-is-the-new-build-system",
     "title": "Turborepo is the new build system",
     "date": "Sat Feb 18 2023 01:44:46 GMT+0100 (Central European Standard Time)",
-    "tags": []
+    "tags": ["programming", "workflow"]
   },
   {
     "slug": "tor-exit-nodes-in-denmark",
