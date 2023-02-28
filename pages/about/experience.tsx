@@ -49,6 +49,12 @@ function HomePage() {
                       )
                     }
                   )}
+                  <div className="flex gap-2 pt-2">
+                    <div className="w-1/4"></div>
+                    <div>
+                      Technologies used: {experience.technologies.join(', ')}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
