@@ -1,5 +1,11 @@
 [
   {
+    "slug": "how-i-do-data-analytics-with-bigquery",
+    "title": "How I do data analytics with BigQuery",
+    "date": "Fri Jun 30 2023 23:52:20 GMT+0200 (Central European Summer Time)",
+    "tags": ["data", "programming", "google cloud"]
+  },
+  {
     "slug": "documentary-about-the-creation-of-react.js",
     "title": "Documentary about the creation of React.js",
     "date": "Tue Feb 28 2023 04:48:39 GMT+0100 (Central European Standard Time)",
