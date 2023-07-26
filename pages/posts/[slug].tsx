@@ -34,6 +34,10 @@ function PostPage({ source, title, tags, published, next, prev }) {
     <div>
       <Head>
         <title>{title}</title>
+        <link
+          rel="canonical"
+          href={`https://www.kevinsimper.dk/posts/${slug}`}
+        />
       </Head>
       <article>
         <div className="text-right">{new Date(published).toISOString()}</div>
