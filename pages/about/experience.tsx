@@ -1,11 +1,19 @@
 import { useState } from 'react'
 import experiences from '../../data/experiences'
+import Head from 'next/head'
 
 function HomePage() {
   const [showAll, setShowAll] = useState(false)
 
   return (
     <div className="space-y-6">
+      <Head>
+        <title>Work Experience from Kevin Simper</title>
+        <link
+          rel="canonical"
+          href={`https://www.kevinsimper.dk/about/experience`}
+        />
+      </Head>
       <h1 className="text-2xl">Work Experience</h1>
       <div className="space-y-6">
         {(showAll ? experiences : experiences.slice(0, 5)).map((experience) => {

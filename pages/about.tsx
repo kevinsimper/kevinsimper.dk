@@ -7,6 +7,7 @@ function AboutPage() {
       <h1 className="text-2xl">About me</h1>
       <Head>
         <title>About - Kevin Simper</title>
+        <link rel="canonical" href={`https://www.kevinsimper.dk/about`} />
       </Head>
       <p>My name Kevin and I like to make new stuff.</p>
       <h2 className="text-xl mt-4">My biggest interests at the moment</h2>

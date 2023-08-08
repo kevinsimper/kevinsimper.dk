@@ -8,6 +8,10 @@ function CategoryPage({ category, posts }) {
       <h1 className="text-2xl">Category: {category}</h1>
       <Head>
         <title>Viewing {category} category</title>
+        <link
+          rel="canonical"
+          href={`https://www.kevinsimper.dk/categories/${category}`}
+        />
       </Head>
       {posts.map((post) => {
         return (

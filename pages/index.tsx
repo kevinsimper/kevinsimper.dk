@@ -1,6 +1,7 @@
 import { readFileSync, promises } from 'fs'
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote } from 'next-mdx-remote'
+import Head from 'next/head'
 
 const components = {
   h1: (props) => <h1 className="text-3xl py-2" {...props} />,
@@ -17,6 +18,10 @@ const components = {
 function HomePage({ posts, full }) {
   return (
     <div>
+      <Head>
+        <title>Kevin Simper - Developer Blog</title>
+        <link rel="canonical" href={`https://www.kevinsimper.dk/`} />
+      </Head>
       <div
         className="rounded"
         style={{

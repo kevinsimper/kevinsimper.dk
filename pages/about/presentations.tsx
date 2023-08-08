@@ -7,6 +7,10 @@ function HomePage({ presentations }) {
       <h1 className="text-2xl">Presentations</h1>
       <Head>
         <title>Presentations from Kevin Simper</title>
+        <link
+          rel="canonical"
+          href={`https://www.kevinsimper.dk/about/presentations`}
+        />
       </Head>
       <p>
         I have given <strong>{presentations.length}</strong> presentations and
