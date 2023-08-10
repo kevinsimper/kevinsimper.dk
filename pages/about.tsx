@@ -80,15 +80,11 @@ function AboutPage() {
       <div>
         <h2 className="text-xl mt-4">Certifications</h2>
         <p>I am a Google Cloud Professionel Cloud Architect.</p>
-        <p>
-          Proof can be seen here:{' '}
-          <a
-            className="text-purple-600"
-            href="https://www.credential.net/gifyqget?key=5db5c6df3703061c8d4de82373a4bfd51f681c36f10caedf031dcb4fd6da6f25"
-          >
-            https://www.credential.net/gifyqget?key=5db5c6df3703061c8d4de82373a4bfd51f681c36f10caedf031dcb4fd6da6f25
-          </a>
-        </p>
+        <img
+          className="py-4"
+          width={200}
+          src="https://storage.googleapis.com/support-kms-prod/IO8gpztaELvBRHPnrxWQouV3NX1i1X22hpAd"
+        />
       </div>
     </div>
   )
