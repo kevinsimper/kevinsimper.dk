@@ -111,8 +111,6 @@ function MyApp({ Component, pageProps }) {
               <br />
               <a href="/projects">Projects</a>
               <br />
-              <a href="/contact">Contact</a>
-              <br />
               <a href="https://talkfrom.com">Talkfrom</a>
               <br />
               <a href="http://kevinsimper.eth">kevinsimper.eth</a>
