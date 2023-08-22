@@ -6,6 +6,7 @@ function SocialPage() {
     <div className="py-6">
       <Head>
         <title>Social media - Kevin Simper</title>
+        <link rel="canonical" href={`https://www.kevinsimper.dk/social`} />
       </Head>
       <h1 className="text-2xl text-center">Find me on social media</h1>
       <ul className="grid lg:grid-cols-4 gap-3 my-4 content-center items-center">

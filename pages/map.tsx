@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { MapSimple } from '../components/MapSimple'
 
 export const places = {
@@ -314,6 +315,10 @@ export const places = {
 function MapPage({ GOOGLE_MAPS_PK, time }) {
   return (
     <div className="map" style={{ minHeight: 'calc(100vh - 158px)' }}>
+      <Head>
+        <title>Map</title>
+        <link rel="canonical" href={`https://www.kevinsimper.dk/map`} />
+      </Head>
       <style>
         {`html, body, #root, .map {
       height: 100%

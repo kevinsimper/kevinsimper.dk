@@ -1,9 +1,15 @@
 import React from 'react'
 import { readFileSync } from 'fs'
+import Head from 'next/head'
 
 function SearchPage({ query, posts }) {
   return (
     <div>
+      <Head>
+        <title>Searching for {query}</title>
+        <link rel="canonical" href={`https://www.kevinsimper.dk/search`} />
+        <meta name="robots" content="noindex, nofollow" />
+      </Head>
       <h1 className="text-2xl">Searched: {query}</h1>
       <p>Found {posts.length} results</p>
 

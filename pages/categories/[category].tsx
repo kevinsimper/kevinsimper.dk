@@ -12,6 +12,7 @@ function CategoryPage({ category, posts }) {
           rel="canonical"
           href={`https://www.kevinsimper.dk/categories/${category}`}
         />
+        <meta name="robots" content="noindex, nofollow" />
       </Head>
       {posts.map((post) => {
         return (

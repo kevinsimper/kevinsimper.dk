@@ -1,8 +1,13 @@
+import Head from 'next/head'
 import React from 'react'
 
 function ClimbsPage() {
   return (
     <div className="space-y-4">
+      <Head>
+        <title>Climbs - Kevin Simper</title>
+        <link rel="canonical" href={`https://www.kevinsimper.dk/climbs`} />
+      </Head>
       <div>
         <h1 className="text-2xl">Climbs</h1>
         <p>Climbs that I have done on bike that I really liked</p>

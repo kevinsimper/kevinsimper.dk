@@ -6,6 +6,7 @@ export default () => (
     <h1 className="text-2xl">Printing nametags</h1>
     <Head>
       <title>Printing Nametags - Kevin Simper</title>
+      <link rel="canonical" href={`https://www.kevinsimper.dk/nametags`} />
     </Head>
     <p className="py-2">
       I have helped communities print nametags. It is a great way to help people

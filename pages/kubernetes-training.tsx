@@ -1,7 +1,15 @@
+import Head from 'next/head'
 import React from 'react'
 
 export default () => (
   <div>
+    <Head>
+      <title>Kubernetes Training - Kevin Simper</title>
+      <link
+        rel="canonical"
+        href={`https://www.kevinsimper.dk/kubernetes-training`}
+      />
+    </Head>
     <div style={{ textAlign: 'center' }}>
       <h1 className="text-2xl">Kubernetes Training</h1>
     </div>

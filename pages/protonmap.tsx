@@ -1,11 +1,16 @@
 import { useState } from 'react'
 import Script from 'next/script'
 import { places } from './map'
+import Head from 'next/head'
 
 function MapPage({ PROTONMAPS, time }) {
   const [leafLoaded, setLeafLoaded] = useState(false)
   return (
     <div className="mapcontainer" style={{ minHeight: 'calc(100vh - 158px)' }}>
+      <Head>
+        <title>Map with ProtoMaps</title>
+        <link rel="canonical" href={`https://www.kevinsimper.dk/map`} />
+      </Head>
       <style>
         {`
           html, body, #root, .mapcontainer {

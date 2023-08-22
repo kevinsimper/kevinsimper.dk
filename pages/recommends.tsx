@@ -38,6 +38,7 @@ function RecommendsPage() {
       <h1 className="text-3xl mb-2">Stuff I recommend</h1>
       <Head>
         <title>Stuff I recommend - Kevin Simper</title>
+        <link rel="canonical" href={`https://www.kevinsimper.dk/recommends`} />
       </Head>
       <Link href={{ pathname: '/climbs' }} className="text-purple-600">
         Climbs I have done on bike
