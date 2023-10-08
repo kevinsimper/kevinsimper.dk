@@ -22,7 +22,7 @@
     "marked": "4.0.12",
     "moment": "2.29.1",
     "next": "13.1.6",
-    "next-mdx-remote": "^3.0.8",
+    "next-mdx-remote": "^4.3.0",
     "postcss": "8.4.12",
     "prismjs": "^1.29.0",
     "react": "18.2.0",
