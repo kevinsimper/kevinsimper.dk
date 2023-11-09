@@ -35,11 +35,7 @@ function ClimbsPage({
               >
                 See route
               </a>
-              <Link
-                href={`/climbs/` + climb.id}
-                className="block"
-                target={'_blank'}
-              >
+              <Link href={`/climbs/` + climb.id} className="block">
                 Details
               </Link>
             </div>
