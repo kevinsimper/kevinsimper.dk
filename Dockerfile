@@ -1,4 +1,4 @@
-FROM node:16-alpine
+FROM node:20-alpine
 
 EXPOSE 9000
 
@@ -6,7 +6,7 @@ WORKDIR /app
 
 ADD package.json package-lock.json /app/
 
-RUN npm i --legacy-peer-deps
+RUN npm i
 
 ADD . /app
 
