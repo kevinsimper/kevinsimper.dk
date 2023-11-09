@@ -344,6 +344,7 @@ function MapPage({ GOOGLE_MAPS_PK, time }) {
                   position: place.location,
                   icon: 'https://storage.googleapis.com/support-kms-prod/SNP_2752125_en_v0',
                 })
+                // @ts-ignore
                 bounds.extend(marker.getPosition())
               })
               map.fitBounds(bounds)
