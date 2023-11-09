@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://Kevin-Simper-s-workspace-gf8rf3.eu-west-1.xata.sh/db/cykelbjerge",
+  "codegen": {
+    "output": "src/xata.ts"
+  }
+}
