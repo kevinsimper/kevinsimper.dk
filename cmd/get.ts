@@ -62,7 +62,7 @@ async function create() {
       startLat: Number(m.start.split(',')[0]),
       startLon: Number(m.start.split(',')[1]),
       endLat: Number(m.end.split(',')[0]),
-      endLon: Number(m.end.split(',')[0]),
+      endLon: Number(m.end.split(',')[1]),
       length: m.length || 0,
     })
   }

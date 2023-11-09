@@ -2,6 +2,7 @@ import type { InferGetServerSidePropsType } from 'next'
 import Head from 'next/head'
 import React from 'react'
 import { getXataClient } from '../src/xata'
+import Link from 'next/link'
 
 function ClimbsPage({
   mountains,
@@ -34,6 +35,13 @@ function ClimbsPage({
               >
                 See route
               </a>
+              <Link
+                href={`/climbs/` + climb.id}
+                className="block"
+                target={'_blank'}
+              >
+                Details
+              </Link>
             </div>
           )
         })}
