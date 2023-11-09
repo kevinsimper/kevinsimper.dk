@@ -21,20 +21,7 @@ function ClimbsPage({
         {mountains.map((climb) => {
           return (
             <div className="border p-4">
-              <a
-                href={`https://www.google.com/maps/place/${climb.endLat},${climb.endLon}`}
-                className="block"
-                target={'_blank'}
-              >
-                {climb.name} - {climb.country}
-              </a>
-              <a
-                href={`https://www.google.com/maps/dir/${climb.startLat},${climb.startLon}/${climb.endLat},${climb.endLon}`}
-                className="block"
-                target={'_blank'}
-              >
-                See route
-              </a>
+              {climb.name} - {climb.country}
               <Link href={`/climbs/` + climb.id} className="block">
                 Details
               </Link>
@@ -48,7 +35,9 @@ function ClimbsPage({
 
 export const getServerSideProps = async () => {
   const xata = getXataClient()
-  const page = await xata.db.mountains.getAll()
+  const page = await xata.db.mountains.getAll({
+    sort: 'id',
+  })
   return {
     props: {
       mountains: page.map((p) => {
