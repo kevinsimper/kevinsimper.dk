@@ -55,7 +55,17 @@ function HomePage({ posts, full }) {
               </a>
 
               <div>
-                {source && <MDXRemote {...source} components={components} />}
+                {source && (
+                  <>
+                    <MDXRemote {...source} components={components} />
+                    <a
+                      className="text-purple-600 hover:underline"
+                      href={'/posts/' + post.slug}
+                    >
+                      Read full post
+                    </a>
+                  </>
+                )}
               </div>
 
               <div className="flex justify-between border-t-2 border-indigo-500/50">
@@ -93,10 +103,13 @@ export async function getStaticProps(context) {
   const full = await Promise.all(
     data.slice(0, 5).map(async (post) => {
       const file = await promises.readFile(path + post.slug + '.md', 'utf-8')
+      let lines = file.trim().split('\n')
       if (file.charAt(0) === '#') {
-        return file.split('\n').slice(1).join('\n')
+        lines = lines.slice(2)
       }
-      return file
+      const maxParagraphs = Math.min(Math.floor(lines.length / 3), 10)
+      lines = lines.slice(0, maxParagraphs)
+      return lines.join('\n')
     })
   )
   const serialized = await Promise.all(
