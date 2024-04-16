@@ -38,7 +38,7 @@ function HomePage({ posts, full }) {
             'linear-gradient(297deg, rgba(125,52,173,1) 11%, rgba(99,102,241,1) 100%)',
         }}
       >
-        Hi, my name is Kevin Simper. I work at GreenMobility as CTO and like to
+        Hi, my name is Kevin Simper. I work at Trifork as AI Lead and like to
         write about tech. I also like to make videos on youtube about
         programming and organize meetups.
       </div>
