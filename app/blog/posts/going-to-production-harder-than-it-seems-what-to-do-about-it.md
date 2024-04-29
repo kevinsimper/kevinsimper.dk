@@ -39,7 +39,7 @@ You will need your logging framework to do:
 
 It is more difficult but considers your service as it is in production always, as soon as you begin making a difference you begin making a matrix of different ways your app can work and you need to explain to all what the difference is between prod/staging/dev/test/etc. and nobody can remember.
 
-Say you use Twilio in production likesendSMS(), don’t add in your code if(env === prod) { sendSMS() } else { // do nothing because staging}. Only the developers will remember and your staging will begin to drift away from looking like production.
+Say you use Twilio in production `likesendSMS()`, don’t add in your code `if(env === prod) { sendSMS() } else { // do nothing because staging}`. Only the developers will remember and your staging will begin to drift away from looking like production.
 
 The solution is in staging also use Twilio exactly like in production. Create another account and use those instead. This will make your application predictable. Predictable is key for quick development!
 
