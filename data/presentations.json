@@ -1,6 +1,55 @@
 {
   "presentations": [
     {
+      "name": "Creating Business Value with Industrial AI Applications",
+      "location": "Trifork, Copenhagen - 13. June 2024",
+      "description": "Working with Vision AI at Trifork, I gave a presentation on why Vision AI is now and how to get started with a successful project.",
+       "links": [
+        {
+          "text": "Event link",
+          "link": "https://trifork.info/visionai-2024"
+        }
+      ]
+    },
+    {
+      "name": "Introduction to the Nvidia tech Stack",
+      "location": "Copenhagen Nvidia User Group, Copenhagen - 4. June 2024",
+      "description": "I gave an overview of the Nvidia software stack, focusing on Nvidia TAO for training and optimizing AI models with minimal coding, and Nvidia DeepStream SDK for building AI-powered video analytics applications. We'll explore how TAO simplifies model training and deployment and how DeepStream enables efficient multi-stream processing and analytics. Additionally, we'll discuss practical examples of using these tools in real-world projects. This session aims to provide a simple walkthrough of Nvidia TAO and DeepStream, showcasing their applications and benefits. Join us to get a foundational understanding of these powerful tools.",
+       "links": [
+        {
+          "text": "Event link",
+          "link": "https://www.meetup.com/copenhagen-nvidia-user-group/events/301338782/"
+        }
+      ]
+    },
+    {
+      "name": "AI Possibilities for Manufacturing",
+      "location": "Trifork, Copenhagen - 22. Februar 2024",
+      "description": "I gave a talk about what I think is the most promising and interesting possiblities with AI at this current moment, how to combine AI with manufactoring that can be implemented today.",
+       "links": [
+        {
+          "text": "Event link",
+          "link": "https://trifork.info/the-future-of-manufacturing"
+        }
+      ]
+    },
+    {
+      "name": "How we help our customers with Vision AI",
+      "location": "Forum for Emerging Tech, Copenhagen - 22. Februar 2024",
+      "description": "I was asked to give a presentation about practical implementaion of AI in business context, what are the considerations? How do we help our customers make sure it gives value? What are the legal ramifications to consider?"
+    },
+    {
+      "name": "Adoption of new technology - as a Engieering Manager",
+      "location": "Engineering Manager meetup, Copenhagen - 20. September 2023",
+      "description": "I gave a presentation about my experience as a manager, how to adopt new technologies in a company while bringing the team along in a good way.",
+       "links": [
+        {
+          "text": "Event link",
+          "link": "https://www.meetup.com/copenhagen-engineering-managers-meetup-group/events/295479199/"
+        }
+      ]
+    },
+    {
       "name": "Advice for a great career",
       "location": "KEA, Copenhagen - 19. October 2021",
       "description": "I was asked to give advice to a class of frontend developers. I gave a presentation about how I got a career, what my advice was and what a good job application looked like."
