@@ -11,14 +11,14 @@ require('prismjs/components/prism-typescript')
 require('prismjs/components/prism-jsx')
 
 export const components = {
-  h1: (props) => <h1 className="text-3xl py-2" {...props} />,
-  h2: (props) => <h2 className="text-2xl py-2" {...props} />,
-  h3: (props) => <h3 className="text-xl py-2" {...props} />,
-  p: (props) => <p className="pb-5" {...props} />,
+  h1: (props) => <h1 className="text-3xl mt-8 mb-4" {...props} />,
+  h2: (props) => <h2 className="text-2xl mt-6 mb-3" {...props} />,
+  h3: (props) => <h3 className="text-xl mt-4 mb-2" {...props} />,
+  p: (props) => <p className="mb-4" {...props} />,
   a: (props) => <a className="text-purple-600 hover:underline" {...props} />,
-  pre: (props) => <pre className="overflow-auto pb-4" {...props} />,
-  ul: (props) => <ol className="pl-10 pb-4 list-disc" {...props} />,
-  ol: (props) => <ol className="pl-10 pb-4 list-decimal" {...props} />,
+  pre: (props) => <pre className="overflow-auto mb-4" {...props} />,
+  ul: (props) => <ul className="pl-6 mb-4 list-disc" {...props} />,
+  ol: (props) => <ol className="pl-6 mb-4 list-decimal" {...props} />,
   Test: <div />,
 }
 
