@@ -12,7 +12,7 @@ But that is not a great solution, because they suggest changing the hostname, so
 Better solution is simply specify which key to use per repository.
 
 ```bash
-git config core.sshCommand 'ssh -i ~/.ssh/id_rsa_corp'
+git config core.sshCommand 'ssh -i ~/.ssh/id_rsa_corp -o IdentitiesOnly=yes'
 ```
 
 That however requires you to be able to clone the repository first, but that you can do with
@@ -22,3 +22,5 @@ GIT_SSH_COMMAND="ssh -i /path/to/your/private/key -o IdentitiesOnly=yes" git clo
 ```
 
 So this way you can easily control which key get used for which repository.
+
+`-o IdentitiesOnly=yes` is important if you are using a SSH Agent (which you most likely), and that means by default `-i` will be ignored if not.
