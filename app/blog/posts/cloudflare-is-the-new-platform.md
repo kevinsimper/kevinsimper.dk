@@ -13,4 +13,4 @@ Reasons is:
 - multi deployment
 - AI integrations
 
-https://workers.cloudflare.com/
+[https://workers.cloudflare.com/](https://workers.cloudflare.com/)
