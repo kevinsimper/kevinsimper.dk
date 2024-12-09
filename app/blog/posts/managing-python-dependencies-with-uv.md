@@ -4,7 +4,7 @@ I have been creating a new Python project and when you start a project you alway
 
 I have previous used pyenv or venv, but they never felt good for many reasons. The Python ecosystem feels more fragmented and powerful. For beginners it feels like the jump from simple dependency management to advance is a large gap.
 
-https://docs.astral.sh/uv/
+[https://docs.astral.sh/uv/](https://docs.astral.sh/uv/)
 
 ### A new and simple package manager that scales
 
@@ -24,8 +24,8 @@ Then you can add dependencies with `uv add gradio` and it is correctly added to 
 
 UV has a feature called workspaces that enables you to quickly scale your growing python project. UV is however still a relative new tool so documentation is amazing but still new. I have made a small example of how you can use UV workspaces to share code in a similar regard like Turborepo allows you.
 
-https://github.com/kevinsimper/fastapi-uv-workspaces-demo
+[https://github.com/kevinsimper/fastapi-uv-workspaces-demo](https://github.com/kevinsimper/fastapi-uv-workspaces-demo)
 
 ## Conclusion
 
-UV is the new kid on the block, but it looks to be it is here to stay. Amazing work by the Astral company https://astral.sh/
+UV is the new kid on the block, but it looks to be it is here to stay. Amazing work by the Astral company [https://astral.sh/](https://astral.sh/)
