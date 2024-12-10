@@ -2,6 +2,119 @@ import React, { useState } from 'react'
 import 'tailwindcss/tailwind.css'
 import Head from 'next/head'
 import { Menu } from '../components/Menu'
+import Link from 'next/link'
+
+
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: 'primary' | 'secondary'
+  className?: string
+}
+
+export const Button: React.FC<ButtonProps> = ({
+  variant = 'primary',
+  className = '',
+  children,
+  ...props
+}) => {
+  const baseStyles = 'rounded-md px-4 py-2 text-sm font-medium shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2'
+  const variantStyles = {
+    primary: 'bg-white text-indigo-600 hover:bg-indigo-50 focus:ring-indigo-500',
+    secondary: 'bg-indigo-100 text-indigo-700 hover:bg-indigo-200 focus:ring-indigo-500'
+  }
+
+  return (
+    <button
+      className={`${baseStyles} ${variantStyles[variant]} ${className}`}
+      {...props}
+    >
+      {children}
+    </button>
+  )
+}
+
+interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  className?: string
+}
+
+export const Input: React.FC<InputProps> = ({ className = '', ...props }) => {
+  return (
+    <input
+      className={`rounded-md border border-indigo-300 bg-white px-3 py-2 text-sm text-indigo-900 placeholder-indigo-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 ${className}`}
+      {...props}
+    />
+  )
+}
+
+
+
+
+
+export function Footer() {
+  return (
+    <footer className="bg-gradient-to-r from-indigo-700 to-indigo-900 text-white">
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">Search</h3>
+            <form method="GET" action="/search" className="space-y-2">
+              <div className="flex gap-2">
+                <Input
+                  name="q"
+                  type="search"
+                  placeholder="Search and press enter.."
+                  className="flex-grow"
+                  aria-label="Search"
+                />
+                <Button type="submit" variant="secondary">
+                  Search
+                </Button>
+              </div>
+            </form>
+          </div>
+
+          <div className="space-y-4 col-span-2">
+            <h3 className="text-lg font-semibold">Pages</h3>
+            <nav className="grid grid-cols-2 gap-2">
+              <Link href="/nametags" className="hover:text-indigo-200 transition-colors">Nametags</Link>
+              <Link href="/recommends" className="hover:text-indigo-200 transition-colors">Recommends</Link>
+              <Link href="/projects" className="hover:text-indigo-200 transition-colors">Projects</Link>
+              <Link href="https://talkfrom.com" className="hover:text-indigo-200 transition-colors">Talkfrom</Link>
+              <Link href="http://kevinsimper.eth" className="hover:text-indigo-200 transition-colors">kevinsimper.eth</Link>
+              <Link href="https://copenhagenjs.dk/speaker/?name=kevin-simper" className="hover:text-indigo-200 transition-colors">
+                CopenhagenJS Speaker
+              </Link>
+            </nav>
+          </div>
+
+          {/* <div className="space-y-4 lg:col-span-1 md:col-span-2">
+            <h3 className="text-lg font-semibold">Stay Connected</h3>
+            <p className="text-sm">Join our newsletter for the latest updates and insights.</p>
+            <form className="flex gap-2">
+              <Input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-grow"
+                aria-label="Email for newsletter"
+              />
+              <Button type="submit">Subscribe</Button>
+            </form>
+            <Link
+              href="/social"
+              className="inline-block mt-4 text-indigo-200 hover:text-white transition-colors"
+            >
+              Get in touch!
+            </Link>
+          </div> */}
+        </div>
+
+        <div className="mt-8 border-t border-indigo-500 pt-8 text-center text-sm">
+          © {new Date().getFullYear()} Kevin Simper. All rights reserved.
+        </div>
+      </div>
+    </footer>
+  )
+}
+
 
 function MyApp({ Component, pageProps }) {
   const [showMenu, setShowMenu] = useState(false)
@@ -78,50 +191,14 @@ function MyApp({ Component, pageProps }) {
         </Menu>
       </header>
       <div
-        className={`${
-          Component?.pageStyle?.fullWidth
+        className={`${Component?.pageStyle?.fullWidth
             ? ''
             : 'max-w-screen-md mx-auto p-4 mb-8'
-        } flex-1 w-full`}
+          } flex-1 w-full`}
       >
         <Component {...pageProps} />
       </div>
-      <footer className="bg-indigo-900 text-white p-8">
-        <div className="max-w-screen-md mx-auto flex flex-col md:flex-row gap-4 justify-around">
-          <div className="flex-1">
-            <a href="/social" className="py-2">
-              Contact me!
-            </a>
-            <form method="GET" action="/search" className="py-4">
-              <div className="py-2">Search:</div>
-              <input
-                className="p-2 text-black w-full"
-                name="q"
-                type="search"
-                placeholder="Search and press enter.."
-              />
-            </form>
-          </div>
-          <div className="py-2">
-            <strong>Pages:</strong>
-            <div>
-              <a href="/nametags">Nametags</a>
-              <br />
-              <a href="/recommends">Recommends</a>
-              <br />
-              <a href="/projects">Projects</a>
-              <br />
-              <a href="https://talkfrom.com">Talkfrom</a>
-              <br />
-              <a href="http://kevinsimper.eth">kevinsimper.eth</a>
-              <br />
-              <a href="https://copenhagenjs.dk/speaker/?name=kevin-simper">
-                CopenhagenJS Speaker
-              </a>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }
