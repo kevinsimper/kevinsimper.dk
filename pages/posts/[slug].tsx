@@ -40,7 +40,7 @@ export const components = {
     />
   ),
   pre: (props) => (
-    <pre className="mb-4 mt-6 overflow-x-auto rounded-lg border bg-black py-4" {...props} />
+    <pre className="mb-4 mt-6 overflow-x-auto rounded-lg border py-4" {...props} />
   ),
   ul: (props) => <ul className="my-6 ml-6 list-disc [&>li]:mt-2" {...props} />,
   ol: (props) => <ol className="my-6 ml-6 list-decimal [&>li]:mt-2" {...props} />,
