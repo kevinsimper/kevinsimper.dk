@@ -5,20 +5,46 @@ import Head from 'next/head'
 import { MDXRemote } from 'next-mdx-remote'
 import Prism from 'prismjs'
 import { useEffect } from 'react'
+import Link from 'next/link'
 
 require('prismjs/components/prism-javascript')
 require('prismjs/components/prism-typescript')
 require('prismjs/components/prism-jsx')
 
+
 export const components = {
-  h1: (props) => <h1 className="text-3xl mt-8 mb-4" {...props} />,
-  h2: (props) => <h2 className="text-2xl mt-6 mb-3" {...props} />,
-  h3: (props) => <h3 className="text-xl mt-4 mb-2" {...props} />,
-  p: (props) => <p className="mb-4" {...props} />,
-  a: (props) => <a className="text-purple-600 hover:underline" {...props} />,
-  pre: (props) => <pre className="overflow-auto mb-4" {...props} />,
-  ul: (props) => <ul className="pl-6 mb-4 list-disc" {...props} />,
-  ol: (props) => <ol className="pl-6 mb-4 list-decimal" {...props} />,
+  h1: (props) => (
+    <h1
+      className="scroll-m-20 text-4xl font-bold tracking-tight lg:text-5xl mt-8 mb-4"
+      {...props}
+    />
+  ),
+  h2: (props) => (
+    <h2
+      className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0 mt-10 mb-4"
+      {...props}
+    />
+  ),
+  h3: (props) => (
+    <h3
+      className="scroll-m-20 text-2xl font-semibold tracking-tight mt-8 mb-4"
+      {...props}
+    />
+  ),
+  p: (props) => <p className="leading-7 [&:not(:first-child)]:mt-6" {...props} />,
+  a: ({ href, ...props }) => (
+    <Link
+      href={href}
+      className="font-medium text-primary underline underline-offset-4 hover:text-primary/80"
+      {...props}
+    />
+  ),
+  pre: (props) => (
+    <pre className="mb-4 mt-6 overflow-x-auto rounded-lg border bg-black py-4" {...props} />
+  ),
+  ul: (props) => <ul className="my-6 ml-6 list-disc [&>li]:mt-2" {...props} />,
+  ol: (props) => <ol className="my-6 ml-6 list-decimal [&>li]:mt-2" {...props} />,
+  hr: (props) => <hr className="my-4 md:my-8" {...props} />,
   Test: <div />,
 }
 
