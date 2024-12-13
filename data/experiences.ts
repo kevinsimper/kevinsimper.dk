@@ -1,5 +1,34 @@
 export default [
   {
+    company: 'Trifork',
+    location: 'Gdanskgade 2, 2150 Nordhavn, Denmark',
+    advancements: [
+      {
+        start: '11/2024',
+        end: '',
+        title: 'Staff Vision AI Engineer',
+        description: `
+        Trifork consolidated several business units, which lead me to take over the Tech Lead on the biggest Vision AI project that Trifork had landed, allowing me to focus on delivering highly technical projects.
+        `,
+      },
+      {
+        start: '12/2023',
+        end: '10/2024',
+        title: 'Business Unit Lead',
+        description: `
+        Took over a business unit as Buiness Unit Lead, which focused on deploying Vision AI with Nvidia technologies. Worked with several big danish companies deploying Vision AI intro production.
+        `,
+      },
+    ],
+
+    link: 'https://www.trifork.com/',
+    technologies: [
+      'Vision AI',
+      'Nvidia',
+      'Python',
+    ],
+  },
+  {
     company: 'GreenMobility',
     location: 'Landgreven 3, 1301 Copenhagen, Denmark',
     advancements: [
