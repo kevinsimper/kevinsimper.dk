@@ -34,7 +34,7 @@ export default [
     advancements: [
       {
         start: '04/2022',
-        end: '',
+        end: '10/2023',
         title: 'CTO',
         description: `
         To help GreenMobility succeed and continue to scale, I took on a new role as CTO. As CTO, I developed and executed our technical strategy, aligned our technology solutions with business objectives, identified new opportunities for growth, and created a culture of innovation and collaboration. This transition allowed me to take on a more strategic role in driving our company's success, while still leveraging my technical expertise to guide the development of innovative solutions.
