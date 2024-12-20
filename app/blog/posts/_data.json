@@ -1,5 +1,11 @@
 [
   {
+    "slug": "learning-async-in-python",
+    "title": "Learning async in Python",
+    "date": "Fri Dec 20 2024 09:04:25 GMT+0100 (Central European Standard Time)",
+    "tags": []
+  },
+  {
     "slug": "managing-python-dependencies-with-uv",
     "title": "Managing Python dependencies with UV",
     "date": "Mon Dec 09 2024 23:36:47 GMT+0100 (Central European Standard Time)",
