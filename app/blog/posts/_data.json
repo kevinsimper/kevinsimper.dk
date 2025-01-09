@@ -1,15 +1,21 @@
 [
   {
+    "slug": "implementing-a-forward_auth-proxy-tips-and-details",
+    "title": "Implementing a forward_auth proxy - tips and details",
+    "date": "Thu Jan 09 2025 01:42:27 GMT+0100 (Central European Standard Time)",
+    "tags": ["programming"]
+  },
+  {
     "slug": "reflecting-on-functions-and-classes",
     "title": "Reflecting on Functions and Classes",
     "date": "Fri Dec 20 2024 09:54:03 GMT+0100 (Central European Standard Time)",
-    "tags": []
+    "tags": ["programming", "python"]
   },
   {
     "slug": "learning-async-in-python",
     "title": "Learning async in Python",
     "date": "Fri Dec 20 2024 09:04:25 GMT+0100 (Central European Standard Time)",
-    "tags": []
+    "tags": ["programming", "python"]
   },
   {
     "slug": "managing-python-dependencies-with-uv",
