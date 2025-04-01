@@ -1,5 +1,11 @@
 [
   {
+    "slug": "best-way-to-get-access-to-gpu-compute",
+    "title": "Best way to get access to GPU Compute",
+    "date": "Tue Apr 01 2025 12:40:17 GMT+0200 (Central European Summer Time)",
+    "tags": []
+  },
+  {
     "slug": "streaming-an-ai-prompt-with-cloudflare-worker",
     "title": "Streaming an AI prompt with Cloudflare Worker",
     "date": "Tue Jan 14 2025 20:43:54 GMT+0100 (Central European Standard Time)",
