@@ -11,7 +11,6 @@ require('prismjs/components/prism-javascript')
 require('prismjs/components/prism-typescript')
 require('prismjs/components/prism-jsx')
 
-
 export const components = {
   h1: (props) => (
     <h1
@@ -31,7 +30,7 @@ export const components = {
       {...props}
     />
   ),
-  p: (props) => <p className="leading-7 [&:not(:first-child)]:mt-6" {...props} />,
+  p: (props) => <p className="leading-7 mt-4" {...props} />,
   a: ({ href, ...props }) => (
     <Link
       href={href}
@@ -40,10 +39,15 @@ export const components = {
     />
   ),
   pre: (props) => (
-    <pre className="mb-4 mt-6 overflow-x-auto rounded-lg border py-4" {...props} />
+    <pre
+      className="mb-4 mt-6 overflow-x-auto rounded-lg border py-4"
+      {...props}
+    />
   ),
   ul: (props) => <ul className="my-6 ml-6 list-disc [&>li]:mt-2" {...props} />,
-  ol: (props) => <ol className="my-6 ml-6 list-decimal [&>li]:mt-2" {...props} />,
+  ol: (props) => (
+    <ol className="my-6 ml-6 list-decimal [&>li]:mt-2" {...props} />
+  ),
   hr: (props) => <hr className="my-4 md:my-8" {...props} />,
   Test: <div />,
 }
@@ -70,7 +74,9 @@ interface CardProps {
 
 export const Card: React.FC<CardProps> = ({ children, className = '' }) => {
   return (
-    <div className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`}>
+    <div
+      className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`}
+    >
       {children}
     </div>
   )
@@ -93,7 +99,9 @@ export const ChevronLeft: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   </svg>
 )
 
-export const ChevronRight: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
+export const ChevronRight: React.FC<React.SVGProps<SVGSVGElement>> = (
+  props
+) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"
@@ -110,8 +118,6 @@ export const ChevronRight: React.FC<React.SVGProps<SVGSVGElement>> = (props) => 
   </svg>
 )
 
-
-
 export const PostNavigation = ({ tags, prev, next }) => {
   return (
     <div className="space-y-6 mt-8">
@@ -121,15 +127,13 @@ export const PostNavigation = ({ tags, prev, next }) => {
           <div className="flex flex-wrap gap-2">
             {tags.map((tag, id) => (
               <Link key={id} href={`/categories/${tag}`}>
-                <Badge className="text-sm hover:bg-secondary/80">
-                  #{tag}
-                </Badge>
+                <Badge className="text-sm hover:bg-secondary/80">#{tag}</Badge>
               </Link>
             ))}
           </div>
         </div>
       )}
-      
+
       {(prev || next) && (
         <div className="grid gap-4 sm:grid-cols-2">
           {prev && (
@@ -138,7 +142,7 @@ export const PostNavigation = ({ tags, prev, next }) => {
                 <ChevronLeft className="h-5 w-5 flex-shrink-0" />
                 <div>
                   <p className="text-sm text-muted-foreground">Previous</p>
-                  <Link 
+                  <Link
                     href={`/posts/${prev.slug}`}
                     className="text-lg font-medium hover:underline"
                   >
@@ -148,13 +152,13 @@ export const PostNavigation = ({ tags, prev, next }) => {
               </div>
             </Card>
           )}
-          
+
           {next && (
             <Card className="p-4">
               <div className="flex items-center justify-between space-x-2">
                 <div>
                   <p className="text-sm text-muted-foreground">Next</p>
-                  <Link 
+                  <Link
                     href={`/posts/${next.slug}`}
                     className="text-lg font-medium hover:underline"
                   >
@@ -188,7 +192,7 @@ function PostPage({ source, title, tags, published, next, prev }) {
           href={`https://www.kevinsimper.dk/posts/${slug}`}
         />
       </Head>
-      <article className='mb-12'>
+      <article className="mb-12">
         <div className="text-right">{new Date(published).toISOString()}</div>
         <MDXRemote {...source} components={components} />
       </article>

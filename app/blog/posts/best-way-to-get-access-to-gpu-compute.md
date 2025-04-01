@@ -6,7 +6,7 @@ But getting GPU compute is still new and unsolved, GPU compute is expensive and 
 
 The easiest way to get started is defenitely your own computer, but most times if not all the time your computer is simply not powerful enough, so many things are not even possible to run locally in relation to machine learning.
 
-What is also easy is using Google Colab, it is a easy web interface that allows you to run Python through what is called a notebook, concretely a Jyputer notebook. It is really good for proving a point and visualising the output of your machine learning or data processing. 
+What is also easy is using Google Colab, it is a easy web interface that allows you to run Python through what is called a notebook, concretely a Jyputer notebook. It is really good for proving a point and visualising the output of your machine learning or data processing.
 
 Downsides quickly arises that automations is not what Google Colab is built for, it does allow running in the background if you are a paying subscriber, but it does not give you any details and it can not be started automatically, the most it has a "Run all", which is not that helpful when running more than a experiement.
 
@@ -22,4 +22,4 @@ It automatically copies your working directory with rsync, so you can iterate su
 
 So try out Skypilot after you have used Google Colab, and are thinking about how to continue your fast paced GPU development tasks 😄
 
-https://docs.skypilot.co/en/latest/docs/index.html
+[https://docs.skypilot.co](https://docs.skypilot.co)
