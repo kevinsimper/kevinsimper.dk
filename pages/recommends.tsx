@@ -26,6 +26,9 @@ function RecommendsPage() {
   const pizza = router.query?.pizza?.toString()
     ? parseInt(router.query?.pizza?.toString())
     : 4
+  const newPizza = router.query?.newPizza?.toString()
+    ? parseInt(router.query?.newPizza?.toString())
+    : 4
   const lasagne = router.query?.lasagne?.toString()
     ? parseInt(router.query?.lasagne?.toString())
     : 4
@@ -85,6 +88,26 @@ function RecommendsPage() {
           <Item>{0.5 * (pizza / 2)} tespoon salt</Item>
           <Item>{200 * (pizza / 2)} gram flour</Item>
           <Item>{100 * (pizza / 2)} gram durumflour</Item>
+        </ul>
+      </div>
+      <div className="mb-2">
+        <h3 className="text-xl">
+          New Pizza Recipe
+          <input
+            type="text"
+            style={{ width: 25 }}
+            defaultValue={newPizza}
+            onChange={(e) => {
+              router.push('?newPizza=' + e.target.value)
+            }}
+          />{' '}
+        </h3>
+        <ul>
+          <Item>{55 * (newPizza / 4)} gram øland wheat flour</Item>
+          <Item>{495 * (newPizza / 4)} gram high protein wheat flour</Item>
+          <Item>{330 * (newPizza / 4)} gram cold water</Item>
+          <Item>{20 * (newPizza / 4)} gram yeast</Item>
+          <Item>Salt</Item>
         </ul>
       </div>
       <div className="mb-2">
