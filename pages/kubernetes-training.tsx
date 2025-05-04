@@ -13,6 +13,13 @@ export default () => (
     <div style={{ textAlign: 'center' }}>
       <h1 className="text-2xl">Kubernetes Training</h1>
     </div>
+    <div className="mx-auto my-6 max-w-xl border border-gray-200 bg-gray-50 px-6 py-4 italic text-gray-600 text-base relative">
+      <span className="absolute -top-4 left-4 bg-gray-200 text-gray-700 font-medium text-xs px-3 py-1 uppercase tracking-wide border border-gray-300">
+        Archived
+      </span>
+      I am not doing Kubernetes training anymore, but I like to keep this page
+      for historical interest.
+    </div>
     <p className="py-2">
       Kubernetes is currently the best software for running your cloud
       infrastructure. It provides a solid foundation for your company to service
