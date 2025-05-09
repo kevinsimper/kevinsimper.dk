@@ -1,27 +1,33 @@
 [
   {
+    "slug": "all-chatgpt-clone-interfaces-could-do-better",
+    "title": "All ChatGPT clone interfaces could do better",
+    "date": "Fri May 09 2025 15:42:51 GMT+0200 (Central European Summer Time)",
+    "tags": ["ai", "chatgpt"]
+  },
+  {
     "slug": "next-generation-of-ai-editors",
     "title": "Next generation of AI Editors",
     "date": "Sun May 04 2025 11:34:00 GMT+0200 (Central European Summer Time)",
-    "tags": []
+    "tags": ["ai", "editor"]
   },
   {
     "slug": "starting-on-something-new",
     "title": "Starting on something new",
     "date": "Tue Apr 15 2025 18:04:34 GMT+0200 (Central European Summer Time)",
-    "tags": []
+    "tags": ["startup"]
   },
   {
     "slug": "best-way-to-get-access-to-gpu-compute",
     "title": "Best way to get access to GPU Compute",
     "date": "Tue Apr 01 2025 12:40:17 GMT+0200 (Central European Summer Time)",
-    "tags": []
+    "tags": ["ai", "cloud"]
   },
   {
     "slug": "streaming-an-ai-prompt-with-cloudflare-worker",
     "title": "Streaming an AI prompt with Cloudflare Worker",
     "date": "Tue Jan 14 2025 20:43:54 GMT+0100 (Central European Standard Time)",
-    "tags": []
+    "tags": ["cloudflare", "programming", "ai"]
   },
   {
     "slug": "implementing-a-forward_auth-proxy-tips-and-details",
