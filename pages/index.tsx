@@ -38,9 +38,9 @@ function HomePage({ posts, full }) {
             'linear-gradient(297deg, rgba(125,52,173,1) 11%, rgba(99,102,241,1) 100%)',
         }}
       >
-        Hi, my name is Kevin Simper. I work at Trifork as AI Lead and like to
-        write about tech. I also like to make videos on youtube about
-        programming and organize meetups.
+        Hi, my name is Kevin Simper. I work at my own startup that makes AI
+        Agents for Bid Managers. I like to write about tech. I also like to make
+        videos on youtube about programming and organize meetups.
       </div>
       <h2 className="text-xl my-2">My latest posts:</h2>
       <div className="space-y-8">
