@@ -1,9 +1,15 @@
 [
   {
+    "slug": "claude-code-review-after-a-month",
+    "title": "Claude Code review after a month",
+    "date": "Fri Jul 11 2025 21:52:34 GMT+0200 (Central European Summer Time)",
+    "tags": ["ai", "editor"]
+  },
+  {
     "slug": "we-need-a-better-captcha-for-the-agent-age",
     "title": "We need a better captcha for the Agent age",
     "date": "Fri May 30 2025 11:23:32 GMT+0200 (Central European Summer Time)",
-    "tags": []
+    "tags": ["ai", "captcha"]
   },
   {
     "slug": "all-chatgpt-clone-interfaces-could-do-better",
