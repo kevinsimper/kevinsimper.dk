@@ -156,6 +156,7 @@ function MyApp({ Component, pageProps }) {
         <title>Kevin Simper</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="icon" type="image/jpeg" href="/favicon.jpg" />
+        <link rel="alternate" type="application/rss+xml" title="Kevin Simper's Blog RSS Feed" href="/api/rss.xml" />
         // stylesheet
         <link
           rel="stylesheet"
