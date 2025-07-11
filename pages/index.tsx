@@ -2,90 +2,86 @@ import { readFileSync, promises } from 'fs'
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote } from 'next-mdx-remote'
 import Head from 'next/head'
+import { mdxComponents } from '../components/mdx-components'
 
-const components = {
-  h1: (props) => <h1 className="text-3xl py-2" {...props} />,
-  h2: (props) => <h2 className="text-2xl py-2" {...props} />,
-  h3: (props) => <h3 className="text-xl py-2" {...props} />,
-  p: (props) => <p className="pb-5" {...props} />,
-  a: (props) => <a className="text-purple-600 hover:underline" {...props} />,
-  pre: (props) => <pre className="overflow-auto pb-4" {...props} />,
-  ul: (props) => <ol className="pl-10 pb-4 list-disc" {...props} />,
-  ol: (props) => <ol className="pl-10 pb-4 list-decimal" {...props} />,
-  Test: <div />,
-}
 
 function HomePage({ posts, full }) {
   return (
-    <div>
+    <div className="min-h-screen bg-white">
       <Head>
         <title>Kevin Simper - Developer Blog</title>
         <link rel="canonical" href={`https://www.kevinsimper.dk/`} />
       </Head>
-      <div
-        className="rounded"
-        style={{
-          backgroundImage: 'url(https://i.imgur.com/TXDOXbD.png)',
-          height: 400,
-          backgroundSize: 'cover',
-          backgroundPositionX: 'calc(50% - -50px)',
-        }}
-      ></div>
-      <div
-        className="my-4 md:my-6 md:p-8 p-6 rounded text-2xl md:leading-tight bg-indigo-500 text-white"
-        style={{
-          background:
-            'linear-gradient(297deg, rgba(125,52,173,1) 11%, rgba(99,102,241,1) 100%)',
-        }}
-      >
-        Hi, my name is Kevin Simper. I work at my own startup that makes AI
-        Agents for Bid Managers. I like to write about tech. I also like to make
-        videos on youtube about programming and organize meetups.
-      </div>
-      <h2 className="text-xl my-2">My latest posts:</h2>
-      <div className="space-y-8">
-        {posts.map((post, id) => {
-          const source = full[id]
-          return (
-            <div key={post.slug} className="py-2 space-y-2">
-              <a href={'/posts/' + post.slug}>
-                <h2 className="text-2xl text-purple-600 hover:underline">
-                  {post.title}
-                </h2>
-              </a>
+      <div className="max-w-4xl mx-auto px-6 py-12">
+        {/* Hero Section */}
+        <div className="mb-16">
+          <div className="relative h-64 md:h-80 lg:h-96 rounded-2xl overflow-hidden mb-8">
+            <img
+              src="https://i.imgur.com/TXDOXbD.png"
+              alt="Kevin Simper"
+              className="w-full h-full object-cover object-[center_20%]"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
+            <div className="absolute bottom-0 left-0 right-0 p-8">
+              <h1 className="text-3xl md:text-4xl font-bold text-white mb-2 drop-shadow-lg">Kevin Simper</h1>
+              <p className="text-lg text-gray-100 drop-shadow-md">
+                I work at my own startup that makes AI Agents for Bid Managers. 
+                I write about tech, make videos on youtube about programming and organize meetups.
+              </p>
+            </div>
+          </div>
+        </div>
 
-              <div>
+        {/* Blog Posts */}
+        <div className="space-y-16">
+          {posts.map((post, id) => {
+            const source = full[id]
+            const isLastPost = id === posts.length - 1
+            return (
+              <article key={post.slug} className={`${!isLastPost ? 'border-b border-gray-100 pb-12' : 'pb-12'}`}>
+                <div className="flex items-center justify-between mb-6">
+                  <time className="text-sm font-medium text-gray-500">
+                    {new Date(post.date).toISOString().split('T')[0]}
+                  </time>
+                  {post.tags && (
+                    <div className="flex gap-2">
+                      {post.tags.map((tag) => (
+                        <a
+                          key={tag}
+                          href={`/categories/${tag}`}
+                          className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-purple-100 text-purple-800 hover:bg-purple-200 transition-colors"
+                        >
+                          #{tag}
+                        </a>
+                      ))}
+                    </div>
+                  )}
+                </div>
+
+                <h2 className="text-2xl font-bold text-gray-900 mb-6 leading-tight">
+                  <a href={'/posts/' + post.slug} className="text-purple-600 hover:text-purple-700 transition-colors">
+                    {post.title}
+                  </a>
+                </h2>
+
                 {source && (
-                  <>
-                    <MDXRemote {...source} components={components} />
+                  <div className="prose prose-lg max-w-none">
+                    <MDXRemote {...source} components={mdxComponents} />
                     <a
-                      className="text-purple-600 hover:underline"
                       href={'/posts/' + post.slug}
+                      className="inline-flex items-center text-purple-600 hover:text-purple-700 font-medium transition-colors"
                     >
                       Read full post
+                      <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
                     </a>
-                  </>
+                  </div>
                 )}
-              </div>
-
-              <div className="flex justify-between border-t-2 border-indigo-500/50">
-                <div>{new Date(post.date).toISOString().split('T')[0]}</div>
-                <ul className="flex">
-                  {post.tags?.map((tag, key) => (
-                    <li key={tag} className="pr-1">
-                      <a
-                        className="text-purple-600"
-                        href={`/categories/${tag}`}
-                      >
-                        #{tag}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          )
-        })}
+              </article>
+            )
+          })}
+        </div>
       </div>
     </div>
   )
