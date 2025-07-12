@@ -1,6 +1,16 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
+import { marked } from 'marked';
+
+// Configure marked options
+marked.setOptions({
+  gfm: true,
+  breaks: true,
+  pedantic: false,
+  smartLists: true,
+  smartypants: true
+});
 
 interface BlogPost {
   slug: string;
@@ -18,12 +28,12 @@ function escapeXml(unsafe: string): string {
     .replace(/'/g, '&apos;');
 }
 
-function generateRssItem(post: BlogPost, content: string): string {
+function generateRssItem(post: BlogPost, markdownContent: string, htmlContent: string): string {
   const postUrl = `https://kevinsimper.dk/posts/${post.slug}`;
   const pubDate = new Date(post.date).toUTCString();
   
   // Create a summary for the description field (first paragraph or 200 chars)
-  const summary = content.split('\n\n')[0].substring(0, 200) + (content.length > 200 ? '...' : '');
+  const summary = markdownContent.split('\n\n')[0].substring(0, 200) + (markdownContent.length > 200 ? '...' : '');
   
   return `
     <item>
@@ -32,7 +42,7 @@ function generateRssItem(post: BlogPost, content: string): string {
       <guid isPermaLink="true">${postUrl}</guid>
       <pubDate>${pubDate}</pubDate>
       <description>${escapeXml(summary)}</description>
-      <content:encoded><![CDATA[${content}]]></content:encoded>
+      <content:encoded><![CDATA[${htmlContent}]]></content:encoded>
       ${post.tags.map(tag => `<category>${escapeXml(tag)}</category>`).join('\n      ')}
     </item>`;
 }
@@ -57,13 +67,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           // Remove frontmatter if present
           content = content.replace(/^---[\s\S]*?---\n*/m, '');
           
-          // Keep the full markdown content but escape it for XML
-          // This allows RSS readers to render or display the markdown as they prefer
+          // Convert markdown to HTML
+          const htmlContent = marked(content);
           
-          return generateRssItem(post, content.trim());
+          return generateRssItem(post, content.trim(), htmlContent);
         } catch (error) {
           console.error(`Error reading post ${post.slug}:`, error);
-          return generateRssItem(post, 'Content not available');
+          return generateRssItem(post, 'Content not available', '<p>Content not available</p>');
         }
       })
     );
