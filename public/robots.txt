@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kevinsimper.dk/api/sitemap.xml
