@@ -24,7 +24,7 @@ function formatDate(dateString: string): string {
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const baseUrl = 'https://kevinsimper.dk';
+  const baseUrl = 'https://www.kevinsimper.dk';
   
   // Read blog posts data
   const dataPath = path.join(process.cwd(), 'app', 'blog', 'posts', '_data.json');
