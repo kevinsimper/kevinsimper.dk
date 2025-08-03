@@ -1,9 +1,15 @@
 [
   {
+    "slug": "building-a-newsletter-for-bid-managers",
+    "title": "Building a newsletter for bid managers",
+    "date": "Sun Aug 03 2025 15:28:36 GMT+0200 (Central European Summer Time)",
+    "tags": ["community", "email"]
+  },
+  {
     "slug": "how-to-deal-with-long-running-agent-calls",
     "title": "How to deal with long running agent calls?",
     "date": "Wed Jul 23 2025 11:15:31 GMT+0200 (Central European Summer Time)",
-    "tags": []
+    "tags": ["ai", "agent", "programming"]
   },
   {
     "slug": "just-in-time-interfaces",
