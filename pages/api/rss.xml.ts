@@ -67,6 +67,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           // Remove frontmatter if present
           content = content.replace(/^---[\s\S]*?---\n*/m, '');
           
+          // Remove the first heading if it appears to be the title
+          const lines = content.split('\n');
+          if (lines.length > 0 && lines[0].startsWith('# ')) {
+            // Check if the first line (without # ) roughly matches the post title
+            const firstLineTitle = lines[0].substring(2).trim();
+            if (firstLineTitle.toLowerCase() === post.title.toLowerCase()) {
+              lines.shift(); // Remove the first line
+              // Remove any empty lines at the start
+              while (lines.length > 0 && lines[0].trim() === '') {
+                lines.shift();
+              }
+              content = lines.join('\n');
+            }
+          }
+          
           // Convert markdown to HTML
           const htmlContent = marked(content);
           
