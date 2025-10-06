@@ -1,5 +1,17 @@
 [
   {
+    "slug": "common-crawl-tutorial",
+    "title": "How to use Common Crawl to find your website",
+    "date": "Mon Oct 06 2025 17:30:00 GMT+0200 (Central European Summer Time)",
+    "tags": ["data", "tutorial", "web"]
+  },
+  {
+    "slug": "making-defencetech-more-visible-with-ai",
+    "title": "Making Defencetech more visible with AI",
+    "date": "Sat Oct 04 2025 16:16:21 GMT+0200 (Central European Summer Time)",
+    "tags": []
+  },
+  {
     "slug": "google-gemini-is-picky-about-file-formats",
     "title": "Google Gemini is picky about file formats",
     "date": "Tue Aug 05 2025 17:09:17 GMT+0200 (Central European Summer Time)",
