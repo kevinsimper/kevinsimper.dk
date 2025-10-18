@@ -1,9 +1,15 @@
 [
   {
+    "slug": "what-is-computer-use",
+    "title": "What is Computer Use",
+    "date": "Sat Oct 18 2025 14:25:36 GMT+0200 (Central European Summer Time)",
+    "tags": ["ai", "programming", "gemini"]
+  },
+  {
     "slug": "how-to-give-gemini-ai-api-multiple-files",
     "title": "How to give Gemini AI API multiple files",
     "date": "Tue Oct 07 2025 10:58:21 GMT+0200 (Central European Summer Time)",
-    "tags": []
+    "tags": ["ai", "programming", "gemini"]
   },
   {
     "slug": "common-crawl-tutorial",
@@ -15,13 +21,13 @@
     "slug": "making-defencetech-more-visible-with-ai",
     "title": "Making Defencetech more visible with AI",
     "date": "Sat Oct 04 2025 16:16:21 GMT+0200 (Central European Summer Time)",
-    "tags": []
+    "tags": ["ai", "programming", "gemini"]
   },
   {
     "slug": "google-gemini-is-picky-about-file-formats",
     "title": "Google Gemini is picky about file formats",
     "date": "Tue Aug 05 2025 17:09:17 GMT+0200 (Central European Summer Time)",
-    "tags": []
+    "tags": ["ai", "programming", "gemini"]
   },
   {
     "slug": "building-a-newsletter-for-bid-managers",
