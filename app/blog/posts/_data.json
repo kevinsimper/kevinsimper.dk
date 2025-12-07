@@ -1,15 +1,21 @@
 [
   {
+    "slug": "downsides-of-using-llms-for-coding",
+    "title": "Downsides of using LLMs for coding",
+    "date": "Sun Dec 07 2025 14:17:16 GMT+0100 (Central European Standard Time)",
+    "tags": ["ai", "programming"]
+  },
+  {
     "slug": "ai-is-bad-a-coding-ai",
     "title": "AI is bad a coding AI",
     "date": "Wed Dec 03 2025 13:29:55 GMT+0100 (Central European Standard Time)",
-    "tags": []
+    "tags": ["agent", "ai"]
   },
   {
     "slug": "my-experience-using-claude-code-vs-gemini-cli",
     "title": "My experience using Claude Code vs Gemini CLI",
     "date": "Thu Nov 27 2025 10:54:57 GMT+0100 (Central European Standard Time)",
-    "tags": []
+    "tags": ["ai", "programming"]
   },
   {
     "slug": "the-ai-coding-agent-that-disappoints",
